@@ -19,11 +19,6 @@ export function getDatabase(): Promise<SQLite.SQLiteDatabase> {
 }
 
 async function seedIfEmpty(db: SQLite.SQLiteDatabase): Promise<void> {
-  const row = await db.getFirstAsync<{ count: number }>(
-    'SELECT COUNT(*) AS count FROM words'
-  );
-  if (row && row.count > 0) return;
-
   await db.withTransactionAsync(async () => {
     // Collect unique categories in order of appearance
     const seen = new Set<string>();
