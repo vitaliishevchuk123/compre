@@ -148,7 +148,7 @@ export default function LessonScreen({ navigation }: LessonProps) {
       </View>
 
       <View style={styles.bottomRow}>
-        {answered && (
+        {answered ? (
           <Pressable
             style={({ pressed }) => [styles.replayBtn, pressed && styles.replayBtnPressed]}
             onPress={() => {
@@ -160,7 +160,14 @@ export default function LessonScreen({ navigation }: LessonProps) {
               });
             }}
           >
-            <Text style={styles.replayText}>Say the answer 🔊</Text>
+            <Text style={styles.replayText}>🔊 answer</Text>
+          </Pressable>
+        ) : (
+          <Pressable
+            style={({ pressed }) => [styles.replayBtn, pressed && styles.replayBtnPressed]}
+            onPress={next}
+          >
+            <Text style={styles.replayText}>Skip</Text>
           </Pressable>
         )}
         <Pressable
