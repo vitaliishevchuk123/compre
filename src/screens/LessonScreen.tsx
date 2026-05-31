@@ -107,11 +107,28 @@ export default function LessonScreen({ navigation }: LessonProps) {
 
   const isLast = index + 1 >= A1_CARDS.length;
 
+  function back() {
+    if (index === 0) return;
+    Speech.stop();
+    setIndex((i) => i - 1);
+    setSelected(null);
+    setIsReplaying(false);
+  }
+
   return (
     <SafeAreaView style={styles.container} edges={['bottom']} {...swipe.panHandlers}>
-      <Text style={styles.progress}>
-        {index + 1} / {A1_CARDS.length}
-      </Text>
+      <View style={styles.progressRow}>
+        <Pressable
+          onPress={back}
+          disabled={index === 0}
+          style={({ pressed }) => [styles.backBtn, index === 0 && styles.backBtnDisabled, pressed && index > 0 && { opacity: 0.5 }]}
+          hitSlop={12}
+        >
+          <Text style={styles.backBtnText}>←</Text>
+        </Pressable>
+        <Text style={styles.progress}>{index + 1} / {A1_CARDS.length}</Text>
+        <View style={styles.backBtn} />
+      </View>
 
       {/* White lesson card: centered image + prompt */}
       <View style={styles.card}>
@@ -276,13 +293,26 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: theme.bg,
   },
+  progressRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 8,
+  },
   progress: {
     fontSize: 14,
     fontWeight: '600',
     color: theme.textSecondary,
     textAlign: 'center',
-    marginBottom: 8,
   },
+  backBtn: {
+    width: 32,
+    height: 32,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  backBtnDisabled: { opacity: 0.2 },
+  backBtnText: { fontSize: 20, color: theme.textSecondary, fontWeight: '600' },
   card: {
     backgroundColor: theme.card,
     borderRadius: theme.radius,
