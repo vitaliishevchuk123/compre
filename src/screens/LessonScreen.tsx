@@ -160,7 +160,7 @@ export default function LessonScreen({ navigation }: LessonProps) {
               });
             }}
           >
-            <Text style={styles.replayText}>🔊 answer</Text>
+            <Text style={styles.replayText}>Say answer 🔊</Text>
           </Pressable>
         ) : (
           <Pressable
