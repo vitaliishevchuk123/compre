@@ -20,11 +20,14 @@ function toWord(r: WordRow): Word {
   };
 }
 
-/** All words for a level, in learning sequence order. */
 export async function getWordsByLevel(level: string): Promise<Word[]> {
   const db = await getDatabase();
   const rows = await db.getAllAsync<WordRow>(
-    'SELECT * FROM words WHERE level = ? ORDER BY seq ASC',
+    `SELECT w.id, w.word, w.level, c.name AS category, w.image, w.seq
+     FROM words w
+     JOIN categories c ON c.id = w.category_id
+     WHERE w.level = ?
+     ORDER BY w.seq ASC`,
     level
   );
   return rows.map(toWord);
@@ -48,21 +51,13 @@ function toUserWord(r: UserWordRow): UserWord {
   };
 }
 
-/** Progress rows keyed by word id. Missing entries mean status 'new'. */
 export async function getUserWordMap(): Promise<Map<number, UserWord>> {
   const db = await getDatabase();
   const rows = await db.getAllAsync<UserWordRow>('SELECT * FROM user_words');
   return new Map(rows.map((r) => [r.word_id, toUserWord(r)]));
 }
 
-/**
- * Record an answer for a word, advancing its status. Correct answers move
- * new -> learning -> known -> mastered after enough correct reviews.
- */
-export async function recordAnswer(
-  wordId: number,
-  correct: boolean
-): Promise<void> {
+export async function recordAnswer(wordId: number, correct: boolean): Promise<void> {
   const db = await getDatabase();
   const existing = await db.getFirstAsync<UserWordRow>(
     'SELECT * FROM user_words WHERE word_id = ?',
@@ -76,18 +71,12 @@ export async function recordAnswer(
   if (existing) {
     await db.runAsync(
       'UPDATE user_words SET status = ?, review_count = ?, correct_count = ? WHERE word_id = ?',
-      status,
-      reviewCount,
-      correctCount,
-      wordId
+      status, reviewCount, correctCount, wordId
     );
   } else {
     await db.runAsync(
       'INSERT INTO user_words (word_id, status, review_count, correct_count) VALUES (?, ?, ?, ?)',
-      wordId,
-      status,
-      reviewCount,
-      correctCount
+      wordId, status, reviewCount, correctCount
     );
   }
 }

@@ -1,16 +1,18 @@
-// SQLite schema. Mirrors PLAN.md (words, user_words, lessons, statistics).
-// `words.image` is intentionally flexible: it holds an imageKey today and can
-// hold a remote URI later without a migration.
 export const SCHEMA_SQL = `
 PRAGMA journal_mode = WAL;
 
+CREATE TABLE IF NOT EXISTS categories (
+  id   INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL UNIQUE
+);
+
 CREATE TABLE IF NOT EXISTS words (
-  id        INTEGER PRIMARY KEY AUTOINCREMENT,
-  word      TEXT NOT NULL UNIQUE,
-  level     TEXT NOT NULL,
-  category  TEXT NOT NULL,
-  image     TEXT,
-  seq       INTEGER NOT NULL DEFAULT 0
+  id          INTEGER PRIMARY KEY AUTOINCREMENT,
+  word        TEXT NOT NULL UNIQUE,
+  level       TEXT NOT NULL,
+  category_id INTEGER NOT NULL REFERENCES categories(id),
+  image       TEXT,
+  seq         INTEGER NOT NULL DEFAULT 0
 );
 
 CREATE TABLE IF NOT EXISTS user_words (

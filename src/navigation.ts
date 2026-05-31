@@ -2,23 +2,20 @@ import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import type { CompositeScreenProps } from '@react-navigation/native';
 
-// Root stack: tabs + lesson overlay
 export type RootStackParamList = {
   Main: undefined;
-  Lesson: undefined;
+  CategoryPicker: { level: string };
+  Lesson: { category?: string };
 };
 
-// Bottom tab screens
 export type TabParamList = {
   Home: undefined;
   Words: undefined;
   Profile: undefined;
 };
 
-export type RootStackProps<T extends keyof RootStackParamList> =
-  NativeStackScreenProps<RootStackParamList, T>;
-
 export type LessonProps = NativeStackScreenProps<RootStackParamList, 'Lesson'>;
+export type CategoryPickerProps = NativeStackScreenProps<RootStackParamList, 'CategoryPicker'>;
 
 export type HomeProps = CompositeScreenProps<
   BottomTabScreenProps<TabParamList, 'Home'>,

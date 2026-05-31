@@ -31,7 +31,14 @@ function shuffle<T>(arr: T[]): T[] {
   return out;
 }
 
-export default function LessonScreen({ navigation }: LessonProps) {
+export default function LessonScreen({ navigation, route }: LessonProps) {
+  const category = route.params?.category;
+  const CARDS = category
+    ? A1_CARDS.filter((c) => c.kind === 'word' && c.category === category)
+    : A1_CARDS;
+
+  const storageKey = `@lesson_index${category ? `_${category}` : ''}`;
+
   const [wordIds, setWordIds] = useState<Map<string, number> | null>(null);
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
@@ -42,17 +49,17 @@ export default function LessonScreen({ navigation }: LessonProps) {
   useEffect(() => {
     Promise.all([
       getWordsByLevel('A1'),
-      AsyncStorage.getItem('@lesson_index'),
+      AsyncStorage.getItem(storageKey),
     ]).then(([words, savedIndex]) => {
       setWordIds(new Map(words.map((w) => [w.word, w.id])));
       if (savedIndex !== null) {
         const i = parseInt(savedIndex, 10);
-        if (i > 0 && i < A1_CARDS.length) setIndex(i);
+        if (i > 0 && i < CARDS.length) setIndex(i);
       }
     });
   }, []);
 
-  const card: LessonCard = A1_CARDS[index];
+  const card: LessonCard = CARDS[index];
   const options = useMemo(() => shuffle(card.options), [card]);
   const prompt = card.kind === 'sentence' ? 'Which sentence?' : (card.sentence ?? 'What is this?');
 
@@ -91,9 +98,9 @@ export default function LessonScreen({ navigation }: LessonProps) {
   const answered = selected !== null;
 
   async function next() {
-    if (index + 1 >= A1_CARDS.length) {
+    if (index + 1 >= CARDS.length) {
       await completeLesson(correctCount);
-      await AsyncStorage.removeItem('@lesson_index');
+      await AsyncStorage.removeItem(storageKey);
       navigation.goBack();
       return;
     }
@@ -101,7 +108,7 @@ export default function LessonScreen({ navigation }: LessonProps) {
     setIndex(nextIndex);
     setSelected(null);
     setIsReplaying(false);
-    AsyncStorage.setItem('@lesson_index', String(nextIndex));
+    AsyncStorage.setItem(storageKey, String(nextIndex));
   }
   nextRef.current = next;
 
@@ -116,7 +123,7 @@ export default function LessonScreen({ navigation }: LessonProps) {
     speak(card.answerPhrase ?? card.answer);
   }
 
-  const isLast = index + 1 >= A1_CARDS.length;
+  const isLast = index + 1 >= CARDS.length;
 
   function back() {
     if (index === 0) return;
@@ -125,7 +132,7 @@ export default function LessonScreen({ navigation }: LessonProps) {
     setIndex(prevIndex);
     setSelected(null);
     setIsReplaying(false);
-    AsyncStorage.setItem('@lesson_index', String(prevIndex));
+    AsyncStorage.setItem(storageKey, String(prevIndex));
   }
 
   return (
@@ -142,7 +149,7 @@ export default function LessonScreen({ navigation }: LessonProps) {
         >
           <Text style={[styles.prevBtnText, index === 0 && styles.prevBtnTextDisabled]}>Prev</Text>
         </Pressable>
-        <Text style={styles.progress}>{index + 1} / {A1_CARDS.length}</Text>
+        <Text style={styles.progress}>{index + 1} / {CARDS.length}</Text>
       </View>
 
       {/* White lesson card: centered image + prompt */}

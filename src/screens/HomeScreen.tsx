@@ -80,7 +80,7 @@ export default function HomeScreen({ navigation }: HomeProps) {
             <Pressable
               key={level.id}
               style={({ pressed }) => [styles.levelCard, pressed && styles.levelCardPressed]}
-              onPress={() => navigation.navigate('Lesson')}
+              onPress={() => navigation.navigate('CategoryPicker', { level: level.id })}
             >
               <View style={styles.levelCardTop}>
                 <Text style={styles.levelId}>{level.id}</Text>
@@ -96,10 +96,6 @@ export default function HomeScreen({ navigation }: HomeProps) {
         })}
       </View>
 
-      <View style={styles.statsRow}>
-        <MiniStat label="Mastered" value={stats.masteredWords} />
-        <MiniStat label="Lessons" value={stats.lessonsCompleted} />
-      </View>
     </SafeAreaView>
   );
 }

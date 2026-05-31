@@ -13,6 +13,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 import HomeScreen from './src/screens/HomeScreen';
 import LessonScreen from './src/screens/LessonScreen';
+import CategoryPickerScreen from './src/screens/CategoryPickerScreen';
 import WordsScreen from './src/screens/WordsScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 import { VoiceProvider } from './src/context/VoiceContext';
@@ -94,6 +95,17 @@ export default function App() {
               name="Main"
               component={TabNavigator}
               options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="CategoryPicker"
+              component={CategoryPickerScreen}
+              options={{
+                title: 'A1',
+                headerStyle: { backgroundColor: 'rgb(72, 64, 56)' },
+                headerTintColor: '#fff',
+                headerTitleStyle: { fontWeight: '700' },
+                headerShadowVisible: false,
+              }}
             />
             <Stack.Screen
               name="Lesson"
