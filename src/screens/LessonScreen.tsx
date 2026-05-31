@@ -10,6 +10,7 @@ import {
   View,
 } from 'react-native';
 import * as Speech from 'expo-speech';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useVoice } from '../context/VoiceContext';
 import { A1_CARDS } from '../data/seed/a1';
@@ -39,8 +40,15 @@ export default function LessonScreen({ navigation }: LessonProps) {
   const { voiceId } = useVoice();
 
   useEffect(() => {
-    getWordsByLevel('A1').then((words) => {
+    Promise.all([
+      getWordsByLevel('A1'),
+      AsyncStorage.getItem('@lesson_index'),
+    ]).then(([words, savedIndex]) => {
       setWordIds(new Map(words.map((w) => [w.word, w.id])));
+      if (savedIndex !== null) {
+        const i = parseInt(savedIndex, 10);
+        if (i > 0 && i < A1_CARDS.length) setIndex(i);
+      }
     });
   }, []);
 
@@ -85,12 +93,15 @@ export default function LessonScreen({ navigation }: LessonProps) {
   async function next() {
     if (index + 1 >= A1_CARDS.length) {
       await completeLesson(correctCount);
+      await AsyncStorage.removeItem('@lesson_index');
       navigation.goBack();
       return;
     }
-    setIndex((i) => i + 1);
+    const nextIndex = index + 1;
+    setIndex(nextIndex);
     setSelected(null);
     setIsReplaying(false);
+    AsyncStorage.setItem('@lesson_index', String(nextIndex));
   }
   nextRef.current = next;
 
@@ -109,10 +120,12 @@ export default function LessonScreen({ navigation }: LessonProps) {
 
   function back() {
     if (index === 0) return;
+    const prevIndex = index - 1;
     Speech.stop();
-    setIndex((i) => i - 1);
+    setIndex(prevIndex);
     setSelected(null);
     setIsReplaying(false);
+    AsyncStorage.setItem('@lesson_index', String(prevIndex));
   }
 
   return (
@@ -121,13 +134,15 @@ export default function LessonScreen({ navigation }: LessonProps) {
         <Pressable
           onPress={back}
           disabled={index === 0}
-          style={({ pressed }) => [styles.backBtn, index === 0 && styles.backBtnDisabled, pressed && index > 0 && { opacity: 0.5 }]}
-          hitSlop={12}
+          style={({ pressed }) => [
+            styles.prevBtn,
+            index === 0 && styles.prevBtnDisabled,
+            pressed && index > 0 && styles.prevBtnPressed,
+          ]}
         >
-          <Text style={styles.backBtnText}>←</Text>
+          <Text style={[styles.prevBtnText, index === 0 && styles.prevBtnTextDisabled]}>Prev</Text>
         </Pressable>
         <Text style={styles.progress}>{index + 1} / {A1_CARDS.length}</Text>
-        <View style={styles.backBtn} />
       </View>
 
       {/* White lesson card: centered image + prompt */}
@@ -284,7 +299,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: theme.bg,
     paddingHorizontal: 20,
-    paddingTop: 4,
+    paddingTop: 8,
     paddingBottom: 16,
   },
   center: {
@@ -303,16 +318,18 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
     color: theme.textSecondary,
-    textAlign: 'center',
   },
-  backBtn: {
-    width: 32,
-    height: 32,
+  prevBtn: {
+    backgroundColor: 'rgb(229, 145, 60)',
+    borderRadius: theme.radius,
+    paddingVertical: 8,
+    paddingHorizontal: 16,
     alignItems: 'center',
-    justifyContent: 'center',
   },
-  backBtnDisabled: { opacity: 0.2 },
-  backBtnText: { fontSize: 20, color: theme.textSecondary, fontWeight: '600' },
+  prevBtnDisabled: { opacity: 0.35 },
+  prevBtnPressed: { opacity: 0.6 },
+  prevBtnText: { fontSize: 14, fontWeight: '700', color: '#fff' },
+  prevBtnTextDisabled: { color: '#fff' },
   card: {
     backgroundColor: theme.card,
     borderRadius: theme.radius,
@@ -328,7 +345,7 @@ const styles = StyleSheet.create({
   // without cropping, so internet-sourced images of any shape look intentional.
   imageFrame: {
     width: '100%',
-    height: 190,
+    height: 400,
     borderRadius: theme.radiusSm,
     backgroundColor: theme.imageBg,
     overflow: 'hidden',
@@ -390,7 +407,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: theme.option,
     borderRadius: theme.radius,
-    paddingVertical: 15,
+    paddingVertical: 11,
     alignItems: 'center',
   },
   replayBtnPressed: { opacity: 0.7 },
@@ -399,7 +416,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: theme.accent,
     borderRadius: theme.radius,
-    paddingVertical: 15,
+    paddingVertical: 11,
     alignItems: 'center',
     shadowColor: theme.accent,
     shadowOpacity: 0.35,

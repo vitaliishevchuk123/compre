@@ -11,7 +11,7 @@ export const theme = {
   accent: '#E5913C', // warm orange — primary actions, active states
   accentDark: '#CC7E2C', // pressed state
 
-  textPrimary: '#2A2620',
+  textPrimary: 'rgb(100, 88, 74)',
   textSecondary: '#9C8E7C',
 
   success: '#4FB477',
@@ -20,7 +20,7 @@ export const theme = {
   dangerBg: '#F7E1DD',
 
   option: '#F3ECE2', // option pill on a white card
-  optionText: '#2A2620',
+  optionText: 'rgb(100, 88, 74)',
 
   radius: 24,
   radiusSm: 16,
