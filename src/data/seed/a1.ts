@@ -131,13 +131,9 @@ export const A1_CARDS: LessonCard[] = [
     newWord: 'sad',
     category: 'emotions',
     knownWords: ['girl', 'happy', 'sad', 'angry'],
-    sentence: 'Choose the correct sentence',
+    sentence: 'How does the girl feel?',
     imageKey: 'a1/girl-sad',
-    options: [
-      'The girl is happy.',
-      'The girl is sad.',
-      'The girl is angry.'
-    ],
+    options: ['sad', 'happy', 'angry'],
     answer: 'The girl is sad.',
   },
 ];
