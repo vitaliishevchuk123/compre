@@ -12,6 +12,7 @@ import { A1_CARDS } from '../data/seed/a1';
 import { getImage } from '../data/imageRegistry';
 import { getWordsByLevel, recordAnswer } from '../db/words';
 import { completeLesson } from '../db/statistics';
+import { theme } from '../theme';
 import type { LessonProps } from '../navigation';
 import type { LessonCard } from '../types';
 
@@ -44,7 +45,7 @@ export default function LessonScreen({ navigation }: LessonProps) {
   if (!wordIds) {
     return (
       <SafeAreaView style={styles.center}>
-        <ActivityIndicator size="large" color="#4f8cff" />
+        <ActivityIndicator size="large" color={theme.accent} />
       </SafeAreaView>
     );
   }
@@ -70,23 +71,35 @@ export default function LessonScreen({ navigation }: LessonProps) {
     setSelected(null);
   }
 
-  const progress = `${index + 1} / ${A1_CARDS.length}`;
+  const isLast = index + 1 >= A1_CARDS.length;
+  const isSentence = card.kind === 'sentence';
 
   return (
     <SafeAreaView style={styles.container} edges={['bottom']}>
-      <Text style={styles.progress}>{progress}</Text>
-
-      <Image source={getImage(card.imageKey)} style={styles.image} resizeMode="cover" />
-
-      <Text style={styles.prompt}>
-        {card.sentence ?? 'What is this?'}
+      <Text style={styles.progress}>
+        {index + 1} / {A1_CARDS.length}
       </Text>
+
+      {/* White lesson card: centered image + prompt */}
+      <View style={styles.card}>
+        <View style={styles.imageFrame}>
+          <Image
+            source={getImage(card.imageKey)}
+            style={styles.image}
+            resizeMode="contain"
+          />
+        </View>
+        <Text style={styles.prompt}>
+          {isSentence ? 'Which sentence?' : card.sentence ?? 'What is this?'}
+        </Text>
+      </View>
 
       <View style={styles.options}>
         {options.map((option) => (
           <Option
             key={option}
             label={option}
+            sentence={isSentence}
             state={optionState(option, card.answer, selected)}
             onPress={() => choose(option)}
           />
@@ -102,9 +115,7 @@ export default function LessonScreen({ navigation }: LessonProps) {
         ]}
         onPress={next}
       >
-        <Text style={styles.nextText}>
-          {index + 1 >= A1_CARDS.length ? 'Finish' : 'Next'}
-        </Text>
+        <Text style={styles.nextText}>{isLast ? 'Finish' : 'Next'}</Text>
       </Pressable>
     </SafeAreaView>
   );
@@ -126,10 +137,12 @@ function optionState(
 function Option({
   label,
   state,
+  sentence,
   onPress,
 }: {
   label: string;
   state: OptionVisual;
+  sentence?: boolean;
   onPress: () => void;
 }) {
   return (
@@ -138,7 +151,13 @@ function Option({
       onPress={onPress}
       disabled={state !== 'idle'}
     >
-      <Text style={[styles.optionText, state === 'muted' && styles.optionTextMuted]}>
+      <Text
+        style={[
+          styles.optionText,
+          sentence && styles.optionTextSentence,
+          state === 'muted' && styles.optionTextMuted,
+        ]}
+      >
         {label}
       </Text>
     </Pressable>
@@ -146,32 +165,92 @@ function Option({
 }
 
 const OPTION_STYLE = StyleSheet.create({
-  idle: { backgroundColor: '#f3f6fd' },
-  correct: { backgroundColor: '#d6f5e0', borderColor: '#34c172', borderWidth: 2 },
-  wrong: { backgroundColor: '#fbe0e0', borderColor: '#e05656', borderWidth: 2 },
-  muted: { backgroundColor: '#f3f6fd', opacity: 0.5 },
+  idle: { backgroundColor: theme.option },
+  correct: { backgroundColor: theme.successBg, borderColor: theme.success, borderWidth: 2 },
+  wrong: { backgroundColor: theme.dangerBg, borderColor: theme.danger, borderWidth: 2 },
+  muted: { backgroundColor: theme.option, opacity: 0.45 },
 });
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#fff', padding: 24 },
-  center: { flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff' },
-  progress: { fontSize: 14, color: '#7a86a1', textAlign: 'center', marginBottom: 12 },
-  image: {
-    width: '100%', aspectRatio: 1, borderRadius: 24, backgroundColor: '#eef2fb',
+  container: {
+    flex: 1,
+    backgroundColor: theme.bg,
+    paddingHorizontal: 24,
+    paddingTop: 8,
+    paddingBottom: 24,
   },
+  center: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: theme.bg,
+  },
+  progress: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: theme.textSecondary,
+    textAlign: 'center',
+    marginBottom: 16,
+  },
+  card: {
+    backgroundColor: theme.card,
+    borderRadius: theme.radius,
+    padding: 20,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOpacity: 0.08,
+    shadowRadius: 16,
+    shadowOffset: { width: 0, height: 6 },
+    elevation: 3,
+  },
+  // Square frame keeps the layout stable; `contain` centers any aspect ratio
+  // without cropping, so internet-sourced images of any shape look intentional.
+  imageFrame: {
+    width: '100%',
+    aspectRatio: 1,
+    borderRadius: theme.radiusSm,
+    backgroundColor: theme.imageBg,
+    overflow: 'hidden',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  image: { width: '100%', height: '100%' },
   prompt: {
-    fontSize: 24, fontWeight: '700', color: '#1a2238',
-    textAlign: 'center', marginVertical: 24,
+    fontSize: 22,
+    fontWeight: '700',
+    color: theme.textPrimary,
+    textAlign: 'center',
+    marginTop: 20,
   },
-  options: { gap: 12 },
-  option: { borderRadius: 16, paddingVertical: 18, alignItems: 'center' },
-  optionText: { fontSize: 18, fontWeight: '600', color: '#1a2238' },
-  optionTextMuted: { color: '#9aa3bb' },
+  options: { gap: 12, marginTop: 24 },
+  option: {
+    borderRadius: theme.radiusSm,
+    paddingVertical: 18,
+    paddingHorizontal: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  optionText: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: theme.optionText,
+    textAlign: 'center',
+  },
+  optionTextSentence: { fontSize: 17, fontWeight: '600' },
+  optionTextMuted: { color: theme.textSecondary },
   next: {
-    marginTop: 'auto', backgroundColor: '#4f8cff', borderRadius: 18,
-    paddingVertical: 18, alignItems: 'center',
+    marginTop: 'auto',
+    backgroundColor: theme.accent,
+    borderRadius: theme.radius,
+    paddingVertical: 18,
+    alignItems: 'center',
+    shadowColor: theme.accent,
+    shadowOpacity: 0.35,
+    shadowRadius: 14,
+    shadowOffset: { width: 0, height: 6 },
+    elevation: 3,
   },
-  nextDisabled: { backgroundColor: '#cdd7ec' },
-  nextPressed: { backgroundColor: '#3d76e0' },
+  nextDisabled: { backgroundColor: '#E4D6C6', shadowOpacity: 0 },
+  nextPressed: { backgroundColor: theme.accentDark },
   nextText: { color: '#fff', fontSize: 18, fontWeight: '700' },
 });

@@ -12,7 +12,9 @@ const registry: Record<string, ImageSourcePropType> = {
   'a1/boy-eat': require('../../assets/images/a1/boy-eat.png'),
   'a1/girl-happy': require('../../assets/images/a1/girl-happy.png'),
   'a1/dog-run-fast': require('../../assets/images/a1/dog-run-fast.png'),
-  'a1/boy-girl-happy': require('../../assets/images/a1/boy-girl-happy.png'),
+  'a1/boy-sad': require('../../assets/images/a1/boy-sad.png'),
+  'a1/dog-angry': require('../../assets/images/a1/dog-angry.png'),
+  'a1/girl-sad': require('../../assets/images/a1/girl-sad.png'),
 };
 
 /** Resolve a bundled image key, or undefined for an unknown/remote key. */

@@ -25,23 +25,33 @@ export interface UserWord {
 }
 
 /**
- * A single learning card. Introduces `newWord` and may show a `sentence` built
- * ONLY from words introduced in earlier cards plus `newWord`. The image conveys
- * meaning instead of a translation.
+ * Exercise format:
+ * - 'word': image + a context sentence; options are single WORDS, pick one.
+ * - 'sentence': image only; options are three near-identical SENTENCES that
+ *   differ by one swapped word — pick the one matching the image.
+ */
+export type ExerciseKind = 'word' | 'sentence';
+
+/**
+ * A single learning card. `newWord` is the focal word; on 'word' cards it is the
+ * one new word being introduced (every other content word is already known), on
+ * 'sentence' cards it is the swapped word being practiced (all words already
+ * known). The image conveys meaning instead of a translation.
  */
 export interface LessonCard {
   /** position in the level sequence; defines what counts as "already learned". */
   order: number;
+  kind: ExerciseKind;
   newWord: string;
   /** previously-learned words reused on this card (for display + invariant checks). */
   knownWords: string[];
-  /** CI sentence, or null for the first single-word introductions. */
+  /** 'word': CI context sentence (or null for first intros). 'sentence': null. */
   sentence: string | null;
   /** scene image key into the image registry. */
   imageKey: string;
-  /** multiple-choice options: the answer plus distractors drawn from known words. */
+  /** options: WORDS for 'word' cards, full SENTENCES for 'sentence' cards. */
   options: string[];
-  /** correct option; always equals newWord. */
+  /** correct option (a word or a full sentence depending on `kind`). */
   answer: string;
   category: string;
 }

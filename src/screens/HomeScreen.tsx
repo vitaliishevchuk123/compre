@@ -2,6 +2,7 @@ import { useCallback, useState } from 'react';
 import { useFocusEffect } from '@react-navigation/native';
 import {
   ActivityIndicator,
+  Image,
   Pressable,
   StyleSheet,
   Text,
@@ -10,6 +11,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { getStatistics, type Statistics } from '../db/statistics';
 import { A1_CARDS } from '../data/seed/a1';
+import { theme } from '../theme';
 import type { HomeProps } from '../navigation';
 
 const A1_TOTAL = A1_CARDS.length;
@@ -33,22 +35,30 @@ export default function HomeScreen({ navigation }: HomeProps) {
   if (!stats) {
     return (
       <SafeAreaView style={styles.center}>
-        <ActivityIndicator size="large" color="#4f8cff" />
+        <ActivityIndicator size="large" color={theme.accent} />
       </SafeAreaView>
     );
   }
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Compre</Text>
-      <Text style={styles.subtitle}>Learn English through understanding</Text>
+      <View style={styles.topBar}>
+        <Image
+          source={require('../../assets/logo.png')}
+          style={styles.logo}
+          resizeMode="contain"
+        />
+      </View>
 
-      <View style={styles.statsRow}>
+      <View style={styles.header}>
+        <Text style={styles.title}>Compre</Text>
+        <Text style={styles.subtitle}>Learn English through understanding</Text>
+      </View>
+
+      <View style={styles.statsGrid}>
         <Stat label="Words" value={`${stats.totalWords} / ${A1_TOTAL}`} />
         <Stat label="Mastered" value={stats.masteredWords} />
-      </View>
-      <View style={styles.statsRow}>
-        <Stat label="Streak" value={`${stats.streak} 🔥`} />
+        <Stat label="Streak" value={`${stats.streak} 🔥`} accent />
         <Stat label="Lessons" value={stats.lessonsCompleted} />
       </View>
 
@@ -62,30 +72,83 @@ export default function HomeScreen({ navigation }: HomeProps) {
   );
 }
 
-function Stat({ label, value }: { label: string; value: string | number }) {
+function Stat({
+  label,
+  value,
+  accent,
+}: {
+  label: string;
+  value: string | number;
+  accent?: boolean;
+}) {
   return (
     <View style={styles.statCard}>
-      <Text style={styles.statValue}>{value}</Text>
+      <Text style={[styles.statValue, accent && styles.statValueAccent]}>
+        {value}
+      </Text>
       <Text style={styles.statLabel}>{label}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#fff', padding: 24 },
-  center: { flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff' },
-  title: { fontSize: 34, fontWeight: '800', color: '#1a2238', marginTop: 12 },
-  subtitle: { fontSize: 15, color: '#7a86a1', marginTop: 4, marginBottom: 28 },
-  statsRow: { flexDirection: 'row', gap: 12, marginBottom: 12 },
+  container: {
+    flex: 1,
+    backgroundColor: theme.bg,
+    paddingHorizontal: 24,
+    paddingTop: 12,
+    paddingBottom: 24,
+  },
+  center: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: theme.bg,
+  },
+  topBar: { alignSelf: 'stretch', alignItems: 'flex-start', paddingTop: 4 },
+  logo: { width: 44, height: 44 },
+  header: { alignItems: 'center', marginTop: 8, marginBottom: 32 },
+  title: { fontSize: 40, fontWeight: '800', color: theme.textPrimary },
+  subtitle: {
+    fontSize: 15,
+    color: theme.textSecondary,
+    marginTop: 6,
+    textAlign: 'center',
+  },
+  statsGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    rowGap: 14,
+  },
   statCard: {
-    flex: 1, backgroundColor: '#f3f6fd', borderRadius: 16, padding: 18,
+    width: '48%',
+    backgroundColor: theme.card,
+    borderRadius: theme.radius,
+    padding: 20,
+    alignItems: 'center',
+    // soft shadow
+    shadowColor: '#000',
+    shadowOpacity: 0.06,
+    shadowRadius: 12,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 2,
   },
-  statValue: { fontSize: 24, fontWeight: '700', color: '#1a2238' },
-  statLabel: { fontSize: 13, color: '#7a86a1', marginTop: 2 },
+  statValue: { fontSize: 26, fontWeight: '800', color: theme.textPrimary },
+  statValueAccent: { color: theme.accent },
+  statLabel: { fontSize: 13, color: theme.textSecondary, marginTop: 4 },
   cta: {
-    marginTop: 'auto', backgroundColor: '#4f8cff', borderRadius: 18,
-    paddingVertical: 18, alignItems: 'center',
+    marginTop: 'auto',
+    backgroundColor: theme.accent,
+    borderRadius: theme.radius,
+    paddingVertical: 18,
+    alignItems: 'center',
+    shadowColor: theme.accent,
+    shadowOpacity: 0.35,
+    shadowRadius: 14,
+    shadowOffset: { width: 0, height: 6 },
+    elevation: 3,
   },
-  ctaPressed: { backgroundColor: '#3d76e0' },
+  ctaPressed: { backgroundColor: theme.accentDark },
   ctaText: { color: '#fff', fontSize: 18, fontWeight: '700' },
 });

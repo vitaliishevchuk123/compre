@@ -6,6 +6,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import HomeScreen from './src/screens/HomeScreen';
 import LessonScreen from './src/screens/LessonScreen';
 import { A1_CARDS, validateCards } from './src/data/seed/a1';
+import { theme } from './src/theme';
 import type { RootStackParamList } from './src/navigation';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -33,7 +34,14 @@ export default function App() {
           <Stack.Screen
             name="Lesson"
             component={LessonScreen}
-            options={{ title: 'Lesson', headerBackTitle: 'Home' }}
+            options={{
+              title: 'Lesson',
+              headerBackTitle: 'Home',
+              headerStyle: { backgroundColor: theme.header },
+              headerTintColor: theme.headerText,
+              headerTitleStyle: { fontWeight: '700' },
+              headerShadowVisible: false,
+            }}
           />
         </Stack.Navigator>
       </NavigationContainer>
