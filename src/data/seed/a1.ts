@@ -5,7 +5,7 @@ import type { LessonCard } from '../../types';
 const FUNCTION_WORDS = new Set([
   'the', 'a', 'an', 'is', 'are', 'can', 'to', 'and',
   'what', 'how', 'this', 'does', 'do', 'many', 'color',
-  'it', 'its', 'which', 'who', 'my', 'your',
+  'it', 'its', 'which', 'who', 'my', 'your', 'where',
 ]);
 
 /**
@@ -632,6 +632,32 @@ export const A1_CARDS: LessonCard[] = [
     knownWords: ['apple', 'nine', 'eight'], sentence: 'How many fishes?',
     imageKey: 'a1/num-ten', options: ['ten', 'nine', 'eight'], answer: 'ten',
     answerPhrase: 'Ten.' },
+
+  // ── Adverbs ──────────────────────────────────────────────────────────────
+  { order: 109, kind: 'word', newWord: 'quietly', category: 'adverbs',
+    knownWords: ['cat', 'sleep'], sentence: 'What is the woman pointing at?',
+    imageKey: 'a1/adv-quietly', options: ['quietly', 'loudly', 'fast'], answer: 'quietly',
+    answerPhrase: 'She is pointing quietly.' },
+  { order: 110, kind: 'word', newWord: 'loudly', category: 'adverbs',
+    knownWords: ['man', 'talk', 'quietly'], sentence: 'How does the woman talk?',
+    imageKey: 'a1/adv-loudly', options: ['loudly', 'quietly', 'fast'], answer: 'loudly',
+    answerPhrase: 'The woman talks loudly.' },
+  { order: 111, kind: 'word', newWord: 'alone', category: 'adverbs',
+    knownWords: ['boy', 'happy'], sentence: 'How is the boy?',
+    imageKey: 'a1/adv-alone', options: ['alone', 'together', 'happy'], answer: 'alone',
+    answerPhrase: 'The boy is alone.' },
+  { order: 112, kind: 'word', newWord: 'together', category: 'adverbs',
+    knownWords: ['boy', 'girl', 'alone'], sentence: 'How are the boy and the girl?',
+    imageKey: 'a1/adv-together', options: ['together', 'alone', 'happy'], answer: 'together',
+    answerPhrase: 'The boy and the girl are together.' },
+  { order: 113, kind: 'word', newWord: 'outside', category: 'adverbs',
+    knownWords: ['dog'], sentence: 'Where is the girl?',
+    imageKey: 'a1/adv-outside', options: ['outside', 'inside', 'alone'], answer: 'outside',
+    answerPhrase: 'The girl is outside.' },
+  { order: 114, kind: 'word', newWord: 'inside', category: 'adverbs',
+    knownWords: ['cat', 'outside'], sentence: 'Where is the TV?',
+    imageKey: 'a1/adv-inside', options: ['inside', 'outside', 'alone'], answer: 'inside',
+    answerPhrase: 'The TV is inside the house.' },
 ];
 
 /** Strip punctuation and lowercase a sentence into word tokens. */

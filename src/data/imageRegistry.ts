@@ -127,6 +127,13 @@ const registry: Record<string, ImageSourcePropType> = {
   'a1/num-eight':    require('../../assets/images/a1/8-cars.png'),
   'a1/num-nine':     require('../../assets/images/a1/9-animals.png'),
   'a1/num-ten':      require('../../assets/images/a1/10-fishes.png'),
+  // Adverbs
+  'a1/adv-quietly':  require('../../assets/images/a1/adv-quietly.jpg'),
+  'a1/adv-loudly':   require('../../assets/images/a1/adv-loudly.jpg'),
+  'a1/adv-alone':    require('../../assets/images/a1/adv-alone.jpg'),
+  'a1/adv-together': require('../../assets/images/a1/adv-together.jpg'),
+  'a1/adv-outside':  require('../../assets/images/a1/adv-outside.jpg'),
+  'a1/adv-inside':   require('../../assets/images/a1/adv-inside.jpg'),
 };
 
 /** Resolve a bundled image key, or undefined for an unknown/remote key. */
