@@ -27,6 +27,7 @@ export const A1_CARDS: LessonCard[] = [
     imageKey: 'a1/boy',
     options: ['boy', 'girl', 'dog'],
     answer: 'boy',
+    answerPhrase: 'This is a boy.',
   },
   {
     order: 2,
@@ -38,6 +39,7 @@ export const A1_CARDS: LessonCard[] = [
     imageKey: 'a1/girl',
     options: ['girl', 'boy', 'dog'],
     answer: 'girl',
+    answerPhrase: 'This is a girl.',
   },
   {
     order: 3,
@@ -49,6 +51,7 @@ export const A1_CARDS: LessonCard[] = [
     imageKey: 'a1/dog',
     options: ['dog', 'boy', 'girl'],
     answer: 'dog',
+    answerPhrase: 'This is a dog.',
   },
   {
     order: 4,
@@ -60,6 +63,7 @@ export const A1_CARDS: LessonCard[] = [
     imageKey: 'a1/dog-run',
     options: ['run', 'eat', 'sleep'],
     answer: 'run',
+    answerPhrase: 'The dog is running.',
   },
   {
     order: 5,
@@ -71,6 +75,7 @@ export const A1_CARDS: LessonCard[] = [
     imageKey: 'a1/boy-eat',
     options: ['eat', 'run', 'sleep'],
     answer: 'eat',
+    answerPhrase: 'The boy is eating.',
   },
   {
     order: 6,
@@ -82,6 +87,7 @@ export const A1_CARDS: LessonCard[] = [
     imageKey: 'a1/girl-happy',
     options: ['happy', 'sad', 'angry'],
     answer: 'happy',
+    answerPhrase: 'The girl is happy.',
   },
   {
     order: 7,
@@ -93,6 +99,7 @@ export const A1_CARDS: LessonCard[] = [
     imageKey: 'a1/dog-run-fast',
     options: ['fast', 'slow', 'happy'],
     answer: 'fast',
+    answerPhrase: 'The dog runs fast.',
   },
   {
     order: 8,
@@ -104,6 +111,7 @@ export const A1_CARDS: LessonCard[] = [
     imageKey: 'a1/boy-sad',
     options: ['sad', 'happy', 'angry'],
     answer: 'sad',
+    answerPhrase: 'The boy is sad.',
   },
   {
     order: 9,
@@ -115,6 +123,7 @@ export const A1_CARDS: LessonCard[] = [
     imageKey: 'a1/dog-angry',
     options: ['angry', 'sad', 'happy'],
     answer: 'angry',
+    answerPhrase: 'The dog is angry.',
   },
   {
     order: 10,

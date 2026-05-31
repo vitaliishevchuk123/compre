@@ -1,12 +1,15 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
+  Animated,
   ActivityIndicator,
   Image,
+  PanResponder,
   Pressable,
   StyleSheet,
   Text,
   View,
 } from 'react-native';
+import * as Speech from 'expo-speech';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { A1_CARDS } from '../data/seed/a1';
 import { getImage } from '../data/imageRegistry';
@@ -31,8 +34,8 @@ export default function LessonScreen({ navigation }: LessonProps) {
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
+  const [isReplaying, setIsReplaying] = useState(false);
 
-  // Map the level's words to their db ids so answers can be persisted.
   useEffect(() => {
     getWordsByLevel('A1').then((words) => {
       setWordIds(new Map(words.map((w) => [w.word, w.id])));
@@ -41,6 +44,25 @@ export default function LessonScreen({ navigation }: LessonProps) {
 
   const card: LessonCard = A1_CARDS[index];
   const options = useMemo(() => shuffle(card.options), [card]);
+  const prompt = card.kind === 'sentence' ? 'Which sentence?' : (card.sentence ?? 'What is this?');
+
+  useEffect(() => {
+    Speech.speak(prompt, { language: 'en-US', rate: 0.85 });
+    return () => { Speech.stop(); };
+  }, [index]);
+
+  // Keep refs so PanResponder (created once) can read latest state.
+  const answeredRef = useRef(false);
+  const nextRef = useRef<() => void>(() => {});
+  answeredRef.current = selected !== null;
+
+  const swipe = useMemo(() => PanResponder.create({
+    onMoveShouldSetPanResponder: (_, g) =>
+      Math.abs(g.dx) > 10 && Math.abs(g.dx) > Math.abs(g.dy),
+    onPanResponderRelease: (_, g) => {
+      if (g.dx < -50 && answeredRef.current) nextRef.current();
+    },
+  }), []);
 
   if (!wordIds) {
     return (
@@ -52,15 +74,6 @@ export default function LessonScreen({ navigation }: LessonProps) {
 
   const answered = selected !== null;
 
-  function choose(option: string) {
-    if (answered) return;
-    setSelected(option);
-    const correct = option === card.answer;
-    if (correct) setCorrectCount((c) => c + 1);
-    const id = wordIds!.get(card.answer);
-    if (id != null) void recordAnswer(id, correct);
-  }
-
   async function next() {
     if (index + 1 >= A1_CARDS.length) {
       await completeLesson(correctCount);
@@ -69,13 +82,25 @@ export default function LessonScreen({ navigation }: LessonProps) {
     }
     setIndex((i) => i + 1);
     setSelected(null);
+    setIsReplaying(false);
+  }
+  nextRef.current = next;
+
+  function choose(option: string) {
+    if (answered) return;
+    setSelected(option);
+    const correct = option === card.answer;
+    if (correct) setCorrectCount((c) => c + 1);
+    const id = wordIds!.get(card.answer);
+    if (id != null) void recordAnswer(id, correct);
+    Speech.stop();
+    Speech.speak(card.answerPhrase ?? card.answer, { language: 'en-US', rate: 0.85 });
   }
 
   const isLast = index + 1 >= A1_CARDS.length;
-  const isSentence = card.kind === 'sentence';
 
   return (
-    <SafeAreaView style={styles.container} edges={['bottom']}>
+    <SafeAreaView style={styles.container} edges={['bottom']} {...swipe.panHandlers}>
       <Text style={styles.progress}>
         {index + 1} / {A1_CARDS.length}
       </Text>
@@ -89,9 +114,16 @@ export default function LessonScreen({ navigation }: LessonProps) {
             resizeMode="contain"
           />
         </View>
-        <Text style={styles.prompt}>
-          {isSentence ? 'Which sentence?' : card.sentence ?? 'What is this?'}
-        </Text>
+        <View style={styles.promptRow}>
+          <Text style={styles.prompt}>{prompt}</Text>
+          <Pressable
+            style={({ pressed }) => [styles.speakBtn, pressed && styles.speakBtnPressed]}
+            onPress={() => Speech.speak(prompt, { language: 'en-US', rate: 0.85 })}
+            hitSlop={10}
+          >
+            <Text style={styles.speakIcon}>🔊</Text>
+          </Pressable>
+        </View>
       </View>
 
       <View style={styles.options}>
@@ -99,24 +131,44 @@ export default function LessonScreen({ navigation }: LessonProps) {
           <Option
             key={option}
             label={option}
-            sentence={isSentence}
+            sentence={card.kind === 'sentence'}
             state={optionState(option, card.answer, selected)}
+            pulse={isReplaying && option === card.answer}
             onPress={() => choose(option)}
           />
         ))}
       </View>
 
-      <Pressable
-        disabled={!answered}
-        style={({ pressed }) => [
-          styles.next,
-          !answered && styles.nextDisabled,
-          pressed && answered && styles.nextPressed,
-        ]}
-        onPress={next}
-      >
-        <Text style={styles.nextText}>{isLast ? 'Finish' : 'Next'}</Text>
-      </Pressable>
+      <View style={styles.bottomRow}>
+        {answered && (
+          <Pressable
+            style={({ pressed }) => [styles.replayBtn, pressed && styles.replayBtnPressed]}
+            onPress={() => {
+              setIsReplaying(true);
+              Speech.stop();
+              Speech.speak(card.answerPhrase ?? card.answer, {
+                language: 'en-US',
+                rate: 0.85,
+                onDone: () => setIsReplaying(false),
+                onStopped: () => setIsReplaying(false),
+              });
+            }}
+          >
+            <Text style={styles.replayText}>Say the answer 🔊</Text>
+          </Pressable>
+        )}
+        <Pressable
+          disabled={!answered}
+          style={({ pressed }) => [
+            styles.next,
+            !answered && styles.nextDisabled,
+            pressed && answered && styles.nextPressed,
+          ]}
+          onPress={next}
+        >
+          <Text style={styles.nextText}>{isLast ? 'Finish' : 'Next'}</Text>
+        </Pressable>
+      </View>
     </SafeAreaView>
   );
 }
@@ -138,29 +190,55 @@ function Option({
   label,
   state,
   sentence,
+  pulse,
   onPress,
 }: {
   label: string;
   state: OptionVisual;
   sentence?: boolean;
+  pulse?: boolean;
   onPress: () => void;
 }) {
+  const anim = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    if (pulse) {
+      Animated.loop(
+        Animated.sequence([
+          Animated.timing(anim, { toValue: 1, duration: 400, useNativeDriver: true }),
+          Animated.timing(anim, { toValue: 0, duration: 400, useNativeDriver: true }),
+        ])
+      ).start();
+    } else {
+      anim.stopAnimation();
+      anim.setValue(0);
+    }
+  }, [pulse]);
+
   return (
-    <Pressable
-      style={[styles.option, OPTION_STYLE[state]]}
-      onPress={onPress}
-      disabled={state !== 'idle'}
+    <Animated.View
+      style={[
+        styles.option,
+        OPTION_STYLE[state],
+        pulse && { opacity: anim.interpolate({ inputRange: [0, 1], outputRange: [1, 0.25] }) },
+      ]}
     >
-      <Text
-        style={[
-          styles.optionText,
-          sentence && styles.optionTextSentence,
-          state === 'muted' && styles.optionTextMuted,
-        ]}
+      <Pressable
+        style={styles.optionInner}
+        onPress={onPress}
+        disabled={state !== 'idle'}
       >
-        {label}
-      </Text>
-    </Pressable>
+        <Text
+          style={[
+            styles.optionText,
+            sentence && styles.optionTextSentence,
+            state === 'muted' && styles.optionTextMuted,
+          ]}
+        >
+          {label}
+        </Text>
+      </Pressable>
+    </Animated.View>
   );
 }
 
@@ -215,16 +293,36 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   image: { width: '100%', height: '100%' },
+  promptRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 20,
+    gap: 10,
+  },
   prompt: {
     fontSize: 22,
     fontWeight: '700',
     color: theme.textPrimary,
     textAlign: 'center',
-    marginTop: 20,
+    flexShrink: 1,
   },
+  speakBtn: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: theme.option,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  speakBtnPressed: { opacity: 0.6 },
+  speakIcon: { fontSize: 18 },
   options: { gap: 12, marginTop: 24 },
   option: {
     borderRadius: theme.radiusSm,
+    overflow: 'hidden',
+  },
+  optionInner: {
     paddingVertical: 18,
     paddingHorizontal: 16,
     alignItems: 'center',
@@ -238,8 +336,23 @@ const styles = StyleSheet.create({
   },
   optionTextSentence: { fontSize: 17, fontWeight: '600' },
   optionTextMuted: { color: theme.textSecondary },
-  next: {
+  bottomRow: {
     marginTop: 'auto',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  replayBtn: {
+    flex: 1,
+    backgroundColor: theme.option,
+    borderRadius: theme.radius,
+    paddingVertical: 18,
+    alignItems: 'center',
+  },
+  replayBtnPressed: { opacity: 0.7 },
+  replayText: { color: theme.textPrimary, fontSize: 18, fontWeight: '700' },
+  next: {
+    flex: 1,
     backgroundColor: theme.accent,
     borderRadius: theme.radius,
     paddingVertical: 18,

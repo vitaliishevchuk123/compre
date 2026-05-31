@@ -53,5 +53,7 @@ export interface LessonCard {
   options: string[];
   /** correct option (a word or a full sentence depending on `kind`). */
   answer: string;
+  /** Full phrase spoken aloud after the user answers. Falls back to `answer`. */
+  answerPhrase?: string;
   category: string;
 }
