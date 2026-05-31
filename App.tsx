@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import HomeScreen from './src/screens/HomeScreen';
 import LessonScreen from './src/screens/LessonScreen';
+import { VoiceProvider } from './src/context/VoiceContext';
 import { A1_CARDS, validateCards } from './src/data/seed/a1';
 import { theme } from './src/theme';
 import type { RootStackParamList } from './src/navigation';
@@ -24,6 +25,7 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
+    <VoiceProvider>
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
@@ -46,6 +48,7 @@ export default function App() {
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style="auto" />
+    </VoiceProvider>
     </SafeAreaProvider>
   );
 }

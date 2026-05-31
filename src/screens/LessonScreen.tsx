@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import * as Speech from 'expo-speech';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useVoice } from '../context/VoiceContext';
 import { A1_CARDS } from '../data/seed/a1';
 import { getImage } from '../data/imageRegistry';
 import { getWordsByLevel, recordAnswer } from '../db/words';
@@ -35,6 +36,7 @@ export default function LessonScreen({ navigation }: LessonProps) {
   const [selected, setSelected] = useState<string | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
   const [isReplaying, setIsReplaying] = useState(false);
+  const { voiceId } = useVoice();
 
   useEffect(() => {
     getWordsByLevel('A1').then((words) => {
@@ -46,10 +48,16 @@ export default function LessonScreen({ navigation }: LessonProps) {
   const options = useMemo(() => shuffle(card.options), [card]);
   const prompt = card.kind === 'sentence' ? 'Which sentence?' : (card.sentence ?? 'What is this?');
 
+  function speak(text: string, extra?: Speech.SpeechOptions) {
+    const opts: Speech.SpeechOptions = { language: 'en-US', rate: 0.85, ...extra };
+    if (voiceId) opts.voice = voiceId;
+    Speech.speak(text, opts);
+  }
+
   useEffect(() => {
-    Speech.speak(prompt, { language: 'en-US', rate: 0.85 });
+    speak(prompt);
     return () => { Speech.stop(); };
-  }, [index]);
+  }, [index, voiceId]);
 
   // Keep refs so PanResponder (created once) can read latest state.
   const answeredRef = useRef(false);
@@ -94,7 +102,7 @@ export default function LessonScreen({ navigation }: LessonProps) {
     const id = wordIds!.get(card.answer);
     if (id != null) void recordAnswer(id, correct);
     Speech.stop();
-    Speech.speak(card.answerPhrase ?? card.answer, { language: 'en-US', rate: 0.85 });
+    speak(card.answerPhrase ?? card.answer);
   }
 
   const isLast = index + 1 >= A1_CARDS.length;
@@ -118,7 +126,7 @@ export default function LessonScreen({ navigation }: LessonProps) {
           <Text style={styles.prompt}>{prompt}</Text>
           <Pressable
             style={({ pressed }) => [styles.speakBtn, pressed && styles.speakBtnPressed]}
-            onPress={() => Speech.speak(prompt, { language: 'en-US', rate: 0.85 })}
+            onPress={() => speak(prompt)}
             hitSlop={10}
           >
             <Text style={styles.speakIcon}>🔊</Text>
@@ -146,9 +154,7 @@ export default function LessonScreen({ navigation }: LessonProps) {
             onPress={() => {
               setIsReplaying(true);
               Speech.stop();
-              Speech.speak(card.answerPhrase ?? card.answer, {
-                language: 'en-US',
-                rate: 0.85,
+              speak(card.answerPhrase ?? card.answer, {
                 onDone: () => setIsReplaying(false),
                 onStopped: () => setIsReplaying(false),
               });
