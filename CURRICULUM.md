@@ -58,7 +58,7 @@ upstairs, downstairs, away, far, quietly, loudly, alone, together, outside, insi
 
 ---
 
-**Current status:** cards 1–292 done
+**Current status:** cards 1–302 done
 - People: boy, girl, man, woman, baby, friend, child, teenager, adult, person, neighbour
 - Family: mother, father, brother, sister, son, daughter, grandma, grandpa, husband, wife, aunt, uncle, cousin, parent
 - Body: head, eye, ear, nose, mouth, hand, foot, arm, leg, hair, face, tooth
@@ -73,7 +73,7 @@ upstairs, downstairs, away, far, quietly, loudly, alone, together, outside, insi
 - Jobs: doctor, teacher, nurse, farmer, driver, waiter, police, singer, worker, student
 - Time: morning, afternoon, evening, night, day, week, month, year
 - Actions: run, eat, sleep, jump, drink, play, walk, sit, stand, read, write, talk, listen, go, come, open, give, see, swim, cook, sing, dance, laugh, ride, fly, climb, draw, drive, wash, wear, love, look, call, help
-- Adjectives: big, small, fast, slow, hot, cold, good, bad, old, young, tall, short, long, new, dirty
+- Adjectives: big, small, fast, slow, hot, cold, good, bad, old, young, tall, short, long, new, dirty, clean, warm, beautiful, dark, full, funny, quiet, hard, healthy, large
 - Emotions: happy, sad, angry, afraid, excited, bored, tired, sick, hungry, thirsty
 - Nature: tree, flower, sun, rain, snow, cloud, sea, river, mountain, island, rock, beach, farm, garden, plant, fire, ice, air, spring, summer, autumn, winter
 - Adverbs: quietly, loudly, alone, together, outside, inside, always, never, often, sometimes, again, away, far, now, usually, really, also, maybe, well, upstairs, downstairs
