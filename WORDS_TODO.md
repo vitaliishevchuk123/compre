@@ -47,8 +47,8 @@
 ✓ happy, sad, angry, afraid, excited, bored, tired, sick, hungry, thirsty
 
 ## adjectives
-✓ big, small, fast, slow, hot, cold, good, bad, old, young, tall, short, long
-— beautiful, clean, dirty, new, dark, easy, difficult, expensive, cheap, free, full, funny, great, hard, healthy, large, late, nice, popular, quiet, ready, rich, strong, terrible, warm, wonderful, wrong, fat, important, interesting, special
+✓ big, small, fast, slow, hot, cold, good, bad, old, young, tall, short, long, new, dirty
+— beautiful, clean, dark, easy, difficult, expensive, cheap, free, full, funny, great, hard, healthy, large, late, nice, popular, quiet, ready, rich, strong, terrible, warm, wonderful, wrong, fat, important, interesting, special
 
 ## nature
 ✓ tree, flower, sun, rain, snow, cloud, sea, river, mountain, island, rock, beach, farm, garden, plant, fire, ice, air, spring, summer, autumn, winter

@@ -1587,6 +1587,16 @@ export const A1_CARDS: LessonCard[] = [
     sentence: 'What is the girl doing?',
     imageKey: 'a1/help', options: ['help', 'give', 'play'], answer: 'help',
     answerPhrase: 'The girl is helping.' },
+  { order: 291, kind: 'word', newWord: 'new', category: 'adjectives',
+    knownWords: ['car', 'old', 'big'],
+    sentence: 'How is the car?',
+    imageKey: 'a1/adj-new', options: ['new', 'old', 'big'], answer: 'new',
+    answerPhrase: 'The car is new.' },
+  { order: 292, kind: 'word', newWord: 'dirty', category: 'adjectives',
+    knownWords: ['cup', 'new', 'old'],
+    sentence: 'How is the cup?',
+    imageKey: 'a1/adj-dirty', options: ['dirty', 'clean', 'new'], answer: 'dirty',
+    answerPhrase: 'The cup is dirty.' },
 ];
 
 /** Strip punctuation and lowercase a sentence into word tokens. */

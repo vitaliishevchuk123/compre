@@ -108,6 +108,8 @@ const registry: Record<string, ImageSourcePropType> = {
   'a1/man-tall':     require('../../assets/images/a1/man-tall.jpg'),
   'a1/woman-short':  require('../../assets/images/a1/woman-short.png'),
   'a1/road-long':    require('../../assets/images/a1/road-long.jpg'),
+  'a1/adj-new':      require('../../assets/images/a1/adj-new.jpg'),
+  'a1/adj-dirty':    require('../../assets/images/a1/adj-dirty.jpg'),
   // Nature
   'a1/tree':         require('../../assets/images/a1/tree.jpg'),
   'a1/flower':       require('../../assets/images/a1/flower.jpg'),
