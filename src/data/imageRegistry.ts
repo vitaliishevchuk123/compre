@@ -271,6 +271,28 @@ const registry: Record<string, ImageSourcePropType> = {
   'a1/thirsty':      require('../../assets/images/a1/thirsty.png'),
   // Time
   'a1/morning':      require('../../assets/images/a1/morning.jpg'),
+  'a1/afternoon':    require('../../assets/images/a1/afternoon.jpg'),
+  'a1/evening':      require('../../assets/images/a1/evening.jpg'),
+  'a1/night':        require('../../assets/images/a1/night.jpg'),
+  'a1/day':          require('../../assets/images/a1/day.jpg'),
+  'a1/week':         require('../../assets/images/a1/week.jpg'),
+  'a1/month':        require('../../assets/images/a1/month.jpg'),
+  'a1/year':         require('../../assets/images/a1/year.jpg'),
+  // Family (extension)
+  'a1/friend':       require('../../assets/images/a1/friend.jpg'),
+  'a1/son':          require('../../assets/images/a1/son.jpg'),
+  'a1/daughter':     require('../../assets/images/a1/daughter.jpg'),
+  'a1/husband':      require('../../assets/images/a1/husband.jpg'),
+  'a1/wife':         require('../../assets/images/a1/wife.jpg'),
+  // Adverbs (frequency & more)
+  'a1/adv-always':   require('../../assets/images/a1/adv-always.jpg'),
+  'a1/adv-never':    require('../../assets/images/a1/adv-never.jpg'),
+  'a1/adv-often':    require('../../assets/images/a1/adv-often.jpg'),
+  'a1/adv-sometimes':require('../../assets/images/a1/adv-sometimes.jpg'),
+  'a1/adv-again':    require('../../assets/images/a1/adv-again.jpg'),
+  'a1/adv-away':     require('../../assets/images/a1/adv-away.jpg'),
+  'a1/adv-far':      require('../../assets/images/a1/adv-far.jpg'),
+  'a1/adv-now':      require('../../assets/images/a1/adv-now.jpg'),
 };
 
 /** Resolve a bundled image key, or undefined for an unknown/remote key. */
