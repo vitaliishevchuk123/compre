@@ -126,8 +126,7 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
   const isLast = index + 1 >= CARDS.length;
 
   function back() {
-    if (index === 0) return;
-    const prevIndex = index - 1;
+    const prevIndex = index === 0 ? CARDS.length - 1 : index - 1;
     Speech.stop();
     setIndex(prevIndex);
     setSelected(null);
@@ -140,14 +139,12 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
       <View style={styles.progressRow}>
         <Pressable
           onPress={back}
-          disabled={index === 0}
           style={({ pressed }) => [
             styles.prevBtn,
-            index === 0 && styles.prevBtnDisabled,
-            pressed && index > 0 && styles.prevBtnPressed,
+            pressed && styles.prevBtnPressed,
           ]}
         >
-          <Text style={[styles.prevBtnText, index === 0 && styles.prevBtnTextDisabled]}>Prev</Text>
+          <Text style={styles.prevBtnText}>Prev</Text>
         </Pressable>
         <Text style={styles.progress}>{index + 1} / {CARDS.length}</Text>
       </View>
@@ -333,10 +330,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     alignItems: 'center',
   },
-  prevBtnDisabled: { opacity: 0.35 },
   prevBtnPressed: { opacity: 0.6 },
   prevBtnText: { fontSize: 14, fontWeight: '700', color: '#fff' },
-  prevBtnTextDisabled: { color: '#fff' },
   card: {
     backgroundColor: theme.card,
     borderRadius: theme.radius,
