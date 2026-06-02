@@ -58,7 +58,7 @@ upstairs, downstairs, away, far, quietly, loudly, alone, together, outside, insi
 
 ---
 
-**Current status:** cards 1–312 done
+**Current status:** cards 1–322 done
 - People: boy, girl, man, woman, baby, friend, child, teenager, adult, person, neighbour
 - Family: mother, father, brother, sister, son, daughter, grandma, grandpa, husband, wife, aunt, uncle, cousin, parent
 - Body: head, eye, ear, nose, mouth, hand, foot, arm, leg, hair, face, tooth
@@ -72,8 +72,8 @@ upstairs, downstairs, away, far, quietly, loudly, alone, together, outside, insi
 - Transport: bus, bike, boat, plane, train, taxi
 - Jobs: doctor, teacher, nurse, farmer, driver, waiter, police, singer, worker, student
 - Time: morning, afternoon, evening, night, day, week, month, year
-- Actions: run, eat, sleep, jump, drink, play, walk, sit, stand, read, write, talk, listen, go, come, open, give, see, swim, cook, sing, dance, laugh, ride, fly, climb, draw, drive, wash, wear, love, look, call, help, buy, think, make, stop, ask, find, say, wait, wake, meet
-- Adjectives: big, small, fast, slow, hot, cold, good, bad, old, young, tall, short, long, new, dirty, clean, warm, beautiful, dark, full, funny, quiet, hard, healthy, large
+- Actions: run, eat, sleep, jump, drink, play, walk, sit, stand, read, write, talk, listen, go, come, open, give, see, swim, cook, sing, dance, laugh, ride, fly, climb, draw, drive, wash, wear, love, look, call, help, buy, think, make, stop, ask, find, say, wait, wake, meet, take, put, work, learn, start, fall, hear, leave
+- Adjectives: big, small, fast, slow, hot, cold, good, bad, old, young, tall, short, long, new, dirty, clean, warm, beautiful, dark, full, funny, quiet, hard, healthy, large, strong, nice
 - Emotions: happy, sad, angry, afraid, excited, bored, tired, sick, hungry, thirsty
 - Nature: tree, flower, sun, rain, snow, cloud, sea, river, mountain, island, rock, beach, farm, garden, plant, fire, ice, air, spring, summer, autumn, winter
 - Adverbs: quietly, loudly, alone, together, outside, inside, always, never, often, sometimes, again, away, far, now, usually, really, also, maybe, well, upstairs, downstairs

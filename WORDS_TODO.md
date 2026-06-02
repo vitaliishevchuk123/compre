@@ -42,14 +42,15 @@
 ✓ run, eat, sleep, jump, drink, play, walk, sit, stand, read, write, talk, listen, go, come, open, give, see, swim
 ✓ cook, sing, dance, laugh, ride, fly, climb, draw, drive, wash, wear, love, look, call, help
 ✓ buy, think, make, stop, ask, find, say, wait, wake, meet
-— hate, know, need, put, take, bring, start, speak, learn, leave, win, break, fall, travel, visit, feel, hear, live, work, study, pay, carry, cut, grow, try, remember, move, build, want
+✓ take, put, work, learn, start, fall, hear, leave
+— hate, know, need, bring, speak, win, break, travel, visit, feel, live, study, pay, carry, cut, grow, try, remember, move, build, want
 
 ## emotions
 ✓ happy, sad, angry, afraid, excited, bored, tired, sick, hungry, thirsty
 
 ## adjectives
-✓ big, small, fast, slow, hot, cold, good, bad, old, young, tall, short, long, new, dirty, clean, warm, beautiful, dark, full, funny, quiet, hard, healthy, large
-— easy, difficult, expensive, cheap, free, great, late, nice, popular, ready, rich, strong, terrible, wonderful, wrong, fat, important, interesting, special
+✓ big, small, fast, slow, hot, cold, good, bad, old, young, tall, short, long, new, dirty, clean, warm, beautiful, dark, full, funny, quiet, hard, healthy, large, strong, nice
+— easy, difficult, expensive, cheap, free, great, late, popular, ready, rich, terrible, wonderful, wrong, fat, important, interesting, special
 
 ## nature
 ✓ tree, flower, sun, rain, snow, cloud, sea, river, mountain, island, rock, beach, farm, garden, plant, fire, ice, air, spring, summer, autumn, winter
