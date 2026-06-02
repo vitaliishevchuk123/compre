@@ -1,5 +1,5 @@
 ---
-description: Add new vocabulary words with Unsplash images to the Compre A1 lesson sequence
+description: Add new vocabulary words with Pexels images to the Compre A1 lesson sequence
 ---
 
 # How to add new words to Compre
@@ -152,6 +152,31 @@ print(f'https://images.pexels.com/photos/{pid}/pexels-photo-{pid}.jpeg?auto=comp
 curl -sL "$(cat /tmp/fix_url.txt)" -o assets/images/a1/broken.jpg
 ls -lh assets/images/a1/broken.jpg
 ```
+
+---
+
+## Step 3.5 — Analyze images for CI quality
+
+After downloading, **read each image visually** using the `Read` tool and evaluate from a Comprehensible Input perspective. The image must convey the word unambiguously without any text or translation.
+
+**CI image checklist:**
+- [ ] The action/concept is immediately obvious (no guessing needed)
+- [ ] No competing interpretations (e.g. "dance" can't look like "point")
+- [ ] A person is visible when the word is an action verb
+- [ ] The image is not too dark, blurry, or abstract
+- [ ] No text in the image that gives away the answer
+- [ ] The subject matches the card sentence (e.g. sentence says "girl" → image shows a girl)
+
+**Common failure patterns to watch for:**
+
+| Word type | Typical bad result | Fix |
+|-----------|-------------------|-----|
+| Action verb | Object shown instead of person doing action (`draw` → pencils, `look` → binoculars) | Search "person [verb]-ing" |
+| Action verb | Wrong action visible (`dance` → pointing, `drive` → passenger view) | Add context: "man at steering wheel", "ballet dancer" |
+| Abstract noun | Too dark/artistic/symbolic (`love` → dark silhouette) | Search concrete symbol: "red heart" |
+| Action verb | No person at all | Always include "person" or subject in query |
+
+**If an image fails:** re-run the Pexels query with a more specific search term. Fetch 3–5 candidates (`per_page=5`), download all to `/tmp/`, view each with `Read`, then copy the best one.
 
 ---
 

@@ -293,6 +293,41 @@ const registry: Record<string, ImageSourcePropType> = {
   'a1/adv-away':     require('../../assets/images/a1/adv-away.jpg'),
   'a1/adv-far':      require('../../assets/images/a1/adv-far.jpg'),
   'a1/adv-now':      require('../../assets/images/a1/adv-now.jpg'),
+  // People (extension)
+  'a1/child':        require('../../assets/images/a1/child.jpg'),
+  'a1/teenager':     require('../../assets/images/a1/teenager.jpg'),
+  'a1/adult':        require('../../assets/images/a1/adult.jpg'),
+  'a1/person':       require('../../assets/images/a1/person.jpg'),
+  'a1/neighbour':    require('../../assets/images/a1/neighbour.jpg'),
+  // Family (extension 2)
+  'a1/aunt':         require('../../assets/images/a1/aunt.jpg'),
+  'a1/uncle':        require('../../assets/images/a1/uncle.jpg'),
+  'a1/cousin':       require('../../assets/images/a1/cousin.jpg'),
+  'a1/parent':       require('../../assets/images/a1/parent.jpg'),
+  // Adverbs (extension 2)
+  'a1/adv-usually':  require('../../assets/images/a1/adv-usually.jpg'),
+  'a1/adv-really':   require('../../assets/images/a1/adv-really.jpg'),
+  'a1/adv-also':     require('../../assets/images/a1/adv-also.jpg'),
+  'a1/adv-maybe':    require('../../assets/images/a1/adv-maybe.jpg'),
+  'a1/adv-well':     require('../../assets/images/a1/adv-well.jpg'),
+  'a1/adv-upstairs': require('../../assets/images/a1/adv-upstairs.jpg'),
+  'a1/adv-downstairs':require('../../assets/images/a1/adv-downstairs.jpg'),
+  // Actions (extension)
+  'a1/cook':         require('../../assets/images/a1/cook.jpg'),
+  'a1/sing':         require('../../assets/images/a1/sing.jpg'),
+  'a1/dance':        require('../../assets/images/a1/dance.jpg'),
+  'a1/laugh':        require('../../assets/images/a1/laugh.jpg'),
+  'a1/ride':         require('../../assets/images/a1/ride.jpg'),
+  'a1/fly':          require('../../assets/images/a1/fly.jpg'),
+  'a1/climb':        require('../../assets/images/a1/climb.jpg'),
+  'a1/draw':         require('../../assets/images/a1/draw.jpg'),
+  'a1/drive':        require('../../assets/images/a1/drive.jpg'),
+  'a1/wash':         require('../../assets/images/a1/wash.jpg'),
+  'a1/wear':         require('../../assets/images/a1/wear.jpg'),
+  'a1/love':         require('../../assets/images/a1/love.jpg'),
+  'a1/look':         require('../../assets/images/a1/look.jpg'),
+  'a1/call':         require('../../assets/images/a1/call.jpg'),
+  'a1/help':         require('../../assets/images/a1/help.jpg'),
 };
 
 /** Resolve a bundled image key, or undefined for an unknown/remote key. */
