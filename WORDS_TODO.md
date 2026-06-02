@@ -41,7 +41,8 @@
 ## actions
 ✓ run, eat, sleep, jump, drink, play, walk, sit, stand, read, write, talk, listen, go, come, open, give, see, swim
 ✓ cook, sing, dance, laugh, ride, fly, climb, draw, drive, wash, wear, love, look, call, help
-— buy, hate, know, think, need, make, put, take, bring, find, start, stop, ask, speak, learn, leave, win, break, fall, wake, wait, travel, visit, feel, hear, say, meet, live, work, study, pay, carry, cut, grow, try, remember, move, build, want
+✓ buy, think, make, stop, ask, find, say, wait, wake, meet
+— hate, know, need, put, take, bring, start, speak, learn, leave, win, break, fall, travel, visit, feel, hear, live, work, study, pay, carry, cut, grow, try, remember, move, build, want
 
 ## emotions
 ✓ happy, sad, angry, afraid, excited, bored, tired, sick, hungry, thirsty
