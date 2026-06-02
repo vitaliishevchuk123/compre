@@ -360,6 +360,16 @@ const registry: Record<string, ImageSourcePropType> = {
   'a1/look':         require('../../assets/images/a1/look.jpg'),
   'a1/call':         require('../../assets/images/a1/call.jpg'),
   'a1/help':         require('../../assets/images/a1/help.jpg'),
+  'a1/act-hate':     require('../../assets/images/a1/act-hate.png'),
+  'a1/act-know':     require('../../assets/images/a1/act-know.png'),
+  'a1/act-need':     require('../../assets/images/a1/act-need.png'),
+  'a1/act-bring':    require('../../assets/images/a1/act-bring.png'),
+  'a1/act-speak':    require('../../assets/images/a1/act-speak.jpg'),
+  'a1/act-win':      require('../../assets/images/a1/act-win.png'),
+  'a1/act-break':    require('../../assets/images/a1/act-break.png'),
+  'a1/act-travel':   require('../../assets/images/a1/act-travel.png'),
+  'a1/act-visit':    require('../../assets/images/a1/act-visit.png'),
+  'a1/act-feel':     require('../../assets/images/a1/act-feel.jpg'),
 };
 
 /** Resolve a bundled image key, or undefined for an unknown/remote key. */

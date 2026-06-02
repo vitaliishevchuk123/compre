@@ -43,7 +43,8 @@
 ✓ cook, sing, dance, laugh, ride, fly, climb, draw, drive, wash, wear, love, look, call, help
 ✓ buy, think, make, stop, ask, find, say, wait, wake, meet
 ✓ take, put, work, learn, start, fall, hear, leave
-— hate, know, need, bring, speak, win, break, travel, visit, feel, live, study, pay, carry, cut, grow, try, remember, move, build, want
+✓ hate, know, need, bring, speak, win, break, travel, visit, feel
+— live, study, pay, carry, cut, grow, try, remember, move, build, want
 
 ## emotions
 ✓ happy, sad, angry, afraid, excited, bored, tired, sick, hungry, thirsty
