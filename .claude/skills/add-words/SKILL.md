@@ -34,9 +34,15 @@ grep "order:" src/data/seed/a1.ts | tail -5
 
 ---
 
-## Step 2 — Find Unsplash images (Playwright MCP)
+## Step 2 — Find images
 
-For each word, navigate to Unsplash search and extract the first photo URL:
+Choose one strategy. Prefer **Pexels** (Strategy 2) when results look better; fall back to **Unsplash** (Strategy 1) when Pexels returns too many similar shots or misses the concept.
+
+---
+
+### Strategy 1 — Unsplash (Playwright MCP)
+
+Navigate to Unsplash search and extract the first photo URL:
 
 ```javascript
 // Navigate to:
@@ -60,6 +66,48 @@ Skip non-Unsplash URLs (istockphoto, getty) — take the next result instead:
   .slice(0,1)
   .map(i => `${new URL(i.src).origin}${new URL(i.src).pathname}?w=800&h=800&fit=crop&auto=format&q=80`)[0]
 ```
+
+---
+
+### Strategy 2 — Pexels API
+
+**Pros:** great search relevance, free, often better for educational apps than Unsplash.  
+**Cons:** sometimes returns many similar-looking photos.
+
+Requires a free API key from [pexels.com/api](https://www.pexels.com/api/). Store it as `PEXELS_API_KEY` in the environment (or pass inline).
+
+Fetch the best photo URL for a word:
+```bash
+curl -s "https://api.pexels.com/v1/search?query=running+cat&per_page=1" \
+  -H "Authorization: $PEXELS_API_KEY" \
+  | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['photos'][0]['src']['large'])"
+```
+
+Batch-fetch multiple words and collect URLs into a shell array:
+```bash
+export PEXELS_API_KEY="YOUR_KEY_HERE"
+
+pexels_url() {
+  curl -s "https://api.pexels.com/v1/search?query=$(python3 -c "import urllib.parse,sys; print(urllib.parse.quote(sys.argv[1]))" "$1")&per_page=3&orientation=square" \
+    -H "Authorization: $PEXELS_API_KEY" \
+    | python3 -c "
+import sys, json
+photos = json.load(sys.stdin)['photos']
+# prefer square-ish photo; fall back to first
+best = sorted(photos, key=lambda p: abs(p['width']-p['height']))[0]
+print(best['src']['large'])
+"
+}
+
+# Example usage:
+pexels_url "running cat"
+pexels_url "horse beautiful"
+```
+
+`src` fields available: `original`, `large`, `large2x`, `medium`, `small`, `portrait`, `landscape`, `tiny`.  
+Use `large` (1280px wide) — good balance of quality and file size for mobile.
+
+If the first result looks wrong, bump `per_page` to 5 and inspect `photos[1]` or `photos[2]` instead.
 
 ---
 

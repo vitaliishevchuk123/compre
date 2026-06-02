@@ -1289,6 +1289,11 @@ export const A1_CARDS: LessonCard[] = [
     sentence: 'What is this?',
     imageKey: 'a1/winter', options: ['winter', 'autumn', 'spring'], answer: 'winter',
     answerPhrase: 'This is winter.' },
+  { order: 239, kind: 'word', newWord: 'morning', category: 'time',
+    knownWords: ['sun', 'day'],
+    sentence: 'What is this?',
+    imageKey: 'a1/morning', options: ['morning', 'evening', 'night'], answer: 'morning',
+    answerPhrase: 'This is morning.' },
 ];
 
 /** Strip punctuation and lowercase a sentence into word tokens. */

@@ -269,6 +269,8 @@ const registry: Record<string, ImageSourcePropType> = {
   'a1/sick':         require('../../assets/images/a1/sick.png'),
   'a1/hungry':       require('../../assets/images/a1/hungry-dog.png'),
   'a1/thirsty':      require('../../assets/images/a1/thirsty.png'),
+  // Time
+  'a1/morning':      require('../../assets/images/a1/morning.jpg'),
 };
 
 /** Resolve a bundled image key, or undefined for an unknown/remote key. */
