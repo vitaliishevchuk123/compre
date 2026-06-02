@@ -124,6 +124,35 @@ curl -sL "[URL]" -o [filename].jpg && echo "[word] ✓" &
 wait && echo "done"
 ```
 
+**After downloading, always validate — Pexels sometimes returns 404 HTML (~29 B) instead of a JPEG:**
+```bash
+for f in assets/images/a1/*.jpg; do
+  size=$(wc -c < "$f")
+  [ "$size" -lt 1024 ] && echo "BROKEN ($size B): $f"
+done
+```
+
+Re-fetch any broken file with a fresh Pexels query (the photo ID may have been deleted):
+```bash
+# Check what's inside before re-fetching
+cat assets/images/a1/broken.jpg   # will print <html><body>404</body></html>
+
+# Re-fetch with a new query, skipping the bad ID
+BAD_ID=12345678
+encoded=$(python3 -c "import urllib.parse,sys; print(urllib.parse.quote(sys.argv[1]))" "new search query")
+curl -s "https://api.pexels.com/v1/search?query=${encoded}&per_page=5&orientation=square" \
+  -H "Authorization: $PEXELS_API_KEY" \
+  | python3 -c "
+import sys,json
+photos=[p for p in json.load(sys.stdin)['photos'] if p['id']!=int('$BAD_ID')]
+best=sorted(photos,key=lambda p:abs(p['width']-p['height']))[0]
+pid=best['id']
+print(f'https://images.pexels.com/photos/{pid}/pexels-photo-{pid}.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop')
+" | tee /tmp/fix_url.txt
+curl -sL "$(cat /tmp/fix_url.txt)" -o assets/images/a1/broken.jpg
+ls -lh assets/images/a1/broken.jpg
+```
+
 ---
 
 ## Step 4 — Register images in imageRegistry.ts
