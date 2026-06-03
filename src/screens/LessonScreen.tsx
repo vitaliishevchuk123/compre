@@ -261,9 +261,7 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
           >
             <Text style={styles.prevBtnText}>Prev</Text>
           </Pressable>
-          <Pressable onPress={openJump} hitSlop={10} style={styles.progressPill}>
-            <Text style={styles.progress}>{index + 1} / {CARDS.length}</Text>
-          </Pressable>
+          <ProgressPill index={index} total={CARDS.length} onPress={openJump} />
         </View>
 
         <View style={styles.card}>
@@ -332,9 +330,7 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
         >
           <Text style={styles.prevBtnText}>Prev</Text>
         </Pressable>
-        <Pressable onPress={openJump} hitSlop={10}>
-          <Text style={styles.progress}>{index + 1} / {CARDS.length}</Text>
-        </Pressable>
+        <ProgressPill index={index} total={CARDS.length} onPress={openJump} />
       </View>
 
       {/* White lesson card: centered image + prompt */}
@@ -408,6 +404,14 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
       </View>
       {jumpModal}
     </SafeAreaView>
+  );
+}
+
+function ProgressPill({ index, total, onPress }: { index: number; total: number; onPress: () => void }) {
+  return (
+    <Pressable onPress={onPress} hitSlop={10} style={styles.progressPill}>
+      <Text style={styles.progress}>{index + 1} / {total}</Text>
+    </Pressable>
   );
 }
 
