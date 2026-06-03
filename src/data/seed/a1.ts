@@ -3153,11 +3153,11 @@ export const A1_CARDS: LessonCard[] = [
   {
     order: 350,
     category: 'adjectives',
-    sentence: 'How is the answer?',
+    sentence: 'How is the action?',
     imageKey: 'a1/adj-right',
     options: ['right', 'wrong', 'incorrect'],
     answer: 'right',
-    answerPhrase: 'The answer is right.',
+    answerPhrase: 'The action is right.',
   },
   {
     order: 351,
@@ -3198,11 +3198,11 @@ export const A1_CARDS: LessonCard[] = [
   {
     order: 355,
     category: 'adjectives',
-    sentence: 'How is the story?',
+    sentence: 'How is the film?',
     imageKey: 'a1/adj-interesting',
     options: ['interesting', 'boring', 'dull'],
     answer: 'interesting',
-    answerPhrase: 'The story is interesting.',
+    answerPhrase: 'The film is interesting.',
   },
   {
     order: 356,
