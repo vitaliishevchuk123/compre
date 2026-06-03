@@ -49,7 +49,7 @@ async function seedIfEmpty(db: SQLite.SQLiteDatabase): Promise<void> {
       const categoryId = categoryIdMap.get(card.category)!;
       await db.runAsync(
         'INSERT OR IGNORE INTO words (word, level, category_id, image, seq) VALUES (?, ?, ?, ?, ?)',
-        card.newWord,
+        card.answer,
         'A1',
         categoryId,
         card.imageKey,

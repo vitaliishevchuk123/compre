@@ -114,3 +114,22 @@ local-first and needs no account yet.)*
 repetition (SRS).
 
 **Phase 3** — cloud sync, AI stories & conversations, premium.
+
+
+Як самому запустити веб-версію
+
+З кореня проєкту (/Users/vitaliishevchuk/Documents/Work/domains/learning/compre):
+
+npm run web
+
+Це запускає expo start --web. Далі:
+- Expo підніме dev-сервер на http://localhost:8081 і зазвичай сам відкриє вкладку в браузері.
+- Якщо не відкрилась — зайди вручну на http://localhost:8081.
+- У терміналі натисни w, щоб відкрити web; r — перезавантажити; Ctrl+C — зупинити сервер.
+
+Корисне:
+- Порт зайнятий (як було щойно): expo спитає «Use port 8082 instead?». Або спершу звільни порт:
+  lsof -ti tcp:8081 | xargs kill -9
+- Чистий старт (якщо щось кешується дивно):
+  npx expo start --web -c
+

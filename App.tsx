@@ -17,7 +17,6 @@ import CategoryPickerScreen from './src/screens/CategoryPickerScreen';
 import WordsScreen from './src/screens/WordsScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 import { VoiceProvider } from './src/context/VoiceContext';
-import { A1_CARDS, validateCards } from './src/data/seed/a1';
 import { theme } from './src/theme';
 import type { RootStackParamList, TabParamList } from './src/navigation';
 
@@ -76,15 +75,6 @@ export default function App() {
   useEffect(() => {
     if (fontsLoaded) SplashScreen.hideAsync();
   }, [fontsLoaded]);
-
-  useEffect(() => {
-    if (__DEV__) {
-      const problems = validateCards(A1_CARDS);
-      if (problems.length) {
-        console.warn('Lesson invariant violations:\n' + problems.join('\n'));
-      }
-    }
-  }, []);
 
   return (
     <SafeAreaProvider>

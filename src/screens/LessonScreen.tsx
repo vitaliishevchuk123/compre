@@ -34,7 +34,7 @@ function shuffle<T>(arr: T[]): T[] {
 export default function LessonScreen({ navigation, route }: LessonProps) {
   const category = route.params?.category;
   const CARDS = category
-    ? A1_CARDS.filter((c) => c.kind === 'word' && c.category === category)
+    ? A1_CARDS.filter((c) => c.category === category)
     : A1_CARDS;
 
   const storageKey = `@lesson_index${category ? `_${category}` : ''}`;
@@ -61,7 +61,7 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
 
   const card: LessonCard = CARDS[index];
   const options = useMemo(() => shuffle(card.options), [card]);
-  const prompt = card.kind === 'sentence' ? 'Which sentence?' : (card.sentence ?? 'What is this?');
+  const prompt = card.sentence ?? 'What is this?';
 
   function speak(text: string, extra?: Speech.SpeechOptions) {
     const opts: Speech.SpeechOptions = { language: 'en-US', rate: 0.85, ...extra };
@@ -175,7 +175,7 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
           <Option
             key={option}
             label={option}
-            sentence={card.kind === 'sentence'}
+            sentence={false}
             state={optionState(option, card.answer, selected)}
             pulse={isReplaying && option === card.answer}
             onPress={() => choose(option)}

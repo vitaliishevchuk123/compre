@@ -35,13 +35,13 @@ export default function WordsScreen() {
     }, [])
   );
 
-  // Deduplicate by newWord, preserve order
+  // Deduplicate by word, preserve order
   const seen = new Set<string>();
   const rows: WordRow[] = [];
   for (const card of A1_CARDS) {
-    if (!seen.has(card.newWord)) {
-      seen.add(card.newWord);
-      rows.push({ word: card.newWord, category: card.category, status: null });
+    if (!seen.has(card.answer)) {
+      seen.add(card.answer);
+      rows.push({ word: card.answer, category: card.category, status: null });
     }
   }
 

@@ -26,7 +26,6 @@ type CategoryInfo = { name: string; imageKey: string; count: number };
 function getCategories(): CategoryInfo[] {
   const map = new Map<string, CategoryInfo>();
   for (const card of A1_CARDS) {
-    if (card.kind !== 'word') continue;
     if (!map.has(card.category)) {
       map.set(card.category, { name: card.category, imageKey: card.imageKey, count: 0 });
     }
@@ -35,7 +34,7 @@ function getCategories(): CategoryInfo[] {
   return Array.from(map.values());
 }
 
-const ALL_COUNT = A1_CARDS.filter((c) => c.kind === 'word').length;
+const ALL_COUNT = A1_CARDS.length;
 const CATEGORIES = getCategories();
 
 export default function CategoryPickerScreen({ navigation, route }: CategoryPickerProps) {
