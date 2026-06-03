@@ -16,7 +16,9 @@ import LessonScreen from './src/screens/LessonScreen';
 import CategoryPickerScreen from './src/screens/CategoryPickerScreen';
 import WordsScreen from './src/screens/WordsScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
+import SettingsScreen from './src/screens/SettingsScreen';
 import { VoiceProvider } from './src/context/VoiceContext';
+import { LearnSettingsProvider } from './src/context/LearnSettingsContext';
 import { theme } from './src/theme';
 import type { RootStackParamList, TabParamList } from './src/navigation';
 
@@ -26,9 +28,10 @@ const Tab = createBottomTabNavigator<TabParamList>();
 type IoniconName = React.ComponentProps<typeof Ionicons>['name'];
 
 const TAB_ICONS: Record<keyof TabParamList, { active: IoniconName; inactive: IoniconName }> = {
-  Home:    { active: 'home',           inactive: 'home-outline' },
-  Words:   { active: 'book',           inactive: 'book-outline' },
-  Profile: { active: 'person',         inactive: 'person-outline' },
+  Home:     { active: 'home',           inactive: 'home-outline' },
+  Words:    { active: 'book',           inactive: 'book-outline' },
+  Settings: { active: 'settings',       inactive: 'settings-outline' },
+  Profile:  { active: 'person',         inactive: 'person-outline' },
 };
 
 function TabNavigator() {
@@ -62,9 +65,10 @@ function TabNavigator() {
         },
       })}
     >
-      <Tab.Screen name="Home"    component={HomeScreen} />
-      <Tab.Screen name="Words"   component={WordsScreen} />
-      <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Screen name="Home"     component={HomeScreen} />
+      <Tab.Screen name="Words"    component={WordsScreen} />
+      <Tab.Screen name="Settings" component={SettingsScreen} />
+      <Tab.Screen name="Profile"  component={ProfileScreen} />
     </Tab.Navigator>
   );
 }
@@ -78,8 +82,9 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <VoiceProvider>
-        <NavigationContainer>
+      <LearnSettingsProvider>
+        <VoiceProvider>
+          <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen
               name="Main"
@@ -110,9 +115,10 @@ export default function App() {
               }}
             />
           </Stack.Navigator>
-        </NavigationContainer>
-        <StatusBar style="auto" />
-      </VoiceProvider>
+          </NavigationContainer>
+          <StatusBar style="auto" />
+        </VoiceProvider>
+      </LearnSettingsProvider>
     </SafeAreaProvider>
   );
 }

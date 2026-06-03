@@ -3,6 +3,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { A1_CARDS } from '../data/seed/a1';
 import { getImage } from '../data/imageRegistry';
 import { theme } from '../theme';
+import { useLearnSettings } from '../context/LearnSettingsContext';
 import type { CategoryPickerProps } from '../navigation';
 
 const CATEGORY_COLOR: Record<string, string> = {
@@ -37,8 +38,12 @@ function getCategories(): CategoryInfo[] {
 const ALL_COUNT = A1_CARDS.length;
 const CATEGORIES = getCategories();
 
-export default function CategoryPickerScreen({ navigation, route }: CategoryPickerProps) {
-  const { level } = route.params;
+export default function CategoryPickerScreen({ navigation }: CategoryPickerProps) {
+  const { mode, autoAdvance, repeatCount, pauseSeconds } = useLearnSettings();
+
+  function go(category?: string) {
+    navigation.navigate('Lesson', { category, mode, autoAdvance, repeatCount, pauseSeconds });
+  }
 
   return (
     <SafeAreaView style={styles.container} edges={['bottom']}>
@@ -47,10 +52,11 @@ export default function CategoryPickerScreen({ navigation, route }: CategoryPick
         {/* All card */}
         <Pressable
           style={({ pressed }) => [styles.card, styles.cardAll, pressed && { opacity: 0.85 }]}
-          onPress={() => navigation.navigate('Lesson', {})}
+          onPress={() => go()}
         >
           <Text style={styles.allLabel}>All</Text>
           <Text style={styles.allCount}>{ALL_COUNT} words</Text>
+          <Text style={styles.modeTag}>{mode === 'learn' ? '📖 Learn' : '✏️ Test'}</Text>
         </Pressable>
 
         {/* Category cards */}
@@ -60,7 +66,7 @@ export default function CategoryPickerScreen({ navigation, route }: CategoryPick
             <Pressable
               key={cat.name}
               style={({ pressed }) => [styles.card, { backgroundColor: bg }, pressed && { opacity: 0.85 }]}
-              onPress={() => navigation.navigate('Lesson', { category: cat.name })}
+              onPress={() => go(cat.name)}
             >
               <Image
                 source={getImage(cat.imageKey)}
@@ -101,9 +107,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
+    gap: 4,
   },
   allLabel: { fontSize: 28, fontWeight: '800', color: '#fff' },
-  allCount: { fontSize: 13, color: 'rgba(255,255,255,0.8)', marginTop: 4, fontWeight: '600' },
+  allCount: { fontSize: 13, color: 'rgba(255,255,255,0.8)', fontWeight: '600' },
+  modeTag: { fontSize: 12, color: 'rgba(255,255,255,0.9)', fontWeight: '600', marginTop: 4 },
 
   catImage: { width: '100%', height: 100 },
   catFooter: { padding: 10 },
