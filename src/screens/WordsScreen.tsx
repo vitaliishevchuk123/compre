@@ -11,19 +11,19 @@ type WordChunk = WordEntry[];
 type Section = { title: string; data: WordChunk[] };
 
 const CATEGORY_COLOR: Record<string, string> = {
-  people:     '#E8D5F5',
-  family:     '#F5D5E8',
-  animals:    '#D5EBF5',
+  people:     '#EDE0F5',
+  family:     '#F5DDF0',
+  animals:    '#D8EEF7',
   actions:    '#D5F5E3',
   adjectives: '#F5EED5',
   adverbs:    '#F5EED5',
-  emotions:   '#FFD5D5',
-  colors:     '#E8F5D5',
-  food:       '#FFF0D5',
-  objects:    '#E0E8FF',
-  body:       '#FFE8E0',
-  nature:     '#D5F5EC',
-  numbers:    '#F0D5FF',
+  emotions:   '#FFD8D8',
+  colors:     '#E5F5D5',
+  food:       '#FFE8C0',
+  objects:    '#DDE5FF',
+  body:       '#FFE5DC',
+  nature:     '#D5F5EE',
+  numbers:    '#EED5FF',
 };
 
 const COLS = 3;
@@ -107,7 +107,11 @@ export default function WordsScreen() {
       <View style={styles.header}>
         <View style={styles.headerTop}>
           <Text style={styles.title}>Words</Text>
-          <Text style={styles.subtitle}>{learned} / {total} learned</Text>
+          <View style={styles.progressPill}>
+            <Text style={styles.progressText}>{learned}</Text>
+            <Text style={styles.progressSep}>/</Text>
+            <Text style={styles.progressTotal}>{total}</Text>
+          </View>
         </View>
         <View style={styles.tabs}>
           <TouchableOpacity
@@ -135,7 +139,9 @@ export default function WordsScreen() {
           return (
             <View style={styles.sectionHeader}>
               {color && <View style={[styles.categoryDot, { backgroundColor: color }]} />}
-              <Text style={styles.sectionTitle}>{section.title}</Text>
+              <Text style={styles.sectionTitle}>
+                {section.title.charAt(0).toUpperCase() + section.title.slice(1)}
+              </Text>
             </View>
           );
         }}
@@ -166,33 +172,53 @@ export default function WordsScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: theme.bg },
-  header: { paddingHorizontal: 16, paddingTop: 12, paddingBottom: 0 },
-  headerTop: { flexDirection: 'row', alignItems: 'baseline', gap: 10, paddingHorizontal: 8, marginBottom: 10 },
-  title: { fontSize: 18, fontWeight: '700', color: 'rgb(229, 145, 60)' },
-  subtitle: { fontSize: 14, color: theme.textSecondary },
+  header: { paddingHorizontal: 20, paddingTop: 12, paddingBottom: 4 },
+  headerTop: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 12,
+  },
+  title: { fontSize: 22, fontWeight: '800', color: theme.accent, letterSpacing: -0.3 },
+  progressPill: {
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    gap: 3,
+    backgroundColor: theme.card,
+    paddingHorizontal: 12,
+    paddingVertical: 5,
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: theme.border,
+  },
+  progressText: { fontSize: 14, fontWeight: '800', color: theme.textPrimary },
+  progressSep: { fontSize: 13, color: theme.textSecondary },
+  progressTotal: { fontSize: 13, fontWeight: '500', color: theme.textSecondary },
+
   tabs: {
     flexDirection: 'row',
     borderRadius: theme.radiusSm,
-    backgroundColor: '#EBEBEB',
+    backgroundColor: theme.border,
     padding: 3,
     gap: 2,
   },
   tab: {
     flex: 1,
-    paddingVertical: 7,
-    borderRadius: theme.radiusSm - 1,
+    paddingVertical: 8,
+    borderRadius: theme.radiusSm - 2,
     alignItems: 'center',
   },
   tabActive: {
     backgroundColor: '#fff',
     shadowColor: '#000',
-    shadowOpacity: 0.08,
+    shadowOpacity: 0.06,
     shadowRadius: 4,
     shadowOffset: { width: 0, height: 1 },
     elevation: 2,
   },
   tabText: { fontSize: 13, fontWeight: '600', color: theme.textSecondary },
-  tabTextActive: { color: theme.textPrimary },
+  tabTextActive: { color: theme.textPrimary, fontWeight: '700' },
+
   list: { paddingHorizontal: 16, paddingTop: 4, paddingBottom: 32 },
   sectionHeader: {
     flexDirection: 'row',
@@ -202,21 +228,21 @@ const styles = StyleSheet.create({
     backgroundColor: theme.bg,
     gap: 8,
   },
-  categoryDot: { width: 12, height: 12, borderRadius: 6 },
-  sectionTitle: { fontSize: 15, fontWeight: '700', color: theme.textSecondary },
+  categoryDot: { width: 10, height: 10, borderRadius: 5 },
+  sectionTitle: { fontSize: 14, fontWeight: '700', color: theme.textSecondary, letterSpacing: 0.3 },
   row: { flexDirection: 'row', gap: 8, marginBottom: 8 },
   chip: {
     flex: 1,
     borderRadius: theme.radiusSm,
-    paddingVertical: 10,
+    paddingVertical: 9,
     paddingHorizontal: 8,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
   chipEmpty: { flex: 1 },
-  chipDone: { opacity: 0.75 },
+  chipDone: { opacity: 0.7 },
   chipWord: { fontSize: 13, fontWeight: '700', color: theme.textPrimary },
   chipWordDone: { color: theme.textSecondary },
-  checkmark: { fontSize: 14, color: theme.success, fontWeight: '700' },
+  checkmark: { fontSize: 13, color: theme.success, fontWeight: '700' },
 });

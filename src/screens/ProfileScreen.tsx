@@ -9,6 +9,14 @@ import { getStatistics, type Statistics } from '../db/statistics';
 import { A1_CARDS } from '../data/seed/a1';
 import { theme } from '../theme';
 import { useVoice } from '../context/VoiceContext';
+import { Ionicons } from '@expo/vector-icons';
+
+const STAT_DEFS: { key: keyof Statistics; label: string; icon: string; format?: (v: number) => string }[] = [
+  { key: 'streak',           label: 'Day streak',  icon: '🔥' },
+  { key: 'totalWords',       label: 'Words seen',  icon: '📖', format: (v) => `${v} / ${A1_CARDS.length}` },
+  { key: 'masteredWords',    label: 'Mastered',    icon: '⭐' },
+  { key: 'lessonsCompleted', label: 'Lessons',     icon: '✅' },
+];
 
 export default function ProfileScreen() {
   const [stats, setStats] = useState<Statistics | null>(null);
@@ -41,27 +49,34 @@ export default function ProfileScreen() {
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
-      <ScrollView contentContainerStyle={styles.content}>
+      <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <Text style={styles.title}>Profile</Text>
 
-        {/* Stats */}
         {stats && (
           <View style={styles.statsGrid}>
-            <StatCard label="Streak" value={`${stats.streak} 🔥`} />
-            <StatCard label="Words" value={`${stats.totalWords} / ${A1_CARDS.length}`} />
-            <StatCard label="Mastered" value={String(stats.masteredWords)} />
-            <StatCard label="Lessons" value={String(stats.lessonsCompleted)} />
+            {STAT_DEFS.map(({ key, label, icon, format }) => (
+              <StatCard
+                key={key}
+                icon={icon}
+                label={label}
+                value={format ? format(stats[key]) : String(stats[key])}
+              />
+            ))}
           </View>
         )}
 
-        {/* Voice setting */}
         <Text style={styles.sectionLabel}>Voice</Text>
         <Pressable
           style={({ pressed }) => [styles.voiceBtn, pressed && { opacity: 0.7 }]}
           onPress={() => setShowVoicePicker(true)}
         >
-          <Text style={styles.voiceBtnLabel}>🔊  {selectedVoiceName}</Text>
-          <Text style={styles.voiceBtnChevron}>›</Text>
+          <View style={styles.voiceBtnLeft}>
+            <View style={styles.voiceBtnIcon}>
+              <Ionicons name="volume-high" size={18} color={theme.accent} />
+            </View>
+            <Text style={styles.voiceBtnLabel}>{selectedVoiceName}</Text>
+          </View>
+          <Ionicons name="chevron-forward" size={18} color={theme.textSecondary} />
         </Pressable>
       </ScrollView>
 
@@ -112,9 +127,10 @@ export default function ProfileScreen() {
   );
 }
 
-function StatCard({ label, value }: { label: string; value: string }) {
+function StatCard({ icon, label, value }: { icon: string; label: string; value: string }) {
   return (
     <View style={styles.statCard}>
+      <Text style={styles.statIcon}>{icon}</Text>
       <Text style={styles.statValue}>{value}</Text>
       <Text style={styles.statLabel}>{label}</Text>
     </View>
@@ -144,59 +160,96 @@ function VoiceRow({ name, language, quality, selected, onPress }: {
           </Text>
         ) : null}
       </View>
-      {selected && <Text style={styles.voiceCheck}>✓</Text>}
+      {selected && <Ionicons name="checkmark-circle" size={20} color={theme.success} />}
     </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: theme.bg },
-  content: { paddingHorizontal: 24, paddingTop: 12, paddingBottom: 40 },
-  title: { fontSize: 18, fontWeight: '700', color: 'rgb(229, 145, 60)', marginBottom: 20 },
+  content: { paddingHorizontal: 20, paddingTop: 12, paddingBottom: 40 },
+  title: { fontSize: 22, fontWeight: '800', color: theme.accent, marginBottom: 20, letterSpacing: -0.3 },
 
   statsGrid: {
-    flexDirection: 'row', flexWrap: 'wrap',
-    justifyContent: 'space-between', rowGap: 12, marginBottom: 28,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 10,
+    marginBottom: 28,
   },
   statCard: {
-    width: '48%', backgroundColor: theme.card,
-    borderRadius: theme.radius, padding: 18, alignItems: 'center',
+    width: '47%',
+    backgroundColor: theme.card,
+    borderRadius: theme.radius,
+    paddingVertical: 18,
+    paddingHorizontal: 16,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOpacity: 0.04,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 1,
   },
-  statValue: { fontSize: 24, fontWeight: '800', color: 'rgb(100, 88, 74)' },
-  statLabel: { fontSize: 12, color: theme.textSecondary, marginTop: 4 },
+  statIcon: { fontSize: 24, marginBottom: 6 },
+  statValue: { fontSize: 22, fontWeight: '800', color: theme.textPrimary },
+  statLabel: { fontSize: 12, color: theme.textSecondary, marginTop: 3, fontWeight: '500' },
 
   sectionLabel: {
-    fontSize: 13, fontWeight: '600', color: theme.textSecondary,
-    textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 8,
+    fontSize: 12,
+    fontWeight: '700',
+    color: theme.textSecondary,
+    textTransform: 'uppercase',
+    letterSpacing: 1,
+    marginBottom: 8,
   },
   voiceBtn: {
-    backgroundColor: theme.card, borderRadius: theme.radiusSm,
-    paddingHorizontal: 16, paddingVertical: 16,
-    flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',
+    backgroundColor: theme.card,
+    borderRadius: theme.radiusSm,
+    paddingHorizontal: 16,
+    paddingVertical: 14,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  voiceBtnLeft: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  voiceBtnIcon: {
+    width: 36,
+    height: 36,
+    borderRadius: 10,
+    backgroundColor: theme.option,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   voiceBtnLabel: { fontSize: 16, fontWeight: '600', color: theme.textPrimary },
-  voiceBtnChevron: { fontSize: 22, color: theme.textSecondary },
 
   modal: { flex: 1, backgroundColor: theme.bg },
   modalHeader: {
-    flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',
-    paddingHorizontal: 20, paddingVertical: 16,
-    borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: theme.option,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+    paddingVertical: 16,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: theme.border,
   },
   modalTitle: { fontSize: 18, fontWeight: '700', color: theme.textPrimary },
   modalClose: { fontSize: 16, fontWeight: '600', color: theme.accent },
   voiceList: { paddingHorizontal: 16, paddingTop: 8, paddingBottom: 32 },
   voiceRow: {
-    flexDirection: 'row', alignItems: 'center',
-    paddingVertical: 14, paddingHorizontal: 16,
-    borderRadius: theme.radiusSm, marginBottom: 6, backgroundColor: theme.card,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    borderRadius: theme.radiusSm,
+    marginBottom: 6,
+    backgroundColor: theme.card,
   },
   voiceRowSelected: {
-    backgroundColor: theme.successBg, borderWidth: 1.5, borderColor: theme.success,
+    backgroundColor: theme.successBg,
+    borderWidth: 1.5,
+    borderColor: theme.success,
   },
   voiceInfo: { flex: 1 },
   voiceName: { fontSize: 16, fontWeight: '600', color: theme.textPrimary },
   voiceNameSelected: { color: theme.success },
   voiceLang: { fontSize: 13, color: theme.textSecondary, marginTop: 2 },
-  voiceCheck: { fontSize: 18, color: theme.success, marginLeft: 8 },
 });

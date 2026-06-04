@@ -12,6 +12,7 @@ import {
   TextInput,
   View,
 } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -56,7 +57,6 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
   const [jumpValue, setJumpValue] = useState(1);
   const { voiceId } = useVoice();
 
-  // Incremented each time we want to cancel an in-progress speak sequence.
   const speakSessionRef = useRef(0);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pausedRef = useRef(false);
@@ -140,7 +140,6 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
     };
   }, [index, voiceId]);
 
-  // Keep refs so PanResponder (created once) can read latest state.
   const answeredRef = useRef(false);
   const nextRef = useRef<() => void>(() => {});
   answeredRef.current = selected !== null;
@@ -162,6 +161,7 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
   }
 
   const answered = selected !== null;
+  const progressPct = CARDS.length > 1 ? index / (CARDS.length - 1) : 1;
 
   async function next() {
     if (index + 1 >= CARDS.length) {
@@ -225,7 +225,7 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
     >
       <Pressable style={styles.jumpBackdrop} onPress={() => { Keyboard.dismiss(); setJumpOpen(false); }} />
       <View style={styles.jumpSheet}>
-        <Text style={styles.jumpTitle}>Jump to slide</Text>
+        <Text style={styles.jumpTitle}>Jump to card</Text>
         <View style={styles.jumpInputRow}>
           <TextInput
             style={styles.jumpInput}
@@ -254,18 +254,27 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
   if (mode === 'learn') {
     return (
       <SafeAreaView style={styles.container} edges={['bottom']} {...swipe.panHandlers}>
+        {/* Progress bar */}
+        <View style={styles.progressBarWrap}>
+          <View style={[styles.progressBarFill, { width: `${Math.round(progressPct * 100)}%` as any }]} />
+        </View>
+
         <View style={styles.progressRow}>
           <Pressable
             onPress={back}
-            style={({ pressed }) => [styles.prevBtn, pressed && styles.prevBtnPressed]}
+            style={({ pressed }) => [styles.navBtn, pressed && { opacity: 0.6 }]}
           >
-            <Text style={styles.prevBtnText}>Prev</Text>
+            <Ionicons name="chevron-back" size={20} color={theme.textPrimary} />
           </Pressable>
-          <ProgressPill index={index} total={CARDS.length} onPress={openJump} />
+          <Pressable onPress={openJump} hitSlop={10}>
+            <Text style={styles.progressText}>
+              {index + 1} <Text style={styles.progressOf}>/ {CARDS.length}</Text>
+            </Text>
+          </Pressable>
         </View>
 
         <View style={styles.card}>
-          <View style={styles.imageFrame}>
+          <View style={[styles.imageFrame, styles.imageFrameLearn]}>
             <Image
               source={getImage(card.imageKey)}
               style={styles.image}
@@ -275,11 +284,11 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
           <View style={styles.promptRow}>
             <Text style={styles.learnWord}>{card.answer}</Text>
             <Pressable
-              style={({ pressed }) => [styles.speakBtn, pressed && styles.speakBtnPressed]}
+              style={({ pressed }) => [styles.speakBtn, pressed && { opacity: 0.6 }]}
               onPress={startLearnSession}
               hitSlop={10}
             >
-              <Text style={styles.speakIcon}>🔊</Text>
+              <Ionicons name="volume-high" size={18} color={theme.accent} />
             </Pressable>
           </View>
           {card.answerPhrase && (
@@ -300,10 +309,10 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
         <View style={styles.bottomRow}>
           {autoAdvance && (
             <Pressable
-              style={({ pressed }) => [styles.pauseBtn, pressed && styles.pauseBtnPressed]}
+              style={({ pressed }) => [styles.pauseBtn, pressed && { opacity: 0.6 }]}
               onPress={togglePause}
             >
-              <Text style={styles.pauseIcon}>{paused ? '▶' : '⏸'}</Text>
+              <Ionicons name={paused ? 'play' : 'pause'} size={20} color={theme.textPrimary} />
             </Pressable>
           )}
           <Pressable
@@ -320,22 +329,27 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
 
   return (
     <SafeAreaView style={styles.container} edges={['bottom']} {...swipe.panHandlers}>
+      {/* Progress bar */}
+      <View style={styles.progressBarWrap}>
+        <View style={[styles.progressBarFill, { width: `${Math.round(progressPct * 100)}%` as any }]} />
+      </View>
+
       <View style={styles.progressRow}>
         <Pressable
           onPress={back}
-          style={({ pressed }) => [
-            styles.prevBtn,
-            pressed && styles.prevBtnPressed,
-          ]}
+          style={({ pressed }) => [styles.navBtn, pressed && { opacity: 0.6 }]}
         >
-          <Text style={styles.prevBtnText}>Prev</Text>
+          <Ionicons name="chevron-back" size={20} color={theme.textPrimary} />
         </Pressable>
-        <ProgressPill index={index} total={CARDS.length} onPress={openJump} />
+        <Pressable onPress={openJump} hitSlop={10}>
+          <Text style={styles.progressText}>
+            {index + 1} <Text style={styles.progressOf}>/ {CARDS.length}</Text>
+          </Text>
+        </Pressable>
       </View>
 
-      {/* White lesson card: centered image + prompt */}
       <View style={styles.card}>
-        <View style={styles.imageFrame}>
+        <View style={[styles.imageFrame, styles.imageFrameTest]}>
           <Image
             source={getImage(card.imageKey)}
             style={styles.image}
@@ -345,20 +359,21 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
         <View style={styles.promptRow}>
           <Text style={styles.prompt}>{prompt}</Text>
           <Pressable
-            style={({ pressed }) => [styles.speakBtn, pressed && styles.speakBtnPressed]}
+            style={({ pressed }) => [styles.speakBtn, pressed && { opacity: 0.6 }]}
             onPress={() => speak(prompt)}
             hitSlop={10}
           >
-            <Text style={styles.speakIcon}>🔊</Text>
+            <Ionicons name="volume-high" size={18} color={theme.accent} />
           </Pressable>
         </View>
       </View>
 
       <View style={styles.options}>
-        {options.map((option) => (
+        {options.map((option, i) => (
           <Option
             key={option}
             label={option}
+            letter={String.fromCharCode(65 + i)}
             sentence={false}
             state={optionState(option, card.answer, selected)}
             pulse={isReplaying && option === card.answer}
@@ -370,7 +385,7 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
       <View style={styles.bottomRow}>
         {answered ? (
           <Pressable
-            style={({ pressed }) => [styles.replayBtn, pressed && styles.replayBtnPressed]}
+            style={({ pressed }) => [styles.replayBtn, pressed && { opacity: 0.7 }]}
             onPress={() => {
               setIsReplaying(true);
               Speech.stop();
@@ -380,11 +395,12 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
               });
             }}
           >
-            <Text style={styles.replayText}>Say answer 🔊</Text>
+            <Ionicons name="volume-high" size={16} color={theme.textPrimary} style={{ marginRight: 6 }} />
+            <Text style={styles.replayText}>Say answer</Text>
           </Pressable>
         ) : (
           <Pressable
-            style={({ pressed }) => [styles.replayBtn, pressed && styles.replayBtnPressed]}
+            style={({ pressed }) => [styles.replayBtn, pressed && { opacity: 0.7 }]}
             onPress={next}
           >
             <Text style={styles.replayText}>Skip</Text>
@@ -407,14 +423,6 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
   );
 }
 
-function ProgressPill({ index, total, onPress }: { index: number; total: number; onPress: () => void }) {
-  return (
-    <Pressable onPress={onPress} hitSlop={10} style={styles.progressPill}>
-      <Text style={styles.progress}>{index + 1} / {total}</Text>
-    </Pressable>
-  );
-}
-
 type OptionVisual = 'idle' | 'correct' | 'wrong' | 'muted';
 
 function optionState(
@@ -430,12 +438,14 @@ function optionState(
 
 function Option({
   label,
+  letter,
   state,
   sentence,
   pulse,
   onPress,
 }: {
   label: string;
+  letter?: string;
   state: OptionVisual;
   sentence?: boolean;
   pulse?: boolean;
@@ -457,6 +467,13 @@ function Option({
     }
   }, [pulse]);
 
+  const badgeLabel = state === 'correct' ? '✓' : state === 'wrong' ? '✗' : (letter ?? '');
+  const badgeBg =
+    state === 'correct' ? theme.success :
+    state === 'wrong' ? theme.danger :
+    'rgba(0,0,0,0.06)';
+  const badgeTextColor = (state === 'correct' || state === 'wrong') ? '#fff' : theme.textSecondary;
+
   return (
     <Animated.View
       style={[
@@ -470,6 +487,11 @@ function Option({
         onPress={onPress}
         disabled={state !== 'idle'}
       >
+        {letter != null && (
+          <View style={[styles.optionBadge, { backgroundColor: badgeBg }]}>
+            <Text style={[styles.optionBadgeText, { color: badgeTextColor }]}>{badgeLabel}</Text>
+          </View>
+        )}
         <Text
           style={[
             styles.optionText,
@@ -488,7 +510,7 @@ const OPTION_STYLE = StyleSheet.create({
   idle: { backgroundColor: theme.option },
   correct: { backgroundColor: theme.successBg, borderColor: theme.success, borderWidth: 2 },
   wrong: { backgroundColor: theme.dangerBg, borderColor: theme.danger, borderWidth: 2 },
-  muted: { backgroundColor: theme.option, opacity: 0.45 },
+  muted: { backgroundColor: theme.option, opacity: 0.4 },
 });
 
 const styles = StyleSheet.create({
@@ -496,7 +518,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: theme.bg,
     paddingHorizontal: 20,
-    paddingTop: 8,
+    paddingTop: 6,
     paddingBottom: 16,
   },
   center: {
@@ -505,81 +527,124 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: theme.bg,
   },
+
+  progressBarWrap: {
+    height: 4,
+    backgroundColor: theme.border,
+    borderRadius: 2,
+    marginHorizontal: -20,
+    marginBottom: 10,
+    overflow: 'hidden',
+  },
+  progressBarFill: {
+    height: '100%',
+    backgroundColor: theme.accent,
+  },
+
   progressRow: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: 8,
+    marginBottom: 10,
   },
-  progressPill: {
+  navBtn: {
+    width: 38,
+    height: 38,
+    borderRadius: 19,
     backgroundColor: theme.card,
-    borderRadius: 20,
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderWidth: 1,
-    borderColor: theme.option,
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOpacity: 0.06,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 2,
   },
-  progress: {
-    fontSize: 14,
+  progressText: {
+    fontSize: 15,
     fontWeight: '700',
     color: theme.textPrimary,
   },
-  prevBtn: {
-    backgroundColor: 'rgb(229, 145, 60)',
-    borderRadius: theme.radius,
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-    alignItems: 'center',
+  progressOf: {
+    fontWeight: '400',
+    color: theme.textSecondary,
+    fontSize: 15,
   },
-  prevBtnPressed: { opacity: 0.6 },
-  prevBtnText: { fontSize: 14, fontWeight: '700', color: '#fff' },
+
   card: {
     backgroundColor: theme.card,
     borderRadius: theme.radius,
     padding: 12,
     alignItems: 'center',
     shadowColor: '#000',
-    shadowOpacity: 0.08,
+    shadowOpacity: 0.06,
     shadowRadius: 16,
-    shadowOffset: { width: 0, height: 6 },
-    elevation: 3,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 2,
   },
-  // Square frame keeps the layout stable; `contain` centers any aspect ratio
-  // without cropping, so internet-sourced images of any shape look intentional.
   imageFrame: {
     width: '100%',
-    height: 400,
     borderRadius: theme.radiusSm,
     backgroundColor: theme.imageBg,
     overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  imageFrameLearn: { height: 340 },
+  imageFrameTest: { height: 240 },
   image: { width: '100%', height: '100%' },
+
   promptRow: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 10,
+    marginTop: 12,
     gap: 8,
   },
   prompt: {
-    fontSize: 20,
+    fontSize: 19,
     fontWeight: '700',
     color: theme.textPrimary,
     textAlign: 'center',
     flexShrink: 1,
   },
-  pauseBtn: {
-    width: 52,
-    height: 52,
-    borderRadius: 26,
+  learnWord: {
+    fontSize: 30,
+    fontWeight: '800',
+    color: theme.textPrimary,
+    textAlign: 'center',
+    flexShrink: 1,
+    letterSpacing: -0.5,
+  },
+  learnPhrase: {
+    fontSize: 16,
+    color: theme.textSecondary,
+    textAlign: 'center',
+    marginTop: 6,
+    paddingHorizontal: 4,
+    fontStyle: 'italic',
+  },
+
+  speakBtn: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
     backgroundColor: theme.option,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  pauseBtnPressed: { opacity: 0.6 },
-  pauseIcon: { fontSize: 20 },
+
+  pauseBtn: {
+    width: 52,
+    height: 52,
+    borderRadius: 26,
+    backgroundColor: theme.card,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: theme.border,
+  },
+
   dotsRow: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -590,7 +655,7 @@ const styles = StyleSheet.create({
     width: 8,
     height: 8,
     borderRadius: 4,
-    backgroundColor: theme.option,
+    backgroundColor: theme.border,
     borderWidth: 1,
     borderColor: theme.textSecondary,
   },
@@ -598,50 +663,40 @@ const styles = StyleSheet.create({
     backgroundColor: theme.accent,
     borderColor: theme.accent,
   },
-  learnWord: {
-    fontSize: 32,
-    fontWeight: '800',
-    color: theme.textPrimary,
-    textAlign: 'center',
-    flexShrink: 1,
-  },
-  learnPhrase: {
-    fontSize: 17,
-    color: theme.textSecondary,
-    textAlign: 'center',
-    marginTop: 8,
-    paddingHorizontal: 4,
-    fontStyle: 'italic',
-  },
-  speakBtn: {
-    width: 36,
-    height: 36,
-    borderRadius: 18,
-    backgroundColor: theme.option,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  speakBtnPressed: { opacity: 0.6 },
-  speakIcon: { fontSize: 18 },
-  options: { gap: 8, marginTop: 14 },
+
+  options: { gap: 6, marginTop: 10 },
   option: {
     borderRadius: theme.radiusSm,
     overflow: 'hidden',
   },
   optionInner: {
-    paddingVertical: 14,
+    paddingVertical: 11,
     paddingHorizontal: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  optionBadge: {
+    width: 28,
+    height: 28,
+    borderRadius: 14,
     alignItems: 'center',
     justifyContent: 'center',
+    flexShrink: 0,
+  },
+  optionBadgeText: {
+    fontSize: 12,
+    fontWeight: '800',
   },
   optionText: {
-    fontSize: 18,
+    fontSize: 17,
     fontWeight: '700',
     color: theme.optionText,
-    textAlign: 'center',
+    flex: 1,
   },
-  optionTextSentence: { fontSize: 17, fontWeight: '600' },
+  optionTextSentence: { fontSize: 16, fontWeight: '600' },
   optionTextMuted: { color: theme.textSecondary },
+
   bottomRow: {
     marginTop: 'auto',
     paddingTop: 10,
@@ -651,32 +706,35 @@ const styles = StyleSheet.create({
   },
   replayBtn: {
     flex: 1,
-    backgroundColor: theme.option,
+    backgroundColor: theme.card,
     borderRadius: theme.radius,
-    paddingVertical: 11,
+    paddingVertical: 14,
     alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: theme.border,
   },
-  replayBtnPressed: { opacity: 0.7 },
-  replayText: { color: theme.textPrimary, fontSize: 18, fontWeight: '700' },
+  replayText: { color: theme.textPrimary, fontSize: 16, fontWeight: '700' },
   next: {
     flex: 1,
     backgroundColor: theme.accent,
     borderRadius: theme.radius,
-    paddingVertical: 11,
+    paddingVertical: 14,
     alignItems: 'center',
     shadowColor: theme.accent,
-    shadowOpacity: 0.35,
-    shadowRadius: 14,
-    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.3,
+    shadowRadius: 12,
+    shadowOffset: { width: 0, height: 5 },
     elevation: 3,
   },
-  nextDisabled: { backgroundColor: '#E4D6C6', shadowOpacity: 0 },
+  nextDisabled: { backgroundColor: theme.border, shadowOpacity: 0 },
   nextPressed: { backgroundColor: theme.accentDark },
-  nextText: { color: '#fff', fontSize: 18, fontWeight: '700' },
+  nextText: { color: '#fff', fontSize: 17, fontWeight: '700' },
 
   jumpBackdrop: {
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.35)',
+    backgroundColor: 'rgba(0,0,0,0.4)',
   },
   jumpSheet: {
     backgroundColor: theme.card,
@@ -720,7 +778,7 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     alignItems: 'center',
     shadowColor: theme.accent,
-    shadowOpacity: 0.35,
+    shadowOpacity: 0.3,
     shadowRadius: 12,
     shadowOffset: { width: 0, height: 5 },
     elevation: 3,

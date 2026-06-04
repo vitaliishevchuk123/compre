@@ -23,13 +23,13 @@ export default function SettingsScreen() {
             style={[styles.segBtn, mode === 'learn' && styles.segBtnActive]}
             onPress={() => setMode('learn')}
           >
-            <Text style={[styles.segText, mode === 'learn' && styles.segTextActive]}>Learn</Text>
+            <Text style={[styles.segText, mode === 'learn' && styles.segTextActive]}>📖  Learn</Text>
           </Pressable>
           <Pressable
             style={[styles.segBtn, mode === 'test' && styles.segBtnActive]}
             onPress={() => setMode('test')}
           >
-            <Text style={[styles.segText, mode === 'test' && styles.segTextActive]}>Test</Text>
+            <Text style={[styles.segText, mode === 'test' && styles.segTextActive]}>✏️  Test</Text>
           </Pressable>
         </View>
 
@@ -37,7 +37,7 @@ export default function SettingsScreen() {
           <>
             <Text style={styles.sectionLabel}>Auto-advance</Text>
             <View style={styles.card}>
-              <SettingRow label="Automatically go to the next slide after audio finishes">
+              <SettingRow label="Move to next card automatically after audio">
                 <View style={styles.chips}>
                   {([false, true] as const).map((v) => (
                     <Pressable
@@ -54,9 +54,9 @@ export default function SettingsScreen() {
               </SettingRow>
             </View>
 
-            <Text style={styles.sectionLabel}>Repeats per slide</Text>
+            <Text style={styles.sectionLabel}>Repeats per card</Text>
             <View style={styles.card}>
-              <SettingRow label="How many times to read each word and sentence">
+              <SettingRow label="How many times to read each word and phrase">
                 <View style={styles.chips}>
                   {REPEAT_OPTIONS.map((n) => (
                     <Pressable
@@ -73,9 +73,9 @@ export default function SettingsScreen() {
               </SettingRow>
             </View>
 
-            <Text style={styles.sectionLabel}>Pause after slide</Text>
+            <Text style={styles.sectionLabel}>Pause after card</Text>
             <View style={styles.card}>
-              <SettingRow label="Wait before moving to the next slide">
+              <SettingRow label="Wait before moving to the next card">
                 <View style={styles.chips}>
                   {PAUSE_OPTIONS.map((s) => (
                     <Pressable
@@ -84,7 +84,7 @@ export default function SettingsScreen() {
                       onPress={() => setPauseSeconds(s)}
                     >
                       <Text style={[styles.chipText, pauseSeconds === s && styles.chipTextActive]}>
-                        {s}s
+                        {s === 0 ? 'None' : `${s}s`}
                       </Text>
                     </Pressable>
                   ))}
@@ -109,27 +109,40 @@ function SettingRow({ label, children }: { label: string; children: React.ReactN
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: theme.bg },
-  content: { paddingHorizontal: 24, paddingTop: 12, paddingBottom: 40 },
-  title: { fontSize: 18, fontWeight: '700', color: 'rgb(229, 145, 60)', marginBottom: 20 },
+  content: { paddingHorizontal: 20, paddingTop: 12, paddingBottom: 40 },
+  title: { fontSize: 22, fontWeight: '800', color: theme.accent, marginBottom: 20, letterSpacing: -0.3 },
 
   sectionLabel: {
-    fontSize: 13, fontWeight: '600', color: theme.textSecondary,
-    textTransform: 'uppercase', letterSpacing: 0.8,
-    marginTop: 20, marginBottom: 8,
+    fontSize: 12,
+    fontWeight: '700',
+    color: theme.textSecondary,
+    textTransform: 'uppercase',
+    letterSpacing: 1,
+    marginTop: 20,
+    marginBottom: 8,
   },
 
   segmented: {
     flexDirection: 'row',
-    backgroundColor: theme.option,
+    backgroundColor: theme.border,
     borderRadius: theme.radius,
     padding: 4,
     gap: 4,
   },
   segBtn: {
-    flex: 1, paddingVertical: 10,
-    borderRadius: theme.radiusSm, alignItems: 'center',
+    flex: 1,
+    paddingVertical: 11,
+    borderRadius: theme.radiusSm,
+    alignItems: 'center',
   },
-  segBtnActive: { backgroundColor: theme.accent },
+  segBtnActive: {
+    backgroundColor: theme.accent,
+    shadowColor: theme.accent,
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 2,
+  },
   segText: { fontSize: 15, fontWeight: '700', color: theme.textSecondary },
   segTextActive: { color: '#fff' },
 
@@ -137,17 +150,29 @@ const styles = StyleSheet.create({
     backgroundColor: theme.card,
     borderRadius: theme.radiusSm,
     paddingHorizontal: 16,
-    paddingVertical: 14,
+    paddingVertical: 16,
+    shadowColor: '#000',
+    shadowOpacity: 0.04,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 1,
   },
-  settingRow: { gap: 10 },
-  settingLabel: { fontSize: 14, color: theme.textSecondary },
+  settingRow: { gap: 12 },
+  settingLabel: { fontSize: 14, color: theme.textSecondary, lineHeight: 20 },
 
   chips: { flexDirection: 'row', gap: 8, flexWrap: 'wrap' },
   chip: {
-    paddingVertical: 7, paddingHorizontal: 16,
-    borderRadius: 20, backgroundColor: theme.option,
+    paddingVertical: 8,
+    paddingHorizontal: 18,
+    borderRadius: 20,
+    backgroundColor: theme.option,
+    borderWidth: 1,
+    borderColor: 'transparent',
   },
-  chipActive: { backgroundColor: theme.accent },
+  chipActive: {
+    backgroundColor: theme.accent,
+    borderColor: theme.accent,
+  },
   chipText: { fontSize: 14, fontWeight: '700', color: theme.textSecondary },
   chipTextActive: { color: '#fff' },
 });

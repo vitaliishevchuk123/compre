@@ -7,19 +7,19 @@ import { useLearnSettings } from '../context/LearnSettingsContext';
 import type { CategoryPickerProps } from '../navigation';
 
 const CATEGORY_COLOR: Record<string, string> = {
-  people:     '#E8D5F5',
-  family:     '#F5D5E8',
-  animals:    '#D5EBF5',
+  people:     '#EDE0F5',
+  family:     '#F5DDF0',
+  animals:    '#D8EEF7',
   actions:    '#D5F5E3',
-  adjectives: '#FFF0D5',
-  adverbs:    '#FFF0D5',
-  emotions:   '#FFD5D5',
-  colors:     '#E8F5D5',
-  food:       '#FFE8C8',
-  objects:    '#E0E8FF',
-  body:       '#FFE8E0',
-  nature:     '#D5F5EC',
-  numbers:    '#F0D5FF',
+  adjectives: '#FFF3D8',
+  adverbs:    '#FFF3D8',
+  emotions:   '#FFD8D8',
+  colors:     '#E5F5D5',
+  food:       '#FFE8C0',
+  objects:    '#DDE5FF',
+  body:       '#FFE5DC',
+  nature:     '#D5F5EE',
+  numbers:    '#EED5FF',
 };
 
 type CategoryInfo = { name: string; imageKey: string; count: number };
@@ -51,12 +51,14 @@ export default function CategoryPickerScreen({ navigation }: CategoryPickerProps
 
         {/* All card */}
         <Pressable
-          style={({ pressed }) => [styles.card, styles.cardAll, pressed && { opacity: 0.85 }]}
+          style={({ pressed }) => [styles.card, styles.cardAll, pressed && { opacity: 0.88 }]}
           onPress={() => go()}
         >
           <Text style={styles.allLabel}>All</Text>
           <Text style={styles.allCount}>{ALL_COUNT} words</Text>
-          <Text style={styles.modeTag}>{mode === 'learn' ? '📖 Learn' : '✏️ Test'}</Text>
+          <View style={styles.modeTag}>
+            <Text style={styles.modeTagText}>{mode === 'learn' ? '📖 Learn' : '✏️ Test'}</Text>
+          </View>
         </Pressable>
 
         {/* Category cards */}
@@ -65,7 +67,7 @@ export default function CategoryPickerScreen({ navigation }: CategoryPickerProps
           return (
             <Pressable
               key={cat.name}
-              style={({ pressed }) => [styles.card, { backgroundColor: bg }, pressed && { opacity: 0.85 }]}
+              style={({ pressed }) => [styles.card, { backgroundColor: bg }, pressed && { opacity: 0.88 }]}
               onPress={() => go(cat.name)}
             >
               <Image
@@ -100,7 +102,12 @@ const styles = StyleSheet.create({
     width: '47%',
     borderRadius: theme.radius,
     overflow: 'hidden',
-    minHeight: 140,
+    minHeight: 148,
+    shadowColor: '#000',
+    shadowOpacity: 0.05,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 2,
   },
   cardAll: {
     backgroundColor: theme.accent,
@@ -109,12 +116,19 @@ const styles = StyleSheet.create({
     padding: 20,
     gap: 4,
   },
-  allLabel: { fontSize: 28, fontWeight: '800', color: '#fff' },
+  allLabel: { fontSize: 30, fontWeight: '800', color: '#fff', letterSpacing: -0.5 },
   allCount: { fontSize: 13, color: 'rgba(255,255,255,0.8)', fontWeight: '600' },
-  modeTag: { fontSize: 12, color: 'rgba(255,255,255,0.9)', fontWeight: '600', marginTop: 4 },
+  modeTag: {
+    marginTop: 8,
+    backgroundColor: 'rgba(255,255,255,0.2)',
+    borderRadius: 12,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+  },
+  modeTagText: { fontSize: 12, color: '#fff', fontWeight: '700' },
 
   catImage: { width: '100%', height: 100 },
   catFooter: { padding: 10 },
-  catName: { fontSize: 15, fontWeight: '700', color: theme.textPrimary },
-  catCount: { fontSize: 11, color: theme.textSecondary, marginTop: 2 },
+  catName: { fontSize: 14, fontWeight: '700', color: theme.textPrimary },
+  catCount: { fontSize: 11, color: theme.textSecondary, marginTop: 2, fontWeight: '500' },
 });

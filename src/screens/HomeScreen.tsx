@@ -15,11 +15,10 @@ import { A1_CARDS } from '../data/seed/a1';
 import { theme } from '../theme';
 import type { HomeProps } from '../navigation';
 
-const LEVELS = [
-  { id: 'A1', name: 'Beginner',           total: A1_CARDS.length, unlocked: true  },
-  { id: 'A2', name: 'Elementary',         total: 0,                unlocked: false },
-  { id: 'B1', name: 'Intermediate',       total: 0,                unlocked: false },
-  { id: 'B2', name: 'Upper Intermediate', total: 0,                unlocked: false },
+const LOCKED_LEVELS = [
+  { id: 'A2', name: 'Elementary' },
+  { id: 'B1', name: 'Intermediate' },
+  { id: 'B2', name: 'Upper-Int.' },
 ];
 
 export default function HomeScreen({ navigation }: HomeProps) {
@@ -49,8 +48,12 @@ export default function HomeScreen({ navigation }: HomeProps) {
     );
   }
 
+  const wordsLearned = Math.min(lessonIndex + 1, A1_CARDS.length);
+  const a1Pct = wordsLearned / A1_CARDS.length;
+
   return (
     <SafeAreaView style={styles.container}>
+      {/* Top bar */}
       <View style={styles.topBar}>
         <View style={styles.brand}>
           <Image source={require('../../assets/logo.png')} style={styles.logo} resizeMode="contain" />
@@ -61,109 +64,162 @@ export default function HomeScreen({ navigation }: HomeProps) {
         </View>
       </View>
 
-      <View style={styles.levelsGrid}>
-        {LEVELS.map((level) => {
-          const wordsLearned = level.id === 'A1' ? lessonIndex + 1 : 0;
-          const pct = level.total > 0 ? wordsLearned / level.total : 0;
+      {/* A1 Continue card */}
+      <Pressable
+        style={({ pressed }) => [styles.continueCard, pressed && { opacity: 0.92 }]}
+        onPress={() => navigation.navigate('CategoryPicker', { level: 'A1' })}
+      >
+        <View style={styles.continueTop}>
+          <View>
+            <Text style={styles.continueBadge}>A1</Text>
+            <Text style={styles.continueTitle}>Continue Learning</Text>
+            <Text style={styles.continueSub}>Beginner · {wordsLearned} / {A1_CARDS.length} words</Text>
+          </View>
+          <View style={styles.arrowCircle}>
+            <Text style={styles.arrowText}>›</Text>
+          </View>
+        </View>
+        <View style={styles.progressTrack}>
+          <View style={[styles.progressFill, { width: `${Math.round(a1Pct * 100)}%` as any }]} />
+        </View>
+      </Pressable>
 
-          if (!level.unlocked) {
-            return (
-              <View key={level.id} style={styles.levelCardLocked}>
-                <Text style={styles.lockIcon}>🔒</Text>
-                <Text style={styles.levelIdLocked}>{level.id}</Text>
-                <Text style={styles.levelNameLocked}>{level.name}</Text>
-              </View>
-            );
-          }
-
-          return (
-            <Pressable
-              key={level.id}
-              style={({ pressed }) => [styles.levelCard, pressed && styles.levelCardPressed]}
-              onPress={() => navigation.navigate('CategoryPicker', { level: level.id })}
-            >
-              <View style={styles.levelCardTop}>
-                <Text style={styles.levelId}>{level.id}</Text>
-                <Text style={styles.levelWords}>{wordsLearned} / {level.total}</Text>
-              </View>
-              <Text style={styles.levelName}>{level.name}</Text>
-              <View style={styles.progressTrack}>
-                <View style={[styles.progressFill, { width: `${Math.round(pct * 100)}%` }]} />
-              </View>
-              <Text style={styles.levelHint}>Tap to start lesson</Text>
-            </Pressable>
-          );
-        })}
+      {/* Locked levels row */}
+      <Text style={styles.sectionLabel}>Levels</Text>
+      <View style={styles.lockedRow}>
+        {LOCKED_LEVELS.map((lv) => (
+          <View key={lv.id} style={styles.lockedCard}>
+            <Text style={styles.lockEmoji}>🔒</Text>
+            <Text style={styles.lockedId}>{lv.id}</Text>
+            <Text style={styles.lockedName}>{lv.name}</Text>
+          </View>
+        ))}
       </View>
 
+      {/* Stats row */}
+      <View style={styles.statsRow}>
+        <StatCard icon="🔥" value={stats.streak} label="Streak" />
+        <StatCard icon="📖" value={stats.totalWords} label="Words" />
+        <StatCard icon="✅" value={stats.lessonsCompleted} label="Lessons" />
+      </View>
     </SafeAreaView>
   );
 }
 
-function MiniStat({ label, value }: { label: string; value: number }) {
+function StatCard({ icon, value, label }: { icon: string; value: number; label: string }) {
   return (
-    <View style={styles.miniStat}>
-      <Text style={styles.miniStatValue}>{value}</Text>
-      <Text style={styles.miniStatLabel}>{label}</Text>
+    <View style={styles.statCard}>
+      <Text style={styles.statIcon}>{icon}</Text>
+      <Text style={styles.statValue}>{value}</Text>
+      <Text style={styles.statLabel}>{label}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, backgroundColor: theme.bg,
-    paddingHorizontal: 20, paddingTop: 8, paddingBottom: 0,
+    flex: 1,
+    backgroundColor: theme.bg,
+    paddingHorizontal: 20,
+    paddingTop: 8,
+    paddingBottom: 0,
   },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: theme.bg },
+
   topBar: {
-    flexDirection: 'row', alignItems: 'center',
-    justifyContent: 'space-between', paddingTop: 4, marginBottom: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingTop: 4,
+    marginBottom: 20,
   },
   brand: { flexDirection: 'row', alignItems: 'center', gap: 8 },
-  logo: { width: 36, height: 36 },
+  logo: { width: 34, height: 34 },
+  title: { fontSize: 20, fontWeight: '800', color: theme.accent, letterSpacing: -0.3 },
   streakPill: {
     backgroundColor: theme.card,
     borderRadius: 20,
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderWidth: 1,
-    borderColor: theme.option,
+    borderColor: theme.border,
   },
-  streakText: { fontSize: 11, fontWeight: '600', color: theme.textPrimary },
-  title: {
-    fontSize: 18, fontWeight: '700', color: 'rgb(229, 145, 60)',
+  streakText: { fontSize: 12, fontWeight: '600', color: theme.textPrimary },
+
+  continueCard: {
+    backgroundColor: theme.accent,
+    borderRadius: theme.radius,
+    padding: 20,
+    marginBottom: 20,
+    shadowColor: theme.accent,
+    shadowOpacity: 0.3,
+    shadowRadius: 16,
+    shadowOffset: { width: 0, height: 6 },
+    elevation: 4,
   },
-  levelsGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 12 },
-  levelCard: {
-    width: '47%', backgroundColor: theme.card,
-    borderRadius: theme.radius, padding: 16,
-    shadowColor: theme.accent, shadowOpacity: 0.12,
-    shadowRadius: 12, shadowOffset: { width: 0, height: 4 },
-    elevation: 3, borderWidth: 2, borderColor: theme.accent,
+  continueTop: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 16,
   },
-  levelCardPressed: { opacity: 0.85 },
-  levelCardTop: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start' },
-  levelId: { fontSize: 22, fontWeight: '900', color: theme.accent },
-  levelWords: { fontSize: 12, fontWeight: '600', color: theme.textSecondary, marginTop: 4 },
-  levelName: { fontSize: 13, fontWeight: '600', color: theme.textSecondary, marginTop: 2 },
+  continueBadge: { fontSize: 13, fontWeight: '800', color: 'rgba(255,255,255,0.75)', marginBottom: 4, letterSpacing: 1 },
+  continueTitle: { fontSize: 22, fontWeight: '800', color: '#fff', letterSpacing: -0.3 },
+  continueSub: { fontSize: 13, color: 'rgba(255,255,255,0.75)', fontWeight: '500', marginTop: 3 },
+  arrowCircle: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: 'rgba(255,255,255,0.2)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  arrowText: { fontSize: 26, color: '#fff', lineHeight: 30 },
   progressTrack: {
-    height: 5, backgroundColor: theme.option,
-    borderRadius: 3, marginTop: 12, overflow: 'hidden',
+    height: 5,
+    backgroundColor: 'rgba(255,255,255,0.3)',
+    borderRadius: 3,
+    overflow: 'hidden',
   },
-  progressFill: { height: '100%', backgroundColor: theme.accent, borderRadius: 3 },
-  levelHint: { fontSize: 11, color: theme.accent, fontWeight: '600', marginTop: 8 },
-  levelCardLocked: {
-    width: '47%', backgroundColor: theme.card,
-    borderRadius: theme.radius, padding: 16, opacity: 0.45,
+  progressFill: { height: '100%', backgroundColor: '#fff', borderRadius: 3 },
+
+  sectionLabel: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: theme.textSecondary,
+    textTransform: 'uppercase',
+    letterSpacing: 1,
+    marginBottom: 10,
   },
-  lockIcon: { fontSize: 18, marginBottom: 4 },
-  levelIdLocked: { fontSize: 22, fontWeight: '900', color: theme.textSecondary },
-  levelNameLocked: { fontSize: 13, fontWeight: '600', color: theme.textSecondary, marginTop: 2 },
-  statsRow: { flexDirection: 'row', gap: 12, marginTop: 'auto', paddingTop: 16, paddingBottom: 8 },
-  miniStat: {
-    flex: 1, backgroundColor: theme.card,
-    borderRadius: theme.radiusSm, paddingVertical: 12, alignItems: 'center',
+
+  lockedRow: { flexDirection: 'row', gap: 10, marginBottom: 20 },
+  lockedCard: {
+    flex: 1,
+    backgroundColor: theme.card,
+    borderRadius: theme.radiusSm,
+    paddingVertical: 14,
+    paddingHorizontal: 10,
+    alignItems: 'center',
+    opacity: 0.5,
   },
-  miniStatValue: { fontSize: 20, fontWeight: '800', color: 'rgb(100, 88, 74)' },
-  miniStatLabel: { fontSize: 12, color: theme.textSecondary, marginTop: 2 },
+  lockEmoji: { fontSize: 16, marginBottom: 4 },
+  lockedId: { fontSize: 16, fontWeight: '800', color: theme.textSecondary },
+  lockedName: { fontSize: 10, fontWeight: '600', color: theme.textSecondary, marginTop: 2, textAlign: 'center' },
+
+  statsRow: { flexDirection: 'row', gap: 10, marginTop: 'auto', paddingBottom: 8 },
+  statCard: {
+    flex: 1,
+    backgroundColor: theme.card,
+    borderRadius: theme.radiusSm,
+    paddingVertical: 16,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOpacity: 0.04,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 1,
+  },
+  statIcon: { fontSize: 20, marginBottom: 4 },
+  statValue: { fontSize: 22, fontWeight: '800', color: theme.textPrimary },
+  statLabel: { fontSize: 11, color: theme.textSecondary, marginTop: 2, fontWeight: '500' },
 });

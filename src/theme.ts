@@ -1,27 +1,25 @@
-// Visual design system, inspired by the MemoDremo learning app:
-// warm cream background, white rounded cards, soft shadows, a warm-orange
-// accent, charcoal header, and clear green/red answer feedback.
 export const theme = {
-  bg: '#F5E7DA', // warm cream background
-  card: '#FFFFFF', // lesson / stat cards
-  imageBg: '#F1E8DC', // neutral frame behind a centered (contained) image
-  header: '#2A2622', // charcoal navigation header
+  bg: '#F7EFE6',
+  card: '#FFFFFF',
+  imageBg: '#EFE5D8',
+  header: '#1E1A16',
   headerText: '#FFFFFF',
 
-  accent: '#E5913C', // warm orange — primary actions, active states
-  accentDark: '#CC7E2C', // pressed state
+  accent: '#E8913C',
+  accentDark: '#D07E2A',
 
-  textPrimary: 'rgb(100, 88, 74)',
-  textSecondary: '#9C8E7C',
+  textPrimary: '#2C2018',
+  textSecondary: '#9A8878',
 
   success: '#4FB477',
   successBg: '#E2F3E8',
-  danger: '#E0695B',
+  danger: '#E05B4D',
   dangerBg: '#F7E1DD',
 
-  option: '#F3ECE2', // option pill on a white card
-  optionText: 'rgb(100, 88, 74)',
+  option: '#EDE3D8',
+  optionText: '#2C2018',
+  border: '#E8DDD2',
 
-  radius: 24,
-  radiusSm: 16,
+  radius: 20,
+  radiusSm: 14,
 } as const;

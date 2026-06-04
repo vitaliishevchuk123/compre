@@ -42,11 +42,11 @@ function TabNavigator() {
         tabBarShowLabel: true,
         tabBarActiveTintColor: theme.accent,
         tabBarInactiveTintColor: theme.textSecondary,
-        tabBarLabelStyle: { fontSize: 11, fontWeight: '600', marginTop: 1 },
+        tabBarLabelStyle: { fontSize: 11, fontWeight: '600', marginTop: 2 },
         tabBarStyle: {
           backgroundColor: theme.card,
           borderTopWidth: StyleSheet.hairlineWidth,
-          borderTopColor: theme.option,
+          borderTopColor: theme.border,
           height: 72,
           paddingBottom: 10,
           paddingTop: 8,
@@ -96,9 +96,9 @@ export default function App() {
               component={CategoryPickerScreen}
               options={{
                 title: 'A1',
-                headerStyle: { backgroundColor: 'rgb(72, 64, 56)' },
-                headerTintColor: '#fff',
-                headerTitleStyle: { fontWeight: '700' },
+                headerStyle: { backgroundColor: theme.bg },
+                headerTintColor: theme.textPrimary,
+                headerTitleStyle: { fontWeight: '700', color: theme.textPrimary },
                 headerShadowVisible: false,
               }}
             />
@@ -107,16 +107,16 @@ export default function App() {
               component={LessonScreen}
               options={{
                 title: 'A1',
-                headerBackTitle: 'Home',
-                headerStyle: { backgroundColor: 'rgb(72, 64, 56)' },
-                headerTintColor: theme.headerText,
-                headerTitleStyle: { fontWeight: '700' },
+                headerBackTitle: 'Back',
+                headerStyle: { backgroundColor: theme.bg },
+                headerTintColor: theme.textPrimary,
+                headerTitleStyle: { fontWeight: '700', color: theme.textPrimary },
                 headerShadowVisible: false,
               }}
             />
           </Stack.Navigator>
           </NavigationContainer>
-          <StatusBar style="auto" />
+          <StatusBar style="dark" />
         </VoiceProvider>
       </LearnSettingsProvider>
     </SafeAreaProvider>
