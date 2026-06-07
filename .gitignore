@@ -43,3 +43,4 @@ yarn-error.*
 .tasks
 .tasks-reports
 .claude/settings.local.json
+.npmrc
