@@ -2,8 +2,6 @@
 
 **Learn English through understanding**
 
-test
-
 > Comprehensible input method
 
 Compre teaches English vocabulary the way people actually acquire language — by
