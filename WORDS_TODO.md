@@ -21,7 +21,7 @@
 
 ## numbers
 ✓ one, two, three, four, five, six, seven, eight, nine, ten
-— eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, thirty, forty, fifty, sixty, seventy, eighty, ninety, hundred, thousand
+✓ eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, thirty, forty, fifty, sixty, seventy, eighty, ninety, hundred, thousand
 
 ## objects / home
 ✓ table, chair, bed, book, bag, cup, door, window, house, car, phone, ball, clock, key, glass, bottle, box, desk, sofa, computer, camera, umbrella, watch, pen, pencil, guitar, piano, radio, television, map
@@ -44,14 +44,15 @@
 ✓ buy, think, make, stop, ask, find, say, wait, wake, meet
 ✓ take, put, work, learn, start, fall, hear, leave
 ✓ hate, know, need, bring, speak, win, break, travel, visit, feel
-— live, study, pay, carry, cut, grow, try, remember, move, build, want
+✓ live, study, pay, carry, cut, grow, try, remember, move, build, want
 
 ## emotions
 ✓ happy, sad, angry, afraid, excited, bored, tired, sick, hungry, thirsty
 
 ## adjectives
 ✓ big, small, fast, slow, hot, cold, good, bad, old, young, tall, short, long, new, dirty, clean, warm, beautiful, dark, full, funny, quiet, hard, healthy, large, strong, nice
-— easy, difficult, expensive, cheap, free, great, late, popular, ready, rich, terrible, wonderful, wrong, fat, important, interesting, special
+✓ easy, difficult, expensive, cheap, free, late, ready, rich, terrible, wonderful, wrong, important, interesting, special
+— great, popular, fat
 
 ## nature
 ✓ tree, flower, sun, rain, snow, cloud, sea, river, mountain, island, rock, beach, farm, garden, plant, fire, ice, air, spring, summer, autumn, winter

@@ -4,6 +4,11 @@ import type { ImageSourcePropType } from 'react-native';
 // must be registered explicitly. Each lesson card references a key here.
 // Real artwork (AI-generated or curated) drops into assets/images/<level>/ and
 // gets wired up below — no schema or data changes needed.
+// Shared stand-in for cards whose real photo has not been added yet. To add a photo:
+// drop the file into assets/images/a1/ and point that card's line below at it
+// (search this file for "TODO photo" to find every card still on the placeholder).
+const PLACEHOLDER = require('../../assets/images/a1/placeholder.png');
+
 const registry: Record<string, ImageSourcePropType> = {
   'a1/boy': require('../../assets/images/a1/boy.png'),
   'a1/girl': require('../../assets/images/a1/girl.png'),
@@ -471,6 +476,259 @@ const registry: Record<string, ImageSourcePropType> = {
   'a1/act-show':     require('../../assets/images/a1/act-show.png'),
   'a1/act-explain':  require('../../assets/images/a1/act-explain.png'),
   'a1/act-teach':    require('../../assets/images/a1/act-teach.png'),
+  // ── new A1 batch · greetings (placeholder, TODO photo) ──
+  'a1/greet-hello': PLACEHOLDER, // TODO photo: The girl waves and says hello to her new neighbour.
+  'a1/greet-goodbye': PLACEHOLDER, // TODO photo: The friends hug and say goodbye at the airport.
+  'a1/greet-please': PLACEHOLDER, // TODO photo: The boy says please and gets more cake.
+  'a1/greet-thanks': PLACEHOLDER, // TODO photo: The girl smiles and says thanks for the flowers.
+  'a1/greet-sorry': PLACEHOLDER, // TODO photo: The boy drops a glass and says sorry.
+  'a1/greet-yes': PLACEHOLDER, // TODO photo: Yes! The baby wants more ice cream.
+  'a1/greet-no': PLACEHOLDER, // TODO photo: No! The cat does not like the bath.
+  'a1/greet-welcome': PLACEHOLDER, // TODO photo: The mat at the front door says welcome.
+  // ── new A1 batch · pronouns (placeholder, TODO photo) ──
+  'a1/pron-i': PLACEHOLDER, // TODO photo: I am taking a photo of the sea.
+  'a1/pron-you': PLACEHOLDER, // TODO photo: The girl points at the camera and says: You!
+  'a1/pron-he': PLACEHOLDER, // TODO photo: He is standing in the rain with a big umbrella.
+  'a1/pron-she': PLACEHOLDER, // TODO photo: She plays the piano every evening.
+  'a1/pron-it': PLACEHOLDER, // TODO photo: It is sleeping on the bed.
+  'a1/pron-we': PLACEHOLDER, // TODO photo: We love the sea!
+  'a1/pron-they': PLACEHOLDER, // TODO photo: They ride their bikes to school.
+  'a1/pron-my': PLACEHOLDER, // TODO photo: This is my ball!
+  'a1/pron-your': PLACEHOLDER, // TODO photo: This is your present!
+  'a1/pron-his': PLACEHOLDER, // TODO photo: It is his hat.
+  'a1/pron-her': PLACEHOLDER, // TODO photo: It is her bag.
+  'a1/pron-our': PLACEHOLDER, // TODO photo: This is our new house!
+  'a1/pron-their': PLACEHOLDER, // TODO photo: It is their dog.
+  // ── new A1 batch · questions (placeholder, TODO photo) ──
+  'a1/q-what': PLACEHOLDER, // TODO photo: What is in the box?
+  'a1/q-where': PLACEHOLDER, // TODO photo: Where is my ball?
+  'a1/q-who': PLACEHOLDER, // TODO photo: Who is at the door?
+  'a1/q-when': PLACEHOLDER, // TODO photo: When does the train come?
+  'a1/q-why': PLACEHOLDER, // TODO photo: Why is the baby crying?
+  'a1/q-how': PLACEHOLDER, // TODO photo: How old are you?
+  // ── new A1 batch · prepositions (placeholder, TODO photo) ──
+  'a1/prep-in': PLACEHOLDER, // TODO photo: The cat is in the box.
+  'a1/prep-on': PLACEHOLDER, // TODO photo: The cat is sleeping on the sofa.
+  'a1/prep-under': PLACEHOLDER, // TODO photo: The boy is hiding under the table.
+  'a1/prep-behind': PLACEHOLDER, // TODO photo: The girl is hiding behind a big tree.
+  'a1/prep-between': PLACEHOLDER, // TODO photo: The dog sits between the boy and the girl.
+  'a1/prep-next-to': PLACEHOLDER, // TODO photo: The cafe is next to the bank.
+  'a1/prep-in-front-of': PLACEHOLDER, // TODO photo: The children stand in front of the school.
+  'a1/prep-above': PLACEHOLDER, // TODO photo: The plane flies above the clouds.
+  'a1/prep-around': PLACEHOLDER, // TODO photo: The children dance around the tree.
+  'a1/prep-through': PLACEHOLDER, // TODO photo: The train goes through a dark tunnel.
+  'a1/prep-across': PLACEHOLDER, // TODO photo: The mother and her boy walk across the road.
+  'a1/prep-with': PLACEHOLDER, // TODO photo: The boy eats his soup with a big spoon.
+  'a1/prep-without': PLACEHOLDER, // TODO photo: The girl goes out without an umbrella. Now she is wet!
+  // ── new A1 batch · actions (placeholder, TODO photo) ──
+  'a1/act-have': PLACEHOLDER, // TODO photo: The girl has a big red balloon.
+  'a1/act-like': PLACEHOLDER, // TODO photo: The boy likes pizza. It is his favorite food!
+  'a1/act-want': PLACEHOLDER, // TODO photo: The baby wants the cake!
+  'a1/act-get': PLACEHOLDER, // TODO photo: The woman gets a letter from her friend.
+  'a1/act-live': PLACEHOLDER, // TODO photo: Fish live in the sea.
+  'a1/act-study': PLACEHOLDER, // TODO photo: The student studies for the exam.
+  'a1/act-use': PLACEHOLDER, // TODO photo: The girl uses her phone to take a photo.
+  'a1/act-tell': PLACEHOLDER, // TODO photo: Grandpa tells a funny story.
+  'a1/act-keep': PLACEHOLDER, // TODO photo: The girl keeps her treasures in a box.
+  'a1/act-send': PLACEHOLDER, // TODO photo: The man sends a letter to his son.
+  'a1/act-enjoy': PLACEHOLDER, // TODO photo: The girl enjoys the beach.
+  'a1/act-finish': PLACEHOLDER, // TODO photo: The runner finishes the race.
+  'a1/act-join': PLACEHOLDER, // TODO photo: The boy joins the football game.
+  'a1/act-build': PLACEHOLDER, // TODO photo: The children build a big sand castle.
+  'a1/act-grow': PLACEHOLDER, // TODO photo: The flowers grow in the garden.
+  'a1/act-follow': PLACEHOLDER, // TODO photo: The little ducks follow their mother.
+  'a1/act-guess': PLACEHOLDER, // TODO photo: The children guess what is in the box.
+  'a1/act-paint': PLACEHOLDER, // TODO photo: The girl paints the wall blue.
+  'a1/act-relax': PLACEHOLDER, // TODO photo: The man relaxes on the sofa.
+  'a1/act-repeat': PLACEHOLDER, // TODO photo: The children repeat the new word.
+  'a1/act-return': PLACEHOLDER, // TODO photo: The boy returns his book to the library.
+  'a1/act-order': PLACEHOLDER, // TODO photo: The woman orders a pizza.
+  'a1/act-lose': PLACEHOLDER, // TODO photo: The team loses the game.
+  'a1/act-fix': PLACEHOLDER, // TODO photo: The man fixes the bike.
+  // ── new A1 batch · numbers (placeholder, TODO photo) ──
+  'a1/num-eleven': PLACEHOLDER, // TODO photo: A football team has eleven players on the field.
+  'a1/num-twelve': PLACEHOLDER, // TODO photo: Twelve eggs are in the box.
+  'a1/num-thirteen': PLACEHOLDER, // TODO photo: The boy is thirteen today.
+  'a1/num-fourteen': PLACEHOLDER, // TODO photo: Two weeks is fourteen days.
+  'a1/num-fifteen': PLACEHOLDER, // TODO photo: Fifteen colorful balls are on the pool table.
+  'a1/num-sixteen': PLACEHOLDER, // TODO photo: The big cake has sixteen candles.
+  'a1/num-seventeen': PLACEHOLDER, // TODO photo: The girl is seventeen and she goes to school by bike.
+  'a1/num-eighteen': PLACEHOLDER, // TODO photo: He is eighteen and he has his first car.
+  'a1/num-nineteen': PLACEHOLDER, // TODO photo: Nineteen people wait for the bus in the rain.
+  'a1/num-twenty': PLACEHOLDER, // TODO photo: We have twenty fingers and toes.
+  'a1/num-thirty': PLACEHOLDER, // TODO photo: Thirty students sit in the classroom.
+  'a1/num-forty': PLACEHOLDER, // TODO photo: Forty people watch a film at the cinema.
+  'a1/num-fifty': PLACEHOLDER, // TODO photo: She is fifty today. Her friends bring a big cake.
+  'a1/num-sixty': PLACEHOLDER, // TODO photo: One hour has sixty minutes.
+  'a1/num-seventy': PLACEHOLDER, // TODO photo: The man with the white hat is seventy years old.
+  'a1/num-eighty': PLACEHOLDER, // TODO photo: Grandma is eighty, but she still dances!
+  'a1/num-ninety': PLACEHOLDER, // TODO photo: Grandpa is ninety and he has a very big party.
+  'a1/num-hundred': PLACEHOLDER, // TODO photo: A hundred balloons fly in the sky.
+  'a1/num-thousand': PLACEHOLDER, // TODO photo: We can see a thousand stars in the night sky.
+  // ── new A1 batch · days (placeholder, TODO photo) ──
+  'a1/day-monday': PLACEHOLDER, // TODO photo: On Monday morning, the tired boy goes to school.
+  'a1/day-tuesday': PLACEHOLDER, // TODO photo: On Tuesday, the children eat pizza at school.
+  'a1/day-wednesday': PLACEHOLDER, // TODO photo: On Wednesday, the girl plays the piano.
+  'a1/day-thursday': PLACEHOLDER, // TODO photo: On Thursday, Mother buys fresh vegetables at the market.
+  'a1/day-friday': PLACEHOLDER, // TODO photo: On Friday night, the friends watch a film.
+  'a1/day-saturday': PLACEHOLDER, // TODO photo: On Saturday, the family goes to the beach.
+  'a1/day-sunday': PLACEHOLDER, // TODO photo: On Sunday, Grandma cooks a big dinner.
+  // ── new A1 batch · months (placeholder, TODO photo) ──
+  'a1/month-january': PLACEHOLDER, // TODO photo: In January, the snow is deep and the new year begins.
+  'a1/month-february': PLACEHOLDER, // TODO photo: In February, the boy gives chocolate to the girl.
+  'a1/month-march': PLACEHOLDER, // TODO photo: In March, the first flowers come out.
+  'a1/month-april': PLACEHOLDER, // TODO photo: In April, the girl runs in the rain with her umbrella.
+  'a1/month-may': PLACEHOLDER, // TODO photo: In May, the garden is full of flowers.
+  'a1/month-june': PLACEHOLDER, // TODO photo: In June, school is over and the children swim.
+  'a1/month-july': PLACEHOLDER, // TODO photo: In July, the family eats ice cream on the hot beach.
+  'a1/month-august': PLACEHOLDER, // TODO photo: In August, the family goes on holiday.
+  'a1/month-september': PLACEHOLDER, // TODO photo: In September, the children go back to school.
+  'a1/month-october': PLACEHOLDER, // TODO photo: In October, the leaves are orange and the pumpkins are big.
+  'a1/month-november': PLACEHOLDER, // TODO photo: In November, it is dark and rainy in the evening.
+  'a1/month-december': PLACEHOLDER, // TODO photo: In December, the family has a tree with lights and many presents.
+  // ── new A1 batch · time (placeholder, TODO photo) ──
+  'a1/time-today': PLACEHOLDER, // TODO photo: The party is today!
+  'a1/time-tomorrow': PLACEHOLDER, // TODO photo: We go to the beach tomorrow!
+  'a1/time-yesterday': PLACEHOLDER, // TODO photo: There was a big storm yesterday.
+  'a1/time-weekend': PLACEHOLDER, // TODO photo: On the weekend, the family rides bikes.
+  'a1/time-hour': PLACEHOLDER, // TODO photo: The bus comes every hour.
+  'a1/time-minute': PLACEHOLDER, // TODO photo: Wait one minute, please!
+  'a1/time-midnight': PLACEHOLDER, // TODO photo: It is midnight and the city sleeps.
+  'a1/time-birthday': PLACEHOLDER, // TODO photo: It is her birthday!
+  'a1/time-party': PLACEHOLDER, // TODO photo: The children dance at the party.
+  'a1/time-holiday': PLACEHOLDER, // TODO photo: The family is on holiday by the sea.
+  // ── new A1 batch · home (placeholder, TODO photo) ──
+  'a1/home-home': PLACEHOLDER, // TODO photo: The boy runs home after school.
+  'a1/home-kitchen': PLACEHOLDER, // TODO photo: Father cooks soup in the kitchen.
+  'a1/home-bathroom': PLACEHOLDER, // TODO photo: The boy washes his face in the bathroom.
+  'a1/home-bedroom': PLACEHOLDER, // TODO photo: The girl reads a book in her bedroom.
+  'a1/home-floor': PLACEHOLDER, // TODO photo: The baby plays on the floor.
+  'a1/home-wall': PLACEHOLDER, // TODO photo: The boy draws a picture on the wall!
+  'a1/home-stairs': PLACEHOLDER, // TODO photo: The cat runs down the stairs.
+  'a1/home-roof': PLACEHOLDER, // TODO photo: A bird sits on the roof of the house.
+  'a1/home-apartment': PLACEHOLDER, // TODO photo: The family lives in a small apartment in the city.
+  // ── new A1 batch · school (placeholder, TODO photo) ──
+  'a1/school-classroom': PLACEHOLDER, // TODO photo: The students sit in the classroom.
+  'a1/school-lesson': PLACEHOLDER, // TODO photo: The English lesson starts now.
+  'a1/school-homework': PLACEHOLDER, // TODO photo: The girl does her homework at the desk.
+  'a1/school-question': PLACEHOLDER, // TODO photo: The girl has a question for the teacher.
+  'a1/school-word': PLACEHOLDER, // TODO photo: The teacher writes a new word on the board.
+  'a1/school-letter': PLACEHOLDER, // TODO photo: The old man reads a letter from his son.
+  'a1/school-page': PLACEHOLDER, // TODO photo: The boy turns the page.
+  'a1/school-picture': PLACEHOLDER, // TODO photo: The child shows his picture to the teacher.
+  'a1/school-story': PLACEHOLDER, // TODO photo: Grandma reads a story to the children before bed.
+  'a1/school-test': PLACEHOLDER, // TODO photo: The students are quiet during the test.
+  'a1/school-dictionary': PLACEHOLDER, // TODO photo: The boy looks for a word in the dictionary.
+  // ── new A1 batch · money (placeholder, TODO photo) ──
+  'a1/money-money': PLACEHOLDER, // TODO photo: The girl puts her money in a pig bank.
+  'a1/money-price': PLACEHOLDER, // TODO photo: The woman looks at the price of the shoes.
+  'a1/money-ticket': PLACEHOLDER, // TODO photo: The boy shows his ticket at the cinema.
+  'a1/money-shopping': PLACEHOLDER, // TODO photo: The mother goes shopping with a big bag.
+  'a1/money-supermarket': PLACEHOLDER, // TODO photo: The family buys food in the supermarket.
+  'a1/money-pay': PLACEHOLDER, // TODO photo: The man pays for his coffee.
+  // ── new A1 batch · hobbies (placeholder, TODO photo) ──
+  'a1/hobby-music': PLACEHOLDER, // TODO photo: The girl listens to music on the bus.
+  'a1/hobby-song': PLACEHOLDER, // TODO photo: The singer sings a happy song.
+  'a1/hobby-sport': PLACEHOLDER, // TODO photo: Swimming is a good sport for kids.
+  'a1/hobby-football': PLACEHOLDER, // TODO photo: The boys play football in the park.
+  'a1/hobby-tennis': PLACEHOLDER, // TODO photo: She plays tennis on a sunny day.
+  'a1/hobby-game': PLACEHOLDER, // TODO photo: The friends play a board game after dinner.
+  'a1/hobby-hobby': PLACEHOLDER, // TODO photo: Painting is her favorite hobby.
+  'a1/hobby-film': PLACEHOLDER, // TODO photo: The family watches a funny film.
+  'a1/hobby-concert': PLACEHOLDER, // TODO photo: The singer and the guitar player are at a big concert.
+  'a1/hobby-team': PLACEHOLDER, // TODO photo: The team is happy because they win.
+  // ── new A1 batch · jobs (placeholder, TODO photo) ──
+  'a1/job-artist': PLACEHOLDER, // TODO photo: The artist paints a picture of the sea.
+  'a1/job-actor': PLACEHOLDER, // TODO photo: The actor is on the big stage.
+  'a1/job-dancer': PLACEHOLDER, // TODO photo: The dancer jumps and turns on the stage.
+  'a1/job-tourist': PLACEHOLDER, // TODO photo: The tourist takes photos of the old street.
+  'a1/job-player': PLACEHOLDER, // TODO photo: The player runs with the ball.
+  'a1/job-scientist': PLACEHOLDER, // TODO photo: The scientist looks at a tiny plant.
+  'a1/job-customer': PLACEHOLDER, // TODO photo: The waiter smiles at the customer.
+  // ── new A1 batch · people (placeholder, TODO photo) ──
+  'a1/people-family': PLACEHOLDER, // TODO photo: The family has a picnic in the park.
+  'a1/people-name': PLACEHOLDER, // TODO photo: The boy writes his name on the bag.
+  'a1/people-job': PLACEHOLDER, // TODO photo: The nurse loves her job.
+  // ── new A1 batch · food (placeholder, TODO photo) ──
+  'a1/food-breakfast': PLACEHOLDER, // TODO photo: The family eats eggs and bread for breakfast.
+  'a1/food-lunch': PLACEHOLDER, // TODO photo: The children eat lunch at school.
+  'a1/food-dinner': PLACEHOLDER, // TODO photo: Grandma cooks dinner for everyone.
+  'a1/food-vegetable': PLACEHOLDER, // TODO photo: A carrot is a vegetable.
+  'a1/food-menu': PLACEHOLDER, // TODO photo: The waiter gives the menu to the guests.
+  'a1/food-cream': PLACEHOLDER, // TODO photo: The girl puts cream on the cake.
+  'a1/food-food': PLACEHOLDER, // TODO photo: There is a lot of food on the table.
+  // ── new A1 batch · places (placeholder, TODO photo) ──
+  'a1/place-pool': PLACEHOLDER, // TODO photo: The children swim in the pool.
+  'a1/place-gym': PLACEHOLDER, // TODO photo: The woman gets strong in the gym.
+  'a1/place-theatre': PLACEHOLDER, // TODO photo: The family watches a show at the theatre.
+  'a1/place-building': PLACEHOLDER, // TODO photo: The tall building has a hundred windows.
+  'a1/place-university': PLACEHOLDER, // TODO photo: The young woman studies at the university.
+  'a1/place-world': PLACEHOLDER, // TODO photo: The boy looks at the world on a globe.
+  // ── new A1 batch · objects (placeholder, TODO photo) ──
+  'a1/obj-newspaper': PLACEHOLDER, // TODO photo: The old man reads the newspaper with his coffee.
+  'a1/obj-magazine': PLACEHOLDER, // TODO photo: The girl reads a magazine at the cafe.
+  'a1/obj-passport': PLACEHOLDER, // TODO photo: The woman shows her passport at the airport.
+  'a1/obj-message': PLACEHOLDER, // TODO photo: The girl sends a message to her friend.
+  'a1/obj-card': PLACEHOLDER, // TODO photo: The boy makes a birthday card for his mother.
+  'a1/obj-present': PLACEHOLDER, // TODO photo: The girl gets a big present.
+  'a1/obj-paper': PLACEHOLDER, // TODO photo: The girl folds paper into a small boat.
+  // ── new A1 batch · body (placeholder, TODO photo) ──
+  'a1/body-finger': PLACEHOLDER, // TODO photo: The baby holds his mother's finger.
+  'a1/body-knee': PLACEHOLDER, // TODO photo: The boy fell and hurt his knee.
+  'a1/body-neck': PLACEHOLDER, // TODO photo: The giraffe has a very long neck.
+  'a1/body-shoulder': PLACEHOLDER, // TODO photo: The parrot sits on the pirate's shoulder.
+  'a1/body-stomach': PLACEHOLDER, // TODO photo: The boy is hungry and his stomach is loud.
+  'a1/body-toe': PLACEHOLDER, // TODO photo: The baby plays with her toes.
+  // ── new A1 batch · animals (placeholder, TODO photo) ──
+  'a1/animal-duck': PLACEHOLDER, // TODO photo: The duck swims in the pond with her babies.
+  'a1/animal-frog': PLACEHOLDER, // TODO photo: The green frog jumps on a big leaf.
+  'a1/animal-monkey': PLACEHOLDER, // TODO photo: The monkey eats a banana in the tree.
+  'a1/animal-giraffe': PLACEHOLDER, // TODO photo: The giraffe eats leaves from the tall tree.
+  'a1/animal-butterfly': PLACEHOLDER, // TODO photo: A butterfly sits on a yellow flower.
+  'a1/animal-tiger': PLACEHOLDER, // TODO photo: The tiger walks in the tall grass.
+  // ── new A1 batch · nature (placeholder, TODO photo) ──
+  'a1/nature-sky': PLACEHOLDER, // TODO photo: The birds fly in the blue sky.
+  'a1/nature-moon': PLACEHOLDER, // TODO photo: The moon is big and bright tonight.
+  'a1/nature-star': PLACEHOLDER, // TODO photo: A star twinkles in the dark sky.
+  'a1/nature-grass': PLACEHOLDER, // TODO photo: The cows eat green grass.
+  'a1/nature-leaf': PLACEHOLDER, // TODO photo: A yellow leaf falls from the tree.
+  'a1/nature-forest': PLACEHOLDER, // TODO photo: The bear walks in the dark forest.
+  'a1/nature-lake': PLACEHOLDER, // TODO photo: The boy sits in a boat on the quiet lake.
+  // ── new A1 batch · weather (placeholder, TODO photo) ──
+  'a1/weather-weather': PLACEHOLDER, // TODO photo: The weather is great today.
+  'a1/weather-sunny': PLACEHOLDER, // TODO photo: It is a sunny day at the beach.
+  'a1/weather-cloudy': PLACEHOLDER, // TODO photo: It is cloudy and grey over the city.
+  'a1/weather-windy': PLACEHOLDER, // TODO photo: It is very windy and the girl holds her hat.
+  'a1/weather-rainy': PLACEHOLDER, // TODO photo: It is a rainy day in the city.
+  'a1/weather-snowy': PLACEHOLDER, // TODO photo: It is snowy and the children play in the garden.
+  'a1/weather-foggy': PLACEHOLDER, // TODO photo: It is foggy and we cannot see the road.
+  'a1/weather-storm': PLACEHOLDER, // TODO photo: A big storm comes over the sea.
+  // ── new A1 batch · adjectives (placeholder, TODO photo) ──
+  'a1/adj-high': PLACEHOLDER, // TODO photo: The tree is very high.
+  'a1/adj-deep': PLACEHOLDER, // TODO photo: The well is very deep.
+  'a1/adj-huge': PLACEHOLDER, // TODO photo: The elephant is huge!
+  'a1/adj-tiny': PLACEHOLDER, // TODO photo: The ant is tiny on her finger.
+  'a1/adj-cool': PLACEHOLDER, // TODO photo: The boy looks really cool.
+  'a1/adj-famous': PLACEHOLDER, // TODO photo: The singer is famous and everyone takes photos.
+  'a1/adj-modern': PLACEHOLDER, // TODO photo: The house is very modern.
+  'a1/adj-amazing': PLACEHOLDER, // TODO photo: The fireworks are amazing!
+  'a1/adj-exciting': PLACEHOLDER, // TODO photo: The ride is very exciting.
+  'a1/adj-pretty': PLACEHOLDER, // TODO photo: The girl in the yellow dress is pretty.
+  'a1/adj-blonde': PLACEHOLDER, // TODO photo: The girl has long blonde hair.
+  // ── new A1 batch · adverbs (placeholder, TODO photo) ──
+  'a1/adv-up': PLACEHOLDER, // TODO photo: The balloon flies up into the sky.
+  'a1/adv-down': PLACEHOLDER, // TODO photo: The boy goes down the slide.
+  'a1/adv-here': PLACEHOLDER, // TODO photo: Come here, little dog!
+  'a1/adv-there': PLACEHOLDER, // TODO photo: Look, the bird is over there!
+  'a1/adv-back': PLACEHOLDER, // TODO photo: The dog brings the ball back.
+  'a1/adv-left': PLACEHOLDER, // TODO photo: Turn left at the bank.
+  'a1/adv-very': PLACEHOLDER, // TODO photo: The elephant is very big.
+  'a1/adv-too': PLACEHOLDER, // TODO photo: The boy eats ice cream, and his sister eats ice cream too.
+  'a1/adv-slowly': PLACEHOLDER, // TODO photo: The snail moves slowly across the leaf.
+  // ── new A1 batch · clothes (placeholder, TODO photo) ──
+  'a1/clothes-scarf': PLACEHOLDER, // TODO photo: The girl wears a warm red scarf.
+  'a1/clothes-socks': PLACEHOLDER, // TODO photo: The boy puts on his socks and shoes.
+  'a1/clothes-shorts': PLACEHOLDER, // TODO photo: The children wear shorts and T-shirts on the beach.
 };
 
 /** Resolve a bundled image key, or undefined for an unknown/remote key. */

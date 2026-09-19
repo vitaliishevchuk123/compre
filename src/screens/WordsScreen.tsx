@@ -24,6 +24,17 @@ const CATEGORY_COLOR: Record<string, string> = {
   body:       '#FFE5DC',
   nature:     '#D5F5EE',
   numbers:    '#EED5FF',
+  greetings:  '#FFE0EC',
+  pronouns:   '#E0ECFF',
+  questions:  '#FFF0C8',
+  prepositions: '#DDF0E8',
+  days:       '#E8E0FF',
+  months:     '#D8ECFF',
+  home:       '#F3E6D6',
+  school:     '#FFF4CC',
+  money:      '#DFF3D0',
+  hobbies:    '#FFDDE6',
+  weather:    '#D6EEFF',
 };
 
 const COLS = 3;
