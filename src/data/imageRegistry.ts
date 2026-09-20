@@ -325,7 +325,7 @@ const registry: Record<string, ImageSourcePropType> = {
   'a1/adv-always':   require('../../assets/images/a1/adv-always.jpg'),
   'a1/adv-never':    require('../../assets/images/a1/adv-never.jpg'),
   'a1/adv-often':    require('../../assets/images/a1/adv-often.jpg'),
-  'a1/adv-sometimes':require('../../assets/images/a1/adv-sometimes.png'),
+  'a1/adv-sometimes':require('../../assets/images/a1/adv-sometimes.jpg'),
   'a1/adv-again':    require('../../assets/images/a1/adv-again.png'),
   'a1/adv-away':     require('../../assets/images/a1/adv-away.png'),
   'a1/adv-far':      require('../../assets/images/a1/adv-far.png'),
