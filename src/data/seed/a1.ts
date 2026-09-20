@@ -3217,6 +3217,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['nice', 'happy', 'good', 'strong'],
     answer: 'nice',
     answerPhrase: 'The girl is nice.',
+    description: 'This word describes a person who is friendly and pleasant. They smile, say kind words, and make other people feel comfortable. It also describes a pleasant day or a pleasant meal.',
   },
   {
     order: 323,
@@ -3226,6 +3227,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['hate', 'love', 'play', 'know'],
     answer: 'hate',
     answerPhrase: 'The cat hates the dog.',
+    description: 'This is a very strong feeling against someone or something. You do not want to see it, hear it, or be near it. A person can feel it about a food that they cannot stand.',
   },
   {
     order: 324,
@@ -3235,6 +3237,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['know', 'learn', 'read', 'hate'],
     answer: 'know',
     answerPhrase: 'The woman knows the way.',
+    description: 'You do this when the information is already in your head. You are sure about a fact, for example your own name or the way to your house. You do not need to search for the answer.',
   },
   {
     order: 325,
@@ -3244,6 +3247,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['need', 'drink', 'eat', 'bring'],
     answer: 'need',
     answerPhrase: 'The baby needs milk.',
+    description: 'This is a strong wish for something that you must have. Without it, you cannot live well, for example air, water, and sleep. It is stronger than a simple wish for a toy.',
   },
   {
     order: 326,
@@ -3253,6 +3257,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['bring', 'fall', 'take', 'speak'],
     answer: 'bring',
     answerPhrase: 'The mother is bringing bread.',
+    description: 'You do this when you carry something with you to the place where a person is. Someone asks for a glass of water, and you go to the kitchen and come back with it. Waiters do this all day.',
   },
   {
     order: 327,
@@ -3262,6 +3267,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['speak', 'fly', 'drink', 'bring'],
     answer: 'speak',
     answerPhrase: 'The man can speak.',
+    description: 'You do this with your mouth and your voice to communicate. You can do it in one language or in many languages. A teacher does it in front of the class, and a person does it on the phone.',
   },
   {
     order: 328,
@@ -3271,6 +3277,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['win', 'jump', 'fall', 'speak'],
     answer: 'win',
     answerPhrase: 'The boy is winning.',
+    description: 'You do this when you get the first place in a game or a competition. You score more points than the other people, and you get a cup or a medal. Everyone is happy for you.',
   },
   {
     order: 329,
@@ -3280,6 +3287,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['break', 'open', 'fall', 'travel'],
     answer: 'break',
     answerPhrase: 'The boy is breaking the glass.',
+    description: 'You do this to a glass, a plate, or a toy when you use too much force, and it splits into pieces. After that, it does not work anymore, and you cannot use it. It is often an accident.',
   },
   {
     order: 330,
@@ -3289,6 +3297,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['travel', 'go', 'fly', 'break'],
     answer: 'travel',
     answerPhrase: 'The man is travelling.',
+    description: 'You do this when you visit places that are far from your home. You may use a train, a car, or a boat, and you may cross many countries. People do this on holiday or for work.',
   },
   {
     order: 331,
@@ -3298,6 +3307,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['visit', 'go', 'come', 'feel'],
     answer: 'visit',
     answerPhrase: 'The woman is visiting the museum.',
+    description: 'You do this when you spend a short time in a place or with a person. Tourists do it in a museum, and children do it at their grandparents\' house. After a while, you return to your home.',
   },
   {
     order: 332,
@@ -3307,6 +3317,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['feel', 'hear', 'look', 'visit'],
     answer: 'feel',
     answerPhrase: 'The girl can feel the rain.',
+    description: 'You do this with your skin or with your emotions. You touch something cold and you know that it is cold, or you notice happiness inside you. Your body sends the information to your brain.',
   },
   {
     order: 333,
@@ -3316,6 +3327,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['soft', 'red', 'run', 'empty'],
     answer: 'soft',
     answerPhrase: 'The pillow is soft.',
+    description: 'This word describes something that is gentle when you press it. It changes shape easily, and it is nice to touch. A pillow, a blanket, and a kitten are like this.',
   },
   {
     order: 334,
@@ -3325,6 +3337,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['empty', 'dog', 'eat', 'soft'],
     answer: 'empty',
     answerPhrase: 'The bottle is empty.',
+    description: 'This word tells us that there is nothing inside. A box, a glass, or a room can be like this. After you drink all the water in a bottle, it is like this.',
   },
   {
     order: 335,
@@ -3334,6 +3347,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['bright', 'cat', 'walk', 'empty'],
     answer: 'bright',
     answerPhrase: 'The sun is bright.',
+    description: 'This word describes something that gives or reflects a lot of light. Your eyes may hurt when you look at it. The sun at noon and a new lamp are like this.',
   },
   {
     order: 336,
@@ -3343,6 +3357,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['heavy', 'small', 'easy', 'wet'],
     answer: 'heavy',
     answerPhrase: 'The box is heavy.',
+    description: 'This word describes something that has a lot of weight. It is hard to lift, and you need strong arms to carry it. A rock, a piano, and a full bag of books are like this.',
   },
   {
     order: 337,
@@ -3352,6 +3367,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['light', 'girl', 'drink', 'wet'],
     answer: 'light',
     answerPhrase: 'The hot-air balloon is light.',
+    description: 'This word describes something that has very little weight. You can lift it with one finger, and the wind can even move it. A feather and a soap bubble are like this.',
   },
   {
     order: 338,
@@ -3361,6 +3377,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['wet', 'book', 'jump', 'light'],
     answer: 'wet',
     answerPhrase: 'They are wet.',
+    description: 'This word describes something that has water on it or in it. After a swim or a walk in the rain, your clothes are like this. Your hair is like this after a shower.',
   },
   {
     order: 339,
@@ -3370,6 +3387,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['dry', 'bird', 'play', 'light'],
     answer: 'dry',
     answerPhrase: 'The towel is dry.',
+    description: 'This word describes something that has no water on it or in it. Your clothes become like this again after you hang them in the sun. A desert is like this for most of the year.',
   },
   {
     order: 340,
@@ -3379,6 +3397,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['cheap', 'expensive', 'costly', 'special'],
     answer: 'cheap',
     answerPhrase: 'The bread is cheap.',
+    description: 'This word describes something that does not cost much money. You can buy it easily with a few coins. Bread and a pencil are usually like this.',
   },
   {
     order: 341,
@@ -3388,6 +3407,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['expensive', 'cheap', 'affordable', 'special'],
     answer: 'expensive',
     answerPhrase: 'The car is expensive.',
+    description: 'This word describes something that costs a lot of money. Only people with high salaries can buy it easily. A new sports car, a diamond ring, and a big house are like this.',
   },
   {
     order: 342,
@@ -3397,6 +3417,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['dangerous', 'safe', 'harmless', 'easy'],
     answer: 'dangerous',
     answerPhrase: 'The lion is dangerous.',
+    description: 'This word describes something that can cause serious injury. You must be very careful around it. A tiger, a fast car, and a fire are like this.',
   },
   {
     order: 343,
@@ -3406,6 +3427,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['safe', 'dangerous', 'risky', 'easy'],
     answer: 'safe',
     answerPhrase: 'The house is safe.',
+    description: 'This word describes a place or a thing where nothing bad can happen to you. You can relax there, and nobody can hurt you. A locked house with a strong door is like this.',
   },
   {
     order: 344,
@@ -3415,6 +3437,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['rich', 'poor', 'broke', 'favorite'],
     answer: 'rich',
     answerPhrase: 'The man is rich.',
+    description: 'This word describes a person who has a lot of money. They may have a big house, expensive cars, and holidays on islands. They do not worry about the price of things.',
   },
   {
     order: 345,
@@ -3424,6 +3447,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['poor', 'rich', 'wealthy', 'favorite'],
     answer: 'poor',
     answerPhrase: 'The woman is poor.',
+    description: 'This word describes a person who has very little money. It is hard for them to buy food, clothes, or a house. They have to count every coin.',
   },
   {
     order: 346,
@@ -3433,6 +3457,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['lucky', 'unlucky', 'unfortunate', 'silly'],
     answer: 'lucky',
     answerPhrase: 'The boy is lucky.',
+    description: 'This word describes a person that good things happen to by chance. They find money on the street, or they win a prize without any effort. Many people carry a four-leaf clover to become like this.',
   },
   {
     order: 347,
@@ -3442,6 +3467,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['ready', 'unready', 'unprepared', 'right'],
     answer: 'ready',
     answerPhrase: 'The girl is ready.',
+    description: 'This word tells us that a person has finished all the preparations. They can start immediately, because everything is done. Before a race, a runner says that they are like this.',
   },
   {
     order: 348,
@@ -3451,6 +3477,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['late', 'early', 'punctual', 'right'],
     answer: 'late',
     answerPhrase: 'The man is late.',
+    description: 'This word tells us that someone arrives after the correct time. The lesson has already begun, or the train has already left. Nobody likes to be like this for an interview.',
   },
   {
     order: 349,
@@ -3460,6 +3487,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['early', 'late', 'delayed', 'wrong'],
     answer: 'early',
     answerPhrase: 'It is early.',
+    description: 'This word tells us that something happens before the usual or expected time. You arrive at the station an hour before the train leaves, or you wake up when the sun is not yet up. Farmers often get up like this.',
   },
   {
     order: 350,
@@ -3469,6 +3497,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['right', 'wrong', 'incorrect', 'early'],
     answer: 'right',
     answerPhrase: 'The action is right.',
+    description: 'This word describes an action or an answer that is as it should be. There is no mistake, and a teacher would say yes to it. It also names the side opposite to the side of your heart.',
   },
   {
     order: 351,
@@ -3478,6 +3507,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['wrong', 'right', 'correct', 'early'],
     answer: 'wrong',
     answerPhrase: 'The answer is wrong.',
+    description: 'This word describes an action or an answer that has a mistake in it. A teacher marks it with a cross. If you add two and two and say five, your answer is like this.',
   },
   {
     order: 352,
@@ -3487,6 +3517,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['easy', 'difficult', 'hard', 'important'],
     answer: 'easy',
     answerPhrase: 'The book is easy.',
+    description: 'This word describes something that needs little effort. You can do it or understand it quickly, without help. A simple story for small children is like this.',
   },
   {
     order: 353,
@@ -3496,6 +3527,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['difficult', 'easy', 'simple', 'important'],
     answer: 'difficult',
     answerPhrase: 'The test is difficult.',
+    description: 'This word describes something that needs a lot of effort. You must think a lot, and you may need help to do it or to understand it. A test about advanced science is like this for most children.',
   },
   {
     order: 354,
@@ -3505,6 +3537,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['important', 'unimportant', 'minor', 'interesting'],
     answer: 'important',
     answerPhrase: 'The book is important.',
+    description: 'This word describes something that matters a lot. It has a big effect on your life or on other people, so you must pay attention to it. A passport and a doctor\'s advice are like this.',
   },
   {
     order: 355,
@@ -3514,6 +3547,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['interesting', 'boring', 'dull', 'difficult'],
     answer: 'interesting',
     answerPhrase: 'The film is interesting.',
+    description: 'This word describes something that makes you want to know more. You pay attention to it, and the time passes quickly. A good adventure story or a film about space can be like this.',
   },
   {
     order: 356,
@@ -3523,6 +3557,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['boring', 'interesting', 'exciting', 'difficult'],
     answer: 'boring',
     answerPhrase: 'The film is boring.',
+    description: 'This word describes something that gives you no pleasure or energy. You look at the clock again and again, and you want it to end. A very long speech about nothing is like this.',
   },
   {
     order: 357,
@@ -3532,6 +3567,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['different', 'same', 'alike', 'wrong'],
     answer: 'different',
     answerPhrase: 'They are different.',
+    description: 'This word tells us that two or more things are not like each other. One is red, and the other is blue, or one is big, and the other is little. You can see that they are not twins.',
   },
   {
     order: 358,
@@ -3541,6 +3577,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['same', 'different', 'opposite', 'late'],
     answer: 'same',
     answerPhrase: 'The shirts are the same.',
+    description: 'This word tells us that two or more things are exactly equal in shape, color, and size. You cannot find any change between them. Two identical shirts from one shop are like this.',
   },
   {
     order: 359,
@@ -3550,6 +3587,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['special', 'ordinary', 'common', 'poor'],
     answer: 'special',
     answerPhrase: 'The day is special.',
+    description: 'This word describes something that is not normal or everyday, but unusual and important to you. A birthday, a wedding, or a prize makes a day feel like this.',
   },
   {
     order: 360,
@@ -3559,6 +3597,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['favorite', 'worst', 'hated', 'poor'],
     answer: 'favorite',
     answerPhrase: 'This is my favorite book.',
+    description: 'This word describes the one thing that you like more than all the others. If you have ten books, it is the one that you read again and again. You choose it first.',
   },
   {
     order: 362,
@@ -3568,6 +3607,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sweet', 'sour', 'bitter', 'cold'],
     answer: 'sweet',
     answerPhrase: 'The cake is sweet.',
+    description: 'This word describes the taste of sugar, honey, and ripe strawberries. Children usually love it, and too much of it is bad for your teeth. Chocolate and candy have this taste.',
   },
   {
     order: 363,
@@ -3577,6 +3617,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sour', 'sweet', 'sugary', 'cold'],
     answer: 'sour',
     answerPhrase: 'The lemon is sour.',
+    description: 'This word describes a sharp taste that makes your mouth pull together. It is the taste of a lemon or of green apples. Your face makes a funny expression when you try it.',
   },
   {
     order: 364,
@@ -3586,6 +3627,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['delicious', 'disgusting', 'awful', 'cool'],
     answer: 'delicious',
     answerPhrase: 'The food is delicious.',
+    description: 'This word describes food that tastes wonderful. You want to eat more, and you say mmm. A hot pizza, a fresh cake, or a bowl of soup from your grandma can be like this.',
   },
   {
     order: 365,
@@ -3595,6 +3637,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['fresh', 'stale', 'rotten', 'cool'],
     answer: 'fresh',
     answerPhrase: 'The banana is fresh.',
+    description: 'This word describes food that was made or picked a short time ago. It has a good smell and taste, and it has not started to go bad. Bread from the oven and vegetables from the garden are like this.',
   },
   {
     order: 367,
@@ -3604,6 +3647,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['silly', 'smart', 'serious', 'kind'],
     answer: 'silly',
     answerPhrase: 'The girl is silly.',
+    description: 'This word describes a person who does funny or foolish things. They make jokes, wear funny clothes, or make strange faces to make people laugh. They are not thinking about being careful.',
   },
   {
     order: 368,
@@ -3613,6 +3657,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['smart', 'silly', 'dumb', 'kind'],
     answer: 'smart',
     answerPhrase: 'The boy is smart.',
+    description: 'This word describes a person who learns fast and solves problems easily. They understand difficult ideas, and they get high marks at school. Their brain is very quick.',
   },
   {
     order: 369,
@@ -3622,6 +3667,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['kind', 'mean', 'cruel', 'smart'],
     answer: 'kind',
     answerPhrase: 'The boy is kind.',
+    description: 'This word describes a person who cares about other people. They share their food, help a friend with a problem, and speak in a gentle voice. Everybody likes to be near them.',
   },
   {
     order: 370,
@@ -3631,6 +3677,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['mean', 'kind', 'gentle', 'busy'],
     answer: 'mean',
     answerPhrase: 'The girl is mean.',
+    description: 'This word describes a person who behaves in an unpleasant way toward others. They laugh at people, refuse to share, and say hurtful words. Nobody wants to play with them.',
   },
   {
     order: 371,
@@ -3640,6 +3687,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['busy', 'free', 'idle', 'mean'],
     answer: 'busy',
     answerPhrase: 'The girl is busy.',
+    description: 'This word describes a person who has a lot of things to do. They work fast, they have no time to rest, and they often say: Sorry, I have no time now. A cook in a restaurant at dinner time is like this.',
   },
   {
     order: 372,
@@ -3649,6 +3697,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['free', 'busy', 'occupied', 'same'],
     answer: 'free',
     answerPhrase: 'The man is free.',
+    description: 'This word describes a person who has no work to do at the moment. They have time for a walk, a game, or a chat with friends. It also describes something that costs no money.',
   },
   {
     order: 373,
@@ -3658,6 +3707,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['careful', 'careless', 'reckless', 'lazy'],
     answer: 'careful',
     answerPhrase: 'The driver is careful.',
+    description: 'This word describes a person who pays attention to avoid mistakes and accidents. They look both ways before they cross a road. They drive slowly on an icy road and hold a hot cup with two hands.',
   },
   {
     order: 374,
@@ -3667,6 +3717,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['lazy', 'active', 'hardworking', 'careful'],
     answer: 'lazy',
     answerPhrase: 'The cat is lazy.',
+    description: 'This word describes a person or an animal that does not like to work or move. They prefer to lie on a sofa or a bed all day. A cat in the sun is often like this.',
   },
   {
     order: 375,
@@ -3676,6 +3727,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['friendly', 'unfriendly', 'aggressive', 'shy'],
     answer: 'friendly',
     answerPhrase: 'The dog is friendly.',
+    description: 'This word describes a person or an animal that is warm and welcoming to others. They smile, wag their tail, and come toward you with joy. You do not need to be afraid of them.',
   },
   {
     order: 376,
@@ -3685,6 +3737,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['shy', 'brave', 'bold', 'friendly'],
     answer: 'shy',
     answerPhrase: 'The girl is shy.',
+    description: 'This word describes a person who feels nervous with new people. They speak very quietly, look at the floor, and hide behind their mother. It is hard for them to say hello first.',
   },
   {
     order: 377,
@@ -3694,6 +3747,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['brave', 'shy', 'cowardly', 'friendly'],
     answer: 'brave',
     answerPhrase: 'The boy is brave.',
+    description: 'This word describes a person who does something dangerous or scary without running away. A firefighter who enters a burning house is like this. They feel afraid inside, but they still act.',
   },
   {
     order: 378,
@@ -3703,6 +3757,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['proud', 'ashamed', 'humble', 'lazy'],
     answer: 'proud',
     answerPhrase: 'The father is proud.',
+    description: 'This word describes a happy feeling about something good that you or someone you love did. A father feels it when his child wins a prize. He smiles, stands tall, and tells everyone.',
   },
   {
     order: 379,
@@ -3712,6 +3767,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['worried', 'calm', 'relaxed', 'careful'],
     answer: 'worried',
     answerPhrase: 'The mother is worried.',
+    description: 'This word describes a feeling when you think that something bad may happen. You cannot stop thinking about the problem, and you feel nervous. A mother feels it when her child is late and does not call.',
   },
   {
     order: 380,
@@ -3721,6 +3777,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['surprised', 'bored', 'calm', 'busy'],
     answer: 'surprised',
     answerPhrase: 'The girl is surprised.',
+    description: 'This word describes a feeling when something happens that you did not expect. Your eyes open wide, and you may say oh or wow. A child feels it when friends jump out at a party with a cake.',
   },
   {
     order: 381,
@@ -3730,6 +3787,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['lonely', 'happy', 'social', 'mean'],
     answer: 'lonely',
     answerPhrase: 'The man is lonely.',
+    description: 'This word describes a sad feeling when you have nobody to talk to. You are alone, and you wish for a friend. A person in a new city with no friends can feel it.',
   },
   {
     order: 382,
@@ -3739,6 +3797,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['perfect', 'terrible', 'awful', 'comfortable'],
     answer: 'perfect',
     answerPhrase: 'The day is perfect.',
+    description: 'This word describes something with no mistakes at all. It could not be better, because everything is exactly right. A day with sunshine, good friends, and a great meal can be like this.',
   },
   {
     order: 383,
@@ -3748,6 +3807,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['terrible', 'perfect', 'wonderful', 'comfortable'],
     answer: 'terrible',
     answerPhrase: 'The weather is terrible.',
+    description: 'This word describes something very bad. It makes you feel unhappy, and you want to leave. A storm with cold rain and strong wind makes the weather like this.',
   },
   {
     order: 384,
@@ -3757,6 +3817,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['wonderful', 'terrible', 'awful', 'boring'],
     answer: 'wonderful',
     answerPhrase: 'The gift is wonderful.',
+    description: 'This word describes something so good that it fills you with joy. You love it, and you want to tell everyone. A surprise gift from a friend is like this.',
   },
   {
     order: 385,
@@ -3766,6 +3827,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['comfortable', 'uncomfortable', 'hard', 'wonderful'],
     answer: 'comfortable',
     answerPhrase: 'The chair is comfortable.',
+    description: 'This word describes something that feels soft and pleasant on your body. You can sit or lie there for a long time without any pain. A big armchair with pillows is like this.',
   },
   {
     order: 386,
@@ -3775,6 +3837,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['narrow', 'wide', 'broad', 'round'],
     answer: 'narrow',
     answerPhrase: 'The street is narrow.',
+    description: 'This word describes something with a small distance from one side to the other. Two cars cannot pass each other on it. A little path between two houses is like this.',
   },
   {
     order: 387,
@@ -3784,6 +3847,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['wide', 'narrow', 'thin', 'square'],
     answer: 'wide',
     answerPhrase: 'The road is wide.',
+    description: 'This word describes something with a large distance from one side to the other. Many cars can drive next to each other on it. A big river or a highway is like this.',
   },
   {
     order: 388,
@@ -3793,6 +3857,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['thick', 'thin', 'slim', 'square'],
     answer: 'thick',
     answerPhrase: 'The book is thick.',
+    description: 'This word describes something with a large distance from one surface to the opposite surface. A winter coat, a big sandwich, and a book with many pages are like this. It is not easy to bend.',
   },
   {
     order: 389,
@@ -3802,6 +3867,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['thin', 'thick', 'fat', 'straight'],
     answer: 'thin',
     answerPhrase: 'The paper is thin.',
+    description: 'This word describes something with a very small distance from one surface to the opposite surface. A sheet of paper and a slice of ham are like this. You can almost see light through it.',
   },
   {
     order: 390,
@@ -3811,6 +3877,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['round', 'square', 'flat', 'thin'],
     answer: 'round',
     answerPhrase: 'The ball is round.',
+    description: 'This word describes a shape with no corners. It looks like a circle or a ball. A wheel, a coin, and an orange are like this.',
   },
   {
     order: 391,
@@ -3820,6 +3887,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['square', 'round', 'circular', 'straight'],
     answer: 'square',
     answerPhrase: 'The box is square.',
+    description: 'This word describes a shape with four sides of the same length and four corners. A chess board and a window in a simple house are like this. A dice has six faces that all look like this.',
   },
   {
     order: 392,
@@ -3829,6 +3897,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['straight', 'curved', 'bent', 'thin'],
     answer: 'straight',
     answerPhrase: 'The road is straight.',
+    description: 'This word describes a line that has no turns or bends. If you draw it with a ruler, it goes from one point to another in the shortest way. A road across a flat desert is like this.',
   },
   {
     order: 393,
@@ -3838,6 +3907,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sharp', 'dull', 'blunt', 'noisy'],
     answer: 'sharp',
     answerPhrase: 'The knife is sharp.',
+    description: 'This word describes an edge or a point that can cut or pierce easily. You must handle it with care. A razor, a needle, and a good pair of scissors are like this.',
   },
   {
     order: 394,
@@ -3847,6 +3917,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['smooth', 'rough', 'bumpy', 'noisy'],
     answer: 'smooth',
     answerPhrase: 'The table is smooth.',
+    description: 'This word describes a surface with no lumps or holes. Your hand slides over it easily, like over glass or silk. A polished table and a river stone are like this.',
   },
   {
     order: 395,
@@ -3856,6 +3927,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['rough', 'smooth', 'soft', 'dry'],
     answer: 'rough',
     answerPhrase: 'The rock is rough.',
+    description: 'This word describes a surface with lumps and small holes. It feels uneven when you touch it, and it can scratch your hand. Sandpaper and tree bark are like this.',
   },
   {
     order: 396,
@@ -3865,6 +3937,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['noisy', 'quiet', 'silent', 'rough'],
     answer: 'noisy',
     answerPhrase: 'The street is noisy.',
+    description: 'This word describes a place with a lot of loud sounds. Cars, music, and people make so much sound that it is hard to talk. A busy market or a building site is like this.',
   },
   {
     order: 397,
@@ -3874,6 +3947,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['close', 'far', 'distant', 'last'],
     answer: 'close',
     answerPhrase: 'The shop is close.',
+    description: 'This word tells us that a place is only a short distance from you. You can get there in a few minutes on foot. Your neighbour\'s house is like this.',
   },
   {
     order: 398,
@@ -3883,6 +3957,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['near', 'far', 'remote', 'last'],
     answer: 'near',
     answerPhrase: 'The school is near.',
+    description: 'This word tells us that something is not a long way from where you are. You can reach it in a few steps. The bus stop at the end of your street is like this.',
   },
   {
     order: 399,
@@ -3892,6 +3967,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['next', 'last', 'previous', 'free'],
     answer: 'next',
     answerPhrase: 'The next house.',
+    description: 'This word means the one that comes directly after this one. If you stand in a line, it is the person behind you. After Monday, it is Tuesday.',
   },
   {
     order: 400,
@@ -3901,6 +3977,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['last', 'first', 'next', 'free'],
     answer: 'last',
     answerPhrase: 'The last day.',
+    description: 'This word means the final one, with no more after it. When you read a book, it is the page at the end. The person at the back of a queue is in this position.',
   },
   {
     order: 401,
@@ -3910,6 +3987,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['first', 'last', 'final', 'near'],
     answer: 'first',
     answerPhrase: 'The first day.',
+    description: 'This word means the one that comes before all the others. It is number one in a line or a list. In a race, the winner gets this place.',
   },
   {
     order: 402,
@@ -3919,6 +3997,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['second', 'first', 'third', 'near'],
     answer: 'second',
     answerPhrase: 'The second place.',
+    description: 'This word means the number two position. It comes right after the winner in a race. A silver medal is given for this place.',
   },
   {
     order: 404,
@@ -3928,6 +4007,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['hope', 'fear', 'dread', 'remember'],
     answer: 'hope',
     answerPhrase: 'The girl hopes.',
+    description: 'You do this when you want something good to happen in the future, and you think that it is possible. A child does it before a test, and says: Please let it be a good mark. It makes you feel positive.',
   },
   {
     order: 405,
@@ -3937,6 +4017,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['wish', 'refuse', 'reject', 'remember'],
     answer: 'wish',
     answerPhrase: 'The boy wishes.',
+    description: 'You do this when you want something that may not be possible. You close your eyes, blow out a candle, and think about your dream. You can also throw a coin into a fountain.',
   },
   {
     order: 406,
@@ -3946,6 +4027,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['remember', 'forget', 'ignore', 'wish'],
     answer: 'remember',
     answerPhrase: 'The man remembers.',
+    description: 'You do this when a memory from the past comes into your mind. You keep a name, a face, or a song in your head for a long time. An old man does it when he thinks about his childhood.',
   },
   {
     order: 407,
@@ -3955,6 +4037,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['forget', 'remember', 'recall', 'try'],
     answer: 'forget',
     answerPhrase: 'The woman forgets.',
+    description: 'This happens when information leaves your mind. You cannot find a name, a word, or a place in your head. You can leave your keys at home because of it.',
   },
   {
     order: 408,
@@ -3964,6 +4047,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['try', 'quit', 'fail', 'understand'],
     answer: 'try',
     answerPhrase: 'The boy is trying.',
+    description: 'You do this when you make an effort to do something new or difficult. You do not know if you will get it, but you do not give up quickly. A child does it when they climb a wall for the first time.',
   },
   {
     order: 409,
@@ -3973,6 +4057,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['understand', 'misunderstand', 'confuse', 'try'],
     answer: 'understand',
     answerPhrase: 'The girl understands.',
+    description: 'You do this when the meaning of something is clear in your head. A teacher explains a rule, and then you know how it works. You say: Now I get it.',
   },
   {
     order: 410,
@@ -3982,6 +4067,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['believe', 'doubt', 'deny', 'choose'],
     answer: 'believe',
     answerPhrase: 'The man believes.',
+    description: 'You do this when you feel that something is true, even without proof. A child does it about a promise from a parent. You accept what another person says.',
   },
   {
     order: 411,
@@ -3991,6 +4077,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['choose', 'refuse', 'reject', 'change'],
     answer: 'choose',
     answerPhrase: 'The girl is choosing.',
+    description: 'You do this when you look at two or more things and take one of them. In a shop, you pick one shirt from ten. You make a decision about which one you want.',
   },
   {
     order: 412,
@@ -4000,6 +4087,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['change', 'keep', 'stay', 'choose'],
     answer: 'change',
     answerPhrase: 'The man is changing.',
+    description: 'You do this when something becomes different from before. You put on new clothes, or you paint a wall in a new color. A caterpillar does it when it turns into a butterfly.',
   },
   {
     order: 413,
@@ -4009,6 +4097,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['turn', 'stop', 'reverse', 'carry'],
     answer: 'turn',
     answerPhrase: 'The car is turning.',
+    description: 'You do this when you move in a different direction, for example to the left or to the right. A car does it at a corner, and you do it with the steering wheel. After that, you face a new way.',
   },
   {
     order: 414,
@@ -4018,6 +4107,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['move', 'stop', 'freeze', 'carry'],
     answer: 'move',
     answerPhrase: 'The man is moving the table.',
+    description: 'You do this when you change the position of something from one place to another. You push a table across a room, or you shift your chair closer to a window. Nothing stays in the same place.',
   },
   {
     order: 415,
@@ -4027,6 +4117,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['carry', 'drop', 'leave', 'turn'],
     answer: 'carry',
     answerPhrase: 'The woman is carrying the box.',
+    description: 'You do this when you hold something in your hands or on your back and take it from one place to another. A person does it with a heavy box, a bag, or a baby. It can make your arms tired.',
   },
   {
     order: 416,
@@ -4036,6 +4127,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['hold', 'drop', 'release', 'move'],
     answer: 'hold',
     answerPhrase: 'The mother is holding the baby.',
+    description: 'You do this when you keep something in your hands, and it does not fall. You close your fingers around it and keep it steady. A mother does it with a baby in her arms.',
   },
   {
     order: 417,
@@ -4045,6 +4137,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['catch', 'throw', 'drop', 'pull'],
     answer: 'catch',
     answerPhrase: 'The boy is catching the ball.',
+    description: 'You do this when something flies through the air, and you take it with your hands. A goalkeeper does it with a ball, and a child does it with a butterfly net. You need quick hands.',
   },
   {
     order: 418,
@@ -4054,6 +4147,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['throw', 'catch', 'hold', 'cut'],
     answer: 'throw',
     answerPhrase: 'The girl is throwing the ball.',
+    description: 'You do this when you send something through the air with a fast movement of your arm. You swing your arm and the ball leaves your hand. A baseball player does it to a teammate on the other side of the field.',
   },
   {
     order: 419,
@@ -4063,6 +4157,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['pull', 'push', 'release', 'throw'],
     answer: 'pull',
     answerPhrase: 'The boy is pulling the rope.',
+    description: 'You do this when you take hold of something and bring it toward you. You use your arms and back, for example to open a heavy door or to drag a rope. In a tug of war, two teams do it.',
   },
   {
     order: 420,
@@ -4072,6 +4167,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['push', 'pull', 'hold', 'cut'],
     answer: 'push',
     answerPhrase: 'The man is pushing the car.',
+    description: 'You do this when you press something with force so that it moves away from you. You use your hands and your body to move a car that has no fuel. A child does it to a swing.',
   },
   {
     order: 421,
@@ -4081,6 +4177,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['cut', 'join', 'mend', 'touch'],
     answer: 'cut',
     answerPhrase: 'The man is cutting the bread.',
+    description: 'You do this with a knife or scissors. You divide something into two or more pieces, for example a slice of bread or a piece of paper. After that, it is not whole anymore.',
   },
   {
     order: 422,
@@ -4090,6 +4187,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['touch', 'avoid', 'ignore', 'smile'],
     answer: 'touch',
     answerPhrase: 'The girl is touching.',
+    description: 'You do this when your hand or finger reaches something and feels it. You do it to a soft cat, or to a hot stove by accident. Your skin gets information.',
   },
   {
     order: 423,
@@ -4099,6 +4197,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['kiss', 'shout', 'ignore', 'push'],
     answer: 'kiss',
     answerPhrase: 'The mother is kissing the baby.',
+    description: 'You do this with your lips to show love. A mother does it to a baby, and a couple does it at a wedding. It is a soft touch of the mouth on a cheek or on other lips.',
   },
   {
     order: 424,
@@ -4108,6 +4207,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['hug', 'push', 'ignore', 'shout'],
     answer: 'hug',
     answerPhrase: 'The father is hugging the son.',
+    description: 'You do this when you put both arms around another person and keep them close. It shows love or comfort. You do it when a friend is sad, or when you meet a family member after a long time.',
   },
   {
     order: 425,
@@ -4117,6 +4217,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['smile', 'frown', 'cry', 'shout'],
     answer: 'smile',
     answerPhrase: 'The girl is smiling.',
+    description: 'You do this with your face when you are happy or friendly. The corners of your mouth go up, but you make no sound. People do it when they see a friend or when they pose for a photo.',
   },
   {
     order: 426,
@@ -4126,6 +4227,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['cry', 'smile', 'laugh', 'whisper'],
     answer: 'cry',
     answerPhrase: 'The baby is crying.',
+    description: 'You do this when you are very sad, hurt, or hungry. Water comes from your eyes, and you often make a loud sound. A baby does it when it needs something.',
   },
   {
     order: 427,
@@ -4135,6 +4237,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['shout', 'whisper', 'smile', 'touch'],
     answer: 'shout',
     answerPhrase: 'The man is shouting.',
+    description: 'You do this when you speak very loudly, with a strong voice. You want someone far away to hear you, or you are very angry or excited. A person does it at a football match.',
   },
   {
     order: 428,
@@ -4144,6 +4247,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['whisper', 'shout', 'scream', 'cry'],
     answer: 'whisper',
     answerPhrase: 'The girl is whispering.',
+    description: 'You do this when you speak very softly, with almost no voice. You put your mouth close to a person\'s ear so that only they hear. You do it in a library or when you tell a secret.',
   },
   {
     order: 429,
@@ -4153,6 +4257,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['answer', 'ask', 'ignore', 'cry'],
     answer: 'answer',
     answerPhrase: 'The student is answering.',
+    description: 'You do this when another person wants information from you, and you reply. A student does it when a teacher wants to know the capital of a country. You say the words, or you write them down.',
   },
   {
     order: 430,
@@ -4162,6 +4267,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['show', 'hide', 'cover', 'smile'],
     answer: 'show',
     answerPhrase: 'The teacher is showing the book.',
+    description: 'You do this when you let other people see something. You hold up a picture, or you open a door so that they can look. A teacher does it with a book in front of a class.',
   },
   {
     order: 431,
@@ -4171,6 +4277,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['explain', 'confuse', 'hide', 'hug'],
     answer: 'explain',
     answerPhrase: 'The teacher is explaining.',
+    description: 'You do this when you make something clear, so that another person understands it. You use simple words, examples, and drawings. A teacher does it when a rule of grammar is difficult.',
   },
   {
     order: 432,
@@ -4180,6 +4287,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['teach', 'learn', 'confuse', 'hug'],
     answer: 'teach',
     answerPhrase: 'The teacher teaches.',
+    description: 'You do this when you give knowledge or skills to other people. You stand in front of a class and show them how to do something, for example how to read or to add numbers. It is the job of a person at a school.',
   },
   {
     order: 433,
@@ -4189,6 +4297,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['hello', 'goodbye', 'sorry', 'yes'],
     answer: 'hello',
     answerPhrase: 'The girl waves and says hello to her new neighbour.',
+    description: 'You say this word when you meet someone. It is a friendly greeting. You use it on the phone, at the door, or when you see a new person for the first time.',
   },
   {
     order: 434,
@@ -4198,6 +4307,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['goodbye', 'hello', 'please', 'yes'],
     answer: 'goodbye',
     answerPhrase: 'The friends hug and say goodbye at the airport.',
+    description: 'You say this word when you leave a person or when they leave you. People often wave their hand and hug at that moment. It is the last thing that you say at the end of a meeting or a phone call.',
   },
   {
     order: 435,
@@ -4207,6 +4317,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['please', 'sorry', 'goodbye', 'no'],
     answer: 'please',
     answerPhrase: 'The boy says please and gets more cake.',
+    description: 'You add this polite word when you ask for something. It shows good manners, and it makes your request nicer. Parents teach children to say it before they get a sweet.',
   },
   {
     order: 436,
@@ -4216,6 +4327,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['thanks', 'sorry', 'goodbye', 'no'],
     answer: 'thanks',
     answerPhrase: 'The girl smiles and says thanks for the flowers.',
+    description: 'You say this when someone does something nice for you, like giving you a gift or helping you. It shows that you are grateful. It is a polite reply to a compliment.',
   },
   {
     order: 437,
@@ -4225,6 +4337,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sorry', 'hello', 'please', 'yes'],
     answer: 'sorry',
     answerPhrase: 'The boy drops a glass and says sorry.',
+    description: 'You say this when you make a mistake or hurt someone by accident. It shows that you feel bad about it. You use it when you break something or step on a foot.',
   },
   {
     order: 438,
@@ -4234,6 +4347,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['yes', 'no', 'maybe', 'sorry'],
     answer: 'yes',
     answerPhrase: 'Yes! The baby wants more ice cream.',
+    description: 'This is the answer that agrees with a question or a request. It means that something is true, or that you accept. You often nod your head when you say it.',
   },
   {
     order: 439,
@@ -4243,6 +4357,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['no', 'yes', 'please', 'welcome'],
     answer: 'no',
     answerPhrase: 'No! The cat does not like the bath.',
+    description: 'This is the answer that disagrees with a question or a request. It means that something is not true, or that you refuse. You often shake your head from side to side when you say it.',
   },
   {
     order: 440,
@@ -4252,6 +4367,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['welcome', 'goodbye', 'sorry', 'no'],
     answer: 'welcome',
     answerPhrase: 'The mat at the front door says welcome.',
+    description: 'You say this to a guest who arrives at your house. It shows that you are happy to see them. Many hotels and houses put it on a mat at the front door.',
   },
   {
     order: 441,
@@ -4261,6 +4377,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['I', 'you', 'they', 'he'],
     answer: 'I',
     answerPhrase: 'I am taking a photo of the sea.',
+    description: 'This is the word that a speaker uses about themselves. In a sentence about the speaker\'s own actions, for example the name or the job of the speaker, it comes first. It is always written with a capital letter.',
   },
   {
     order: 442,
@@ -4270,6 +4387,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['you', 'I', 'we', 'he'],
     answer: 'you',
     answerPhrase: 'The girl points at the camera and says: You!',
+    description: 'This is the word for the person who is listening to the speaker. When a person looks straight at a friend and speaks to them directly, they use this word. It can be for one listener or for many.',
   },
   {
     order: 443,
@@ -4279,6 +4397,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['he', 'she', 'it', 'you'],
     answer: 'he',
     answerPhrase: 'He is standing in the rain with a big umbrella.',
+    description: 'This is the word for one male person, when we talk about a father, a brother, or a man with an umbrella. The person is not the one who speaks, and not the one who listens.',
   },
   {
     order: 444,
@@ -4288,6 +4407,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['she', 'he', 'it', 'you'],
     answer: 'she',
     answerPhrase: 'She plays the piano every evening.',
+    description: 'This is the word for one female person, when we talk about a mother, a sister, or a woman at the piano. The person is not the one who speaks, and not the one who listens.',
   },
   {
     order: 445,
@@ -4297,6 +4417,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['it', 'he', 'we', 'she'],
     answer: 'it',
     answerPhrase: 'It is sleeping on the bed.',
+    description: 'This is the word for a thing or an animal when nobody says whether the animal is male or female. Speakers choose this word for a table, a cat, or the weather.',
   },
   {
     order: 446,
@@ -4306,6 +4427,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['we', 'you', 'it', 'they'],
     answer: 'we',
     answerPhrase: 'We love the sea!',
+    description: 'This is the word that a speaker uses for themselves and other people together. A family on a beach uses this word when all of them speak about their own feelings. The speaker is always part of the group.',
   },
   {
     order: 447,
@@ -4315,6 +4437,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['they', 'we', 'he', 'it'],
     answer: 'they',
     answerPhrase: 'They ride their bikes to school.',
+    description: 'This is the word for two or more other people, or things, when a speaker talks about them. The speaker is not in the group, and the listener is not in the group either. For example, a speaker chooses this word for two boys with bikes.',
   },
   {
     order: 448,
@@ -4324,6 +4447,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['my', 'your', 'their', 'his'],
     answer: 'my',
     answerPhrase: 'This is my ball!',
+    description: 'This is the word that a speaker uses to show that something belongs to the speaker. It comes before a noun, like ball or book. A child hugs a toy and uses this word.',
   },
   {
     order: 449,
@@ -4333,6 +4457,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['your', 'my', 'our', 'his'],
     answer: 'your',
     answerPhrase: 'This is your present!',
+    description: 'This is the word that shows that something belongs to the person who is listening. It comes before a noun. When a girl gives a present to a friend, she uses this word for the present.',
   },
   {
     order: 450,
@@ -4342,6 +4467,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['his', 'her', 'their', 'your'],
     answer: 'his',
     answerPhrase: 'It is his hat.',
+    description: 'This is the word that shows that something belongs to one male person, like a man with a funny hat. It comes before a noun. The owner is not the speaker and not the listener.',
   },
   {
     order: 451,
@@ -4351,6 +4477,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['her', 'his', 'our', 'their'],
     answer: 'her',
     answerPhrase: 'It is her bag.',
+    description: 'This is the word that shows that something belongs to one female person, like a woman with a yellow bag. It comes before a noun. The owner is not the speaker and not the listener.',
   },
   {
     order: 452,
@@ -4360,6 +4487,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['our', 'their', 'your', 'her'],
     answer: 'our',
     answerPhrase: 'This is our new house!',
+    description: 'This is the word that a speaker uses for something that belongs to the speaker and other people together. A family in front of a new house uses it. It comes before a noun.',
   },
   {
     order: 453,
@@ -4369,6 +4497,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['their', 'our', 'my', 'her'],
     answer: 'their',
     answerPhrase: 'It is their dog.',
+    description: 'This is the word that shows that something belongs to two or more other people, or to a group. A boy and a girl who walk with a dog are the owners. It comes before a noun, and the speaker is not one of them.',
   },
   {
     order: 454,
@@ -4378,6 +4507,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['what', 'where', 'who', 'when'],
     answer: 'what',
     answerPhrase: 'What is in the box?',
+    description: 'This is a question word that we use to ask about a thing or an idea. A girl finds a mystery box and wants to know its contents, so she asks a question with this word. The answer is usually a noun.',
   },
   {
     order: 455,
@@ -4387,6 +4517,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['where', 'why', 'when', 'who'],
     answer: 'where',
     answerPhrase: 'Where is my ball?',
+    description: 'This is a question word that we use to ask about a place or a position. A boy looks under the bed for his toy and asks a question with this word. The answer is a location.',
   },
   {
     order: 456,
@@ -4396,6 +4527,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['who', 'how', 'when', 'where'],
     answer: 'who',
     answerPhrase: 'Who is at the door?',
+    description: 'This is a question word that we use to ask about a person. If someone knocks at the door, you ask a question with this word to find out the name. The answer is a name or a description of a person.',
   },
   {
     order: 457,
@@ -4405,6 +4537,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['when', 'who', 'what', 'why'],
     answer: 'when',
     answerPhrase: 'When does the train come?',
+    description: 'This is a question word that we use to ask about time. People ask a question with this word if they want to know the hour or the day of an event, for example a train. The answer is a time.',
   },
   {
     order: 458,
@@ -4414,6 +4547,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['why', 'where', 'which', 'when'],
     answer: 'why',
     answerPhrase: 'Why is the baby crying?',
+    description: 'This is a question word that we use to ask about a reason or a cause. A mother sees her baby crying, and she wants to know the reason, so she asks a question with this word. The answer often starts with because.',
   },
   {
     order: 459,
@@ -4423,6 +4557,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['how', 'where', 'who', 'why'],
     answer: 'how',
     answerPhrase: 'How old are you?',
+    description: 'This is a question word that we use to ask about the way, the manner, or the amount. Friends ask a question with this word when they want to know the age of a girl. It is also used in a greeting to ask about a person\'s health.',
   },
   {
     order: 460,
@@ -4432,6 +4567,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['in', 'on', 'behind', 'through'],
     answer: 'in',
     answerPhrase: 'The cat is in the box.',
+    description: 'This word shows that something is inside a space or a container. A cat that sits inside a box is described with this word.',
   },
   {
     order: 461,
@@ -4441,6 +4577,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['on', 'under', 'in', 'between'],
     answer: 'on',
     answerPhrase: 'The cat is sleeping on the sofa.',
+    description: 'This word shows that something is placed at the top surface of another thing and is supported by it. A cat asleep at the top of a sofa is described with this word. A cup resting at the top of a table is another example.',
   },
   {
     order: 462,
@@ -4450,6 +4587,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['under', 'on', 'above', 'in'],
     answer: 'under',
     answerPhrase: 'The boy is hiding under the table.',
+    description: 'This word shows that something is at a lower position than another thing, and it may be covered by it. A boy who hides beneath a table is described with this word. A dog can sleep beneath a bed.',
   },
   {
     order: 463,
@@ -4459,6 +4597,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['behind', 'in', 'on', 'through'],
     answer: 'behind',
     answerPhrase: 'The girl is hiding behind a big tree.',
+    description: 'This word shows that something is at the back of another thing, where you cannot see it easily. A girl who hides at the back side of a big tree is described with this word.',
   },
   {
     order: 464,
@@ -4468,6 +4607,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['between', 'behind', 'under', 'on'],
     answer: 'between',
     answerPhrase: 'The dog sits between the boy and the girl.',
+    description: 'This word shows that something is in the middle of two other things. A dog that sits with a boy at one side and a girl at the other side is described with this word.',
   },
   {
     order: 465,
@@ -4477,6 +4617,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['next to', 'above', 'under', 'across'],
     answer: 'next to',
     answerPhrase: 'The cafe is next to the bank.',
+    description: 'This word shows that something is very close to another thing, at its side. A cafe and a bank are neighbours on the same street. Two friends who sit at the same bench are described with this word.',
   },
   {
     order: 466,
@@ -4486,6 +4627,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['in front of', 'behind', 'under', 'above'],
     answer: 'in front of',
     answerPhrase: 'The children stand in front of the school.',
+    description: 'This word shows that something is at the face side of another thing, so that you see it before you see the other thing. Children who wait at the entrance of a school are described with this word.',
   },
   {
     order: 467,
@@ -4495,6 +4637,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['above', 'under', 'between', 'across'],
     answer: 'above',
     answerPhrase: 'The plane flies above the clouds.',
+    description: 'This word shows that something is at a higher position than another thing, but it does not touch it. A plane that flies higher than the clouds is described with this word. The moon is in this position over the trees.',
   },
   {
     order: 468,
@@ -4504,6 +4647,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['around', 'under', 'behind', 'above'],
     answer: 'around',
     answerPhrase: 'The children dance around the tree.',
+    description: 'This word shows a movement or a position in a circle, on all sides of something. Children hold hands and dance in a ring with a tree in the center. A fence goes on all sides of a garden.',
   },
   {
     order: 469,
@@ -4513,6 +4657,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['through', 'above', 'behind', 'with'],
     answer: 'through',
     answerPhrase: 'The train goes through a dark tunnel.',
+    description: 'This word shows a movement from one end to the other end of a closed space, like a tunnel. A train enters a mountain at one side and comes out at the other side. Light does it when it passes a clear window.',
   },
   {
     order: 470,
@@ -4522,6 +4667,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['across', 'behind', 'above', 'with'],
     answer: 'across',
     answerPhrase: 'The mother and her boy walk across the road.',
+    description: 'This word shows a movement from one side to the other side of something wide, like a road or a river. A mother and her boy go from the pavement at one side to the pavement at the other side when the light is green.',
   },
   {
     order: 471,
@@ -4531,6 +4677,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['with', 'without', 'behind', 'on'],
     answer: 'with',
     answerPhrase: 'The boy eats his soup with a big spoon.',
+    description: 'This word shows that a person uses a tool, or that people or things are together. A boy eats soup using a spoon, so the spoon is the tool. A house that has a garden is described using this word.',
   },
   {
     order: 472,
@@ -4540,6 +4687,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['without', 'with', 'under', 'around'],
     answer: 'without',
     answerPhrase: 'The girl goes out without an umbrella. Now she is wet!',
+    description: 'This word shows that something is missing, or that a person does not have or use something. A girl walks in the rain and does not have an umbrella. A cake that has no sugar is described using this word.',
   },
   {
     order: 473,
@@ -4549,6 +4697,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['have', 'lose', 'eat', 'like'],
     answer: 'have',
     answerPhrase: 'The girl has a big red balloon.',
+    description: 'You do this when something belongs to you, or when it is in your hands or in your house. A girl holds a big red balloon, so it is hers. People also do it with brothers, sisters, and ideas.',
   },
   {
     order: 474,
@@ -4558,6 +4707,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['like', 'hate', 'cook', 'have'],
     answer: 'like',
     answerPhrase: 'The boy likes pizza. It is his favorite food!',
+    description: 'You do this when something gives you pleasure and you enjoy it. A boy smiles at his pizza because it tastes good to him. It is a positive feeling, but weaker than love.',
   },
   {
     order: 475,
@@ -4567,6 +4717,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['want', 'hate', 'give', 'have'],
     answer: 'want',
     answerPhrase: 'The baby wants the cake!',
+    description: 'You do this when you wish to get or to do something. A baby looks at a cake and reaches with both hands. It is a feeling of desire.',
   },
   {
     order: 476,
@@ -4576,6 +4727,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['get', 'give', 'break', 'live'],
     answer: 'get',
     answerPhrase: 'The woman gets a letter from her friend.',
+    description: 'You do this when something comes to you from another person or place. A woman opens the door, and the postman hands her a letter. After that, the letter is hers.',
   },
   {
     order: 477,
@@ -4585,6 +4737,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['live', 'fly', 'climb', 'get'],
     answer: 'live',
     answerPhrase: 'Fish live in the sea.',
+    description: 'You do this when you are alive, and you have a home in a place. Fish do it in water, and people do it in houses. The place where you do it is your address.',
   },
   {
     order: 478,
@@ -4594,6 +4747,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['study', 'dance', 'swim', 'use'],
     answer: 'study',
     answerPhrase: 'The student studies for the exam.',
+    description: 'You do this when you spend time to learn about a subject. A student sits with many books and a lamp late at night before a test. It needs attention and a good memory.',
   },
   {
     order: 479,
@@ -4603,6 +4757,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['use', 'eat', 'wear', 'tell'],
     answer: 'use',
     answerPhrase: 'The girl uses her phone to take a photo.',
+    description: 'You do this when you take a tool or a device and do a job with it. A girl takes her phone and makes a photo. A person does it with a spoon, a key, or a computer.',
   },
   {
     order: 480,
@@ -4612,6 +4767,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['tell', 'wash', 'jump', 'keep'],
     answer: 'tell',
     answerPhrase: 'Grandpa tells a funny story.',
+    description: 'You do this when you give information or a story to other people in words. A grandfather sits with the children and speaks about something funny from his youth. You can do it with a joke or a secret.',
   },
   {
     order: 481,
@@ -4621,6 +4777,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['keep', 'throw', 'cut', 'tell'],
     answer: 'keep',
     answerPhrase: 'The girl keeps her treasures in a box.',
+    description: 'You do this when you have something and you do not lose it or give it away. A girl has a little box for her treasures and puts them there. She wants them to stay with her for a long time.',
   },
   {
     order: 482,
@@ -4630,6 +4787,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['send', 'open', 'read', 'enjoy'],
     answer: 'send',
     answerPhrase: 'The man sends a letter to his son.',
+    description: 'You do this when you make something go to another person far away. A man puts a letter in a red box, and the post office takes it to his son. You can also do it with an email or a message.',
   },
   {
     order: 483,
@@ -4639,6 +4797,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['enjoy', 'hate', 'forget', 'send'],
     answer: 'enjoy',
     answerPhrase: 'The girl enjoys the beach.',
+    description: 'You do this when something gives you a lot of pleasure. A girl smiles at the sun and the sea because she loves the time on the beach. She feels good, and she does not want it to end.',
   },
   {
     order: 484,
@@ -4648,6 +4807,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['finish', 'start', 'wait', 'join'],
     answer: 'finish',
     answerPhrase: 'The runner finishes the race.',
+    description: 'You do this when you reach the end of something. A runner crosses the last line of a race, and there is no more distance. You do it when you eat the last piece of a meal or write the last page.',
   },
   {
     order: 485,
@@ -4657,6 +4817,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['join', 'leave', 'break', 'build'],
     answer: 'join',
     answerPhrase: 'The boy joins the football game.',
+    description: 'You do this when you become a member of a group, or you begin to take part in a game. A boy sees children with a football and asks to be one of the players. Two rivers can do it, and they become one river.',
   },
   {
     order: 486,
@@ -4666,6 +4827,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['build', 'wash', 'cut', 'grow'],
     answer: 'build',
     answerPhrase: 'The children build a big sand castle.',
+    description: 'You do this when you make something bigger by putting many parts together. Workers do it with bricks to make a house. Children do it with sand or with blocks.',
   },
   {
     order: 487,
@@ -4675,6 +4837,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['grow', 'sleep', 'drive', 'build'],
     answer: 'grow',
     answerPhrase: 'The flowers grow in the garden.',
+    description: 'This happens when a living thing gets bigger over time. A seed becomes a plant, and a baby becomes a boy. In spring, flowers do it in the garden.',
   },
   {
     order: 488,
@@ -4684,6 +4847,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['follow', 'catch', 'kiss', 'grow'],
     answer: 'follow',
     answerPhrase: 'The little ducks follow their mother.',
+    description: 'You do this when you go behind someone and go where they go. Little ducks walk after their mother in a line. A dog does it when you walk down the street.',
   },
   {
     order: 489,
@@ -4693,6 +4857,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['guess', 'cook', 'ride', 'follow'],
     answer: 'guess',
     answerPhrase: 'The children guess what is in the box.',
+    description: 'You do this when you try to say the answer, but you are not sure, and you have no proof. Children look at a closed box and say what may be inside. You may be right, or you may be wrong.',
   },
   {
     order: 490,
@@ -4702,6 +4867,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['paint', 'cook', 'cut', 'guess'],
     answer: 'paint',
     answerPhrase: 'The girl paints the wall blue.',
+    description: 'You do this with a brush and colors. You cover a wall, a picture, or a door with color. An artist does it on a canvas.',
   },
   {
     order: 491,
@@ -4711,6 +4877,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['relax', 'run', 'work', 'repeat'],
     answer: 'relax',
     answerPhrase: 'The man relaxes on the sofa.',
+    description: 'You do this when you rest and feel calm, with no stress. A man lies on a sofa with a cup of tea and does nothing important. You do it on holiday or after a long day.',
   },
   {
     order: 492,
@@ -4720,6 +4887,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['repeat', 'sleep', 'run', 'order'],
     answer: 'repeat',
     answerPhrase: 'The children repeat the new word.',
+    description: 'You do this when you say or do the same thing again. The teacher says a new word two times, and the children say it after her. It helps you to learn a new phrase.',
   },
   {
     order: 493,
@@ -4729,6 +4897,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['return', 'buy', 'lose', 'repeat'],
     answer: 'return',
     answerPhrase: 'The boy returns his book to the library.',
+    description: 'You do this when you bring something back to the place or to the person where it came from. A boy takes a book to the library after he finishes reading it. You also do it when you come back home.',
   },
   {
     order: 494,
@@ -4738,6 +4907,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['order', 'cook', 'wash', 'lose'],
     answer: 'order',
     answerPhrase: 'The woman orders a pizza.',
+    description: 'You do this in a restaurant when you tell the waiter which food or drink you want. You read the menu and choose your meal. Then the kitchen makes it for you.',
   },
   {
     order: 495,
@@ -4747,6 +4917,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['lose', 'win', 'dance', 'order'],
     answer: 'lose',
     answerPhrase: 'The team loses the game.',
+    description: 'You do this in a game when the other team gets more points than you. The players look very sad after the final whistle. You can also do it with your keys when you cannot find them anymore.',
   },
   {
     order: 496,
@@ -4756,6 +4927,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['fix', 'ride', 'break', 'lose'],
     answer: 'fix',
     answerPhrase: 'The man fixes the bike.',
+    description: 'You do this when you repair something that does not work, so that it works again. A man uses tools on a bike with a flat tire. A plumber does it with a pipe.',
   },
   {
     order: 497,
@@ -4765,6 +4937,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['eleven', 'ten', 'twelve', 'nine'],
     answer: 'eleven',
     answerPhrase: 'A football team has eleven players on the field.',
+    description: 'This number is written with the same digit twice, a one and another one. A football team has this many players on the field. It comes right after the number of your fingers.',
   },
   {
     order: 498,
@@ -4774,6 +4947,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['twelve', 'eleven', 'ten', 'nine'],
     answer: 'twelve',
     answerPhrase: 'Twelve eggs are in the box.',
+    description: 'This number is the number of eggs in a standard box. It is also the number of months in a year and the number of numbers on a clock face.',
   },
   {
     order: 499,
@@ -4783,6 +4957,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['thirteen', 'three', 'thirty', 'fourteen'],
     answer: 'thirteen',
     answerPhrase: 'The boy is thirteen today.',
+    description: 'This number is the age when a child first becomes a teenager. Some people think that it is an unlucky number, and some buildings have no floor with this number.',
   },
   {
     order: 500,
@@ -4792,6 +4967,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['fourteen', 'seven', 'ten', 'fifteen'],
     answer: 'fourteen',
     answerPhrase: 'Two weeks is fourteen days.',
+    description: 'This number is the number of days in two weeks. It is also the age of many students in their first year of high school.',
   },
   {
     order: 501,
@@ -4801,6 +4977,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['fifteen', 'ten', 'twelve', 'sixteen'],
     answer: 'fifteen',
     answerPhrase: 'Fifteen colorful balls are on the pool table.',
+    description: 'This number is the number of colored balls on a pool table, without the white one. It is also the number of minutes in a quarter of an hour. Three groups of five make this number.',
   },
   {
     order: 502,
@@ -4810,6 +4987,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sixteen', 'six', 'sixty', 'seventeen'],
     answer: 'sixteen',
     answerPhrase: 'The big cake has sixteen candles.',
+    description: 'This number is the age when a young person in many countries can start to work, or take a first driving lesson on a moped. It is four groups of four.',
   },
   {
     order: 503,
@@ -4819,6 +4997,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['seventeen', 'seven', 'seventy', 'eighteen'],
     answer: 'seventeen',
     answerPhrase: 'The girl is seventeen and she goes to school by bike.',
+    description: 'This number is the age of a teenager who is almost an adult. In many countries, a person of this age still goes to school and cannot vote yet. It comes right before the age of an adult.',
   },
   {
     order: 504,
@@ -4828,6 +5007,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['eighteen', 'eight', 'eighty', 'seventeen'],
     answer: 'eighteen',
     answerPhrase: 'He is eighteen and he has his first car.',
+    description: 'This number is the age when a person becomes an adult in many countries. At this age, a person can vote and start to drive a car. It is a big birthday.',
   },
   {
     order: 505,
@@ -4837,6 +5017,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['nineteen', 'nine', 'ninety', 'twenty'],
     answer: 'nineteen',
     answerPhrase: 'Nineteen people wait for the bus in the rain.',
+    description: 'This number is the last age of a teenager. After this age, a person is not a teenager anymore.',
   },
   {
     order: 506,
@@ -4846,6 +5027,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['twenty', 'ten', 'fifteen', 'nineteen'],
     answer: 'twenty',
     answerPhrase: 'We have twenty fingers and toes.',
+    description: 'This number is the total of all your fingers and all your toes. It is two times the number of fingers on both hands.',
   },
   {
     order: 507,
@@ -4855,6 +5037,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['thirty', 'twenty', 'forty', 'fifty'],
     answer: 'thirty',
     answerPhrase: 'Thirty students sit in the classroom.',
+    description: 'This number is often the number of days in a month. It is the age of many young workers. Three groups of ten make it.',
   },
   {
     order: 508,
@@ -4864,6 +5047,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['forty', 'fourteen', 'four', 'fifty'],
     answer: 'forty',
     answerPhrase: 'Forty people watch a film at the cinema.',
+    description: 'This number is the number of weeks of a normal pregnancy. It is also the age when many people say that middle age begins.',
   },
   {
     order: 509,
@@ -4873,6 +5057,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['fifty', 'fifteen', 'five', 'sixty'],
     answer: 'fifty',
     answerPhrase: 'She is fifty today. Her friends bring a big cake.',
+    description: 'This number is half of a hundred. Americans have this many stars on their flag, one for each state.',
   },
   {
     order: 510,
@@ -4882,6 +5067,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sixty', 'sixteen', 'six', 'seventy'],
     answer: 'sixty',
     answerPhrase: 'One hour has sixty minutes.',
+    description: 'This number is the number of seconds in one minute. It is also the number of minutes in one hour.',
   },
   {
     order: 511,
@@ -4891,6 +5077,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['seventy', 'seventeen', 'seven', 'eighty'],
     answer: 'seventy',
     answerPhrase: 'The man with the white hat is seventy years old.',
+    description: 'This number is a typical age for a person who stopped working many years ago. Many grandparents are this age. It comes after the number of minutes in an hour.',
   },
   {
     order: 512,
@@ -4900,6 +5087,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['eighty', 'eighteen', 'eight', 'ninety'],
     answer: 'eighty',
     answerPhrase: 'Grandma is eighty, but she still dances!',
+    description: 'This number is a very old age for a person. Not many people reach it, and they receive a big party. It comes ten years after seventy.',
   },
   {
     order: 513,
@@ -4909,6 +5097,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['ninety', 'nineteen', 'nine', 'eighty'],
     answer: 'ninety',
     answerPhrase: 'Grandpa is ninety and he has a very big party.',
+    description: 'This number is a very great age for a person. It is only ten years before one hundred.',
   },
   {
     order: 514,
@@ -4918,6 +5107,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['hundred', 'thousand', 'ten', 'ninety'],
     answer: 'hundred',
     answerPhrase: 'A hundred balloons fly in the sky.',
+    description: 'This number is the number of years in a century. It is a one with two zeros after it. It is also the highest score in many school tests.',
   },
   {
     order: 515,
@@ -4927,6 +5117,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['thousand', 'hundred', 'ten', 'seventy'],
     answer: 'thousand',
     answerPhrase: 'We can see a thousand stars in the night sky.',
+    description: 'This number is a one with three zeros after it. It is the number of meters in a kilometer. A city can have this many trees.',
   },
   {
     order: 516,
@@ -4936,6 +5127,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['Monday', 'Friday', 'Sunday', 'Tuesday'],
     answer: 'Monday',
     answerPhrase: 'On Monday morning, the tired boy goes to school.',
+    description: 'This is the first working day of the week. After the weekend, people go back to work and school. Many people do not like it.',
   },
   {
     order: 517,
@@ -4945,6 +5137,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['Tuesday', 'Thursday', 'Monday', 'Wednesday'],
     answer: 'Tuesday',
     answerPhrase: 'On Tuesday, the children eat pizza at school.',
+    description: 'This is the day after the first day of the working week. It is the second working day. In many schools, it has a special lunch for students.',
   },
   {
     order: 518,
@@ -4954,6 +5147,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['Wednesday', 'Saturday', 'Monday', 'Thursday'],
     answer: 'Wednesday',
     answerPhrase: 'On Wednesday, the girl plays the piano.',
+    description: 'This is the day in the middle of the working week. There are two working days before it and two after it. People sometimes call it hump day.',
   },
   {
     order: 519,
@@ -4963,6 +5157,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['Thursday', 'Tuesday', 'Sunday', 'Friday'],
     answer: 'Thursday',
     answerPhrase: 'On Thursday, Mother buys fresh vegetables at the market.',
+    description: 'This is the fourth day of the working week. It comes right before the last working day. Many markets are open on this day.',
   },
   {
     order: 520,
@@ -4972,6 +5167,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['Friday', 'Monday', 'Wednesday', 'Thursday'],
     answer: 'Friday',
     answerPhrase: 'On Friday night, the friends watch a film.',
+    description: 'This is the last working day of the week. In the evening, people are happy because the weekend starts. Many people go to a restaurant or a cinema on this evening.',
   },
   {
     order: 521,
@@ -4981,6 +5177,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['Saturday', 'Tuesday', 'Thursday', 'Sunday'],
     answer: 'Saturday',
     answerPhrase: 'On Saturday, the family goes to the beach.',
+    description: 'This is the first day of the weekend. Many people do not work or go to school. Families go shopping, play sports, or visit friends.',
   },
   {
     order: 522,
@@ -4990,6 +5187,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['Sunday', 'Monday', 'Friday', 'Saturday'],
     answer: 'Sunday',
     answerPhrase: 'On Sunday, Grandma cooks a big dinner.',
+    description: 'This is the last day of the week. Many families rest at home, and shops are often closed. People prepare for work and school on the next day.',
   },
   {
     order: 523,
@@ -4999,6 +5197,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['January', 'July', 'May', 'February'],
     answer: 'January',
     answerPhrase: 'In January, the snow is deep and the new year begins.',
+    description: 'This is the first month of the year. New Year\'s Day is on the first of it. In the north of the world, it is one of the coldest months.',
   },
   {
     order: 524,
@@ -5008,6 +5207,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['February', 'August', 'June', 'January'],
     answer: 'February',
     answerPhrase: 'In February, the boy gives chocolate to the girl.',
+    description: 'This is the shortest month of the year. It has twenty-eight days, or twenty-nine in a leap year. People celebrate Valentine\'s Day in it.',
   },
   {
     order: 525,
@@ -5017,6 +5217,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['March', 'September', 'December', 'February'],
     answer: 'March',
     answerPhrase: 'In March, the first flowers come out.',
+    description: 'This is the third month of the year. Spring starts in the north of the world in this month. The days become longer than the nights.',
   },
   {
     order: 526,
@@ -5026,6 +5227,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['April', 'July', 'October', 'May'],
     answer: 'April',
     answerPhrase: 'In April, the girl runs in the rain with her umbrella.',
+    description: 'This is the fourth month of the year. It is famous for rain showers. The first day of it is a day for jokes and tricks.',
   },
   {
     order: 527,
@@ -5035,6 +5237,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['May', 'November', 'January', 'April'],
     answer: 'May',
     answerPhrase: 'In May, the garden is full of flowers.',
+    description: 'This is the fifth month of the year. The weather is warm, and flowers are everywhere. In many countries, the first day of it is a holiday for workers.',
   },
   {
     order: 528,
@@ -5044,6 +5247,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['June', 'February', 'December', 'July'],
     answer: 'June',
     answerPhrase: 'In June, school is over and the children swim.',
+    description: 'This is the sixth month of the year. School ends in it in many countries, and summer starts. The longest day of the year in the north is in it.',
   },
   {
     order: 529,
@@ -5053,6 +5257,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['July', 'January', 'March', 'June'],
     answer: 'July',
     answerPhrase: 'In July, the family eats ice cream on the hot beach.',
+    description: 'This is the seventh month of the year. It is the hottest month in many countries in the north. People go to beaches and eat ice cream.',
   },
   {
     order: 530,
@@ -5062,6 +5267,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['August', 'April', 'February', 'September'],
     answer: 'August',
     answerPhrase: 'In August, the family goes on holiday.',
+    description: 'This is the eighth month of the year. It is the middle of the summer holiday. Many families travel to the coast or to the mountains.',
   },
   {
     order: 531,
@@ -5071,6 +5277,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['September', 'June', 'March', 'October'],
     answer: 'September',
     answerPhrase: 'In September, the children go back to school.',
+    description: 'This is the ninth month of the year. The new school year begins in it in many countries. Summer ends, and the first cool days come.',
   },
   {
     order: 532,
@@ -5080,6 +5287,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['October', 'May', 'July', 'November'],
     answer: 'October',
     answerPhrase: 'In October, the leaves are orange and the pumpkins are big.',
+    description: 'This is the tenth month of the year. The leaves fall from the trees, and people carve pumpkins for a spooky holiday on the last day of it.',
   },
   {
     order: 533,
@@ -5089,6 +5297,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['November', 'June', 'August', 'October'],
     answer: 'November',
     answerPhrase: 'In November, it is dark and rainy in the evening.',
+    description: 'This is the eleventh month of the year. It is the last month before winter in the north. The days are short, and it often rains.',
   },
   {
     order: 534,
@@ -5098,6 +5307,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['December', 'July', 'April', 'November'],
     answer: 'December',
     answerPhrase: 'In December, the family has a tree with lights and many presents.',
+    description: 'This is the last month of the year. Winter starts in it in the north, and people celebrate a big holiday with a tree and gifts. On the last day of it, everyone waits for midnight.',
   },
   {
     order: 535,
@@ -5107,6 +5317,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['today', 'yesterday', 'tomorrow', 'weekend'],
     answer: 'today',
     answerPhrase: 'The party is today!',
+    description: 'This word means this day, the one that we live right now. It is not the past and not the future. The party in the picture happens on it.',
   },
   {
     order: 536,
@@ -5116,6 +5327,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['tomorrow', 'yesterday', 'today', 'weekend'],
     answer: 'tomorrow',
     answerPhrase: 'We go to the beach tomorrow!',
+    description: 'This word means the day after this one. It has not started yet, and we plan things for it. If you go to bed tonight, you wake up in it.',
   },
   {
     order: 537,
@@ -5125,6 +5337,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['yesterday', 'tomorrow', 'today', 'minute'],
     answer: 'yesterday',
     answerPhrase: 'There was a big storm yesterday.',
+    description: 'This word means the day before this one. It is already in the past, and we talk about what happened during it. A storm that came last night belongs to it.',
   },
   {
     order: 538,
@@ -5134,6 +5347,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['weekend', 'week', 'month', 'yesterday'],
     answer: 'weekend',
     answerPhrase: 'On the weekend, the family rides bikes.',
+    description: 'This word is the name for Saturday and Sunday together. Most people do not work or go to school on these two days. Families rest, travel, or play sports.',
   },
   {
     order: 539,
@@ -5143,6 +5357,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['hour', 'day', 'year', 'birthday'],
     answer: 'hour',
     answerPhrase: 'The bus comes every hour.',
+    description: 'This is a unit of time with sixty minutes. There are twenty-four of them in one full turn of the Earth. A film often lasts two of them.',
   },
   {
     order: 540,
@@ -5152,6 +5367,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['minute', 'hour', 'night', 'birthday'],
     answer: 'minute',
     answerPhrase: 'Wait one minute, please!',
+    description: 'This is a unit of time with sixty seconds. If you ask a friend to wait for it, you mean a very short time. A clock has a long hand that moves one step for each of them.',
   },
   {
     order: 541,
@@ -5161,6 +5377,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['midnight', 'morning', 'afternoon', 'party'],
     answer: 'midnight',
     answerPhrase: 'It is midnight and the city sleeps.',
+    description: 'This is twelve o\'clock at night. It is the exact moment when one day ends and the next one begins. The city is dark and quiet then, and most people sleep.',
   },
   {
     order: 542,
@@ -5170,6 +5387,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['birthday', 'holiday', 'weekend', 'midnight'],
     answer: 'birthday',
     answerPhrase: 'It is her birthday!',
+    description: 'This is the special day each year when a person celebrates the date of their birth. Friends give presents, and there is a cake with candles. Everyone sings a song for the person.',
   },
   {
     order: 543,
@@ -5179,6 +5397,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['party', 'lesson', 'test', 'midnight'],
     answer: 'party',
     answerPhrase: 'The children dance at the party.',
+    description: 'This is an event where friends meet to celebrate, dance, eat, and have fun. There is often loud music and there are balloons. People go to one on a birthday or at New Year.',
   },
   {
     order: 544,
@@ -5188,6 +5407,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['holiday', 'lesson', 'party', 'minute'],
     answer: 'holiday',
     answerPhrase: 'The family is on holiday by the sea.',
+    description: 'This is a time when people do not go to school or work. Families travel to another place and rest. They swim in the sea, visit museums, and take photos.',
   },
   {
     order: 545,
@@ -5197,6 +5417,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['home', 'school', 'shop', 'floor'],
     answer: 'home',
     answerPhrase: 'The boy runs home after school.',
+    description: 'This is the place where a person lives with their family. It is where you sleep, eat, and keep your things. After a long day, you go back to it and feel comfortable.',
   },
   {
     order: 546,
@@ -5206,6 +5427,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['kitchen', 'bedroom', 'garden', 'floor'],
     answer: 'kitchen',
     answerPhrase: 'Father cooks soup in the kitchen.',
+    description: 'This is the room in a house where people prepare and cook food. It has a fridge, a cooker, and a sink. Many families also eat breakfast there.',
   },
   {
     order: 547,
@@ -5215,6 +5437,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['bathroom', 'kitchen', 'garden', 'wall'],
     answer: 'bathroom',
     answerPhrase: 'The boy washes his face in the bathroom.',
+    description: 'This is the room where people wash their bodies and brush their teeth. It has a bath or a shower, a sink, and a toilet. It is often small, with white tiles.',
   },
   {
     order: 548,
@@ -5224,6 +5447,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['bedroom', 'kitchen', 'park', 'wall'],
     answer: 'bedroom',
     answerPhrase: 'The girl reads a book in her bedroom.',
+    description: 'This is the room where a person sleeps. It has a bed, a cupboard for clothes, and often a small lamp. Children keep their toys and books there.',
   },
   {
     order: 549,
@@ -5233,6 +5457,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['floor', 'roof', 'wall', 'bedroom'],
     answer: 'floor',
     answerPhrase: 'The baby plays on the floor.',
+    description: 'This is the flat surface that you walk on inside a building. It is at the bottom of a room, under your feet. A carpet or a wooden board covers it.',
   },
   {
     order: 550,
@@ -5242,6 +5467,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['wall', 'paper', 'book', 'bedroom'],
     answer: 'wall',
     answerPhrase: 'The boy draws a picture on the wall!',
+    description: 'This is a vertical side of a room or a building. It stands upright between rooms and holds up the roof. People hang pictures and mirrors on it.',
   },
   {
     order: 551,
@@ -5251,6 +5477,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['stairs', 'road', 'river', 'apartment'],
     answer: 'stairs',
     answerPhrase: 'The cat runs down the stairs.',
+    description: 'These are steps that connect one floor of a building to another. You walk up or down them, and there is often a handrail at the side. When the lift is broken, you use them.',
   },
   {
     order: 552,
@@ -5260,6 +5487,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['roof', 'floor', 'window', 'apartment'],
     answer: 'roof',
     answerPhrase: 'A bird sits on the roof of the house.',
+    description: 'This is the top cover of a house or a building. It protects the rooms from rain, snow, and sun. Birds like to sit on it, and Santa Claus lands on it.',
   },
   {
     order: 553,
@@ -5269,6 +5497,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['apartment', 'farm', 'island', 'roof'],
     answer: 'apartment',
     answerPhrase: 'The family lives in a small apartment in the city.',
+    description: 'This is a home that is one part of a bigger building, on one floor. Many families live in the same building, each in its own set of rooms. It is very common in cities.',
   },
   {
     order: 554,
@@ -5278,6 +5507,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['classroom', 'kitchen', 'cinema', 'homework'],
     answer: 'classroom',
     answerPhrase: 'The students sit in the classroom.',
+    description: 'This is a room in a school where a teacher and students have lessons. It has desks, chairs, and a board. Students sit there for many hours a day.',
   },
   {
     order: 555,
@@ -5287,6 +5517,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['lesson', 'party', 'holiday', 'question'],
     answer: 'lesson',
     answerPhrase: 'The English lesson starts now.',
+    description: 'This is a period of time when a teacher teaches a subject to students. It lasts about forty-five minutes at school. Students listen, write notes, and learn new things.',
   },
   {
     order: 556,
@@ -5296,6 +5527,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['homework', 'shopping', 'dinner', 'question'],
     answer: 'homework',
     answerPhrase: 'The girl does her homework at the desk.',
+    description: 'This is work that a teacher gives to students to finish at home, after school. It can be exercises, a text to read, or a project. Students bring it back to class the next day.',
   },
   {
     order: 557,
@@ -5305,6 +5537,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['question', 'answer', 'ticket', 'homework'],
     answer: 'question',
     answerPhrase: 'The girl has a question for the teacher.',
+    description: 'This is a sentence that asks for information. It often begins with words like what, where, or why, and it ends with a special mark. A student puts up a hand to ask one.',
   },
   {
     order: 558,
@@ -5314,6 +5547,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['word', 'door', 'apple', 'lesson'],
     answer: 'word',
     answerPhrase: 'The teacher writes a new word on the board.',
+    description: 'This is a single unit of language with a meaning. You put many of them together to make a sentence. A dictionary has thousands of them, in alphabetical order.',
   },
   {
     order: 559,
@@ -5323,6 +5557,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['letter', 'bottle', 'box', 'test'],
     answer: 'letter',
     answerPhrase: 'The old man reads a letter from his son.',
+    description: 'This is a written message on paper that you put in an envelope. A postman brings it to your house. It can also mean one of the signs of the alphabet, like A or B.',
   },
   {
     order: 560,
@@ -5332,6 +5567,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['page', 'door', 'key', 'test'],
     answer: 'page',
     answerPhrase: 'The boy turns the page.',
+    description: 'This is one sheet of paper in a book, a newspaper, or a notebook. It has a number at the bottom, and it has text on both sides. You turn it to continue reading.',
   },
   {
     order: 561,
@@ -5341,6 +5577,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['picture', 'letter', 'map', 'lesson'],
     answer: 'picture',
     answerPhrase: 'The child shows his picture to the teacher.',
+    description: 'This is an image made by hand or by a camera. It can be a painting, a drawing, or a photo. People hang it on a wall to look at it.',
   },
   {
     order: 562,
@@ -5350,6 +5587,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['story', 'homework', 'test', 'dictionary'],
     answer: 'story',
     answerPhrase: 'Grandma reads a story to the children before bed.',
+    description: 'This is a text or a talk that tells about people and events, real or imagined. It has a beginning, a middle, and an end. Parents read one to children before bedtime.',
   },
   {
     order: 563,
@@ -5359,6 +5597,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['test', 'party', 'lesson', 'story'],
     answer: 'test',
     answerPhrase: 'The students are quiet during the test.',
+    description: 'This is a set of questions that shows how much a student knows. The students are very quiet and write fast, and later the teacher gives a mark. Some people feel nervous before it.',
   },
   {
     order: 564,
@@ -5368,6 +5607,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['dictionary', 'radio', 'window', 'story'],
     answer: 'dictionary',
     answerPhrase: 'The boy looks for a word in the dictionary.',
+    description: 'This is a big book that has a list of words in alphabetical order. Next to each word, it explains the meaning. You use it when you find a word that you do not know.',
   },
   {
     order: 565,
@@ -5377,6 +5617,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['money', 'water', 'rice', 'ticket'],
     answer: 'money',
     answerPhrase: 'The girl puts her money in a pig bank.',
+    description: 'This is what people use to pay for things in shops. It can be coins or paper notes, or a number on a card. You get it from a job, and you keep it in a wallet.',
   },
   {
     order: 566,
@@ -5386,6 +5627,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['price', 'name', 'map', 'ticket'],
     answer: 'price',
     answerPhrase: 'The woman looks at the price of the shoes.',
+    description: 'This is the amount of money that you must pay for something in a shop. A small label shows it on a product. A customer looks at it before they decide to buy.',
   },
   {
     order: 567,
@@ -5395,6 +5637,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['ticket', 'passport', 'letter', 'money'],
     answer: 'ticket',
     answerPhrase: 'The boy shows his ticket at the cinema.',
+    description: 'This is a small piece of paper or a code that lets you enter a place or use a service. You need one for a cinema, a bus, or a concert. A person at the door checks it.',
   },
   {
     order: 568,
@@ -5404,6 +5647,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['shopping', 'swimming', 'sleeping', 'price'],
     answer: 'shopping',
     answerPhrase: 'The mother goes shopping with a big bag.',
+    description: 'You do this when you go to stores to buy things. You walk through shops, put goods into a basket, and pay at the till. Many people do it on Saturday.',
   },
   {
     order: 569,
@@ -5413,6 +5657,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['supermarket', 'library', 'hospital', 'money'],
     answer: 'supermarket',
     answerPhrase: 'The family buys food in the supermarket.',
+    description: 'This is a very big shop where you can buy many kinds of food and other things in one place. You take a trolley, walk along many shelves, and pay at the exit. It sells fruit, meat, drinks, and soap.',
   },
   {
     order: 570,
@@ -5422,6 +5667,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['pay', 'wait', 'cook', 'open'],
     answer: 'pay',
     answerPhrase: 'The man pays for his coffee.',
+    description: 'You do this when you give money in exchange for goods or a service. At the end of a meal in a restaurant, you do it to the waiter. You can do it with coins, notes, or a card.',
   },
   {
     order: 571,
@@ -5431,6 +5677,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['music', 'water', 'homework', 'sport'],
     answer: 'music',
     answerPhrase: 'The girl listens to music on the bus.',
+    description: 'This is a form of art that uses sounds in a pleasant pattern. It can have a melody, a rhythm, and words. People listen to it on the radio or with headphones.',
   },
   {
     order: 572,
@@ -5440,6 +5687,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['song', 'story', 'letter', 'sport'],
     answer: 'song',
     answerPhrase: 'The singer sings a happy song.',
+    description: 'This is a piece of music with words that a singer performs. It often has a chorus that repeats. Many people listen to one on the radio or sing one in the shower.',
   },
   {
     order: 573,
@@ -5449,6 +5697,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sport', 'music', 'lesson', 'film'],
     answer: 'sport',
     answerPhrase: 'Swimming is a good sport for kids.',
+    description: 'This is a physical activity with rules, done for fun or competition. Running, swimming, and football all belong to this group. It keeps your body strong and healthy.',
   },
   {
     order: 574,
@@ -5458,6 +5707,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['football', 'tennis', 'piano', 'song'],
     answer: 'football',
     answerPhrase: 'The boys play football in the park.',
+    description: 'This is a team game with eleven players on each side and one round ball. Players try to kick the ball into a net at the end of the field. Millions of people watch the World Cup.',
   },
   {
     order: 575,
@@ -5467,6 +5717,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['tennis', 'football', 'guitar', 'film'],
     answer: 'tennis',
     answerPhrase: 'She plays tennis on a sunny day.',
+    description: 'This is a game for two or four people, with a racket and a small yellow ball. Players hit the ball over a net, and it must land inside the lines. A famous tournament of it happens in Wimbledon.',
   },
   {
     order: 576,
@@ -5476,6 +5727,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['game', 'song', 'lesson', 'film'],
     answer: 'game',
     answerPhrase: 'The friends play a board game after dinner.',
+    description: 'This is an activity that people play for fun, and that usually has rules. It can use cards, a dice, a board, or a screen. Someone wins, and the others lose.',
   },
   {
     order: 577,
@@ -5485,6 +5737,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['hobby', 'job', 'lesson', 'concert'],
     answer: 'hobby',
     answerPhrase: 'Painting is her favorite hobby.',
+    description: 'This is an activity that you do for pleasure in your free time. It is not work, and nobody forces you to do it. Painting, collecting stamps, and playing chess are examples.',
   },
   {
     order: 578,
@@ -5494,6 +5747,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['film', 'song', 'football', 'team'],
     answer: 'film',
     answerPhrase: 'The family watches a funny film.',
+    description: 'This is a story that is shown on a screen with moving pictures and sound. Actors play the characters. People watch it in a cinema or at home, often with popcorn.',
   },
   {
     order: 579,
@@ -5503,6 +5757,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['concert', 'lesson', 'market', 'team'],
     answer: 'concert',
     answerPhrase: 'The singer and the guitar player are at a big concert.',
+    description: 'This is a live musical show for many people. Singers or musicians play on a stage, and the audience listens and claps. People buy tickets for it and sometimes dance.',
   },
   {
     order: 580,
@@ -5512,6 +5767,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['team', 'family', 'class', 'concert'],
     answer: 'team',
     answerPhrase: 'The team is happy because they win.',
+    description: 'This is a group of people who play or work together to reach one goal. Eleven players in the same shirts are an example in football. They help each other and win or lose together.',
   },
   {
     order: 581,
@@ -5521,6 +5777,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['artist', 'farmer', 'driver', 'tourist'],
     answer: 'artist',
     answerPhrase: 'The artist paints a picture of the sea.',
+    description: 'This is a person who creates pictures, statues, or other works of art. They use paint, pencils, or clay. Their work is shown in a museum or a gallery.',
   },
   {
     order: 582,
@@ -5530,6 +5787,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['actor', 'doctor', 'waiter', 'tourist'],
     answer: 'actor',
     answerPhrase: 'The actor is on the big stage.',
+    description: 'This is a person who plays a role in a film or a play. They learn a text by heart and pretend to be another person. Audiences watch them on a stage or a screen.',
   },
   {
     order: 583,
@@ -5539,6 +5797,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['dancer', 'singer', 'nurse', 'scientist'],
     answer: 'dancer',
     answerPhrase: 'The dancer jumps and turns on the stage.',
+    description: 'This is a person who moves their body to music as a job or a hobby. They jump, turn, and move their arms in beautiful ways. Some of them perform in a ballet on a stage.',
   },
   {
     order: 584,
@@ -5548,6 +5807,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['tourist', 'teacher', 'worker', 'dancer'],
     answer: 'tourist',
     answerPhrase: 'The tourist takes photos of the old street.',
+    description: 'This is a person who travels to a place for pleasure, not for work. They take photos, visit famous buildings, and buy small gifts. They often carry a map and a camera.',
   },
   {
     order: 585,
@@ -5557,6 +5817,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['player', 'driver', 'student', 'scientist'],
     answer: 'player',
     answerPhrase: 'The player runs with the ball.',
+    description: 'This is a person who takes part in a game or a sport. A person in a football team is an example, and a person at a chess table is another. They try to win by using skill.',
   },
   {
     order: 586,
@@ -5566,6 +5827,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['scientist', 'singer', 'farmer', 'customer'],
     answer: 'scientist',
     answerPhrase: 'The scientist looks at a tiny plant.',
+    description: 'This is a person who studies nature and the world with careful experiments. They work in a laboratory or in the field, and they often wear a white coat. They look for new discoveries.',
   },
   {
     order: 587,
@@ -5575,6 +5837,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['customer', 'doctor', 'driver', 'player'],
     answer: 'customer',
     answerPhrase: 'The waiter smiles at the customer.',
+    description: 'This is a person who buys goods or a service in a shop or a restaurant. They pay money to the company. A waiter must be polite to them.',
   },
   {
     order: 588,
@@ -5584,6 +5847,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['family', 'team', 'class', 'person'],
     answer: 'family',
     answerPhrase: 'The family has a picnic in the park.',
+    description: 'This is a group of people who are related to each other. Parents, children, grandparents, and cousins belong to it. They often live together and take care of each other.',
   },
   {
     order: 589,
@@ -5593,6 +5857,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['name', 'word', 'number', 'person'],
     answer: 'name',
     answerPhrase: 'The boy writes his name on the bag.',
+    description: 'This is what people call you, and it is written on your documents. Your parents choose it when you are born. It is the first thing that you say when you meet someone.',
   },
   {
     order: 590,
@@ -5602,6 +5867,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['job', 'hobby', 'holiday', 'friend'],
     answer: 'job',
     answerPhrase: 'The nurse loves her job.',
+    description: 'This is the work that a person does regularly to earn money. A doctor, a driver, and a teacher each have one. It usually needs a certain number of hours each day.',
   },
   {
     order: 591,
@@ -5611,6 +5877,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['breakfast', 'dinner', 'lunch', 'menu'],
     answer: 'breakfast',
     answerPhrase: 'The family eats eggs and bread for breakfast.',
+    description: 'This is the first meal of the day. People eat it after they wake up, usually before they leave home. It often includes eggs, bread, cereal, or fruit.',
   },
   {
     order: 592,
@@ -5620,6 +5887,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['lunch', 'breakfast', 'dinner', 'menu'],
     answer: 'lunch',
     answerPhrase: 'The children eat lunch at school.',
+    description: 'This is the meal in the middle of the day, around noon. Children eat it at school, and workers eat it at their office or in a cafe. It is often a sandwich or a hot plate.',
   },
   {
     order: 593,
@@ -5629,6 +5897,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['dinner', 'breakfast', 'lunch', 'menu'],
     answer: 'dinner',
     answerPhrase: 'Grandma cooks dinner for everyone.',
+    description: 'This is the main meal of the evening. The whole family sits at the table after work and school, and they talk about their day. It is often the biggest meal.',
   },
   {
     order: 594,
@@ -5638,6 +5907,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['vegetable', 'animal', 'drink', 'ice cream'],
     answer: 'vegetable',
     answerPhrase: 'A carrot is a vegetable.',
+    description: 'This is a plant that people eat as a part of a meal, but it is not sweet like a fruit. Carrots, potatoes, and onions all belong to this group. It is healthy and gives you energy.',
   },
   {
     order: 595,
@@ -5647,6 +5917,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['menu', 'key', 'ticket', 'cream'],
     answer: 'menu',
     answerPhrase: 'The waiter gives the menu to the guests.',
+    description: 'This is a list of the food and the drinks that a restaurant offers. The waiter gives it to the guests, and it shows the prices. You read it and choose your meal.',
   },
   {
     order: 596,
@@ -5656,6 +5927,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['cream', 'salt', 'rice', 'tea'],
     answer: 'cream',
     answerPhrase: 'The girl puts cream on the cake.',
+    description: 'This is a thick, white liquid from milk. You whip it until it is fluffy and put it on a cake or in coffee. Butter is made from it.',
   },
   {
     order: 597,
@@ -5665,6 +5937,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['food', 'water', 'books', 'bus'],
     answer: 'food',
     answerPhrase: 'There is a lot of food on the table.',
+    description: 'This is anything that people and animals eat to stay alive and to grow. Bread, cheese, fruit, and meat all belong to this group. You need it several times a day.',
   },
   {
     order: 598,
@@ -5674,6 +5947,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['pool', 'library', 'station', 'theatre'],
     answer: 'pool',
     answerPhrase: 'The children swim in the pool.',
+    description: 'This is a big container filled with water for swimming. It can be inside a building or outside in the sun. Children jump into it on a hot day.',
   },
   {
     order: 599,
@@ -5683,6 +5957,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['gym', 'cafe', 'museum', 'building'],
     answer: 'gym',
     answerPhrase: 'The woman gets strong in the gym.',
+    description: 'This is a place with machines and weights where people train their muscles. They run on a machine, lift heavy things, and get strong. Many people go there after work.',
   },
   {
     order: 600,
@@ -5692,6 +5967,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['theatre', 'bank', 'hotel', 'gym'],
     answer: 'theatre',
     answerPhrase: 'The family watches a show at the theatre.',
+    description: 'This is a building where actors perform plays on a stage in front of an audience. People sit in rows of red chairs and clap at the end. Some also offer musicals and ballet.',
   },
   {
     order: 601,
@@ -5701,6 +5977,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['building', 'tree', 'boat', 'university'],
     answer: 'building',
     answerPhrase: 'The tall building has a hundred windows.',
+    description: 'This is a structure with walls and a roof, where people live, work, or do other things. A house, a school, and an office are all examples. A tall one can have a hundred windows.',
   },
   {
     order: 602,
@@ -5710,6 +5987,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['university', 'farm', 'airport', 'building'],
     answer: 'university',
     answerPhrase: 'The young woman studies at the university.',
+    description: 'This is a place where students study after they finish school. They choose a subject, listen to lectures, and get a degree at the end. Young adults spend three or four years there.',
   },
   {
     order: 603,
@@ -5719,6 +5997,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['world', 'island', 'sun', 'university'],
     answer: 'world',
     answerPhrase: 'The boy looks at the world on a globe.',
+    description: 'This is the planet where all people live, with all its countries and oceans. A round model of it is called a globe. It goes around the star that gives us light and heat.',
   },
   {
     order: 604,
@@ -5728,6 +6007,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['newspaper', 'radio', 'letter', 'passport'],
     answer: 'newspaper',
     answerPhrase: 'The old man reads the newspaper with his coffee.',
+    description: 'This is a big printed paper with the news of the day. It has articles, photos, and advertisements. People read it in the morning with a coffee.',
   },
   {
     order: 605,
@@ -5737,6 +6017,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['magazine', 'map', 'menu', 'passport'],
     answer: 'magazine',
     answerPhrase: 'The girl reads a magazine at the cafe.',
+    description: 'This is a thin book with glossy pages that comes out every week or every month. It has articles and many photos about fashion, sport, or famous people. You can buy it at a newsstand.',
   },
   {
     order: 606,
@@ -5746,6 +6027,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['passport', 'ticket', 'map', 'television'],
     answer: 'passport',
     answerPhrase: 'The woman shows her passport at the airport.',
+    description: 'This is a small official book that shows your name, your photo, and your country. You must show it to an officer when you travel to another country. It has stamps from your trips.',
   },
   {
     order: 607,
@@ -5755,6 +6037,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['message', 'umbrella', 'cake', 'magazine'],
     answer: 'message',
     answerPhrase: 'The girl sends a message to her friend.',
+    description: 'This is a short piece of information that you send to another person. You type the words on a phone or write them on paper. The other person reads it later and replies.',
   },
   {
     order: 608,
@@ -5764,6 +6047,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['card', 'ball', 'key', 'magazine'],
     answer: 'card',
     answerPhrase: 'The boy makes a birthday card for his mother.',
+    description: 'This is a small piece of thick paper with a picture and a few written words. People send it for a birthday or another holiday. You put it in an envelope or give it by hand.',
   },
   {
     order: 609,
@@ -5773,6 +6057,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['present', 'bag', 'hat', 'newspaper'],
     answer: 'present',
     answerPhrase: 'The girl gets a big present.',
+    description: 'This is a thing that you give to someone for free on a birthday or a holiday. It is often wrapped in colored paper with a ribbon. The person opens it and is surprised.',
   },
   {
     order: 610,
@@ -5782,6 +6067,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['paper', 'water', 'bread', 'television'],
     answer: 'paper',
     answerPhrase: 'The girl folds paper into a small boat.',
+    description: 'This is a thin, flat material that you write, draw, or print on. It is made from trees. You can fold it into a boat or a plane.',
   },
   {
     order: 611,
@@ -5791,6 +6077,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['finger', 'foot', 'ear', 'shoulder'],
     answer: 'finger',
     answerPhrase: 'The baby holds his mother\'s finger.',
+    description: 'You have five of these on each hand. They are long and thin, and you use them to hold a pen, to press a key, or to point. A baby holds a parent\'s hand with them.',
   },
   {
     order: 612,
@@ -5800,6 +6087,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['knee', 'ear', 'nose', 'finger'],
     answer: 'knee',
     answerPhrase: 'The boy fell and hurt his knee.',
+    description: 'This is the joint in the middle of your leg. It lets your leg bend when you walk, run, or sit. If you fall on the ground, you may hurt it.',
   },
   {
     order: 613,
@@ -5809,6 +6097,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['neck', 'nose', 'ear', 'knee'],
     answer: 'neck',
     answerPhrase: 'The giraffe has a very long neck.',
+    description: 'This is the part of the body between the head and the shoulders. It holds your head up and lets you turn it to the left and to the right. A giraffe has a very long one.',
   },
   {
     order: 614,
@@ -5818,6 +6107,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['shoulder', 'knee', 'foot', 'stomach'],
     answer: 'shoulder',
     answerPhrase: 'The parrot sits on the pirate\'s shoulder.',
+    description: 'This is the top part of your arm, next to your neck. A person carries a bag on it, and a parrot sits on it in a pirate story. You lift it when you do not know an answer.',
   },
   {
     order: 615,
@@ -5827,6 +6117,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['stomach', 'nose', 'hand', 'shoulder'],
     answer: 'stomach',
     answerPhrase: 'The boy is hungry and his stomach is loud.',
+    description: 'This is the organ in your belly where your food goes after you swallow it. It makes a noise when you have not eaten for a long time. You may feel pain there when you eat too much.',
   },
   {
     order: 616,
@@ -5836,6 +6127,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['toe', 'hair', 'tooth', 'stomach'],
     answer: 'toe',
     answerPhrase: 'The baby plays with her toes.',
+    description: 'You have five of these on each foot. They are small, and you can move them a little. A baby plays with them when she lies on her back.',
   },
   {
     order: 617,
@@ -5845,6 +6137,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['duck', 'cow', 'pig', 'frog'],
     answer: 'duck',
     answerPhrase: 'The duck swims in the pond with her babies.',
+    description: 'This is a bird that lives near water and has a flat beak and webbed feet. It swims on a pond and says quack. Little ones follow their mother in a line.',
   },
   {
     order: 618,
@@ -5854,6 +6147,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['frog', 'snake', 'mouse', 'monkey'],
     answer: 'frog',
     answerPhrase: 'The green frog jumps on a big leaf.',
+    description: 'This is a small green animal with long back legs that jumps very well. It lives near water, and it says ribbit. It starts life as a tadpole.',
   },
   {
     order: 619,
@@ -5863,6 +6157,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['monkey', 'sheep', 'horse', 'frog'],
     answer: 'monkey',
     answerPhrase: 'The monkey eats a banana in the tree.',
+    description: 'This is a clever animal with a long tail that lives in warm forests. It climbs trees easily, and it uses its hands like a person. Its favorite food is a banana.',
   },
   {
     order: 620,
@@ -5872,6 +6167,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['giraffe', 'bear', 'rabbit', 'butterfly'],
     answer: 'giraffe',
     answerPhrase: 'The giraffe eats leaves from the tall tree.',
+    description: 'This is the tallest animal in the world. It has a very long neck, long legs, and brown spots on its yellow skin. It lives in Africa and eats leaves from tall trees.',
   },
   {
     order: 621,
@@ -5881,6 +6177,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['butterfly', 'bird', 'fish', 'tiger'],
     answer: 'butterfly',
     answerPhrase: 'A butterfly sits on a yellow flower.',
+    description: 'This is a small insect with big colorful wings. It starts life as a caterpillar, and it drinks from flowers. It moves through the air in a light, soft way.',
   },
   {
     order: 622,
@@ -5890,6 +6187,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['tiger', 'cow', 'sheep', 'butterfly'],
     answer: 'tiger',
     answerPhrase: 'The tiger walks in the tall grass.',
+    description: 'This is a big wild cat with orange fur and black lines. It lives in forests of Asia, and it is a very strong hunter. It is a rare and endangered animal.',
   },
   {
     order: 623,
@@ -5899,6 +6197,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sky', 'sea', 'grass', 'winter'],
     answer: 'sky',
     answerPhrase: 'The birds fly in the blue sky.',
+    description: 'This is the space above the Earth that we see when we look up. It is blue on a sunny day, dark at night, and full of stars. Birds and planes travel through it.',
   },
   {
     order: 624,
@@ -5908,6 +6207,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['moon', 'sun', 'cloud', 'grass'],
     answer: 'moon',
     answerPhrase: 'The moon is big and bright tonight.',
+    description: 'This is the big round object that goes around the Earth. It is white and shines at night, because it reflects light from a star. Its shape changes from a thin curve to a full circle.',
   },
   {
     order: 625,
@@ -5917,6 +6217,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['star', 'cloud', 'tree', 'lake'],
     answer: 'star',
     answerPhrase: 'A star twinkles in the dark sky.',
+    description: 'This is a huge ball of hot gas that we see as a tiny bright point in the night sky. There are billions of them. Some people make a wish when one falls.',
   },
   {
     order: 626,
@@ -5926,6 +6227,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['grass', 'meat', 'rice', 'star'],
     answer: 'grass',
     answerPhrase: 'The cows eat green grass.',
+    description: 'This is a green plant with thin leaves that covers the ground in fields and gardens. Cows and sheep eat it. You cut it with a machine in a garden.',
   },
   {
     order: 627,
@@ -5935,6 +6237,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['leaf', 'rain', 'rock', 'star'],
     answer: 'leaf',
     answerPhrase: 'A yellow leaf falls from the tree.',
+    description: 'This is a flat, thin, green part of a plant that grows on a branch. It uses sunlight to make food for the plant. In autumn, it turns yellow or red and falls to the ground.',
   },
   {
     order: 628,
@@ -5944,6 +6247,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['forest', 'city', 'beach', 'moon'],
     answer: 'forest',
     answerPhrase: 'The bear walks in the dark forest.',
+    description: 'This is a large area of land that is covered with trees. Many wild animals, like bears and deer, live there. It can be dark, quiet, and full of green.',
   },
   {
     order: 629,
@@ -5953,6 +6257,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['lake', 'road', 'farm', 'forest'],
     answer: 'lake',
     answerPhrase: 'The boy sits in a boat on the quiet lake.',
+    description: 'This is a large area of still water that is surrounded by land. It is smaller than the sea, and it is often in the mountains. People swim, fish, or ride in small boats on it.',
   },
   {
     order: 630,
@@ -5962,6 +6267,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['weather', 'food', 'music', 'garden'],
     answer: 'weather',
     answerPhrase: 'The weather is great today.',
+    description: 'This word describes the conditions of the sky and the air outside on a certain day. It can be sunny, rainy, windy, or snowy. People check it before they decide what to wear.',
   },
   {
     order: 631,
@@ -5971,6 +6277,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sunny', 'rainy', 'snowy', 'windy'],
     answer: 'sunny',
     answerPhrase: 'It is a sunny day at the beach.',
+    description: 'This word describes a day with a blue sky and lots of bright light. It feels warm, and there are few clouds. People go to the beach and wear sunglasses.',
   },
   {
     order: 632,
@@ -5980,6 +6287,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['cloudy', 'sunny', 'windy', 'rainy'],
     answer: 'cloudy',
     answerPhrase: 'It is cloudy and grey over the city.',
+    description: 'This word describes a day when a thick grey layer covers the whole sky. You cannot see the blue color, but no water falls. The light is weak.',
   },
   {
     order: 633,
@@ -5989,6 +6297,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['windy', 'sunny', 'hot', 'cloudy'],
     answer: 'windy',
     answerPhrase: 'It is very windy and the girl holds her hat.',
+    description: 'This word describes a day when the air moves fast outside. It blows your hair, moves the leaves on the trees, and makes flags fly. You need to hold your hat.',
   },
   {
     order: 634,
@@ -5998,6 +6307,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['rainy', 'sunny', 'dry', 'snowy'],
     answer: 'rainy',
     answerPhrase: 'It is a rainy day in the city.',
+    description: 'This word describes a day when water falls from the sky in drops. The streets are wet, and people carry umbrellas. You hear a soft sound on the roof.',
   },
   {
     order: 635,
@@ -6007,6 +6317,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['snowy', 'sunny', 'windy', 'rainy'],
     answer: 'snowy',
     answerPhrase: 'It is snowy and the children play in the garden.',
+    description: 'This word describes a day when white ice flakes fall from the sky and cover the ground. It is very cold, and children make a man out of them. The whole garden looks white.',
   },
   {
     order: 636,
@@ -6016,6 +6327,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['foggy', 'sunny', 'hot', 'storm'],
     answer: 'foggy',
     answerPhrase: 'It is foggy and we cannot see the road.',
+    description: 'This word describes a morning when a thick white cloud is near the ground. You can see only a few meters in front of you, and cars must drive slowly. The world looks grey and mysterious.',
   },
   {
     order: 637,
@@ -6025,6 +6337,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['storm', 'snow', 'spring', 'foggy'],
     answer: 'storm',
     answerPhrase: 'A big storm comes over the sea.',
+    description: 'This is a period of very bad weather with strong wind, heavy rain, and loud thunder. Lightning lights up the dark sky. Boats stay in the port, and people stay at home.',
   },
   {
     order: 638,
@@ -6034,6 +6347,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['high', 'small', 'short', 'straight'],
     answer: 'high',
     answerPhrase: 'The tree is very high.',
+    description: 'This word describes something with a great distance from the bottom to the top, or something far above the ground. A tree that reaches the sky and a mountain are like this. Birds fly at this position over a city.',
   },
   {
     order: 639,
@@ -6043,6 +6357,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['deep', 'short', 'small', 'huge'],
     answer: 'deep',
     answerPhrase: 'The well is very deep.',
+    description: 'This word describes something with a great distance from the top to the bottom, going down. A well, a mine, and the ocean are like this. If you drop a stone, it takes a long time to reach the bottom.',
   },
   {
     order: 640,
@@ -6052,6 +6367,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['huge', 'tiny', 'thin', 'deep'],
     answer: 'huge',
     answerPhrase: 'The elephant is huge!',
+    description: 'This word describes something extremely big, much bigger than normal. An elephant, a whale, and a mountain are like this. It makes other things look very little.',
   },
   {
     order: 641,
@@ -6061,6 +6377,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['tiny', 'huge', 'heavy', 'deep'],
     answer: 'tiny',
     answerPhrase: 'The ant is tiny on her finger.',
+    description: 'This word describes something extremely small, much smaller than normal. An ant, a grain of sand, and a drop of water are like this. You need to look closely to see it.',
   },
   {
     order: 642,
@@ -6070,6 +6387,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['cool', 'sad', 'shy', 'rough'],
     answer: 'cool',
     answerPhrase: 'The boy looks really cool.',
+    description: 'This word describes a person or a thing that looks modern and impressive. A boy in sunglasses and a black jacket can be like this. Teenagers use it to say that they like something a lot.',
   },
   {
     order: 643,
@@ -6079,6 +6397,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['famous', 'shy', 'poor', 'modern'],
     answer: 'famous',
     answerPhrase: 'The singer is famous and everyone takes photos.',
+    description: 'This word describes a person that many people know and recognize. Singers, actors, and football players are often like this. Fans ask them for a photo in the street.',
   },
   {
     order: 644,
@@ -6088,6 +6407,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['modern', 'old', 'small', 'famous'],
     answer: 'modern',
     answerPhrase: 'The house is very modern.',
+    description: 'This word describes something that uses the newest ideas, styles, or technology. A house made of glass and steel is an example. It looks very different from a house that people built hundreds of years ago.',
   },
   {
     order: 645,
@@ -6097,6 +6417,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['amazing', 'boring', 'sad', 'terrible'],
     answer: 'amazing',
     answerPhrase: 'The fireworks are amazing!',
+    description: 'This word describes something so great and surprising that you cannot believe it. Fireworks in the night sky and a giant waterfall are like this. People say wow when they see it.',
   },
   {
     order: 646,
@@ -6106,6 +6427,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['exciting', 'boring', 'quiet', 'terrible'],
     answer: 'exciting',
     answerPhrase: 'The ride is very exciting.',
+    description: 'This word describes something that gives you a lot of energy and makes your heart beat fast. A fast roller coaster and a close football match are like this. You cannot wait for what happens next.',
   },
   {
     order: 647,
@@ -6115,6 +6437,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['pretty', 'angry', 'tired', 'lonely'],
     answer: 'pretty',
     answerPhrase: 'The girl in the yellow dress is pretty.',
+    description: 'This word describes a person or a thing that is nice to look at in a soft, cute way. A girl in a yellow dress with a flower in her hair can be like this. It is a gentle kind of beauty.',
   },
   {
     order: 648,
@@ -6124,6 +6447,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['blonde', 'black', 'brown', 'lonely'],
     answer: 'blonde',
     answerPhrase: 'The girl has long blonde hair.',
+    description: 'This word describes hair that has a light yellow color, like straw or honey. Many children in northern countries have hair like this. Some people change their hair to this color at a hairdresser.',
   },
   {
     order: 649,
@@ -6133,6 +6457,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['up', 'down', 'away', 'here'],
     answer: 'up',
     answerPhrase: 'The balloon flies up into the sky.',
+    description: 'This word shows a movement toward a higher place. A balloon leaves a hand and moves toward the sky. You do it with your eyes when you look at the ceiling.',
   },
   {
     order: 650,
@@ -6142,6 +6467,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['down', 'up', 'far', 'here'],
     answer: 'down',
     answerPhrase: 'The boy goes down the slide.',
+    description: 'This word shows a movement toward a lower place. A child on a slide moves from the top to the bottom this way. A ball that falls from a table does it too.',
   },
   {
     order: 651,
@@ -6151,6 +6477,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['here', 'there', 'away', 'down'],
     answer: 'here',
     answerPhrase: 'Come here, little dog!',
+    description: 'This word means in this place, the place where the speaker is. A girl points to the ground in front of her and calls a dog to come to it. It is the opposite of a far place.',
   },
   {
     order: 652,
@@ -6160,6 +6487,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['there', 'here', 'now', 'down'],
     answer: 'there',
     answerPhrase: 'Look, the bird is over there!',
+    description: 'This word means in that place, a place that is not where the speaker is. A boy points at a bird in a tree that is far from him and says a sentence with this word. It shows a different location.',
   },
   {
     order: 653,
@@ -6169,6 +6497,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['back', 'away', 'up', 'downstairs'],
     answer: 'back',
     answerPhrase: 'The dog brings the ball back.',
+    description: 'This word shows a movement toward the place or the person where something came from. A dog runs with a ball and returns to its owner. You also do it when you go home after a day out.',
   },
   {
     order: 654,
@@ -6178,6 +6507,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['left', 'right', 'straight', 'up'],
     answer: 'left',
     answerPhrase: 'Turn left at the bank.',
+    description: 'This word shows one of two sides. If you face the front, your heart is on this side. A tourist turns to this side at the bank.',
   },
   {
     order: 655,
@@ -6187,6 +6517,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['very', 'never', 'often', 'slowly'],
     answer: 'very',
     answerPhrase: 'The elephant is very big.',
+    description: 'This word makes an adjective stronger. It means to a great degree. When you say that something is big, and you want to show that it is even bigger, you put this word in front of it.',
   },
   {
     order: 656,
@@ -6196,6 +6527,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['too', 'never', 'away', 'slowly'],
     answer: 'too',
     answerPhrase: 'The boy eats ice cream, and his sister eats ice cream too.',
+    description: 'This word means also, in addition. A boy eats ice cream, and his sister does the same thing, so you say that she does it with this word at the end of the sentence. It goes at the end.',
   },
   {
     order: 657,
@@ -6205,6 +6537,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['slowly', 'quickly', 'loudly', 'too'],
     answer: 'slowly',
     answerPhrase: 'The snail moves slowly across the leaf.',
+    description: 'This word describes how someone or something moves or does something, with low speed. A snail crosses a leaf in this way. It takes a long time.',
   },
   {
     order: 658,
@@ -6214,6 +6547,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['scarf', 'shirt', 'boot', 'shorts'],
     answer: 'scarf',
     answerPhrase: 'The girl wears a warm red scarf.',
+    description: 'This is a long piece of soft cloth that you wear around your neck in cold weather. It is usually made of wool. It keeps your throat and your chest warm.',
   },
   {
     order: 659,
@@ -6223,6 +6557,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['socks', 'hat', 'coat', 'shorts'],
     answer: 'socks',
     answerPhrase: 'The boy puts on his socks and shoes.',
+    description: 'You wear these on your feet, under your shoes. They are soft and made of cotton or wool. You always have two of them, and they keep your feet warm and dry.',
   },
   {
     order: 660,
@@ -6232,5 +6567,6 @@ export const A1_CARDS: LessonCard[] = [
     options: ['shorts', 'jacket', 'sweater', 'socks'],
     answer: 'shorts',
     answerPhrase: 'The children wear shorts and T-shirts on the beach.',
+    description: 'You wear these on the lower part of your body when it is hot. They have two short legs that end above the knees. Children wear them on the beach and when they play sport.',
   },
 ];
