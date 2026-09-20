@@ -1017,6 +1017,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['four', 'three', 'five'],
     answer: 'four',
     answerPhrase: 'Four.',
+    description: 'This is the number of legs on a dog or a table. A car has this many wheels. It is a pair and another pair.',
   },
   {
     order: 103,
@@ -1026,6 +1027,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['five', 'four', 'six'],
     answer: 'five',
     answerPhrase: 'Five.',
+    description: 'This is the number of fingers on one hand. It is also the number of toes on one foot. A starfish has this many arms.',
   },
   {
     order: 104,
@@ -1035,6 +1037,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['six', 'five', 'seven'],
     answer: 'six',
     answerPhrase: 'Six.',
+    description: 'This is the number of legs on an insect, like an ant or a bee. A dice has this many sides. It is a pair and a pair and a pair.',
   },
   {
     order: 105,
@@ -1044,6 +1047,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['seven', 'six', 'eight'],
     answer: 'seven',
     answerPhrase: 'Seven.',
+    description: 'This is the number of days in a week. It is also the number of colors in a rainbow. Many people think it is a lucky number.',
   },
   {
     order: 106,
@@ -1053,6 +1057,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['eight', 'seven', 'nine'],
     answer: 'eight',
     answerPhrase: 'Eight.',
+    description: 'This is the number of legs on a spider. An octopus has this many arms. A stop sign has this many sides.',
   },
   {
     order: 107,
@@ -1062,6 +1067,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['nine', 'eight', 'ten'],
     answer: 'nine',
     answerPhrase: 'Nine.',
+    description: 'A baby grows inside its mother for this many months before it is born. There is a saying that a cat has this many lives. It is the last number that you write with just one figure.',
   },
   {
     order: 108,
@@ -1071,6 +1077,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['ten', 'nine', 'eight'],
     answer: 'ten',
     answerPhrase: 'Ten.',
+    description: 'This is the number of fingers on both of your hands. It is also the number of toes on both of your feet. You write it with a one and a zero.',
   },
   {
     order: 109,
@@ -1080,6 +1087,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['quietly', 'loudly', 'fast'],
     answer: 'quietly',
     answerPhrase: 'She is pointing quietly.',
+    description: 'This word tells us how someone does something. You do it with very little sound, like a mouse. People do this in a library, or when a baby is sleeping.',
   },
   {
     order: 110,
@@ -1089,6 +1097,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['loudly', 'quietly', 'fast'],
     answer: 'loudly',
     answerPhrase: 'The woman talks loudly.',
+    description: 'This word tells us how someone does something. You make a lot of sound, like a drum or a shout. People do this at a concert, or when they are far away from each other.',
   },
   {
     order: 111,
@@ -1098,6 +1107,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['alone', 'together', 'happy'],
     answer: 'alone',
     answerPhrase: 'The boy is alone.',
+    description: 'This word tells us that a person has nobody else with them. They have no friends and no family near them. Sometimes people feel lonely when they are like this.',
   },
   {
     order: 112,
@@ -1107,6 +1117,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['together', 'alone', 'happy'],
     answer: 'together',
     answerPhrase: 'The boy and the girl are together.',
+    description: 'This word tells us that people or animals are with each other. They are in the same place, and they do things as a group. Friends are like this when they play a game.',
   },
   {
     order: 113,
@@ -1116,6 +1127,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['outside', 'inside', 'alone'],
     answer: 'outside',
     answerPhrase: 'The girl is outside.',
+    description: 'This word tells us that you are not in a building. You are in the open air, in a garden, in a park, or on the street. You can feel the wind and the sun there.',
   },
   {
     order: 114,
@@ -1125,6 +1137,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['inside', 'outside', 'alone'],
     answer: 'inside',
     answerPhrase: 'The TV is inside the house.',
+    description: 'This word tells us that something is in a closed space, for example in a room or in a box. You are safe from the wind and the rain there. Your bed and your TV are usually like this at home.',
   },
   {
     order: 115,
@@ -1134,6 +1147,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['hair', 'ear', 'nose'],
     answer: 'hair',
     answerPhrase: 'This is hair.',
+    description: 'This grows on your head. It can be long or short, straight or curly. Its color can be black, brown, yellow, or gray, and you wash and brush it every day.',
   },
   {
     order: 116,
@@ -1143,6 +1157,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['face', 'head', 'hand'],
     answer: 'face',
     answerPhrase: 'This is a face.',
+    description: 'This is the part of you that people look at when they talk to you. It has your eyes, your nose, and your mouth. It shows if you are happy or sad.',
   },
   {
     order: 117,
@@ -1152,6 +1167,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['tooth', 'nose', 'eye'],
     answer: 'tooth',
     answerPhrase: 'This is a tooth.',
+    description: 'You have many of these in your mouth. They are hard and white, and you use them to bite and chew food. You brush them every morning and every night.',
   },
   {
     order: 118,
@@ -1161,6 +1177,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['elephant', 'horse', 'bear'],
     answer: 'elephant',
     answerPhrase: 'This is an elephant.',
+    description: 'This is the biggest animal that lives on land. It has a very long nose called a trunk, two huge ears, and two long white tusks. It is gray and lives in Africa and Asia.',
   },
   {
     order: 119,
@@ -1170,6 +1187,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['lion', 'bear', 'elephant'],
     answer: 'lion',
     answerPhrase: 'This is a lion.',
+    description: 'This is a big wild cat that lives in Africa. The male has a large ring of hair around his head, and it makes a loud roar. People call it the king of the animals.',
   },
   {
     order: 120,
@@ -1179,6 +1197,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sheep', 'cow', 'rabbit'],
     answer: 'sheep',
     answerPhrase: 'This is a sheep.',
+    description: 'This is a farm animal with thick, soft wool. People cut the wool and make warm clothes from it. It says baa and eats grass.',
   },
   {
     order: 121,
@@ -1188,6 +1207,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['snake', 'fish', 'bird'],
     answer: 'snake',
     answerPhrase: 'This is a snake.',
+    description: 'This is a long animal with no legs. It moves on the ground with its whole body, and its dry skin is covered with scales. Some of them are dangerous and can bite with poison.',
   },
   {
     order: 122,
@@ -1197,6 +1217,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['pig', 'cow', 'bear'],
     answer: 'pig',
     answerPhrase: 'This is a pig.',
+    description: 'This is a farm animal with a pink body, a short curly tail, and a flat nose called a snout. It says oink and likes to roll in the mud. People get bacon and ham from it.',
   },
   {
     order: 123,
@@ -1206,6 +1227,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['mouse', 'rabbit', 'snake'],
     answer: 'mouse',
     answerPhrase: 'This is a mouse.',
+    description: 'This is a very small animal with a long thin tail, small round ears, and sharp teeth. It eats cheese and hides in holes. Cats like to chase it.',
   },
   {
     order: 124,
@@ -1215,6 +1237,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['purple', 'pink', 'blue'],
     answer: 'purple',
     answerPhrase: 'This is purple.',
+    description: 'This is the color of ripe plums and dark grapes. Some flowers, like lavender, are this color too. In the past, kings and queens wore it on special days.',
   },
   {
     order: 125,
@@ -1224,6 +1247,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['grey', 'white', 'black'],
     answer: 'grey',
     answerPhrase: 'This is grey.',
+    description: 'This is the color of a rainy sky and of an elephant. Stones, ashes, and old people\'s hair are often this color. It is a quiet, calm color.',
   },
   {
     order: 126,
@@ -1233,6 +1257,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['brown', 'orange', 'red'],
     answer: 'brown',
     answerPhrase: 'This is brown.',
+    description: 'This is the color of chocolate, coffee, and earth. Wood and tree trunks are this color too. It is a warm, natural color.',
   },
   {
     order: 127,
@@ -1242,6 +1267,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['afraid', 'happy', 'angry'],
     answer: 'afraid',
     answerPhrase: 'The boy is afraid.',
+    description: 'This is a feeling that you have when something dangerous or scary is near. Your heart beats fast, and you want to run away or hide. You may feel this way in the dark or when you see a big snake.',
   },
   {
     order: 128,
@@ -1251,6 +1277,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['excited', 'happy', 'sad'],
     answer: 'excited',
     answerPhrase: 'The girl is excited.',
+    description: 'This is a feeling that you have when something great is going to happen soon. Your heart beats fast, and you cannot wait. Children feel this way before a birthday party or a trip.',
   },
   {
     order: 129,
@@ -1260,6 +1287,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['bored', 'excited', 'happy'],
     answer: 'bored',
     answerPhrase: 'The boy is bored.',
+    description: 'This is a feeling that you have when there is nothing interesting to do. Time goes very slowly, and you look at the clock again and again. You may sigh and feel that nothing is fun.',
   },
   {
     order: 130,
@@ -1269,6 +1297,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['tired', 'sad', 'bored'],
     answer: 'tired',
     answerPhrase: 'The girl is tired.',
+    description: 'This is a feeling in your body when you worked or played a lot, or when you did not sleep enough. Your eyes feel heavy, and you want to rest. You may yawn.',
   },
   {
     order: 131,
@@ -1278,6 +1307,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sick', 'tired', 'sad'],
     answer: 'sick',
     answerPhrase: 'The boy is sick.',
+    description: 'This is what we say when your body does not feel well. You may have a fever, a cough, or a sore throat. You stay in bed and see a doctor.',
   },
   {
     order: 132,
@@ -1287,6 +1317,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['hungry', 'angry', 'tired'],
     answer: 'hungry',
     answerPhrase: 'The dog is hungry.',
+    description: 'This is a feeling that you have when you have not eaten for a long time. Your stomach may make noise, and you want food. You feel this way before lunch or dinner.',
   },
   {
     order: 133,
@@ -1296,6 +1327,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['thirsty', 'hungry', 'tired'],
     answer: 'thirsty',
     answerPhrase: 'The cat is thirsty.',
+    description: 'This is a feeling in your mouth and throat when your body needs water. Your mouth feels dry, and you want a cold drink. You feel this way after you run in hot weather.',
   },
   {
     order: 134,
@@ -1305,6 +1337,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['hat', 'bag', 'cup'],
     answer: 'hat',
     answerPhrase: 'This is a hat.',
+    description: 'You wear this on your head. It keeps the sun off your face in summer, or it keeps your head warm in winter. Cowboys and chefs wear special ones.',
   },
   {
     order: 135,
@@ -1314,6 +1347,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['coat', 'hat', 'bag'],
     answer: 'coat',
     answerPhrase: 'This is a coat.',
+    description: 'You wear this over your other clothes when the weather is cold or wet. It is long and warm, with sleeves and buttons. You take it off when you come inside.',
   },
   {
     order: 136,
@@ -1323,6 +1357,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['dress', 'coat', 'hat'],
     answer: 'dress',
     answerPhrase: 'This is a dress.',
+    description: 'This is one piece of clothing that a girl or a woman wears. It covers the top of the body and the legs together, and it can be long or short. Women often wear it to a party.',
   },
   {
     order: 137,
@@ -1332,6 +1367,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['shirt', 'coat', 'dress'],
     answer: 'shirt',
     answerPhrase: 'This is a shirt.',
+    description: 'You wear this on the upper part of your body. It has sleeves, a collar, and buttons down the front. Men often wear it to work with a tie.',
   },
   {
     order: 138,
@@ -1341,6 +1377,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['shoe', 'hat', 'shirt'],
     answer: 'shoe',
     answerPhrase: 'This is a shoe.',
+    description: 'You wear this on your foot. It protects your foot from the ground and from the cold. You usually have a pair of them, and you tie the laces.',
   },
   {
     order: 139,
@@ -1350,6 +1387,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['jacket', 'coat', 'shirt'],
     answer: 'jacket',
     answerPhrase: 'This is a jacket.',
+    description: 'You wear this over your other clothes, but it is shorter and lighter than the long, warm kind. It often has a zip and pockets. You wear it on a cool day in spring or autumn.',
   },
   {
     order: 140,
@@ -1359,6 +1397,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['skirt', 'dress', 'jacket'],
     answer: 'skirt',
     answerPhrase: 'This is a skirt.',
+    description: 'You wear this from your waist down. It has no separate legs, so it hangs around your legs like a short or long tube. Girls and women wear it.',
   },
   {
     order: 141,
@@ -1368,6 +1407,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['jeans', 'skirt', 'coat'],
     answer: 'jeans',
     answerPhrase: 'These are jeans.',
+    description: 'This is a pair of strong blue trousers. They are made of a heavy cotton cloth called denim. People wear them every day because they are comfortable.',
   },
   {
     order: 142,
@@ -1377,6 +1417,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['T-shirt', 'shirt', 'jacket'],
     answer: 'T-shirt',
     answerPhrase: 'This is a T-shirt.',
+    description: 'This is a light top with short sleeves and no collar. It is made of soft cotton and has no buttons. People wear it in summer, often with a picture or words on the front.',
   },
   {
     order: 143,
@@ -1386,6 +1427,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sweater', 'coat', 'jacket'],
     answer: 'sweater',
     answerPhrase: 'This is a sweater.',
+    description: 'You wear this in cold weather. It is made of wool, and it is soft and warm. You pull it over your head, and it has no zip and no buttons.',
   },
   {
     order: 144,
@@ -1395,6 +1437,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['trousers', 'jeans', 'skirt'],
     answer: 'trousers',
     answerPhrase: 'These are trousers.',
+    description: 'You wear these on the lower part of your body. They have two long parts, one for each leg, and they go from your waist to your ankles. Men and women wear them to work, often with a belt.',
   },
   {
     order: 145,
@@ -1404,6 +1447,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['boot', 'shoe', 'hat'],
     answer: 'boot',
     answerPhrase: 'This is a boot.',
+    description: 'You wear this on your foot, but it is stronger and taller than an ordinary one. It covers your ankle and sometimes part of your leg. Farmers and hikers wear it in mud, rain, or snow.',
   },
   {
     order: 146,
@@ -1413,6 +1457,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['cake', 'bread', 'egg'],
     answer: 'cake',
     answerPhrase: 'This is a cake.',
+    description: 'This is a sweet food that you bake in an oven. It is made from flour, sugar, and butter. People eat it on birthdays, and it often has candles on it.',
   },
   {
     order: 147,
@@ -1422,6 +1467,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['juice', 'water', 'milk'],
     answer: 'juice',
     answerPhrase: 'This is juice.',
+    description: 'This is a sweet drink that comes from fruit. You squeeze fruit like oranges or apples, and the liquid comes out. It is often yellow, orange, or red.',
   },
   {
     order: 148,
@@ -1431,6 +1477,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['coffee', 'juice', 'milk'],
     answer: 'coffee',
     answerPhrase: 'This is coffee.',
+    description: 'This is a hot, dark brown drink. It is made from roasted beans, and it has a strong smell. Many adults drink it in the morning to feel awake.',
   },
   {
     order: 149,
@@ -1440,6 +1487,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['tea', 'coffee', 'juice'],
     answer: 'tea',
     answerPhrase: 'This is tea.',
+    description: 'This is a hot drink that you make with dry leaves and hot water. It can be black, green, or made from herbs. People often drink it with lemon or sugar, and it is very popular in England.',
   },
   {
     order: 150,
@@ -1449,6 +1497,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['cheese', 'bread', 'egg'],
     answer: 'cheese',
     answerPhrase: 'This is cheese.',
+    description: 'This is a food that people make from milk. It can be soft or hard, and it is often yellow or white. Mice love it, and people put it on pizza.',
   },
   {
     order: 151,
@@ -1458,6 +1507,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['chicken', 'egg', 'rice'],
     answer: 'chicken',
     answerPhrase: 'This is chicken.',
+    description: 'This is meat from a farm bird. People cook it in an oven or fry it in a pan. It has white or brown meat, and it is one of the most popular foods in the world.',
   },
   {
     order: 152,
