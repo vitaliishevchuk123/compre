@@ -917,6 +917,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['tree', 'flower', 'bird'],
     answer: 'tree',
     answerPhrase: 'This is a tree.',
+    description: 'This is a tall plant with a thick trunk, branches, and many green leaves. It can live for many years. Some animals build nests in it, and you can sit in its shade.',
   },
   {
     order: 93,
@@ -926,6 +927,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['flower', 'tree', 'bird'],
     answer: 'flower',
     answerPhrase: 'This is a flower.',
+    description: 'This is the colorful part of a plant. It has soft petals and often a sweet smell. Bees visit it, and people give it to someone as a gift.',
   },
   {
     order: 94,
@@ -935,6 +937,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sun', 'rain', 'cloud'],
     answer: 'sun',
     answerPhrase: 'This is the sun.',
+    description: 'This is a huge, bright star in the sky. It gives us light and heat during the day. It goes down in the evening, and then it is night.',
   },
   {
     order: 95,
@@ -944,6 +947,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['rain', 'sun', 'cloud'],
     answer: 'rain',
     answerPhrase: 'This is rain.',
+    description: 'This is water that falls from the sky in small drops. You need an umbrella when it comes down. It makes the grass and the trees grow.',
   },
   {
     order: 96,
@@ -953,6 +957,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['snow', 'rain', 'sun'],
     answer: 'snow',
     answerPhrase: 'This is snow.',
+    description: 'This is white, soft, and very cold. It falls from the sky in winter, and it covers the ground like a blanket. Children make a man out of it.',
   },
   {
     order: 97,
@@ -962,6 +967,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['cloud', 'sun', 'rain'],
     answer: 'cloud',
     answerPhrase: 'This is a cloud.',
+    description: 'This is a soft, white or gray shape that floats high in the sky. It is made of tiny drops of water. It can look like cotton, and it can make a day dark.',
   },
   {
     order: 98,
@@ -971,6 +977,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['ball', 'bag', 'cup'],
     answer: 'ball',
     answerPhrase: 'This is a ball.',
+    description: 'This is a round object that you throw, kick, or catch. Children use it in games like football and basketball. It can roll and bounce on the ground.',
   },
   {
     order: 99,
@@ -980,6 +987,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['one', 'two', 'three'],
     answer: 'one',
     answerPhrase: 'One.',
+    description: 'This is the first number when you count. It means a single thing. You have this many noses and this many mouths on your face.',
   },
   {
     order: 100,
@@ -989,6 +997,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['two', 'one', 'three'],
     answer: 'two',
     answerPhrase: 'Two.',
+    description: 'This is the number that comes right after the first number. It means a pair. You have this many eyes, ears, hands, and feet.',
   },
   {
     order: 101,
@@ -998,6 +1007,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['three', 'two', 'four'],
     answer: 'three',
     answerPhrase: 'Three.',
+    description: 'This is the number you get when you add a pair and a single thing. A triangle has this many sides, and a traffic light has this many colors.',
   },
   {
     order: 102,
