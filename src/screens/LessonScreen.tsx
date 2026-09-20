@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import {
   Animated,
   ActivityIndicator,
@@ -17,6 +17,8 @@ import * as Speech from 'expo-speech';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useVoice } from '../context/VoiceContext';
+import { useLearnSettings } from '../context/LearnSettingsContext';
+import ModeSwitch from '../components/ModeSwitch';
 import { A1_CARDS } from '../data/seed/a1';
 import { getImage } from '../data/imageRegistry';
 import { getWordsByLevel, recordAnswer } from '../db/words';
@@ -37,7 +39,7 @@ function shuffle<T>(arr: T[]): T[] {
 
 export default function LessonScreen({ navigation, route }: LessonProps) {
   const category = route.params?.category;
-  const mode = route.params?.mode ?? 'test';
+  const { mode, setMode } = useLearnSettings();
   const autoAdvance = route.params?.autoAdvance ?? false;
   const repeatCount = route.params?.repeatCount ?? 1;
   const pauseSeconds = route.params?.pauseSeconds ?? 0;
@@ -61,6 +63,19 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pausedRef = useRef(false);
   const [paused, setPausedState] = useState(false);
+
+  // Quick Learn/Test switch in the header (same setting as Settings → Mode).
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerRight: () => <ModeSwitch mode={mode} onChange={setMode} />,
+    });
+  }, [navigation, mode, setMode]);
+
+  // Drop a half-answered card when the mode changes.
+  useEffect(() => {
+    setSelected(null);
+    setIsReplaying(false);
+  }, [mode]);
 
   useEffect(() => {
     Promise.all([
@@ -138,7 +153,7 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
       Speech.stop();
       if (timerRef.current) { clearTimeout(timerRef.current); timerRef.current = null; }
     };
-  }, [index, voiceId]);
+  }, [index, voiceId, mode]);
 
   const answeredRef = useRef(false);
   const nextRef = useRef<() => void>(() => {});

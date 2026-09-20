@@ -53,7 +53,7 @@ export default function CategoryPickerScreen({ navigation }: CategoryPickerProps
   const { mode, autoAdvance, repeatCount, pauseSeconds } = useLearnSettings();
 
   function go(category?: string) {
-    navigation.navigate('Lesson', { category, mode, autoAdvance, repeatCount, pauseSeconds });
+    navigation.navigate('Lesson', { category, autoAdvance, repeatCount, pauseSeconds });
   }
 
   return (

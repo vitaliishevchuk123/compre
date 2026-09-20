@@ -5,7 +5,7 @@ import type { CompositeScreenProps } from '@react-navigation/native';
 export type RootStackParamList = {
   Main: undefined;
   CategoryPicker: { level: string };
-  Lesson: { category?: string; mode?: 'learn' | 'test'; autoAdvance?: boolean; repeatCount?: number; pauseSeconds?: number };
+  Lesson: { category?: string; autoAdvance?: boolean; repeatCount?: number; pauseSeconds?: number };
 };
 
 export type TabParamList = {
