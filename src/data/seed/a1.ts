@@ -2817,6 +2817,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['climb', 'jump', 'sit', 'draw'],
     answer: 'climb',
     answerPhrase: 'The boy is climbing.',
+    description: 'You do this when you go up a tree, a wall, or a mountain. You use your hands and your feet to pull your body higher. It can be dangerous if you fall.',
   },
   {
     order: 283,
@@ -2826,6 +2827,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['draw', 'read', 'write', 'drive'],
     answer: 'draw',
     answerPhrase: 'The child is drawing.',
+    description: 'You do this with a pencil, a pen, or colors on paper. You make a picture with lines and shapes, for example of a house or a face. Artists do this every day.',
   },
   {
     order: 284,
@@ -2835,6 +2837,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['drive', 'walk', 'run', 'wash'],
     answer: 'drive',
     answerPhrase: 'The driver is driving.',
+    description: 'You do this in a car, a bus, or a truck. You sit behind the steering wheel, and you control the speed and the direction. You must have a license to do this.',
   },
   {
     order: 285,
@@ -2844,6 +2847,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['wash', 'eat', 'sit', 'drive'],
     answer: 'wash',
     answerPhrase: 'The man is washing.',
+    description: 'You do this to make something clean with water and soap. You can do it to your hands, your hair, your clothes, or the dishes. You dry it afterwards.',
   },
   {
     order: 286,
@@ -2853,6 +2857,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['wear', 'give', 'open', 'love'],
     answer: 'wear',
     answerPhrase: 'The girl is wearing a dress.',
+    description: 'You do this with clothes, shoes, or a hat. They are on your body, and you use them every day. In the morning, you put on your clothes, and then you are doing this.',
   },
   {
     order: 287,
@@ -2862,6 +2867,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['love', 'hate', 'like', 'wear'],
     answer: 'love',
     answerPhrase: 'This is love.',
+    description: 'This is a very strong feeling of care for someone or something. A parent has it for their child, and a friend has it for a friend. It makes you happy, and you want to protect the person.',
   },
   {
     order: 288,
@@ -2871,6 +2877,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['look', 'sleep', 'run', 'call'],
     answer: 'look',
     answerPhrase: 'The boy is looking.',
+    description: 'You do this with your eyes when you turn them toward something. You want to see it, so you point your eyes at it and pay attention. You do this at a picture, at a window, or at a person.',
   },
   {
     order: 289,
@@ -2880,6 +2887,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['call', 'talk', 'listen', 'look'],
     answer: 'call',
     answerPhrase: 'The boy is calling.',
+    description: 'You do this with a phone, or with your voice from far away. You say someone\'s name to get their attention, or you dial their number. Then you wait for them to answer.',
   },
   {
     order: 290,
@@ -2889,6 +2897,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['help', 'give', 'play', 'call'],
     answer: 'help',
     answerPhrase: 'The girl is helping.',
+    description: 'You do this when you make something easier for another person. They have a problem or a heavy job, and you work together with them. Good friends do this without being asked.',
   },
   {
     order: 291,
@@ -2898,6 +2907,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['new', 'old', 'big', 'cheap'],
     answer: 'new',
     answerPhrase: 'The car is new.',
+    description: 'This word describes something that was made or bought recently. It has not been used much, and it still looks perfect. A phone that you just bought in a shop is like this.',
   },
   {
     order: 292,
@@ -2907,6 +2917,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['dirty', 'clean', 'new', 'warm'],
     answer: 'dirty',
     answerPhrase: 'The cup is dirty.',
+    description: 'This word tells us that something has marks, dust, or mud on it. You need to wash it before you use it. Your shoes are like this after you walk in the rain.',
   },
   {
     order: 293,
@@ -2916,6 +2927,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['clean', 'dirty', 'new', 'warm'],
     answer: 'clean',
     answerPhrase: 'The shirt is clean.',
+    description: 'This word tells us that something has no marks, dust, or mud on it. It is fresh and tidy, and it smells nice. Clothes are like this after you wash them.',
   },
   {
     order: 294,
@@ -2925,6 +2937,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['warm', 'cold', 'hot', 'clean'],
     answer: 'warm',
     answerPhrase: 'The cup is warm.',
+    description: 'This word tells us about a mild, pleasant temperature. It is not so low that you shiver, and it is not so high that it burns you. A bath is often like this.',
   },
   {
     order: 295,
@@ -2934,6 +2947,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['beautiful', 'small', 'old', 'funny'],
     answer: 'beautiful',
     answerPhrase: 'The flower is beautiful.',
+    description: 'This word describes something that is very nice to look at. A sunset, a garden full of roses, or a famous painting can be like this. People say it when they really enjoy how something looks.',
   },
   {
     order: 296,
@@ -2943,6 +2957,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['dark', 'bright', 'cold', 'full'],
     answer: 'dark',
     answerPhrase: 'The night is dark.',
+    description: 'This word tells us that there is little or no light. You cannot see well, and you may need a torch or a lamp. A room without windows at midnight is like this.',
   },
   {
     order: 297,
@@ -2952,6 +2967,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['full', 'empty', 'small', 'dark'],
     answer: 'full',
     answerPhrase: 'The cup is full.',
+    description: 'This word tells us that there is no space left inside. The container holds as much as it can, and one more drop of water would spill out. A glass of juice filled to the top is like this.',
   },
   {
     order: 298,
@@ -2961,6 +2977,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['funny', 'sad', 'angry', 'beautiful'],
     answer: 'funny',
     answerPhrase: 'The man is funny.',
+    description: 'This word describes something that makes you laugh. A joke, a clown, or a silly cartoon can be like this. People with a good sense of humor are like this too.',
   },
   {
     order: 299,
@@ -2970,6 +2987,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['quiet', 'loud', 'angry', 'hard'],
     answer: 'quiet',
     answerPhrase: 'The baby is quiet.',
+    description: 'This word tells us that there is very little sound. A library at night and a sleeping baby are like this. You could hear a pin drop.',
   },
   {
     order: 300,
@@ -2979,6 +2997,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['hard', 'soft', 'big', 'quiet'],
     answer: 'hard',
     answerPhrase: 'The rock is hard.',
+    description: 'This word describes something that does not change shape when you press it. It is solid and firm, and it can hurt if you hit it. A stone or a metal table is like this.',
   },
   {
     order: 301,
@@ -2988,6 +3007,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['healthy', 'dirty', 'bad', 'funny'],
     answer: 'healthy',
     answerPhrase: 'The carrot is healthy.',
+    description: 'This word describes a body that is strong and free from illness. It also describes food that helps your body stay strong. Vegetables, fruit, and sport help you to be like this.',
   },
   {
     order: 302,
