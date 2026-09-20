@@ -117,6 +117,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sleep', 'run', 'eat'],
     answer: 'sleep',
     answerPhrase: 'The cat is sleeping.',
+    description: 'You do this at night when you are tired. You close your eyes and your body rests. You often lie in a bed and have dreams.',
   },
   {
     order: 13,
@@ -126,6 +127,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['big', 'small', 'fast'],
     answer: 'big',
     answerPhrase: 'The dog is big.',
+    description: 'This word tells us about size. A thing like this takes up a lot of space, for example an elephant or a tall house. It is larger than most things.',
   },
   {
     order: 14,
@@ -135,6 +137,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['small', 'big', 'fast'],
     answer: 'small',
     answerPhrase: 'The cat is small.',
+    description: 'This word tells us about size. A thing like this takes very little space, for example an ant or a coin. It is tiny compared to most things.',
   },
   {
     order: 15,
@@ -144,6 +147,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['jump', 'run', 'sleep'],
     answer: 'jump',
     answerPhrase: 'The dog is jumping.',
+    description: 'You do this with your legs. You push your body up into the air, and then you come down again. Frogs and kangaroos do this a lot.',
   },
   {
     order: 16,
@@ -153,6 +157,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['drink', 'eat', 'sleep'],
     answer: 'drink',
     answerPhrase: 'The boy is drinking.',
+    description: 'You do this with your mouth. You take water, juice, or milk into your mouth and swallow it. You do this when you are thirsty.',
   },
   {
     order: 17,
@@ -162,6 +167,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['play', 'run', 'eat'],
     answer: 'play',
     answerPhrase: 'The girl is playing.',
+    description: 'You do this for fun. Children do this with toys, games, or with their friends. It is not work, and it makes you feel happy.',
   },
   {
     order: 18,
@@ -171,6 +177,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['walk', 'run', 'jump'],
     answer: 'walk',
     answerPhrase: 'The dog is walking.',
+    description: 'You do this with your legs. You go from one place to another, one step at a time. One foot is always on the ground, and you move at a calm, normal speed.',
   },
   {
     order: 19,
@@ -180,6 +187,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['bird', 'dog', 'cat'],
     answer: 'bird',
     answerPhrase: 'This is a bird.',
+    description: 'This is an animal with feathers and two wings. Most of them can fly high in the sky. They build nests and lay eggs, and many of them sing.',
   },
   {
     order: 20,
@@ -189,6 +197,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['fish', 'bird', 'cat'],
     answer: 'fish',
     answerPhrase: 'This is a fish.',
+    description: 'This is an animal that lives in water. It has fins and a tail, and it breathes with gills. It swims in the sea, in rivers, and in lakes.',
   },
   {
     order: 21,
@@ -198,6 +207,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['man', 'boy', 'dog'],
     answer: 'man',
     answerPhrase: 'This is a man.',
+    description: 'This is an adult male person. He is grown up and is no longer a child. He may have a job, and maybe a family.',
   },
   {
     order: 22,

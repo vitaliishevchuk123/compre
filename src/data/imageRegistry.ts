@@ -26,7 +26,7 @@ const registry: Record<string, ImageSourcePropType> = {
   'a1/cat-small':  require('../../assets/images/a1/cat-small.jpg'),
   'a1/dog-jump':   require('../../assets/images/a1/dog-jump.jpg'),
   'a1/boy-drink':  require('../../assets/images/a1/boy-drink.png'),
-  'a1/girl-play':  require('../../assets/images/a1/girl-play.jpg'),
+  'a1/girl-play':  require('../../assets/images/a1/girl-play.png'),
   'a1/dog-walk':   require('../../assets/images/a1/dog-walk.jpg'),
   'a1/bird':       require('../../assets/images/a1/bird.jpg'),
   'a1/fish':       require('../../assets/images/a1/fish.jpg'),
