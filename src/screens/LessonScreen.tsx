@@ -12,6 +12,7 @@ import {
   Text,
   TextInput,
   View,
+  useWindowDimensions,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
@@ -28,6 +29,9 @@ import { theme } from '../theme';
 import type { LessonProps } from '../navigation';
 import type { LessonCard } from '../types';
 
+/** Screens shorter than this (iPhone 8 / SE, or a phone browser with toolbars) get tighter spacing. */
+const COMPACT_HEIGHT = 760;
+
 /** Fisher–Yates shuffle (returns a new array). */
 function shuffle<T>(arr: T[]): T[] {
   const out = [...arr];
@@ -41,6 +45,7 @@ function shuffle<T>(arr: T[]): T[] {
 export default function LessonScreen({ navigation, route }: LessonProps) {
   const category = route.params?.category;
   const { mode, setMode } = useLearnSettings();
+  const compact = useWindowDimensions().height < COMPACT_HEIGHT;
   const autoAdvance = route.params?.autoAdvance ?? false;
   const repeatCount = route.params?.repeatCount ?? 1;
   const pauseSeconds = route.params?.pauseSeconds ?? 0;
@@ -293,18 +298,18 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
 
   if (mode === 'learn') {
     return (
-      <SafeAreaView style={styles.container} edges={['bottom']} {...swipe.panHandlers}>
+      <SafeAreaView style={[styles.container, compact && cs.container]} edges={['bottom']} {...swipe.panHandlers}>
         {/* Progress bar */}
-        <View style={styles.progressBarWrap}>
+        <View style={[styles.progressBarWrap, compact && cs.progressBarWrap]}>
           <View style={[styles.progressBarFill, { width: `${Math.round(progressPct * 100)}%` as any }]} />
         </View>
 
-        <View style={styles.progressRow}>
+        <View style={[styles.progressRow, compact && cs.progressRow]}>
           <Pressable
             onPress={back}
-            style={({ pressed }) => [styles.navBtn, pressed && { opacity: 0.6 }]}
+            style={({ pressed }) => [styles.navBtn, compact && cs.navBtn, pressed && { opacity: 0.6 }]}
           >
-            <Ionicons name="chevron-back" size={20} color={theme.textPrimary} />
+            <Ionicons name="chevron-back" size={compact ? 18 : 20} color={theme.textPrimary} />
           </Pressable>
           <Pressable onPress={openJump} hitSlop={10}>
             <Text style={styles.progressText}>
@@ -313,18 +318,18 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
           </Pressable>
         </View>
 
-        <View style={styles.card}>
-          <View style={[styles.imageFrame, styles.imageFrameLearn]}>
+        <View style={[styles.card, compact && cs.card]}>
+          <View style={[styles.imageFrame, styles.imageFrameLearn, compact && cs.imageFrame]}>
             <Image
               source={getImage(card.imageKey)}
               style={styles.image}
               resizeMode="contain"
             />
           </View>
-          <View style={styles.promptRow}>
-            <Text style={styles.learnWord}>{card.answer}</Text>
+          <View style={[styles.promptRow, compact && cs.promptRow]}>
+            <Text style={[styles.learnWord, compact && cs.learnWord]}>{card.answer}</Text>
             <Pressable
-              style={({ pressed }) => [styles.speakBtn, pressed && { opacity: 0.6 }]}
+              style={({ pressed }) => [styles.speakBtn, compact && cs.speakBtn, pressed && { opacity: 0.6 }]}
               onPress={startLearnSession}
               hitSlop={10}
             >
@@ -332,7 +337,7 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
             </Pressable>
           </View>
           {card.answerPhrase && (
-            <Text style={styles.learnPhrase}>{card.answerPhrase}</Text>
+            <Text style={[styles.learnPhrase, compact && cs.learnPhrase]}>{card.answerPhrase}</Text>
           )}
           {repeatCount > 1 && (
             <View style={styles.dotsRow}>
@@ -348,24 +353,24 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
 
         {card.description && (
           <ScrollView style={styles.descriptionWrap} contentContainerStyle={styles.descriptionContent}>
-            <Text style={styles.description}>{card.description}</Text>
+            <Text style={[styles.description, compact && cs.description]}>{card.description}</Text>
           </ScrollView>
         )}
 
-        <View style={styles.bottomRow}>
+        <View style={[styles.bottomRow, compact && cs.bottomRow]}>
           {autoAdvance && (
             <Pressable
-              style={({ pressed }) => [styles.pauseBtn, pressed && { opacity: 0.6 }]}
+              style={({ pressed }) => [styles.pauseBtn, compact && cs.pauseBtn, pressed && { opacity: 0.6 }]}
               onPress={togglePause}
             >
               <Ionicons name={paused ? 'play' : 'pause'} size={20} color={theme.textPrimary} />
             </Pressable>
           )}
           <Pressable
-            style={({ pressed }) => [styles.next, { flex: 1 }, pressed && styles.nextPressed]}
+            style={({ pressed }) => [styles.next, compact && cs.next, { flex: 1 }, pressed && styles.nextPressed]}
             onPress={next}
           >
-            <Text style={styles.nextText}>{isLast ? 'Finish' : 'Next'}</Text>
+            <Text style={[styles.nextText, compact && cs.nextText]}>{isLast ? 'Finish' : 'Next'}</Text>
           </Pressable>
         </View>
         {jumpModal}
@@ -374,18 +379,18 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
   }
 
   return (
-    <SafeAreaView style={styles.container} edges={['bottom']} {...swipe.panHandlers}>
+    <SafeAreaView style={[styles.container, compact && cs.container]} edges={['bottom']} {...swipe.panHandlers}>
       {/* Progress bar */}
-      <View style={styles.progressBarWrap}>
+      <View style={[styles.progressBarWrap, compact && cs.progressBarWrap]}>
         <View style={[styles.progressBarFill, { width: `${Math.round(progressPct * 100)}%` as any }]} />
       </View>
 
-      <View style={styles.progressRow}>
+      <View style={[styles.progressRow, compact && cs.progressRow]}>
         <Pressable
           onPress={back}
-          style={({ pressed }) => [styles.navBtn, pressed && { opacity: 0.6 }]}
+          style={({ pressed }) => [styles.navBtn, compact && cs.navBtn, pressed && { opacity: 0.6 }]}
         >
-          <Ionicons name="chevron-back" size={20} color={theme.textPrimary} />
+          <Ionicons name="chevron-back" size={compact ? 18 : 20} color={theme.textPrimary} />
         </Pressable>
         <Pressable onPress={openJump} hitSlop={10}>
           <Text style={styles.progressText}>
@@ -394,34 +399,44 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
         </Pressable>
       </View>
 
-      <View style={styles.card}>
-        <View style={[styles.imageFrame, styles.imageFrameTest]}>
+      <View style={[styles.card, compact && cs.card]}>
+        <View style={[styles.imageFrame, styles.imageFrameTest, compact && cs.imageFrame]}>
           <Image
             source={getImage(card.imageKey)}
             style={styles.image}
             resizeMode="contain"
           />
         </View>
-        <View style={styles.promptRow}>
-          <Text style={styles.prompt}>{prompt}</Text>
+        <View style={[styles.promptRow, compact && cs.promptRow]}>
+          <Text style={[styles.prompt, compact && cs.prompt]}>{prompt}</Text>
           <Pressable
-            style={({ pressed }) => [styles.speakBtn, pressed && { opacity: 0.6 }]}
+            style={({ pressed }) => [styles.speakBtn, compact && cs.speakBtn, pressed && { opacity: 0.6 }]}
             onPress={speakQuestion}
             hitSlop={10}
           >
             <Ionicons name="volume-high" size={18} color={theme.accent} />
           </Pressable>
         </View>
-        {card.description && <Text style={styles.testDescription}>{card.description}</Text>}
+        {card.description && (
+          <ScrollView
+            style={styles.testDescriptionWrap}
+            contentContainerStyle={styles.testDescriptionContent}
+          >
+            <Text style={[styles.testDescription, compact && cs.testDescription]}>
+              {card.description}
+            </Text>
+          </ScrollView>
+        )}
       </View>
 
-      <View style={styles.options}>
+      <View style={[styles.options, compact && cs.options]}>
         {options.map((option, i) => (
           <Option
             key={option}
             label={option}
             letter={String.fromCharCode(65 + i)}
             sentence={false}
+            compact={compact}
             state={optionState(option, card.answer, selected)}
             pulse={isReplaying && option === card.answer}
             onPress={() => choose(option)}
@@ -429,10 +444,10 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
         ))}
       </View>
 
-      <View style={styles.bottomRow}>
+      <View style={[styles.bottomRow, compact && cs.bottomRow]}>
         {answered ? (
           <Pressable
-            style={({ pressed }) => [styles.replayBtn, pressed && { opacity: 0.7 }]}
+            style={({ pressed }) => [styles.replayBtn, compact && cs.replayBtn, pressed && { opacity: 0.7 }]}
             onPress={() => {
               setIsReplaying(true);
               Speech.stop();
@@ -443,26 +458,27 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
             }}
           >
             <Ionicons name="volume-high" size={16} color={theme.textPrimary} style={{ marginRight: 6 }} />
-            <Text style={styles.replayText}>Say answer</Text>
+            <Text style={[styles.replayText, compact && cs.replayText]}>Say answer</Text>
           </Pressable>
         ) : (
           <Pressable
-            style={({ pressed }) => [styles.replayBtn, pressed && { opacity: 0.7 }]}
+            style={({ pressed }) => [styles.replayBtn, compact && cs.replayBtn, pressed && { opacity: 0.7 }]}
             onPress={next}
           >
-            <Text style={styles.replayText}>Skip</Text>
+            <Text style={[styles.replayText, compact && cs.replayText]}>Skip</Text>
           </Pressable>
         )}
         <Pressable
           disabled={!answered}
           style={({ pressed }) => [
             styles.next,
+            compact && cs.next,
             !answered && styles.nextDisabled,
             pressed && answered && styles.nextPressed,
           ]}
           onPress={next}
         >
-          <Text style={styles.nextText}>{isLast ? 'Finish' : 'Next'}</Text>
+          <Text style={[styles.nextText, compact && cs.nextText]}>{isLast ? 'Finish' : 'Next'}</Text>
         </Pressable>
       </View>
       {jumpModal}
@@ -489,6 +505,7 @@ function Option({
   state,
   sentence,
   pulse,
+  compact,
   onPress,
 }: {
   label: string;
@@ -496,6 +513,7 @@ function Option({
   state: OptionVisual;
   sentence?: boolean;
   pulse?: boolean;
+  compact?: boolean;
   onPress: () => void;
 }) {
   const anim = useRef(new Animated.Value(0)).current;
@@ -530,18 +548,19 @@ function Option({
       ]}
     >
       <Pressable
-        style={styles.optionInner}
+        style={[styles.optionInner, compact && cs.optionInner]}
         onPress={onPress}
         disabled={state !== 'idle'}
       >
         {letter != null && (
-          <View style={[styles.optionBadge, { backgroundColor: badgeBg }]}>
+          <View style={[styles.optionBadge, compact && cs.optionBadge, { backgroundColor: badgeBg }]}>
             <Text style={[styles.optionBadgeText, { color: badgeTextColor }]}>{badgeLabel}</Text>
           </View>
         )}
         <Text
           style={[
             styles.optionText,
+            compact && cs.optionText,
             sentence && styles.optionTextSentence,
             state === 'muted' && styles.optionTextMuted,
           ]}
@@ -683,13 +702,21 @@ const styles = StyleSheet.create({
     color: theme.textPrimary,
     textAlign: 'center',
   },
+  testDescriptionWrap: {
+    width: '100%',
+    // Never shrinks: the image gives up space first (see imageFrame minHeight);
+    // only a description taller than maxHeight scrolls.
+    flexGrow: 0,
+    flexShrink: 0,
+    maxHeight: 120,
+    marginTop: 8,
+  },
+  testDescriptionContent: { paddingHorizontal: 4 },
   testDescription: {
     fontSize: 14,
     lineHeight: 19,
     color: theme.textSecondary,
     textAlign: 'center',
-    marginTop: 8,
-    paddingHorizontal: 4,
   },
 
   speakBtn: {
@@ -851,6 +878,33 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   jumpGoText: { color: '#fff', fontSize: 18, fontWeight: '700' },
+});
+
+/** Overrides for short screens (see COMPACT_HEIGHT). */
+const cs = StyleSheet.create({
+  container: { paddingTop: 4, paddingBottom: 8 },
+  progressBarWrap: { marginBottom: 6 },
+  progressRow: { marginBottom: 6 },
+  navBtn: { width: 32, height: 32, borderRadius: 16 },
+  card: { padding: 8 },
+  imageFrame: { minHeight: 64 },
+  promptRow: { marginTop: 8, gap: 6 },
+  prompt: { fontSize: 17 },
+  learnWord: { fontSize: 26 },
+  learnPhrase: { fontSize: 15, marginTop: 4 },
+  description: { fontSize: 14, lineHeight: 19 },
+  testDescription: { fontSize: 13, lineHeight: 17 },
+  speakBtn: { width: 30, height: 30, borderRadius: 15 },
+  pauseBtn: { width: 40, height: 40, borderRadius: 20 },
+  options: { gap: 5, marginTop: 8 },
+  optionInner: { paddingVertical: 7, paddingHorizontal: 14, gap: 10 },
+  optionBadge: { width: 22, height: 22, borderRadius: 11 },
+  optionText: { fontSize: 16 },
+  bottomRow: { paddingTop: 8, gap: 8 },
+  replayBtn: { paddingVertical: 9 },
+  replayText: { fontSize: 15 },
+  next: { paddingVertical: 9 },
+  nextText: { fontSize: 16 },
 });
 
 function LessonSlider({
