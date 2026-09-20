@@ -3017,6 +3017,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['large', 'small', 'old', 'round'],
     answer: 'large',
     answerPhrase: 'The elephant is large.',
+    description: 'This word tells us about size. A thing like this takes up much more space than usual. A whale, a mountain, or a stadium is an example.',
   },
   {
     order: 303,
@@ -3026,6 +3027,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['buy', 'sell', 'walk', 'think'],
     answer: 'buy',
     answerPhrase: 'The woman is buying.',
+    description: 'You do this in a shop. You take something you want and give money to the person at the till. After that, the thing is yours.',
   },
   {
     order: 304,
@@ -3035,6 +3037,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['think', 'sleep', 'talk', 'make'],
     answer: 'think',
     answerPhrase: 'The man is thinking.',
+    description: 'You do this with your brain. You have ideas and try to solve a problem, but you say nothing. People do this before they answer a hard question.',
   },
   {
     order: 305,
@@ -3044,6 +3047,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['make', 'eat', 'open', 'stop'],
     answer: 'make',
     answerPhrase: 'The woman is making a cake.',
+    description: 'You do this when you build, cook, or create something new. For example, you can do this to a cake, a table, or a paper plane. In the end, there is a new thing that did not exist before.',
   },
   {
     order: 306,
@@ -3053,6 +3057,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['stop', 'run', 'jump', 'make'],
     answer: 'stop',
     answerPhrase: 'The boy is stopping.',
+    description: 'You do this when you end a movement or an action. A car does this at a red light, and a clock does this when the battery is empty. After that, there is no more movement.',
   },
   {
     order: 307,
@@ -3062,6 +3067,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['ask', 'talk', 'listen', 'find'],
     answer: 'ask',
     answerPhrase: 'The girl is asking.',
+    description: 'You do this when you want to know something. You say a question to another person and wait for an answer. Students do it in class when they do not understand.',
   },
   {
     order: 308,
@@ -3071,6 +3077,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['find', 'give', 'take', 'ask'],
     answer: 'find',
     answerPhrase: 'The girl is finding the key.',
+    description: 'You do this when you discover something that you were looking for. Before that, you did not know where it was, for example your lost key. After you do this, you have it again.',
   },
   {
     order: 309,
@@ -3080,6 +3087,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['say', 'talk', 'call', 'wait'],
     answer: 'say',
     answerPhrase: 'The woman is saying.',
+    description: 'You do this when you speak a word or a sentence. The words come out of your mouth, and other people can hear them. You do it when you tell someone your name.',
   },
   {
     order: 310,
@@ -3089,6 +3097,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['wait', 'sit', 'walk', 'say'],
     answer: 'wait',
     answerPhrase: 'The man is waiting.',
+    description: 'You do this when you stay in one place until something happens. You stay at a bus stop until the bus comes, or in a queue until it is your turn. It can feel long and boring.',
   },
   {
     order: 311,
@@ -3098,6 +3107,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['wake', 'sleep', 'sit', 'meet'],
     answer: 'wake',
     answerPhrase: 'The boy is waking up.',
+    description: 'You do this in the morning when your rest in bed is over. You open your eyes, and your body and your brain start to work. An alarm clock helps you do this.',
   },
   {
     order: 312,
@@ -3107,6 +3117,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['meet', 'walk', 'play', 'take'],
     answer: 'meet',
     answerPhrase: 'The friends are meeting.',
+    description: 'You do this when you see another person and you come together in the same place. You may do it for the first time, or you may do it to see a friend you know well. People do it at a cafe, at school, or at a party.',
   },
   {
     order: 313,
@@ -3116,6 +3127,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['take', 'give', 'find', 'meet'],
     answer: 'take',
     answerPhrase: 'The girl is taking the book.',
+    description: 'You do this when you put your hand on something and it becomes yours, or it goes with you. You do it to a book from a shelf, or to a present that someone offers you. Then you carry it away.',
   },
   {
     order: 314,
@@ -3125,6 +3137,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['put', 'take', 'open', 'work'],
     answer: 'put',
     answerPhrase: 'The boy is putting the cup on the table.',
+    description: 'You do this when you place something in a certain position. You hold a cup, and you set it on a table, or you set your keys in a bag. After that, it stays there.',
   },
   {
     order: 315,
@@ -3134,6 +3147,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['work', 'sit', 'read', 'put'],
     answer: 'work',
     answerPhrase: 'The man is working.',
+    description: 'You do this when you have a job to do. You use your body or your mind to earn money or to finish a task. Many people do this from nine in the morning to five in the evening.',
   },
   {
     order: 316,
@@ -3143,6 +3157,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['learn', 'run', 'play', 'start'],
     answer: 'learn',
     answerPhrase: 'The girl is learning.',
+    description: 'You do this when you get new knowledge or a new skill. You do it at school, from a book, or when someone shows you. After that, you know or can do something that you could not before.',
   },
   {
     order: 317,
@@ -3152,6 +3167,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['start', 'stop', 'run', 'learn'],
     answer: 'start',
     answerPhrase: 'The man is starting.',
+    description: 'You do this when you begin something. A race, a lesson, or an engine has a first moment, and that moment is this. After that, the action goes on until the end.',
   },
   {
     order: 318,
@@ -3161,6 +3177,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['fall', 'jump', 'run', 'start'],
     answer: 'fall',
     answerPhrase: 'The boy is falling.',
+    description: 'You do this when your body goes down to the ground by accident. You lose your balance, for example on ice, and you cannot stop it. Leaves do it from a tree in autumn.',
   },
   {
     order: 319,
@@ -3170,6 +3187,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['hear', 'see', 'talk', 'leave'],
     answer: 'hear',
     answerPhrase: 'The girl can hear.',
+    description: 'You do this with your ears. Sound comes into them, and you know what is happening around you. When a bell rings, you do this without any effort.',
   },
   {
     order: 320,
@@ -3179,6 +3197,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['leave', 'come', 'go', 'hear'],
     answer: 'leave',
     answerPhrase: 'The man is leaving.',
+    description: 'You do this when you move out of a place and stop being there. You take your things, say goodbye, and the place is behind you. A guest does it at the end of a party.',
   },
   {
     order: 321,
@@ -3188,6 +3207,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['strong', 'big', 'tall', 'nice'],
     answer: 'strong',
     answerPhrase: 'The man is strong.',
+    description: 'This word describes someone with a lot of power in their body. They can lift heavy things and push hard. A weightlifter is an example.',
   },
   {
     order: 322,
