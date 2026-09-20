@@ -46,11 +46,11 @@ const registry: Record<string, ImageSourcePropType> = {
   'a1/color-red':    require('../../assets/images/a1/color-red.jpg'),
   'a1/color-blue':   require('../../assets/images/a1/color-blue.jpg'),
   'a1/color-green':  require('../../assets/images/a1/color-green.jpg'),
-  'a1/color-yellow': require('../../assets/images/a1/color-yellow.jpg'),
+  'a1/color-yellow': require('../../assets/images/a1/color-yellow.png'),
   'a1/color-white':  require('../../assets/images/a1/color-white.jpg'),
   'a1/color-black':  require('../../assets/images/a1/color-black.jpg'),
   'a1/color-orange': require('../../assets/images/a1/color-orange.jpg'),
-  'a1/color-pink':   require('../../assets/images/a1/color-pink.jpg'),
+  'a1/color-pink':   require('../../assets/images/a1/color-pink.png'),
   // Food
   'a1/apple':        require('../../assets/images/a1/apple.jpg'),
   'a1/banana':       require('../../assets/images/a1/banana.jpg'),

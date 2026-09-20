@@ -217,6 +217,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['woman', 'man', 'girl'],
     answer: 'woman',
     answerPhrase: 'This is a woman.',
+    description: 'This is an adult female person. She is grown up and is no longer a child. She may have a job, and maybe a family.',
   },
   {
     order: 23,
@@ -226,6 +227,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['baby', 'boy', 'man'],
     answer: 'baby',
     answerPhrase: 'This is a baby.',
+    description: 'This is a very small child, only a few months or one year old. It cannot walk or talk yet. It drinks milk, sleeps a lot, and cries when it needs something.',
   },
   {
     order: 24,
@@ -235,6 +237,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['old', 'young', 'big'],
     answer: 'old',
     answerPhrase: 'The man is old.',
+    description: 'This word tells us about age. A person like this has lived for many years, and often has white or gray hair. Grandparents are often like this.',
   },
   {
     order: 25,
@@ -244,6 +247,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['young', 'old', 'small'],
     answer: 'young',
     answerPhrase: 'The woman is young.',
+    description: 'This word tells us about age. A person like this has not lived for many years and is full of energy. Children and teenagers are like this.',
   },
   {
     order: 26,
@@ -253,6 +257,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['mother', 'woman', 'girl'],
     answer: 'mother',
     answerPhrase: 'This is a mother.',
+    description: 'This is a female parent. She has children and takes care of them. You often call her mom.',
   },
   {
     order: 27,
@@ -262,6 +267,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['father', 'man', 'boy'],
     answer: 'father',
     answerPhrase: 'This is a father.',
+    description: 'This is a male parent. He has children and takes care of them. You often call him dad.',
   },
   {
     order: 28,
@@ -271,6 +277,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['brother', 'boy', 'man'],
     answer: 'brother',
     answerPhrase: 'This is a brother.',
+    description: 'This is a male person in your family. He has the same parents as you. You grow up together, and you can play, talk, and sometimes argue with him.',
   },
   {
     order: 29,
@@ -280,6 +287,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sister', 'girl', 'woman'],
     answer: 'sister',
     answerPhrase: 'This is a sister.',
+    description: 'This is a female person in your family. She has the same parents as you. You grow up together, and you can play, talk, and share secrets with her.',
   },
   {
     order: 30,
@@ -289,6 +297,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['grandma', 'woman', 'mother'],
     answer: 'grandma',
     answerPhrase: 'This is a grandma.',
+    description: 'This is the mother of your mother or your father. She is old and often has gray hair. She loves to cook for you and tell you stories.',
   },
   {
     order: 31,
@@ -298,6 +307,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['grandpa', 'man', 'father'],
     answer: 'grandpa',
     answerPhrase: 'This is a grandpa.',
+    description: 'This is the father of your mother or your father. He is old and often has gray hair. He loves to tell you stories and play with you.',
   },
   {
     order: 32,
@@ -307,6 +317,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['red', 'blue', 'green'],
     answer: 'red',
     answerPhrase: 'This is red.',
+    description: 'This is the color of a ripe tomato, a strawberry, and a rose. A fire truck is this color too. It is a strong, warm color.',
   },
   {
     order: 33,
@@ -316,6 +327,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['blue', 'red', 'green'],
     answer: 'blue',
     answerPhrase: 'This is blue.',
+    description: 'This is the color of the sky on a sunny day. The sea and many rivers look like this too. It is a cool and calm color.',
   },
   {
     order: 34,
@@ -325,6 +337,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['green', 'red', 'blue'],
     answer: 'green',
     answerPhrase: 'This is green.',
+    description: 'This is the color of grass and of the leaves on trees. Frogs and many vegetables are this color too. It is the color of nature.',
   },
   {
     order: 35,
@@ -334,6 +347,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['yellow', 'red', 'green'],
     answer: 'yellow',
     answerPhrase: 'This is yellow.',
+    description: 'This is the color of the sun and of a lemon. Sunflowers and little ducklings are this color too. It is a bright and cheerful color.',
   },
   {
     order: 36,
@@ -343,6 +357,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['white', 'black', 'red'],
     answer: 'white',
     answerPhrase: 'This is white.',
+    description: 'This is the color of snow and of milk. It is very light and bright. A cloud on a sunny day is often this color.',
   },
   {
     order: 37,
@@ -352,6 +367,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['black', 'white', 'red'],
     answer: 'black',
     answerPhrase: 'This is black.',
+    description: 'This is the color of the sky at night when there are no lights. Coal is this color too. It is the darkest color of all.',
   },
   {
     order: 38,
@@ -361,6 +377,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['orange', 'red', 'yellow'],
     answer: 'orange',
     answerPhrase: 'This is orange.',
+    description: 'This is the color of a carrot and of a pumpkin. It is also the color of the sun when it goes down in the evening. It is a warm and bright color.',
   },
   {
     order: 39,
@@ -370,6 +387,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['pink', 'red', 'white'],
     answer: 'pink',
     answerPhrase: 'This is pink.',
+    description: 'This is the color of cotton candy and of a flamingo. Many flowers are this color too. It is a soft, gentle color that people often link with sweet things.',
   },
   {
     order: 40,
@@ -379,6 +397,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['apple', 'banana', 'bread'],
     answer: 'apple',
     answerPhrase: 'This is an apple.',
+    description: 'This is a round fruit that grows on a tree. It can be red, green, or yellow, and it is sweet and crunchy. You can eat it raw or bake it in a pie.',
   },
   {
     order: 41,
@@ -388,6 +407,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['banana', 'apple', 'bread'],
     answer: 'banana',
     answerPhrase: 'This is a banana.',
+    description: 'This is a long, curved fruit with a soft, sweet inside. Its skin is yellow, and you must peel it before you eat it. Monkeys love to eat it.',
   },
   {
     order: 42,
