@@ -1517,6 +1517,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['pizza', 'bread', 'cheese'],
     answer: 'pizza',
     answerPhrase: 'This is pizza.',
+    description: 'This is a round, flat food from Italy. It has a thin base with tomato sauce and other things on top. You bake it in a hot oven and cut it into slices.',
   },
   {
     order: 153,
@@ -1526,6 +1527,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sandwich', 'pizza', 'bread'],
     answer: 'sandwich',
     answerPhrase: 'This is a sandwich.',
+    description: 'This is a food with two slices on the outside and tasty things in the middle, like ham, salad, or an egg. People often take it to school or work for lunch. You hold it in your hands and eat it.',
   },
   {
     order: 154,
@@ -1535,6 +1537,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['carrot', 'banana', 'apple'],
     answer: 'carrot',
     answerPhrase: 'This is a carrot.',
+    description: 'This is a long orange vegetable that grows under the ground. It is crunchy and sweet. Rabbits love to eat it, and it is good for your eyes.',
   },
   {
     order: 155,
@@ -1544,6 +1547,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['tomato', 'apple', 'carrot'],
     answer: 'tomato',
     answerPhrase: 'This is a tomato.',
+    description: 'This is a round, soft, red fruit that people use as a vegetable. It is very juicy, and people put it in salads and on pizza. Ketchup is made from it.',
   },
   {
     order: 156,
@@ -1553,6 +1557,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['potato', 'rice', 'carrot'],
     answer: 'potato',
     answerPhrase: 'This is a potato.',
+    description: 'This is a vegetable that grows under the ground. It is round or oval, with brown skin, and it is soft inside when you cook it. People boil it, bake it, or make chips from it.',
   },
   {
     order: 157,
@@ -1562,6 +1567,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['onion', 'carrot', 'tomato'],
     answer: 'onion',
     answerPhrase: 'This is an onion.',
+    description: 'This is a round vegetable with many layers and thin dry skin. It has a strong smell, and it can make you cry when you cut it. People cook it in many kinds of food.',
   },
   {
     order: 158,
@@ -1571,6 +1577,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['butter', 'cheese', 'milk'],
     answer: 'butter',
     answerPhrase: 'This is butter.',
+    description: 'This is a soft, yellow food that people make from cream. You spread it on bread, or you use it to cook in a pan. It becomes liquid when it gets hot.',
   },
   {
     order: 159,
@@ -1580,6 +1587,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sugar', 'salt', 'butter'],
     answer: 'sugar',
     answerPhrase: 'This is sugar.',
+    description: 'This is a sweet white powder that people add to tea, coffee, and cakes. It comes from a tall plant called cane, or from a root called a beet. Too much of it is bad for your teeth.',
   },
   {
     order: 160,
@@ -1589,6 +1597,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['salt', 'sugar', 'egg'],
     answer: 'salt',
     answerPhrase: 'This is salt.',
+    description: 'This is a white powder that makes food taste stronger. It comes from the sea or from under the ground. People add a little to soup, chips, and meat.',
   },
   {
     order: 161,
@@ -1598,6 +1607,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['meat', 'chicken', 'bread'],
     answer: 'meat',
     answerPhrase: 'This is meat.',
+    description: 'This is the soft part of an animal that people eat. Beef comes from cows, and pork comes from pigs. People cook it in a pan or on a grill.',
   },
   {
     order: 162,
@@ -1607,6 +1617,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['pasta', 'rice', 'bread'],
     answer: 'pasta',
     answerPhrase: 'This is pasta.',
+    description: 'This is a food from Italy made from flour and water. It comes in many shapes, like long thin strings or little tubes. You boil it in water and eat it with a sauce.',
   },
   {
     order: 163,
@@ -1616,6 +1627,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['salad', 'soup', 'pasta'],
     answer: 'salad',
     answerPhrase: 'This is a salad.',
+    description: 'This is a cold dish made of raw vegetables, like lettuce, tomatoes, and cucumbers. You usually eat it with a fork, and you put a little oil on top. It is light and healthy.',
   },
   {
     order: 164,
@@ -1625,6 +1637,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['chocolate', 'cake', 'bread'],
     answer: 'chocolate',
     answerPhrase: 'This is chocolate.',
+    description: 'This is a sweet brown food that comes from cocoa beans. It often comes in bars, and it melts in your mouth or in your hand. Many children love it as a treat.',
   },
   {
     order: 165,
@@ -1634,6 +1647,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['ice cream', 'cake', 'chocolate'],
     answer: 'ice cream',
     answerPhrase: 'This is ice cream.',
+    description: 'This is a very cold, sweet food that people eat in summer. It is made from milk and sugar. It melts fast in the sun, so you eat it quickly from a cone or a cup.',
   },
   {
     order: 166,
@@ -1643,6 +1657,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['fruit', 'apple', 'carrot'],
     answer: 'fruit',
     answerPhrase: 'This is fruit.',
+    description: 'This is the name for a group of sweet, juicy foods that grow on trees and plants. Bananas, grapes, and oranges belong to this group. People often eat it as a healthy snack.',
   },
   {
     order: 167,
@@ -1652,6 +1667,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['pepper', 'onion', 'tomato'],
     answer: 'pepper',
     answerPhrase: 'This is a pepper.',
+    description: 'This is a vegetable that is hollow inside and has many small seeds. It can be green, yellow, or red, and some kinds are very hot and spicy. People eat it in salads or cook it with meat.',
   },
   {
     order: 168,
@@ -1661,6 +1677,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['clock', 'table', 'phone'],
     answer: 'clock',
     answerPhrase: 'This is a clock.',
+    description: 'This is a round or square object that shows the time. It has numbers and two or three hands that move. People put it on a wall or on a desk.',
   },
   {
     order: 169,
@@ -1670,6 +1687,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['key', 'door', 'phone'],
     answer: 'key',
     answerPhrase: 'This is a key.',
+    description: 'This is a small piece of metal. You put it in a lock and turn it to open or close something. You often keep several of them on a ring in your pocket.',
   },
   {
     order: 170,
@@ -1679,6 +1697,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['glass', 'cup', 'bottle'],
     answer: 'glass',
     answerPhrase: 'This is a glass.',
+    description: 'This is a container for cold drinks like water or juice. You can see through it, and it has no handle. It can break easily if you drop it.',
   },
   {
     order: 171,
@@ -1688,6 +1707,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['bottle', 'glass', 'cup'],
     answer: 'bottle',
     answerPhrase: 'This is a bottle.',
+    description: 'This is a container with a narrow top. It holds water, milk, juice, or other drinks, and you close it with a cap. It is often made of plastic, and you can carry it in your bag.',
   },
   {
     order: 172,
@@ -1697,6 +1717,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['box', 'bag', 'book'],
     answer: 'box',
     answerPhrase: 'This is a box.',
+    description: 'This is a container with straight sides and often a lid. It is usually made of cardboard, wood, or plastic. You put things inside it, and people use it to send a parcel.',
   },
   {
     order: 173,
@@ -1706,6 +1727,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['desk', 'table', 'chair'],
     answer: 'desk',
     answerPhrase: 'This is a desk.',
+    description: 'This is a piece of furniture where a person works or studies. It often has drawers under the top for pens and papers. Students and office workers use it every day.',
   },
   {
     order: 174,
@@ -1715,6 +1737,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sofa', 'chair', 'bed'],
     answer: 'sofa',
     answerPhrase: 'This is a sofa.',
+    description: 'This is a long, soft piece of furniture in a living room. Two or three people can sit on it together. You can also relax on it or watch TV.',
   },
   {
     order: 175,
@@ -1724,6 +1747,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['computer', 'phone', 'book'],
     answer: 'computer',
     answerPhrase: 'This is a computer.',
+    description: 'This is a machine with a screen and a keyboard. You use it to work, to play games, and to look for information on the internet. It can be small enough to carry, or it can stay on a desk.',
   },
   {
     order: 176,
@@ -1733,6 +1757,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['camera', 'phone', 'computer'],
     answer: 'camera',
     answerPhrase: 'This is a camera.',
+    description: 'This is a device that takes pictures and videos. You point it at something, and it saves the image. Photographers use it to catch a special moment.',
   },
   {
     order: 177,
@@ -1742,6 +1767,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['umbrella', 'bag', 'coat'],
     answer: 'umbrella',
     answerPhrase: 'This is an umbrella.',
+    description: 'This is an object that you hold over your head when it rains. It opens like a big circle on a long stick. It keeps the drops of water off you.',
   },
   {
     order: 178,
@@ -1751,6 +1777,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['watch', 'clock', 'phone'],
     answer: 'watch',
     answerPhrase: 'This is a watch.',
+    description: 'This is a small object that shows the time, and you wear it around your wrist. It has a face with numbers and a strap. You can look at it quickly without taking anything out of your pocket.',
   },
   {
     order: 179,
@@ -1760,6 +1787,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['pen', 'pencil', 'book'],
     answer: 'pen',
     answerPhrase: 'This is a pen.',
+    description: 'You write with this. It has ink inside, usually blue or black, and you cannot rub out what you write. It has a small ball at the tip.',
   },
   {
     order: 180,
@@ -1769,6 +1797,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['pencil', 'pen', 'book'],
     answer: 'pencil',
     answerPhrase: 'This is a pencil.',
+    description: 'You write or draw with this. It is a thin wooden stick with a gray tip made of graphite. It often has a small eraser at the end, so you can rub out your mistakes.',
   },
   {
     order: 181,
@@ -1778,6 +1807,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['guitar', 'piano', 'phone'],
     answer: 'guitar',
     answerPhrase: 'This is a guitar.',
+    description: 'This is a musical instrument with a wooden body and a long neck. It has six strings, and you play it with your fingers. Many singers play it in a band.',
   },
   {
     order: 182,
@@ -1787,6 +1817,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['piano', 'guitar', 'desk'],
     answer: 'piano',
     answerPhrase: 'This is a piano.',
+    description: 'This is a big musical instrument with black and white keys. You sit in front of it and press the keys with your fingers. It makes beautiful sounds, and it stands on the floor.',
   },
   {
     order: 183,
@@ -1796,6 +1827,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['radio', 'phone', 'camera'],
     answer: 'radio',
     answerPhrase: 'This is a radio.',
+    description: 'This is a device that plays music, news, and other programs. You listen to it, but you do not see any pictures. Many people turn it on in the car or in the kitchen.',
   },
   {
     order: 184,
@@ -1805,6 +1837,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['television', 'computer', 'phone'],
     answer: 'television',
     answerPhrase: 'This is a television.',
+    description: 'This is a device with a big screen that many homes have. You watch films, news, and sports on it. People sit on a sofa in front of it in the evening.',
   },
   {
     order: 185,
@@ -1814,6 +1847,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['map', 'book', 'bag'],
     answer: 'map',
     answerPhrase: 'This is a map.',
+    description: 'This is a drawing that shows a place from above. It shows countries, cities, roads, rivers, and seas. People use it to find their way when they travel.',
   },
   {
     order: 186,
@@ -1823,6 +1857,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['school', 'house', 'hospital'],
     answer: 'school',
     answerPhrase: 'This is a school.',
+    description: 'This is a building where children go to learn. Teachers teach subjects like reading, writing, and math. Students have lessons, play at break time, and go home in the afternoon.',
   },
   {
     order: 187,
@@ -1832,6 +1867,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['shop', 'school', 'house'],
     answer: 'shop',
     answerPhrase: 'This is a shop.',
+    description: 'This is a place where you buy things. People come in, look at things on the shelves, and pay for what they take. You can buy clothes, food, or toys there.',
   },
   {
     order: 188,
@@ -1841,6 +1877,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['park', 'garden', 'school'],
     answer: 'park',
     answerPhrase: 'This is a park.',
+    description: 'This is a large public area with grass and trees in a city. People walk, run, play games, and have a picnic there. Anyone can go in, and it is free.',
   },
   {
     order: 189,
@@ -1850,6 +1887,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['hospital', 'school', 'house'],
     answer: 'hospital',
     answerPhrase: 'This is a hospital.',
+    description: 'This is a big building where doctors and nurses take care of sick people. People who are very ill stay there in a bed. An ambulance takes people there in an emergency.',
   },
   {
     order: 190,
@@ -1859,6 +1897,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['restaurant', 'cafe', 'school'],
     answer: 'restaurant',
     answerPhrase: 'This is a restaurant.',
+    description: 'This is a place where you sit at a table and order a full meal. A waiter brings the food to you, and you pay at the end. People go there for lunch or dinner.',
   },
   {
     order: 191,
@@ -1868,6 +1907,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['hotel', 'house', 'hospital'],
     answer: 'hotel',
     answerPhrase: 'This is a hotel.',
+    description: 'This is a big building where travelers pay to sleep for a few nights. It has many rooms with beds, and a reception desk at the entrance. People stay there on holiday or on a business trip.',
   },
   {
     order: 192,

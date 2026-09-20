@@ -4,6 +4,8 @@
 
 > Comprehensible input method
 
+**Live demo:** https://vitaliishevchuk123.github.io/compre/
+
 Compre teaches English vocabulary the way people actually acquire language — by
 understanding meaning in context, never by translation. Every lesson card shows
 an image and introduces exactly **one** new word; every other word on the card is
