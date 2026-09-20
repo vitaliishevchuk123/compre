@@ -17,7 +17,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['boy', 'girl', 'dog', 'man'],
     answer: 'boy',
     answerPhrase: 'This is a boy.',
-    description: 'This is a young male person. He is not a baby, and he is not a grown man yet. He goes to school and plays with friends.',
+    description: 'This is a young male person. He is not a baby, and he is still growing up. He goes to school and plays with friends.',
   },
   {
     order: 2,
@@ -297,7 +297,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['grandma', 'woman', 'mother', 'sister'],
     answer: 'grandma',
     answerPhrase: 'This is a grandma.',
-    description: 'This is the mother of your mother or your father. She is old and often has gray hair. She loves to cook for you and tell you stories.',
+    description: 'This is the female parent of one of your parents. She is old and often has gray hair. She loves to cook for you and tell you stories.',
   },
   {
     order: 31,
@@ -307,7 +307,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['grandpa', 'man', 'father', 'grandma'],
     answer: 'grandpa',
     answerPhrase: 'This is a grandpa.',
-    description: 'This is the father of your mother or your father. He is old and often has gray hair. He loves to tell you stories and play with you.',
+    description: 'This is the male parent of one of your parents. He is old and often has gray hair. He loves to tell you stories and play with you.',
   },
   {
     order: 32,
@@ -477,7 +477,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['table', 'chair', 'bed', 'book'],
     answer: 'table',
     answerPhrase: 'This is a table.',
-    description: 'This is a piece of furniture with a flat top and four legs. You put food, books, or a computer on it. Families sit around it to eat dinner.',
+    description: 'This is a piece of furniture with a flat top and four legs. You put food, plates, or a computer on it. Families sit around it to eat dinner.',
   },
   {
     order: 49,
@@ -797,7 +797,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['open', 'close', 'go', 'give'],
     answer: 'open',
     answerPhrase: 'The man is opening the door.',
-    description: 'You do this to a door, a window, or a box. Before you do this, it is shut, and after you do this, you can see or go inside. You often use a key or a handle.',
+    description: 'You do this to a door, a window, or a box. Before you do this, it is shut, and after you do this, you can see or step inside. You often use a key or a handle.',
   },
   {
     order: 81,
@@ -897,7 +897,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['short', 'tall', 'small', 'bad'],
     answer: 'short',
     answerPhrase: 'The woman is short.',
-    description: 'This word tells us about height. A person or a thing like this does not reach very high from the ground. A small child is like this next to an adult, and so is a low fence.',
+    description: 'This word tells us about height. A person or a thing like this does not reach very high from the ground. A young child is like this next to an adult, and so is a low fence.',
   },
   {
     order: 91,
@@ -1597,7 +1597,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['salt', 'sugar', 'egg', 'meat'],
     answer: 'salt',
     answerPhrase: 'This is salt.',
-    description: 'This is a white powder that makes food taste stronger. It comes from the sea or from under the ground. People add a little to soup, chips, and meat.',
+    description: 'This is a white powder that makes food taste stronger. It comes from the sea or from under the ground. People add a little to soup, chips, and fish.',
   },
   {
     order: 161,
@@ -2027,7 +2027,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['village', 'town', 'city', 'street'],
     answer: 'village',
     answerPhrase: 'This is a village.',
-    description: 'This is a very small place in the countryside where a few hundred people live. It has only a few streets, a small shop, and maybe one church. Most people know each other, and there are fields all around.',
+    description: 'This is a very small place in the countryside where a few hundred people live. It has only a few narrow roads, a small shop, and maybe one church. Most people know each other, and there are fields all around.',
   },
   {
     order: 204,
@@ -2117,6 +2117,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['taxi', 'car', 'bus', 'plane'],
     answer: 'taxi',
     answerPhrase: 'This is a taxi.',
+    description: 'This is a vehicle with a driver that you call or stop on the street. You tell the driver where you want to go, and you pay money at the end. In some cities it is yellow.',
   },
   {
     order: 213,
@@ -2126,6 +2127,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['doctor', 'nurse', 'teacher', 'farmer'],
     answer: 'doctor',
     answerPhrase: 'This is a doctor.',
+    description: 'This person helps sick people get better. They ask about your pain, look at your body, and give you medicine. They usually work in a hospital or a clinic and wear a white coat.',
   },
   {
     order: 214,
@@ -2135,6 +2137,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['teacher', 'doctor', 'student', 'farmer'],
     answer: 'teacher',
     answerPhrase: 'This is a teacher.',
+    description: 'This person helps others to learn. They stand in front of a class, explain new things, and give homework. They work in a school.',
   },
   {
     order: 215,
@@ -2144,6 +2147,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['nurse', 'doctor', 'teacher', 'driver'],
     answer: 'nurse',
     answerPhrase: 'This is a nurse.',
+    description: 'This person takes care of ill people in a hospital. They check your temperature, give you a shot, and help you when you cannot walk. They often work all night.',
   },
   {
     order: 216,
@@ -2153,6 +2157,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['farmer', 'worker', 'doctor', 'teacher'],
     answer: 'farmer',
     answerPhrase: 'This is a farmer.',
+    description: 'This person grows plants and keeps animals to make food. They work outside in the fields and often get up very early. They may grow wheat and vegetables, or keep cows and sheep.',
   },
   {
     order: 217,
@@ -2162,6 +2167,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['driver', 'farmer', 'worker', 'waiter'],
     answer: 'driver',
     answerPhrase: 'This is a driver.',
+    description: 'This person controls a vehicle like a bus, a truck, or a taxi. They take people or things from one place to another. They must have a license.',
   },
   {
     order: 218,
@@ -2171,6 +2177,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['waiter', 'driver', 'teacher', 'police'],
     answer: 'waiter',
     answerPhrase: 'This is a waiter.',
+    description: 'This person works in a restaurant. They bring the menu, take your order, and carry the food to your table. They are polite, and you can leave them a tip.',
   },
   {
     order: 219,
@@ -2180,6 +2187,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['police', 'driver', 'worker', 'singer'],
     answer: 'police',
     answerPhrase: 'This is police.',
+    description: 'These are the people who keep a city safe. They catch thieves, stop fights, and help when there is an accident. They wear a uniform, and their cars have blue lights.',
   },
   {
     order: 220,
@@ -2189,6 +2197,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['singer', 'teacher', 'doctor', 'worker'],
     answer: 'singer',
     answerPhrase: 'This is a singer.',
+    description: 'This person makes music with their voice. They perform songs on a stage or in a recording studio. Many people buy their music, and they may become famous.',
   },
   {
     order: 221,
@@ -2198,6 +2207,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['worker', 'farmer', 'driver', 'student'],
     answer: 'worker',
     answerPhrase: 'This is a worker.',
+    description: 'This is a general word for a person who has a job, especially in a factory or on a building site. They often wear a helmet and strong boots, and they get paid every month.',
   },
   {
     order: 222,
@@ -2207,6 +2217,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['student', 'teacher', 'worker', 'singer'],
     answer: 'student',
     answerPhrase: 'This is a student.',
+    description: 'This person goes to school or university to learn. They read books, take tests, and do homework. They do not have a full-time job yet.',
   },
   {
     order: 223,
@@ -2216,6 +2227,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sea', 'river', 'rain', 'mountain'],
     answer: 'sea',
     answerPhrase: 'This is the sea.',
+    description: 'This is a huge area of salty water. It is very deep, and big waves move across it. Ships and whales travel in it, and people like to swim next to it in summer.',
   },
   {
     order: 224,
@@ -2225,6 +2237,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['river', 'sea', 'rain', 'mountain'],
     answer: 'river',
     answerPhrase: 'This is a river.',
+    description: 'This is a long line of fresh water that flows across the land. It begins in the hills and moves down to a bigger body of water. Fish live in it, and people cross it on a bridge.',
   },
   {
     order: 225,
@@ -2234,6 +2247,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['mountain', 'tree', 'cloud', 'island'],
     answer: 'mountain',
     answerPhrase: 'This is a mountain.',
+    description: 'This is a very, very high piece of land with a pointed top. Snow often covers the top all year, and it is hard and dangerous to climb. Everest is the highest one in the world.',
   },
   {
     order: 226,
@@ -2243,6 +2257,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['island', 'mountain', 'sea', 'farm'],
     answer: 'island',
     answerPhrase: 'This is an island.',
+    description: 'This is a piece of land with water all around it. It can be tiny with just a few palm trees, or large with many people living on it. You need a boat or a plane to get there.',
   },
   {
     order: 227,
@@ -2252,6 +2267,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['rock', 'mountain', 'tree', 'island'],
     answer: 'rock',
     answerPhrase: 'This is a rock.',
+    description: 'This is a hard, heavy piece of stone. It can be small like a pebble or big like a house. You find it on the ground, on a beach, or in the hills.',
   },
   {
     order: 228,
@@ -2261,6 +2277,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['beach', 'sea', 'river', 'rock'],
     answer: 'beach',
     answerPhrase: 'This is a beach.',
+    description: 'This is a flat area of soft sand next to water. People lie in the sun, build sandcastles, and swim there on holiday. You take a towel and wear sunglasses.',
   },
   {
     order: 229,
@@ -2270,6 +2287,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['farm', 'garden', 'park', 'beach'],
     answer: 'farm',
     answerPhrase: 'This is a farm.',
+    description: 'This is a large area of land in the countryside with fields, barns, and animals. People grow wheat and vegetables there, and they keep cows, pigs, and sheep. It usually has a tractor and a big red barn.',
   },
   {
     order: 230,
@@ -2279,6 +2297,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['garden', 'farm', 'park', 'beach'],
     answer: 'garden',
     answerPhrase: 'This is a garden.',
+    description: 'This is a small piece of land next to a house. People grow flowers, vegetables, and grass there. It is private, so only the family who lives in the house uses it.',
   },
   {
     order: 231,
@@ -2288,6 +2307,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['plant', 'tree', 'flower', 'fire'],
     answer: 'plant',
     answerPhrase: 'This is a plant.',
+    description: 'This is a living thing that grows in soil and cannot move. It has roots, a stem, and green leaves, and it needs water and sunlight. Grass and vegetables are examples.',
   },
   {
     order: 232,
@@ -2297,6 +2317,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['fire', 'sun', 'rain', 'plant'],
     answer: 'fire',
     answerPhrase: 'This is fire.',
+    description: 'This is something very hot that burns. It has bright orange and yellow flames, and it burns wood and paper and makes smoke. People make it to cook food or to keep warm, but it can be dangerous.',
   },
   {
     order: 233,
@@ -2306,6 +2327,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['ice', 'snow', 'water', 'fire'],
     answer: 'ice',
     answerPhrase: 'This is ice.',
+    description: 'This is a clear, hard, and slippery solid. It forms when a lake or a river is freezing cold. It melts when it gets warm, and people put it in drinks to keep them cool.',
   },
   {
     order: 234,
@@ -2315,6 +2337,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['air', 'cloud', 'rain', 'spring'],
     answer: 'air',
     answerPhrase: 'This is air.',
+    description: 'This is the invisible gas all around us. We cannot see it, but we breathe it all the time. Wind is this thing when it moves fast.',
   },
   {
     order: 235,
@@ -2324,6 +2347,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['spring', 'summer', 'autumn', 'air'],
     answer: 'spring',
     answerPhrase: 'This is spring.',
+    description: 'This is the season when new life begins. Flowers open, trees get new green leaves, and baby animals are born. The weather changes from cold to warm.',
   },
   {
     order: 236,
@@ -2333,6 +2357,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['summer', 'spring', 'winter', 'air'],
     answer: 'summer',
     answerPhrase: 'This is summer.',
+    description: 'This is the hottest season of the year. The days are long, the sun shines a lot, and school is often closed. Many people go to the beach and eat ice cream.',
   },
   {
     order: 237,
@@ -2342,6 +2367,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['autumn', 'summer', 'winter', 'ice'],
     answer: 'autumn',
     answerPhrase: 'This is autumn.',
+    description: 'This is the season when the leaves on the trees turn red, orange, and brown and fall down. The days become shorter, and the weather gets cooler. Farmers gather their crops at this time.',
   },
   {
     order: 238,
@@ -2351,6 +2377,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['winter', 'autumn', 'spring', 'ice'],
     answer: 'winter',
     answerPhrase: 'This is winter.',
+    description: 'This is the coldest season of the year. It often snows, the days are short, and people wear thick coats and warm hats. Many trees have no leaves then.',
   },
   {
     order: 239,
@@ -2360,6 +2387,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['morning', 'evening', 'night', 'week'],
     answer: 'morning',
     answerPhrase: 'This is morning.',
+    description: 'This is the first part of the day. The sun comes up, and people wake up, eat breakfast, and go to work or school. It ends at noon.',
   },
   {
     order: 240,
@@ -2369,6 +2397,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['afternoon', 'morning', 'evening', 'week'],
     answer: 'afternoon',
     answerPhrase: 'This is afternoon.',
+    description: 'This is the part of the day after lunch. The sun is still high, and children finish school. It lasts from noon until about five or six o\'clock.',
   },
   {
     order: 241,
@@ -2378,6 +2407,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['evening', 'morning', 'afternoon', 'month'],
     answer: 'evening',
     answerPhrase: 'This is evening.',
+    description: 'This is the part of the day when the sun goes down. People finish work, eat dinner, and relax at home. It comes just before it gets dark.',
   },
   {
     order: 242,
@@ -2387,6 +2417,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['night', 'morning', 'evening', 'month'],
     answer: 'night',
     answerPhrase: 'This is night.',
+    description: 'This is the time when it is dark outside. The moon and the stars are in the sky, and most people are in bed. It lasts until the sun comes up again.',
   },
   {
     order: 243,
@@ -2396,6 +2427,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['day', 'night', 'morning', 'year'],
     answer: 'day',
     answerPhrase: 'This is day.',
+    description: 'This is the time it takes the Earth to turn around once, which is twenty-four hours. Seven of these make one week. Every one begins at midnight and has its own date.',
   },
   {
     order: 244,
@@ -2405,6 +2437,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['week', 'day', 'month', 'hour'],
     answer: 'week',
     answerPhrase: 'This is a week.',
+    description: 'This is a period of time that starts on Monday and ends on Sunday. Many people work from Monday to Friday and rest at the weekend. It has seven parts, and each part has its own name.',
   },
   {
     order: 245,
@@ -2414,6 +2447,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['month', 'week', 'year', 'day'],
     answer: 'month',
     answerPhrase: 'This is a month.',
+    description: 'This is a period of time with a name, like January, February, or March. It is about the time from one full moon to the next. Many people get their salary once in each one.',
   },
   {
     order: 246,
@@ -2423,6 +2457,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['year', 'month', 'day', 'hour'],
     answer: 'year',
     answerPhrase: 'This is a year.',
+    description: 'This is the time it takes the Earth to go around the sun once. It has four seasons, and it starts on the first of January. It has twelve parts with names like January and February.',
   },
   {
     order: 247,
@@ -2432,6 +2467,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['friend', 'teacher', 'student', 'child'],
     answer: 'friend',
     answerPhrase: 'This is a friend.',
+    description: 'This is a person you like and trust. You enjoy spending time with them, you help each other, and you share secrets. Some of them stay with you for your whole life.',
   },
   {
     order: 248,
@@ -2441,6 +2477,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['son', 'father', 'brother', 'husband'],
     answer: 'son',
     answerPhrase: 'This is a son.',
+    description: 'This is the male child of two parents. They gave birth to him and raised him. When he grows up, he is still their child.',
   },
   {
     order: 249,
@@ -2450,6 +2487,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['daughter', 'mother', 'sister', 'husband'],
     answer: 'daughter',
     answerPhrase: 'This is a daughter.',
+    description: 'This is the female child of two parents. They gave birth to her and raised her. When she grows up, she is still their child.',
   },
   {
     order: 250,
@@ -2459,6 +2497,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['husband', 'man', 'father', 'daughter'],
     answer: 'husband',
     answerPhrase: 'This is a husband.',
+    description: 'This is a male person who is married. He has a wife, and they live together as a couple. They had a wedding, and he wears a ring.',
   },
   {
     order: 251,
@@ -2468,6 +2507,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['wife', 'woman', 'mother', 'daughter'],
     answer: 'wife',
     answerPhrase: 'This is a wife.',
+    description: 'This is a female person who is married. She has a husband, and they live together as a couple. She wears a ring from the day of the wedding.',
   },
   {
     order: 252,
@@ -2477,6 +2517,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['always', 'never', 'sometimes', 'again'],
     answer: 'always',
     answerPhrase: 'The dog always runs.',
+    description: 'This word tells us how frequently something happens. It happens every single time, without a break. The sun comes up in the morning in this way.',
   },
   {
     order: 253,
@@ -2486,6 +2527,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['never', 'always', 'sometimes', 'again'],
     answer: 'never',
     answerPhrase: 'The cat never swims.',
+    description: 'This word tells us how frequently something happens. It means zero times. It did not happen in the past, it does not happen now, and it will not happen in the future.',
   },
   {
     order: 254,
@@ -2495,6 +2537,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['often', 'always', 'never', 'now'],
     answer: 'often',
     answerPhrase: 'The boy often plays.',
+    description: 'This word tells us how frequently something happens. It happens many times, but not every time. For example, you do it two or three times in a week.',
   },
   {
     order: 255,
@@ -2504,6 +2547,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sometimes', 'often', 'always', 'now'],
     answer: 'sometimes',
     answerPhrase: 'It sometimes happens.',
+    description: 'This word tells us how frequently something happens. It happens a few times, but not regularly. Maybe you do it once in a while, when you feel like it.',
   },
   {
     order: 256,
@@ -2513,6 +2557,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['again', 'often', 'always', 'away'],
     answer: 'again',
     answerPhrase: 'The man stands up and sits down again.',
+    description: 'This word means one more time. You did something before, and now you do the same thing once more. If you did not hear a sentence, you ask the person to repeat it in this way.',
   },
   {
     order: 257,
@@ -2522,6 +2567,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['away', 'outside', 'inside', 'upstairs'],
     answer: 'away',
     answerPhrase: 'It is away.',
+    description: 'This word tells us that someone or something is not in this place. It went to a different place, and you cannot see it near you. When a bird flies off, it goes like this.',
   },
   {
     order: 258,
@@ -2531,6 +2577,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['far', 'away', 'outside', 'upstairs'],
     answer: 'far',
     answerPhrase: 'It is far.',
+    description: 'This word tells us about a long distance. The place is not close to you, and you need a lot of time or a vehicle to get there. The moon is like this from the Earth.',
   },
   {
     order: 259,
@@ -2540,6 +2587,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['now', 'always', 'again', 'far'],
     answer: 'now',
     answerPhrase: 'The man is eating now.',
+    description: 'This word means at this moment. It is not in the past, and it is not in the future. It is the time when you are reading or listening.',
   },
   {
     order: 260,
@@ -2549,6 +2597,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['child', 'baby', 'boy', 'adult'],
     answer: 'child',
     answerPhrase: 'This is a child.',
+    description: 'This is a very young person who is still growing up. They go to school, play games, and live with their parents. A person of about six or ten years old is an example.',
   },
   {
     order: 261,
@@ -2558,6 +2607,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['teenager', 'child', 'adult', 'neighbour'],
     answer: 'teenager',
     answerPhrase: 'This is a teenager.',
+    description: 'This is a person between thirteen and nineteen years old. They are no longer little, but they are not fully independent yet. They go to high school, love music, and often argue with their parents.',
   },
   {
     order: 262,
