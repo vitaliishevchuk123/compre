@@ -2617,6 +2617,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['adult', 'teenager', 'child', 'neighbour'],
     answer: 'adult',
     answerPhrase: 'This is an adult.',
+    description: 'This is a person who has finished growing up. They are usually older than eighteen, and they can vote, drive, and have a job. Their parents do not decide for them anymore.',
   },
   {
     order: 263,
@@ -2626,6 +2627,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['person', 'man', 'woman', 'family'],
     answer: 'person',
     answerPhrase: 'This is a person.',
+    description: 'This is the general word for any human being. It can be young or old, and it can be male or female. Every human is one, and you are one too.',
   },
   {
     order: 264,
@@ -2635,6 +2637,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['neighbour', 'friend', 'teacher', 'adult'],
     answer: 'neighbour',
     answerPhrase: 'This is a neighbour.',
+    description: 'This is someone who lives next to you, in the next house or the next flat. You often say hello to them on the stairs or over the fence. They can hear your music if it is too loud.',
   },
   {
     order: 265,
@@ -2644,6 +2647,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['aunt', 'mother', 'sister', 'uncle'],
     answer: 'aunt',
     answerPhrase: 'This is an aunt.',
+    description: 'This is a woman in your family who has the same parents as your mom or your dad. She may also be the wife of your dad\'s or your mom\'s brother. Her children are your cousins.',
   },
   {
     order: 266,
@@ -2653,6 +2657,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['uncle', 'father', 'brother', 'cousin'],
     answer: 'uncle',
     answerPhrase: 'This is an uncle.',
+    description: 'This is a man in your family who has the same parents as your mom or your dad. He may also be the husband of your parent\'s sister. You often see him at family parties.',
   },
   {
     order: 267,
@@ -2662,6 +2667,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['cousin', 'brother', 'sister', 'uncle'],
     answer: 'cousin',
     answerPhrase: 'This is a cousin.',
+    description: 'This is a relative of about your own age who has the same grandparents as you but different parents. You do not live in the same house, but you meet at holidays and birthdays.',
   },
   {
     order: 268,
@@ -2671,6 +2677,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['parent', 'mother', 'father', 'cousin'],
     answer: 'parent',
     answerPhrase: 'This is a parent.',
+    description: 'This is the word for anyone who has a child and takes care of them. It includes both women and men. They feed the child, teach them, and keep them safe.',
   },
   {
     order: 269,
@@ -2680,6 +2687,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['usually', 'often', 'always', 'maybe'],
     answer: 'usually',
     answerPhrase: 'He usually brushes his teeth in the morning.',
+    description: 'This word tells us what normally happens. It is the regular way, and it happens on most days, but not on every single one. For example, you get up at seven on school days in this way.',
   },
   {
     order: 270,
@@ -2689,6 +2697,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['really', 'good', 'and', 'well'],
     answer: 'really',
     answerPhrase: 'Look at the dog. It is really big.',
+    description: 'This word makes another word stronger. It means very much, in a true way. You put it in front of an adjective, for example before the words tall, cold, or hungry.',
   },
   {
     order: 271,
@@ -2698,6 +2707,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['also', 'and', 'too', 'well'],
     answer: 'also',
     answerPhrase: 'The girl is also here.',
+    description: 'This word adds one more thing to what you already said. It means in addition. It usually stands in the middle of a sentence, after the verb is or before another verb.',
   },
   {
     order: 272,
@@ -2707,6 +2717,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['maybe', 'yes', 'no', 'usually'],
     answer: 'maybe',
     answerPhrase: 'Maybe it is true.',
+    description: 'This word is used when you are not sure. It means possibly. Something could be true, or it could be false, and you do not know which.',
   },
   {
     order: 273,
@@ -2716,6 +2727,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['well', 'good', 'fine', 'also'],
     answer: 'well',
     answerPhrase: 'It is well done.',
+    description: 'This word tells us how a job was done. The person did it with skill and care, and the result was of high quality. A teacher says it to a student who gets a high mark.',
   },
   {
     order: 274,
@@ -2725,6 +2737,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['upstairs', 'above', 'up', 'downstairs'],
     answer: 'upstairs',
     answerPhrase: 'It is upstairs.',
+    description: 'This word tells us that something is on a higher floor of a house or a building. You need to climb the steps to get there. In many homes, the bedrooms are there.',
   },
   {
     order: 275,
@@ -2734,6 +2747,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['downstairs', 'below', 'down', 'far'],
     answer: 'downstairs',
     answerPhrase: 'It is downstairs.',
+    description: 'This word tells us that something is on a lower floor of a house or a building. You go there by using the steps to the ground floor. In many homes, the kitchen and the living room are there.',
   },
   {
     order: 276,
@@ -2743,6 +2757,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['cook', 'eat', 'sit', 'sing'],
     answer: 'cook',
     answerPhrase: 'The woman is cooking.',
+    description: 'You do this in a kitchen. You prepare food with heat, for example in a pan or in an oven, so that it is ready for dinner. Chefs do this all day.',
   },
   {
     order: 277,
@@ -2752,15 +2767,17 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sing', 'dance', 'walk', 'cook'],
     answer: 'sing',
     answerPhrase: 'The man is singing.',
+    description: 'You do this with your voice. You make music with words, and the sound goes high and low in a pattern. People do it in the shower, at concerts, and in a choir.',
   },
   {
     order: 278,
     category: 'actions',
-    sentence: 'What is the ьфт doing?',
+    sentence: 'What is the girl doing?',
     imageKey: 'a1/dance',
     options: ['dance', 'sing', 'run', 'laugh'],
     answer: 'dance',
     answerPhrase: 'The girl is dancing.',
+    description: 'You do this with your whole body, and you do it to music. You move your feet, your arms, and your body in a special pattern. People do this at parties, weddings, and in clubs.',
   },
   {
     order: 279,
@@ -2770,6 +2787,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['laugh', 'sleep', 'run', 'dance'],
     answer: 'laugh',
     answerPhrase: 'The boy is laughing.',
+    description: 'You do this when something is very funny. You make a happy sound, like ha-ha-ha, and your face smiles. People do it when they hear a good joke.',
   },
   {
     order: 280,
@@ -2779,6 +2797,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['ride', 'walk', 'run', 'fly'],
     answer: 'ride',
     answerPhrase: 'The boy is riding.',
+    description: 'You do this when you sit on an animal or on a vehicle, and it carries you. People do it on a horse, on a bike, or on a motorbike. You do not use your own legs to move forward.',
   },
   {
     order: 281,
@@ -2788,6 +2807,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['fly', 'swim', 'walk', 'ride'],
     answer: 'fly',
     answerPhrase: 'The bird is flying.',
+    description: 'You do this in the air. Birds do it with their wings, and planes do it with engines. You leave the ground and travel high in the sky.',
   },
   {
     order: 282,
