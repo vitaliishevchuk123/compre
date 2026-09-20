@@ -17,6 +17,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['boy', 'girl', 'dog'],
     answer: 'boy',
     answerPhrase: 'This is a boy.',
+    description: 'This is a young male person. He is not a baby, and he is not a grown man yet. He goes to school and plays with friends.',
   },
   {
     order: 2,
@@ -26,6 +27,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['girl', 'boy', 'dog'],
     answer: 'girl',
     answerPhrase: 'This is a girl.',
+    description: 'This is a young female person. She is not a baby, and she is not a grown woman yet. She goes to school and plays with friends.',
   },
   {
     order: 3,
@@ -35,6 +37,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['dog', 'boy', 'girl'],
     answer: 'dog',
     answerPhrase: 'This is a dog.',
+    description: 'This is an animal that many people keep at home. It has four legs and a tail, and it says woof. It is a friendly pet and likes to play.',
   },
   {
     order: 4,
@@ -44,6 +47,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['run', 'eat', 'sleep'],
     answer: 'run',
     answerPhrase: 'The dog is running.',
+    description: 'You do this with your legs. You move very fast, much faster than when you walk. Children and dogs like to do this in the park.',
   },
   {
     order: 5,
@@ -53,6 +57,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['eat', 'run', 'sleep'],
     answer: 'eat',
     answerPhrase: 'The boy is eating.',
+    description: 'You do this with your mouth. You put food in your mouth, chew it, and swallow it. You do this when you are hungry.',
   },
   {
     order: 6,

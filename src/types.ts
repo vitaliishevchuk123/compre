@@ -43,5 +43,11 @@ export interface LessonCard {
   answer: string;
   /** Full phrase spoken aloud after the user answers. Falls back to `answer`. */
   answerPhrase?: string;
+  /**
+   * 2–3 simple English sentences explaining the focal word WITHOUT saying it.
+   * Read aloud right after the question (test) or after the word + phrase
+   * (learn). May use words the learner doesn't know yet — it's extra listening.
+   */
+  description?: string;
   category: string;
 }

@@ -7,6 +7,7 @@ import {
   Modal,
   PanResponder,
   Pressable,
+  ScrollView,
   StyleSheet,
   Text,
   TextInput,
@@ -108,16 +109,27 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
     function doRepeat(n: number) {
       if (speakSessionRef.current !== session) return;
       setCurrentRepeat(n);
+
+      // After word + phrase (+ description on the first pass): repeat or advance.
+      const afterSpeech = () => {
+        if (speakSessionRef.current !== session) return;
+        if (n + 1 < repeatCount) {
+          timerRef.current = setTimeout(() => doRepeat(n + 1), 800);
+        } else if (autoAdvance && !pausedRef.current) {
+          timerRef.current = setTimeout(() => nextRef.current(), pauseSeconds * 1000);
+        }
+      };
+
       speak(card.answer, {
         onDone: () => {
           if (speakSessionRef.current !== session) return;
           speak(card.answerPhrase ?? card.answer, {
             onDone: () => {
               if (speakSessionRef.current !== session) return;
-              if (n + 1 < repeatCount) {
-                timerRef.current = setTimeout(() => doRepeat(n + 1), 800);
-              } else if (autoAdvance && !pausedRef.current) {
-                timerRef.current = setTimeout(() => nextRef.current(), pauseSeconds * 1000);
+              if (n === 0 && card.description) {
+                speak(card.description, { onDone: afterSpeech });
+              } else {
+                afterSpeech();
               }
             },
           });
@@ -142,10 +154,22 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
     }
   }
 
+  /** Test mode: read the question, then the description of the word. */
+  function speakQuestion() {
+    const session = ++speakSessionRef.current;
+    Speech.stop();
+    speak(prompt, {
+      onDone: () => {
+        if (speakSessionRef.current !== session || !card.description) return;
+        speak(card.description);
+      },
+    });
+  }
+
   useEffect(() => {
     if (mode !== 'learn') {
-      speak(prompt);
-      return () => { Speech.stop(); };
+      speakQuestion();
+      return () => { speakSessionRef.current++; Speech.stop(); };
     }
     startLearnSession();
     return () => {
@@ -200,6 +224,7 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
     if (correct) setCorrectCount((c) => c + 1);
     const id = wordIds!.get(card.answer);
     if (id != null) void recordAnswer(id, correct);
+    speakSessionRef.current++;
     Speech.stop();
     speak(card.answerPhrase ?? card.answer);
   }
@@ -321,6 +346,12 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
           )}
         </View>
 
+        {card.description && (
+          <ScrollView style={styles.descriptionWrap} contentContainerStyle={styles.descriptionContent}>
+            <Text style={styles.description}>{card.description}</Text>
+          </ScrollView>
+        )}
+
         <View style={styles.bottomRow}>
           {autoAdvance && (
             <Pressable
@@ -375,12 +406,13 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
           <Text style={styles.prompt}>{prompt}</Text>
           <Pressable
             style={({ pressed }) => [styles.speakBtn, pressed && { opacity: 0.6 }]}
-            onPress={() => speak(prompt)}
+            onPress={speakQuestion}
             hitSlop={10}
           >
             <Ionicons name="volume-high" size={18} color={theme.accent} />
           </Pressable>
         </View>
+        {card.description && <Text style={styles.testDescription}>{card.description}</Text>}
       </View>
 
       <View style={styles.options}>
@@ -591,6 +623,7 @@ const styles = StyleSheet.create({
     borderRadius: theme.radius,
     padding: 12,
     alignItems: 'center',
+    flexShrink: 1,
     shadowColor: '#000',
     shadowOpacity: 0.06,
     shadowRadius: 16,
@@ -599,6 +632,8 @@ const styles = StyleSheet.create({
   },
   imageFrame: {
     width: '100%',
+    flexShrink: 1,
+    minHeight: 120,
     borderRadius: theme.radiusSm,
     backgroundColor: theme.imageBg,
     overflow: 'hidden',
@@ -638,6 +673,23 @@ const styles = StyleSheet.create({
     marginTop: 6,
     paddingHorizontal: 4,
     fontStyle: 'italic',
+  },
+  // minHeight forces the (shrinkable) card image to give up space on short screens.
+  descriptionWrap: { flex: 1, minHeight: 84, marginTop: 10 },
+  descriptionContent: { paddingHorizontal: 8, paddingBottom: 4 },
+  description: {
+    fontSize: 15,
+    lineHeight: 21,
+    color: theme.textPrimary,
+    textAlign: 'center',
+  },
+  testDescription: {
+    fontSize: 14,
+    lineHeight: 19,
+    color: theme.textSecondary,
+    textAlign: 'center',
+    marginTop: 8,
+    paddingHorizontal: 4,
   },
 
   speakBtn: {
