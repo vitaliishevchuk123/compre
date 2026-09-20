@@ -517,6 +517,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['bag', 'book', 'cup'],
     answer: 'bag',
     answerPhrase: 'This is a bag.',
+    description: 'This is something you use to carry things. It has a handle or a strap, and you can put clothes, food, or school things inside. Students take it to school every day.',
   },
   {
     order: 53,
@@ -526,6 +527,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['cup', 'bag', 'book'],
     answer: 'cup',
     answerPhrase: 'This is a cup.',
+    description: 'This is a small container for drinks. It usually has a handle, and you hold it in your hand. You drink tea or coffee from it.',
   },
   {
     order: 54,
@@ -535,6 +537,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['door', 'window', 'house'],
     answer: 'door',
     answerPhrase: 'This is a door.',
+    description: 'This is a part of a room or a building that you open and close. You walk through it to go in or out. It often has a handle and a lock.',
   },
   {
     order: 55,
@@ -544,6 +547,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['window', 'door', 'house'],
     answer: 'window',
     answerPhrase: 'This is a window.',
+    description: 'This is an opening in the wall of a building. It is made of glass, so you can see outside and light comes in. You can open it to get fresh air.',
   },
   {
     order: 56,
@@ -553,6 +557,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['house', 'door', 'window'],
     answer: 'house',
     answerPhrase: 'This is a house.',
+    description: 'This is a building where people live. It has a roof, walls, and rooms like a kitchen and a bedroom. A family lives in it together.',
   },
   {
     order: 57,
@@ -562,6 +567,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['car', 'house', 'bag'],
     answer: 'car',
     answerPhrase: 'This is a car.',
+    description: 'This is a vehicle with four wheels and an engine. People drive it on roads to go to work or on holiday. It has seats and a steering wheel.',
   },
   {
     order: 58,
@@ -571,6 +577,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['phone', 'book', 'bag'],
     answer: 'phone',
     answerPhrase: 'This is a phone.',
+    description: 'This is a small device that you use to talk to people far away. You can also send messages, take photos, and use the internet with it. Most people carry it in their pocket.',
   },
   {
     order: 59,
@@ -580,6 +587,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['head', 'hand', 'foot'],
     answer: 'head',
     answerPhrase: 'This is a head.',
+    description: 'This is the top part of your body. It has your face and your hair, and your brain is inside it. Your neck holds it up.',
   },
   {
     order: 60,
@@ -589,6 +597,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['eye', 'ear', 'nose'],
     answer: 'eye',
     answerPhrase: 'This is an eye.',
+    description: 'You have two of these on your face. You use them to see colors, shapes, and light. You close them when you sleep.',
   },
   {
     order: 61,
@@ -598,6 +607,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['ear', 'eye', 'nose'],
     answer: 'ear',
     answerPhrase: 'This is an ear.',
+    description: 'You have two of these, one on each side of your head. You use them to hear sounds and music. Some people hang jewelry on them.',
   },
   {
     order: 62,
@@ -607,6 +617,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['nose', 'ear', 'mouth'],
     answer: 'nose',
     answerPhrase: 'This is a nose.',
+    description: 'This is the part in the middle of your face, above your lips. You use it to smell flowers and food. You also breathe air through it.',
   },
   {
     order: 63,
@@ -616,6 +627,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['mouth', 'nose', 'ear'],
     answer: 'mouth',
     answerPhrase: 'This is a mouth.',
+    description: 'This is the part of your face that you use to eat, drink, and talk. It has teeth and a tongue inside. You open it when you laugh or yawn.',
   },
   {
     order: 64,
@@ -625,6 +637,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['hand', 'foot', 'arm'],
     answer: 'hand',
     answerPhrase: 'This is a hand.',
+    description: 'You have two of these, and each one has five fingers. You use them to hold things, to write, and to wave hello. You clap with them too.',
   },
   {
     order: 65,
@@ -634,6 +647,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['foot', 'hand', 'leg'],
     answer: 'foot',
     answerPhrase: 'This is a foot.',
+    description: 'You have two of these, and each one has five toes. You stand on them, and you wear socks and shoes on them. They are at the very bottom of your body.',
   },
   {
     order: 66,
@@ -643,6 +657,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['arm', 'hand', 'leg'],
     answer: 'arm',
     answerPhrase: 'This is an arm.',
+    description: 'You have two of these, one on each side of your upper body. You use them to carry heavy things and to hug people. You bend them at the elbow.',
   },
   {
     order: 67,
@@ -652,6 +667,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['leg', 'arm', 'foot'],
     answer: 'leg',
     answerPhrase: 'This is a leg.',
+    description: 'You have two of these, and you use them to walk, run, and jump. They hold up your body when you stand. You bend them at the knee.',
   },
   {
     order: 68,
@@ -661,6 +677,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['horse', 'dog', 'cat'],
     answer: 'horse',
     answerPhrase: 'This is a horse.',
+    description: 'This is a big, strong animal with four long legs, a long tail, and a mane. People ride it, and it can run very fast. Farmers also use it to pull carts.',
   },
   {
     order: 69,
@@ -670,6 +687,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['cow', 'horse', 'dog'],
     answer: 'cow',
     answerPhrase: 'This is a cow.',
+    description: 'This is a big farm animal that gives us milk. It says moo and eats grass in the fields. It is often black and white, or brown.',
   },
   {
     order: 70,
@@ -679,6 +697,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['rabbit', 'cat', 'dog'],
     answer: 'rabbit',
     answerPhrase: 'This is a rabbit.',
+    description: 'This is a small animal with long ears and soft fur. It has a short, fluffy tail and jumps very fast. It loves to eat carrots and grass.',
   },
   {
     order: 71,
@@ -688,6 +707,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['bear', 'dog', 'horse'],
     answer: 'bear',
     answerPhrase: 'This is a bear.',
+    description: 'This is a very big and strong wild animal with thick fur and sharp claws. It lives in forests or in cold places. It sleeps through the winter and loves honey.',
   },
   {
     order: 72,
@@ -697,6 +717,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sit', 'run', 'sleep'],
     answer: 'sit',
     answerPhrase: 'The dog is sitting.',
+    description: 'You do this when you want to rest your legs. You put your bottom on a chair or on the floor, and you bend your knees. People do this at a table, in a car, and in class.',
   },
   {
     order: 73,
@@ -706,6 +727,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['stand', 'sit', 'walk'],
     answer: 'stand',
     answerPhrase: 'The man is standing.',
+    description: 'You do this on your feet with your legs straight. Your body is up, and you do not move to another place. People do this when they wait in a line.',
   },
   {
     order: 74,
@@ -715,6 +737,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['read', 'eat', 'sleep'],
     answer: 'read',
     answerPhrase: 'The girl is reading.',
+    description: 'You do this with your eyes. You look at the words in a book or on a phone, and you understand them. Children learn to do this at school.',
   },
   {
     order: 75,
@@ -724,6 +747,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['write', 'read', 'eat'],
     answer: 'write',
     answerPhrase: 'The boy is writing.',
+    description: 'You do this with your hand and a pen. You make letters and words on paper. You do this when you send a letter or take notes in class.',
   },
   {
     order: 76,
@@ -733,6 +757,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['talk', 'walk', 'sit'],
     answer: 'talk',
     answerPhrase: 'The man is talking.',
+    description: 'You do this with your mouth and your voice. You say words to another person, and they answer you. People do this on the phone and at dinner.',
   },
   {
     order: 77,
@@ -742,6 +767,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['listen', 'talk', 'read'],
     answer: 'listen',
     answerPhrase: 'The girl is listening.',
+    description: 'You do this with your ears. You pay attention to sounds, to music, or to the words of another person. Students do this when the teacher speaks.',
   },
   {
     order: 78,
@@ -751,6 +777,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['go', 'come', 'walk'],
     answer: 'go',
     answerPhrase: 'The man is going.',
+    description: 'You do this when you leave the place where you are. You move away from here toward another place, like school or the shop. You can do this by car, by bus, or on foot.',
   },
   {
     order: 79,
@@ -760,6 +787,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['come', 'go', 'run'],
     answer: 'come',
     answerPhrase: 'The dog is coming.',
+    description: 'You do this when you move closer to the person who is calling you. You arrive here from another place. A dog does this when you call its name.',
   },
   {
     order: 80,
@@ -769,6 +797,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['open', 'close', 'go'],
     answer: 'open',
     answerPhrase: 'The man is opening the door.',
+    description: 'You do this to a door, a window, or a box. Before you do this, it is shut, and after you do this, you can see or go inside. You often use a key or a handle.',
   },
   {
     order: 81,
@@ -778,6 +807,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['give', 'take', 'eat'],
     answer: 'give',
     answerPhrase: 'The girl is giving.',
+    description: 'You do this when you hand something to another person. It was yours, and now it is theirs. People do this with presents on a birthday.',
   },
   {
     order: 82,
@@ -787,6 +817,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['see', 'eat', 'run'],
     answer: 'see',
     answerPhrase: 'The boy can see.',
+    description: 'You do this with your eyes. Light goes into them, and you know what is in front of you. You need light to do this, so it is hard at night.',
   },
   {
     order: 83,
@@ -796,6 +827,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['swim', 'run', 'walk'],
     answer: 'swim',
     answerPhrase: 'The boy is swimming.',
+    description: 'You do this in water. You move your arms and legs to go forward in a pool or in the sea. Fish do this all the time.',
   },
   {
     order: 84,
@@ -805,6 +837,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['hot', 'cold', 'big'],
     answer: 'hot',
     answerPhrase: 'The water is hot.',
+    description: 'This word tells us about temperature. A thing like this can burn you, like the sun, a fire, or fresh tea. In summer, the weather is often like this.',
   },
   {
     order: 85,
@@ -814,6 +847,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['cold', 'hot', 'big'],
     answer: 'cold',
     answerPhrase: 'The water is cold.',
+    description: 'This word tells us about temperature. A thing like this makes you shiver, like snow, ice, or a winter wind. You need a warm coat when the weather is like this.',
   },
   {
     order: 86,
@@ -823,6 +857,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['good', 'bad', 'big'],
     answer: 'good',
     answerPhrase: 'The dog is good.',
+    description: 'This word is used for things that are nice and right. A person or an animal like this behaves well and helps others. You say it about a tasty meal or a friendly dog.',
   },
   {
     order: 87,
@@ -832,6 +867,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['bad', 'good', 'big'],
     answer: 'bad',
     answerPhrase: 'The cat is bad.',
+    description: 'This word is used for things that are not nice and not right. A person or an animal like this does things that hurt or upset others. You say it about rotten food or a naughty child.',
   },
   {
     order: 88,
@@ -841,6 +877,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['slow', 'fast', 'big'],
     answer: 'slow',
     answerPhrase: 'The turtle walks slow.',
+    description: 'This word tells us about speed. Something like this takes a long time to get to a place. A snail, a turtle, and a heavy truck on a hill move this way.',
   },
   {
     order: 89,
@@ -850,6 +887,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['tall', 'short', 'big'],
     answer: 'tall',
     answerPhrase: 'The man is tall.',
+    description: 'This word tells us about height. A person or a thing like this reaches high up from the ground, like a giraffe or a tree. A basketball player is often like this.',
   },
   {
     order: 90,
@@ -859,6 +897,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['short', 'tall', 'small'],
     answer: 'short',
     answerPhrase: 'The woman is short.',
+    description: 'This word tells us about height. A person or a thing like this does not reach very high from the ground. A small child is like this next to an adult, and so is a low fence.',
   },
   {
     order: 91,
@@ -868,6 +907,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['long', 'short', 'big'],
     answer: 'long',
     answerPhrase: 'This is long.',
+    description: 'This word tells us about length. There is a lot of space between one end of a thing like this and the other end. A snake, a river, and a train are like this.',
   },
   {
     order: 92,
