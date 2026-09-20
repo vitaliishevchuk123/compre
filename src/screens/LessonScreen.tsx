@@ -99,6 +99,8 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
   const card: LessonCard = CARDS[index];
   const options = useMemo(() => shuffle(card.options), [card]);
   const prompt = card.sentence ?? 'What is this?';
+  // 4 options sit in a 2x2 grid; 3 (or any other count) stay one per row.
+  const gridOptions = options.length === 4;
 
   function speak(text: string, extra?: Speech.SpeechOptions) {
     const opts: Speech.SpeechOptions = { language: 'en-US', rate: 0.85, ...extra };
@@ -437,6 +439,7 @@ export default function LessonScreen({ navigation, route }: LessonProps) {
             letter={String.fromCharCode(65 + i)}
             sentence={false}
             compact={compact}
+            grid={gridOptions}
             state={optionState(option, card.answer, selected)}
             pulse={isReplaying && option === card.answer}
             onPress={() => choose(option)}
@@ -506,6 +509,7 @@ function Option({
   sentence,
   pulse,
   compact,
+  grid,
   onPress,
 }: {
   label: string;
@@ -514,6 +518,7 @@ function Option({
   sentence?: boolean;
   pulse?: boolean;
   compact?: boolean;
+  grid?: boolean;
   onPress: () => void;
 }) {
   const anim = useRef(new Animated.Value(0)).current;
@@ -543,12 +548,13 @@ function Option({
     <Animated.View
       style={[
         styles.option,
+        grid ? styles.optionHalf : styles.optionFull,
         OPTION_STYLE[state],
         pulse && { opacity: anim.interpolate({ inputRange: [0, 1], outputRange: [1, 0.25] }) },
       ]}
     >
       <Pressable
-        style={[styles.optionInner, compact && cs.optionInner]}
+        style={[styles.optionInner, compact && cs.optionInner, grid && styles.optionInnerGrid]}
         onPress={onPress}
         disabled={state !== 'idle'}
       >
@@ -758,7 +764,10 @@ const styles = StyleSheet.create({
     borderColor: theme.accent,
   },
 
-  options: { gap: 6, marginTop: 10 },
+  options: { gap: 6, marginTop: 10, flexDirection: 'row', flexWrap: 'wrap' },
+  optionFull: { flexBasis: '100%' },
+  // Two per row (47% + 47% + gap fits every phone width).
+  optionHalf: { flexBasis: '47%', flexGrow: 1 },
   option: {
     borderRadius: theme.radiusSm,
     overflow: 'hidden',
@@ -770,6 +779,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 12,
   },
+  // Half-width buttons: tighter padding so longer words like "restaurant" still fit.
+  optionInnerGrid: { paddingHorizontal: 10, gap: 8 },
   optionBadge: {
     width: 28,
     height: 28,
