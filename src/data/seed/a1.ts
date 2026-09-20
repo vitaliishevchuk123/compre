@@ -67,6 +67,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['happy', 'sad', 'angry'],
     answer: 'happy',
     answerPhrase: 'The girl is happy.',
+    description: 'This is a good feeling. You feel this way when something nice happens, like a birthday or a gift. You smile and laugh.',
   },
   {
     order: 7,
@@ -76,6 +77,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['fast', 'slow', 'happy'],
     answer: 'fast',
     answerPhrase: 'The dog runs fast.',
+    description: 'This word tells us how something moves. It moves with very high speed and does not take much time. A racing car and a running dog can be like this.',
   },
   {
     order: 8,
@@ -85,6 +87,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['sad', 'happy', 'angry'],
     answer: 'sad',
     answerPhrase: 'The boy is sad.',
+    description: 'This is a bad feeling. You feel this way when you lose something you love or when things go wrong. Your face looks down, and sometimes you cry.',
   },
   {
     order: 9,
@@ -94,6 +97,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['angry', 'sad', 'happy'],
     answer: 'angry',
     answerPhrase: 'The dog is angry.',
+    description: 'This is a strong feeling. You feel this way when something is unfair or someone breaks your things. Your face gets red, and you may shout.',
   },
   {
     order: 11,
@@ -103,6 +107,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['cat', 'dog', 'girl'],
     answer: 'cat',
     answerPhrase: 'This is a cat.',
+    description: 'This is a small animal with soft fur, sharp claws, and long whiskers. It says meow and likes to sleep a lot. Many people keep it as a pet at home.',
   },
   {
     order: 12,
