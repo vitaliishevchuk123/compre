@@ -843,15 +843,19 @@ const styles = StyleSheet.create({
   },
   jumpSheet: {
     backgroundColor: theme.card,
-    borderTopLeftRadius: 28,
-    borderTopRightRadius: 28,
-    paddingHorizontal: 24,
-    paddingTop: 24,
-    paddingBottom: 40,
-    gap: 20,
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
+    paddingHorizontal: 20,
+    paddingTop: 18,
+    paddingBottom: 24,
+    gap: 14,
+    // Keep the sheet phone-sized (and centered) on wide web screens.
+    width: '100%',
+    maxWidth: 480,
+    alignSelf: 'center',
   },
   jumpTitle: {
-    fontSize: 17,
+    fontSize: 15,
     fontWeight: '700',
     color: theme.textPrimary,
     textAlign: 'center',
@@ -860,27 +864,29 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'baseline',
     justifyContent: 'center',
-    gap: 10,
+    gap: 8,
   },
+  // Fixed width: a bare web <input> is very wide and pushed "/ 656" onto two lines.
   jumpInput: {
-    fontSize: 28,
+    fontSize: 22,
     fontWeight: '800',
     color: theme.accent,
     textAlign: 'center',
-    minWidth: 70,
+    width: 72,
     borderBottomWidth: 2,
     borderBottomColor: theme.accent,
-    paddingVertical: 4,
+    paddingVertical: 2,
   },
   jumpOf: {
-    fontSize: 28,
+    fontSize: 22,
     fontWeight: '800',
     color: theme.accent,
+    flexShrink: 0,
   },
   jumpGoBtn: {
     backgroundColor: theme.accent,
     borderRadius: theme.radius,
-    paddingVertical: 14,
+    paddingVertical: 11,
     alignItems: 'center',
     shadowColor: theme.accent,
     shadowOpacity: 0.3,
@@ -888,7 +894,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 5 },
     elevation: 3,
   },
-  jumpGoText: { color: '#fff', fontSize: 18, fontWeight: '700' },
+  jumpGoText: { color: '#fff', fontSize: 16, fontWeight: '700' },
 });
 
 /** Overrides for short screens (see COMPACT_HEIGHT). */
@@ -943,7 +949,7 @@ function LessonSlider({
   }), [trackWidth, total]);
 
   const thumbPct = total > 1 ? (value - 1) / (total - 1) : 0;
-  const THUMB_R = 14;
+  const THUMB_R = 11;
 
   return (
     <View
@@ -961,25 +967,25 @@ function LessonSlider({
 
 const sliderStyles = StyleSheet.create({
   track: {
-    height: 40,
+    height: 32,
     justifyContent: 'center',
     backgroundColor: theme.option,
-    borderRadius: 20,
+    borderRadius: 16,
     overflow: 'visible',
   },
   fill: {
     height: '100%',
     backgroundColor: theme.accent,
-    borderRadius: 20,
+    borderRadius: 16,
     opacity: 0.35,
   },
   thumb: {
     position: 'absolute',
-    width: 28,
-    height: 28,
-    borderRadius: 14,
+    width: 22,
+    height: 22,
+    borderRadius: 11,
     backgroundColor: theme.accent,
-    top: 6,
+    top: 5,
     shadowColor: '#000',
     shadowOpacity: 0.15,
     shadowRadius: 4,
