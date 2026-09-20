@@ -63,11 +63,11 @@ const registry: Record<string, ImageSourcePropType> = {
   'a1/bread':        require('../../assets/images/a1/bread.jpg'),
   'a1/egg':          require('../../assets/images/a1/egg.jpg'),
   'a1/rice':         require('../../assets/images/a1/rice.jpg'),
-  'a1/soup':         require('../../assets/images/a1/soup.jpg'),
+  'a1/soup':         require('../../assets/images/a1/soup.png'),
   // Home
   'a1/table':        require('../../assets/images/a1/table.png'),
   'a1/chair':        require('../../assets/images/a1/chair.jpg'),
-  'a1/bed':          require('../../assets/images/a1/bed.jpg'),
+  'a1/bed':          require('../../assets/images/a1/bed.png'),
   'a1/book':         require('../../assets/images/a1/book.jpg'),
   'a1/bag':          require('../../assets/images/a1/bag.jpg'),
   'a1/cup':          require('../../assets/images/a1/cup.jpg'),

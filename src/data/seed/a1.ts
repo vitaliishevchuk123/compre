@@ -417,6 +417,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['water', 'milk', 'soup'],
     answer: 'water',
     answerPhrase: 'The boy is drinking water.',
+    description: 'This is a clear liquid with no color and no taste. Rivers, lakes, and the sea are full of it. People and animals must drink it to live.',
   },
   {
     order: 43,
@@ -426,6 +427,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['milk', 'water', 'soup'],
     answer: 'milk',
     answerPhrase: 'The cat is drinking milk.',
+    description: 'This is a white liquid that comes from cows. Babies and kittens drink it, and people make cheese and butter from it. It is good for your bones.',
   },
   {
     order: 44,
@@ -435,6 +437,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['bread', 'apple', 'egg'],
     answer: 'bread',
     answerPhrase: 'This is bread.',
+    description: 'This is a food that you make from flour. You bake it in an oven, and you often cut it into slices. People eat it with butter or cheese for breakfast.',
   },
   {
     order: 45,
@@ -444,6 +447,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['egg', 'bread', 'apple'],
     answer: 'egg',
     answerPhrase: 'The woman is eating an egg.',
+    description: 'This is a food that comes from a chicken. It has a hard shell outside, and a yellow and white part inside. You can boil it or fry it for breakfast.',
   },
   {
     order: 46,
@@ -453,6 +457,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['rice', 'bread', 'soup'],
     answer: 'rice',
     answerPhrase: 'The man is eating rice.',
+    description: 'This is a food made of many tiny white grains. It grows in wet fields, and you cook it in hot water. Many people in Asia eat it almost every day.',
   },
   {
     order: 47,
@@ -462,6 +467,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['soup', 'rice', 'bread'],
     answer: 'soup',
     answerPhrase: 'This is soup.',
+    description: 'This is a hot food that is mostly liquid. You make it by cooking vegetables or meat in water. You eat it with a spoon from a bowl.',
   },
   {
     order: 48,
@@ -471,6 +477,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['table', 'chair', 'bed'],
     answer: 'table',
     answerPhrase: 'This is a table.',
+    description: 'This is a piece of furniture with a flat top and four legs. You put food, books, or a computer on it. Families sit around it to eat dinner.',
   },
   {
     order: 49,
@@ -480,6 +487,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['chair', 'table', 'bed'],
     answer: 'chair',
     answerPhrase: 'This is a chair.',
+    description: 'This is a piece of furniture for one person. It has four legs and a back, and you sit on it. You find it in a kitchen, in a classroom, and at a desk.',
   },
   {
     order: 50,
@@ -489,6 +497,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['bed', 'chair', 'table'],
     answer: 'bed',
     answerPhrase: 'This is a bed.',
+    description: 'This is a piece of furniture that you use at night. It is soft and comfortable, with a pillow and a blanket. You lie on it when you sleep.',
   },
   {
     order: 51,
@@ -498,6 +507,7 @@ export const A1_CARDS: LessonCard[] = [
     options: ['book', 'bag', 'cup'],
     answer: 'book',
     answerPhrase: 'This is a book.',
+    description: 'This is a set of paper pages held together in a cover. It has words, and sometimes pictures. You read it to learn something or to enjoy a story.',
   },
   {
     order: 52,
