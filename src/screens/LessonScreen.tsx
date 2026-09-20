@@ -502,6 +502,12 @@ function optionState(
   return 'muted';
 }
 
+/** Half-width (grid) buttons get a smaller font for long words so they never break mid-word. */
+function gridLabelSize(grid: boolean | undefined, label: string) {
+  if (!grid || label.length < 10) return null;
+  return { fontSize: label.length >= 13 ? 13 : 14 };
+}
+
 function Option({
   label,
   letter,
@@ -567,6 +573,7 @@ function Option({
           style={[
             styles.optionText,
             compact && cs.optionText,
+            gridLabelSize(grid, label),
             sentence && styles.optionTextSentence,
             state === 'muted' && styles.optionTextMuted,
           ]}
