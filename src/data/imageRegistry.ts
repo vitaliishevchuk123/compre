@@ -442,7 +442,7 @@ const registry: Record<string, ImageSourcePropType> = {
   'a1/adj-noisy':    require('../../assets/images/a1/adj-noisy.png'),
   'a1/adj-close':    require('../../assets/images/a1/adj-close.png'),
   'a1/adj-near':     require('../../assets/images/a1/adj-near.png'),
-  'a1/adj-next':     require('../../assets/images/a1/adj-next.png'),
+  'a1/adj-next':     require('../../assets/images/a1/adj-next.jpg'),
   'a1/adj-last':     require('../../assets/images/a1/adj-last.png'),
   'a1/adj-first':    require('../../assets/images/a1/adj-first.png'),
   'a1/adj-second':   require('../../assets/images/a1/adj-second.png'),

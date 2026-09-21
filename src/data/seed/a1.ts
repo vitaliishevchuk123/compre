@@ -3822,11 +3822,11 @@ export const A1_CARDS: LessonCard[] = [
   {
     order: 385,
     category: 'adjectives',
-    sentence: 'How is the chair?',
+    sentence: 'How are the chairs?',
     imageKey: 'a1/adj-comfortable',
     options: ['comfortable', 'uncomfortable', 'hard', 'wonderful'],
     answer: 'comfortable',
-    answerPhrase: 'The chair is comfortable.',
+    answerPhrase: 'The chairs are comfortable.',
     description: 'This word describes something that feels soft and pleasant on your body. You can sit or lie there for a long time without any pain. A big armchair with pillows is like this.',
   },
   {
