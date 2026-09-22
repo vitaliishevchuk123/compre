@@ -7,7 +7,7 @@ import type { ImageSourcePropType } from 'react-native';
 // Cards whose real photo has not been added yet point straight at placeholder.png
 // (no shared constant, so replacing one is just swapping that filename). To add a
 // photo: drop the file into assets/images/a1/ and swap the require() path below
-// (search this file for "TODO photo" to find every card still on the placeholder).
+// (search this file for "placeholder.png" to find every card still on the placeholder).
 
 const registry: Record<string, ImageSourcePropType> = {
   'a1/boy': require('../../assets/images/a1/boy.png'),
@@ -476,7 +476,7 @@ const registry: Record<string, ImageSourcePropType> = {
   'a1/act-show':     require('../../assets/images/a1/act-show.png'),
   'a1/act-explain':  require('../../assets/images/a1/act-explain.png'),
   'a1/act-teach':    require('../../assets/images/a1/act-teach.png'),
-  // ── new A1 batch · greetings (placeholder, TODO photo) ──
+  // ── new A1 batch · greetings ──
   'a1/greet-hello': require('../../assets/images/a1/greet-hello.png'),
   'a1/greet-goodbye': require('../../assets/images/a1/greet-goodbye.png'),
   'a1/greet-please': require('../../assets/images/a1/greet-please.png'),
@@ -485,250 +485,250 @@ const registry: Record<string, ImageSourcePropType> = {
   'a1/greet-yes': require('../../assets/images/a1/greet-yes.png'),
   'a1/greet-no': require('../../assets/images/a1/greet-no.png'),
   'a1/greet-welcome': require('../../assets/images/a1/greet-welcome.png'),
-  // ── new A1 batch · pronouns (placeholder, TODO photo) ──
+  // ── new A1 batch · pronouns ──
   'a1/pron-i': require('../../assets/images/a1/pron-i.png'),
   'a1/pron-you': require('../../assets/images/a1/pron-you.png'),
   'a1/pron-he': require('../../assets/images/a1/pron-he.png'),
   'a1/pron-she': require('../../assets/images/a1/pron-she.png'),
   'a1/pron-it': require('../../assets/images/a1/pron-it.png'),
   'a1/pron-we': require('../../assets/images/a1/pron-we.png'),
-  'a1/pron-they': require('../../assets/images/a1/pron-they.png'), // TODO photo: They ride their bikes to school.
-  'a1/pron-my': require('../../assets/images/a1/placeholder.png'), // TODO photo: This is my ball!
-  'a1/pron-your': require('../../assets/images/a1/placeholder.png'), // TODO photo: This is your present!
-  'a1/pron-his': require('../../assets/images/a1/placeholder.png'), // TODO photo: It is his hat.
-  'a1/pron-her': require('../../assets/images/a1/placeholder.png'), // TODO photo: It is her bag.
-  'a1/pron-our': require('../../assets/images/a1/placeholder.png'), // TODO photo: This is our new house!
-  'a1/pron-their': require('../../assets/images/a1/placeholder.png'), // TODO photo: It is their dog.
-  // ── new A1 batch · questions (placeholder, TODO photo) ──
-  'a1/q-what': require('../../assets/images/a1/placeholder.png'), // TODO photo: What is in the box?
-  'a1/q-where': require('../../assets/images/a1/placeholder.png'), // TODO photo: Where is my ball?
-  'a1/q-who': require('../../assets/images/a1/placeholder.png'), // TODO photo: Who is at the door?
-  'a1/q-when': require('../../assets/images/a1/placeholder.png'), // TODO photo: When does the train come?
-  'a1/q-why': require('../../assets/images/a1/placeholder.png'), // TODO photo: Why is the baby crying?
-  'a1/q-how': require('../../assets/images/a1/placeholder.png'), // TODO photo: How old are you?
-  // ── new A1 batch · prepositions (placeholder, TODO photo) ──
-  'a1/prep-in': require('../../assets/images/a1/placeholder.png'), // TODO photo: The cat is in the box.
-  'a1/prep-on': require('../../assets/images/a1/placeholder.png'), // TODO photo: The cat is sleeping on the sofa.
-  'a1/prep-under': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy is hiding under the table.
-  'a1/prep-behind': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl is hiding behind a big tree.
-  'a1/prep-between': require('../../assets/images/a1/placeholder.png'), // TODO photo: The dog sits between the boy and the girl.
-  'a1/prep-next-to': require('../../assets/images/a1/placeholder.png'), // TODO photo: The cafe is next to the bank.
-  'a1/prep-in-front-of': require('../../assets/images/a1/placeholder.png'), // TODO photo: The children stand in front of the school.
-  'a1/prep-above': require('../../assets/images/a1/placeholder.png'), // TODO photo: The plane flies above the clouds.
-  'a1/prep-around': require('../../assets/images/a1/placeholder.png'), // TODO photo: The children dance around the tree.
-  'a1/prep-through': require('../../assets/images/a1/placeholder.png'), // TODO photo: The train goes through a dark tunnel.
-  'a1/prep-across': require('../../assets/images/a1/placeholder.png'), // TODO photo: The mother and her boy walk across the road.
-  'a1/prep-with': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy eats his soup with a big spoon.
-  'a1/prep-without': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl goes out without an umbrella. Now she is wet!
-  // ── new A1 batch · actions (placeholder, TODO photo) ──
-  'a1/act-have': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl has a big red balloon.
-  'a1/act-like': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy likes pizza. It is his favorite food!
-  'a1/act-want': require('../../assets/images/a1/placeholder.png'), // TODO photo: The baby wants the cake!
-  'a1/act-get': require('../../assets/images/a1/placeholder.png'), // TODO photo: The woman gets a letter from her friend.
-  'a1/act-live': require('../../assets/images/a1/placeholder.png'), // TODO photo: Fish live in the sea.
-  'a1/act-study': require('../../assets/images/a1/placeholder.png'), // TODO photo: The student studies for the exam.
-  'a1/act-use': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl uses her phone to take a photo.
-  'a1/act-tell': require('../../assets/images/a1/placeholder.png'), // TODO photo: Grandpa tells a funny story.
-  'a1/act-keep': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl keeps her treasures in a box.
-  'a1/act-send': require('../../assets/images/a1/placeholder.png'), // TODO photo: The man sends a letter to his son.
-  'a1/act-enjoy': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl enjoys the beach.
-  'a1/act-finish': require('../../assets/images/a1/placeholder.png'), // TODO photo: The runner finishes the race.
-  'a1/act-join': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy joins the football game.
-  'a1/act-build': require('../../assets/images/a1/placeholder.png'), // TODO photo: The children build a big sand castle.
-  'a1/act-grow': require('../../assets/images/a1/placeholder.png'), // TODO photo: The flowers grow in the garden.
-  'a1/act-follow': require('../../assets/images/a1/placeholder.png'), // TODO photo: The little ducks follow their mother.
-  'a1/act-guess': require('../../assets/images/a1/placeholder.png'), // TODO photo: The children guess what is in the box.
-  'a1/act-paint': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl paints the wall blue.
-  'a1/act-relax': require('../../assets/images/a1/placeholder.png'), // TODO photo: The man relaxes on the sofa.
-  'a1/act-repeat': require('../../assets/images/a1/placeholder.png'), // TODO photo: The children repeat the new word.
-  'a1/act-return': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy returns his book to the library.
-  'a1/act-order': require('../../assets/images/a1/placeholder.png'), // TODO photo: The woman orders a pizza.
-  'a1/act-lose': require('../../assets/images/a1/placeholder.png'), // TODO photo: The team loses the game.
-  'a1/act-fix': require('../../assets/images/a1/placeholder.png'), // TODO photo: The man fixes the bike.
-  // ── new A1 batch · numbers (placeholder, TODO photo) ──
-  'a1/num-eleven': require('../../assets/images/a1/placeholder.png'), // TODO photo: A football team has eleven players on the field.
-  'a1/num-twelve': require('../../assets/images/a1/placeholder.png'), // TODO photo: Twelve eggs are in the box.
-  'a1/num-thirteen': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy is thirteen today.
-  'a1/num-fourteen': require('../../assets/images/a1/placeholder.png'), // TODO photo: Two weeks is fourteen days.
-  'a1/num-fifteen': require('../../assets/images/a1/placeholder.png'), // TODO photo: Fifteen colorful balls are on the pool table.
-  'a1/num-sixteen': require('../../assets/images/a1/placeholder.png'), // TODO photo: The big cake has sixteen candles.
-  'a1/num-seventeen': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl is seventeen and she goes to school by bike.
-  'a1/num-eighteen': require('../../assets/images/a1/placeholder.png'), // TODO photo: He is eighteen and he has his first car.
-  'a1/num-nineteen': require('../../assets/images/a1/placeholder.png'), // TODO photo: Nineteen people wait for the bus in the rain.
-  'a1/num-twenty': require('../../assets/images/a1/placeholder.png'), // TODO photo: We have twenty fingers and toes.
-  'a1/num-thirty': require('../../assets/images/a1/placeholder.png'), // TODO photo: Thirty students sit in the classroom.
-  'a1/num-forty': require('../../assets/images/a1/placeholder.png'), // TODO photo: Forty people watch a film at the cinema.
-  'a1/num-fifty': require('../../assets/images/a1/placeholder.png'), // TODO photo: She is fifty today. Her friends bring a big cake.
-  'a1/num-sixty': require('../../assets/images/a1/placeholder.png'), // TODO photo: One hour has sixty minutes.
-  'a1/num-seventy': require('../../assets/images/a1/placeholder.png'), // TODO photo: The man with the white hat is seventy years old.
-  'a1/num-eighty': require('../../assets/images/a1/placeholder.png'), // TODO photo: Grandma is eighty, but she still dances!
-  'a1/num-ninety': require('../../assets/images/a1/placeholder.png'), // TODO photo: Grandpa is ninety and he has a very big party.
-  'a1/num-hundred': require('../../assets/images/a1/placeholder.png'), // TODO photo: A hundred balloons fly in the sky.
-  'a1/num-thousand': require('../../assets/images/a1/placeholder.png'), // TODO photo: We can see a thousand stars in the night sky.
-  // ── new A1 batch · days (placeholder, TODO photo) ──
-  'a1/day-monday': require('../../assets/images/a1/placeholder.png'), // TODO photo: On Monday morning, the tired boy goes to school.
-  'a1/day-tuesday': require('../../assets/images/a1/placeholder.png'), // TODO photo: On Tuesday, the children eat pizza at school.
-  'a1/day-wednesday': require('../../assets/images/a1/placeholder.png'), // TODO photo: On Wednesday, the girl plays the piano.
-  'a1/day-thursday': require('../../assets/images/a1/placeholder.png'), // TODO photo: On Thursday, Mother buys fresh vegetables at the market.
-  'a1/day-friday': require('../../assets/images/a1/placeholder.png'), // TODO photo: On Friday night, the friends watch a film.
-  'a1/day-saturday': require('../../assets/images/a1/placeholder.png'), // TODO photo: On Saturday, the family goes to the beach.
-  'a1/day-sunday': require('../../assets/images/a1/placeholder.png'), // TODO photo: On Sunday, Grandma cooks a big dinner.
-  // ── new A1 batch · months (placeholder, TODO photo) ──
-  'a1/month-january': require('../../assets/images/a1/placeholder.png'), // TODO photo: In January, the snow is deep and the new year begins.
-  'a1/month-february': require('../../assets/images/a1/placeholder.png'), // TODO photo: In February, the boy gives chocolate to the girl.
-  'a1/month-march': require('../../assets/images/a1/placeholder.png'), // TODO photo: In March, the first flowers come out.
-  'a1/month-april': require('../../assets/images/a1/placeholder.png'), // TODO photo: In April, the girl runs in the rain with her umbrella.
-  'a1/month-may': require('../../assets/images/a1/placeholder.png'), // TODO photo: In May, the garden is full of flowers.
-  'a1/month-june': require('../../assets/images/a1/placeholder.png'), // TODO photo: In June, school is over and the children swim.
-  'a1/month-july': require('../../assets/images/a1/placeholder.png'), // TODO photo: In July, the family eats ice cream on the hot beach.
-  'a1/month-august': require('../../assets/images/a1/placeholder.png'), // TODO photo: In August, the family goes on holiday.
-  'a1/month-september': require('../../assets/images/a1/placeholder.png'), // TODO photo: In September, the children go back to school.
-  'a1/month-october': require('../../assets/images/a1/placeholder.png'), // TODO photo: In October, the leaves are orange and the pumpkins are big.
-  'a1/month-november': require('../../assets/images/a1/placeholder.png'), // TODO photo: In November, it is dark and rainy in the evening.
-  'a1/month-december': require('../../assets/images/a1/placeholder.png'), // TODO photo: In December, the family has a tree with lights and many presents.
-  // ── new A1 batch · time (placeholder, TODO photo) ──
-  'a1/time-today': require('../../assets/images/a1/placeholder.png'), // TODO photo: The party is today!
-  'a1/time-tomorrow': require('../../assets/images/a1/placeholder.png'), // TODO photo: We go to the beach tomorrow!
-  'a1/time-yesterday': require('../../assets/images/a1/placeholder.png'), // TODO photo: There was a big storm yesterday.
-  'a1/time-weekend': require('../../assets/images/a1/placeholder.png'), // TODO photo: On the weekend, the family rides bikes.
-  'a1/time-hour': require('../../assets/images/a1/placeholder.png'), // TODO photo: The bus comes every hour.
-  'a1/time-minute': require('../../assets/images/a1/placeholder.png'), // TODO photo: Wait one minute, please!
-  'a1/time-midnight': require('../../assets/images/a1/placeholder.png'), // TODO photo: It is midnight and the city sleeps.
-  'a1/time-birthday': require('../../assets/images/a1/placeholder.png'), // TODO photo: It is her birthday!
-  'a1/time-party': require('../../assets/images/a1/placeholder.png'), // TODO photo: The children dance at the party.
-  'a1/time-holiday': require('../../assets/images/a1/placeholder.png'), // TODO photo: The family is on holiday by the sea.
-  // ── new A1 batch · home (placeholder, TODO photo) ──
-  'a1/home-home': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy runs home after school.
-  'a1/home-kitchen': require('../../assets/images/a1/placeholder.png'), // TODO photo: Father cooks soup in the kitchen.
-  'a1/home-bathroom': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy washes his face in the bathroom.
-  'a1/home-bedroom': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl reads a book in her bedroom.
-  'a1/home-floor': require('../../assets/images/a1/placeholder.png'), // TODO photo: The baby plays on the floor.
-  'a1/home-wall': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy draws a picture on the wall!
-  'a1/home-stairs': require('../../assets/images/a1/placeholder.png'), // TODO photo: The cat runs down the stairs.
-  'a1/home-roof': require('../../assets/images/a1/placeholder.png'), // TODO photo: A bird sits on the roof of the house.
-  'a1/home-apartment': require('../../assets/images/a1/placeholder.png'), // TODO photo: The family lives in a small apartment in the city.
-  // ── new A1 batch · school (placeholder, TODO photo) ──
-  'a1/school-classroom': require('../../assets/images/a1/placeholder.png'), // TODO photo: The students sit in the classroom.
-  'a1/school-lesson': require('../../assets/images/a1/placeholder.png'), // TODO photo: The English lesson starts now.
-  'a1/school-homework': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl does her homework at the desk.
-  'a1/school-question': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl has a question for the teacher.
-  'a1/school-word': require('../../assets/images/a1/placeholder.png'), // TODO photo: The teacher writes a new word on the board.
-  'a1/school-letter': require('../../assets/images/a1/placeholder.png'), // TODO photo: The old man reads a letter from his son.
-  'a1/school-page': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy turns the page.
-  'a1/school-picture': require('../../assets/images/a1/placeholder.png'), // TODO photo: The child shows his picture to the teacher.
-  'a1/school-story': require('../../assets/images/a1/placeholder.png'), // TODO photo: Grandma reads a story to the children before bed.
-  'a1/school-test': require('../../assets/images/a1/placeholder.png'), // TODO photo: The students are quiet during the test.
-  'a1/school-dictionary': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy looks for a word in the dictionary.
-  // ── new A1 batch · money (placeholder, TODO photo) ──
-  'a1/money-money': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl puts her money in a pig bank.
-  'a1/money-price': require('../../assets/images/a1/placeholder.png'), // TODO photo: The woman looks at the price of the shoes.
-  'a1/money-ticket': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy shows his ticket at the cinema.
-  'a1/money-shopping': require('../../assets/images/a1/placeholder.png'), // TODO photo: The mother goes shopping with a big bag.
-  'a1/money-supermarket': require('../../assets/images/a1/placeholder.png'), // TODO photo: The family buys food in the supermarket.
-  'a1/money-pay': require('../../assets/images/a1/placeholder.png'), // TODO photo: The man pays for his coffee.
-  // ── new A1 batch · hobbies (placeholder, TODO photo) ──
-  'a1/hobby-music': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl listens to music on the bus.
-  'a1/hobby-song': require('../../assets/images/a1/placeholder.png'), // TODO photo: The singer sings a happy song.
-  'a1/hobby-sport': require('../../assets/images/a1/placeholder.png'), // TODO photo: Swimming is a good sport for kids.
-  'a1/hobby-football': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boys play football in the park.
-  'a1/hobby-tennis': require('../../assets/images/a1/placeholder.png'), // TODO photo: She plays tennis on a sunny day.
-  'a1/hobby-game': require('../../assets/images/a1/placeholder.png'), // TODO photo: The friends play a board game after dinner.
-  'a1/hobby-hobby': require('../../assets/images/a1/placeholder.png'), // TODO photo: Painting is her favorite hobby.
-  'a1/hobby-film': require('../../assets/images/a1/placeholder.png'), // TODO photo: The family watches a funny film.
-  'a1/hobby-concert': require('../../assets/images/a1/placeholder.png'), // TODO photo: The singer and the guitar player are at a big concert.
-  'a1/hobby-team': require('../../assets/images/a1/placeholder.png'), // TODO photo: The team is happy because they win.
-  // ── new A1 batch · jobs (placeholder, TODO photo) ──
-  'a1/job-artist': require('../../assets/images/a1/placeholder.png'), // TODO photo: The artist paints a picture of the sea.
-  'a1/job-actor': require('../../assets/images/a1/placeholder.png'), // TODO photo: The actor is on the big stage.
-  'a1/job-dancer': require('../../assets/images/a1/placeholder.png'), // TODO photo: The dancer jumps and turns on the stage.
-  'a1/job-tourist': require('../../assets/images/a1/placeholder.png'), // TODO photo: The tourist takes photos of the old street.
-  'a1/job-player': require('../../assets/images/a1/placeholder.png'), // TODO photo: The player runs with the ball.
-  'a1/job-scientist': require('../../assets/images/a1/placeholder.png'), // TODO photo: The scientist looks at a tiny plant.
-  'a1/job-customer': require('../../assets/images/a1/placeholder.png'), // TODO photo: The waiter smiles at the customer.
-  // ── new A1 batch · people (placeholder, TODO photo) ──
-  'a1/people-family': require('../../assets/images/a1/placeholder.png'), // TODO photo: The family has a picnic in the park.
-  'a1/people-name': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy writes his name on the bag.
-  'a1/people-job': require('../../assets/images/a1/placeholder.png'), // TODO photo: The nurse loves her job.
-  // ── new A1 batch · food (placeholder, TODO photo) ──
-  'a1/food-breakfast': require('../../assets/images/a1/placeholder.png'), // TODO photo: The family eats eggs and bread for breakfast.
-  'a1/food-lunch': require('../../assets/images/a1/placeholder.png'), // TODO photo: The children eat lunch at school.
-  'a1/food-dinner': require('../../assets/images/a1/placeholder.png'), // TODO photo: Grandma cooks dinner for everyone.
-  'a1/food-vegetable': require('../../assets/images/a1/placeholder.png'), // TODO photo: A carrot is a vegetable.
-  'a1/food-menu': require('../../assets/images/a1/placeholder.png'), // TODO photo: The waiter gives the menu to the guests.
-  'a1/food-cream': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl puts cream on the cake.
-  'a1/food-food': require('../../assets/images/a1/placeholder.png'), // TODO photo: There is a lot of food on the table.
-  // ── new A1 batch · places (placeholder, TODO photo) ──
-  'a1/place-pool': require('../../assets/images/a1/placeholder.png'), // TODO photo: The children swim in the pool.
-  'a1/place-gym': require('../../assets/images/a1/placeholder.png'), // TODO photo: The woman gets strong in the gym.
-  'a1/place-theatre': require('../../assets/images/a1/placeholder.png'), // TODO photo: The family watches a show at the theatre.
-  'a1/place-building': require('../../assets/images/a1/placeholder.png'), // TODO photo: The tall building has a hundred windows.
-  'a1/place-university': require('../../assets/images/a1/placeholder.png'), // TODO photo: The young woman studies at the university.
-  'a1/place-world': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy looks at the world on a globe.
-  // ── new A1 batch · objects (placeholder, TODO photo) ──
-  'a1/obj-newspaper': require('../../assets/images/a1/placeholder.png'), // TODO photo: The old man reads the newspaper with his coffee.
-  'a1/obj-magazine': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl reads a magazine at the cafe.
-  'a1/obj-passport': require('../../assets/images/a1/placeholder.png'), // TODO photo: The woman shows her passport at the airport.
-  'a1/obj-message': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl sends a message to her friend.
-  'a1/obj-card': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy makes a birthday card for his mother.
-  'a1/obj-present': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl gets a big present.
-  'a1/obj-paper': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl folds paper into a small boat.
-  // ── new A1 batch · body (placeholder, TODO photo) ──
-  'a1/body-finger': require('../../assets/images/a1/placeholder.png'), // TODO photo: The baby holds his mother's finger.
-  'a1/body-knee': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy fell and hurt his knee.
-  'a1/body-neck': require('../../assets/images/a1/placeholder.png'), // TODO photo: The giraffe has a very long neck.
-  'a1/body-shoulder': require('../../assets/images/a1/placeholder.png'), // TODO photo: The parrot sits on the pirate's shoulder.
-  'a1/body-stomach': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy is hungry and his stomach is loud.
-  'a1/body-toe': require('../../assets/images/a1/placeholder.png'), // TODO photo: The baby plays with her toes.
-  // ── new A1 batch · animals (placeholder, TODO photo) ──
-  'a1/animal-duck': require('../../assets/images/a1/placeholder.png'), // TODO photo: The duck swims in the pond with her babies.
-  'a1/animal-frog': require('../../assets/images/a1/placeholder.png'), // TODO photo: The green frog jumps on a big leaf.
-  'a1/animal-monkey': require('../../assets/images/a1/placeholder.png'), // TODO photo: The monkey eats a banana in the tree.
-  'a1/animal-giraffe': require('../../assets/images/a1/placeholder.png'), // TODO photo: The giraffe eats leaves from the tall tree.
-  'a1/animal-butterfly': require('../../assets/images/a1/placeholder.png'), // TODO photo: A butterfly sits on a yellow flower.
-  'a1/animal-tiger': require('../../assets/images/a1/placeholder.png'), // TODO photo: The tiger walks in the tall grass.
-  // ── new A1 batch · nature (placeholder, TODO photo) ──
-  'a1/nature-sky': require('../../assets/images/a1/placeholder.png'), // TODO photo: The birds fly in the blue sky.
-  'a1/nature-moon': require('../../assets/images/a1/placeholder.png'), // TODO photo: The moon is big and bright tonight.
-  'a1/nature-star': require('../../assets/images/a1/placeholder.png'), // TODO photo: A star twinkles in the dark sky.
-  'a1/nature-grass': require('../../assets/images/a1/placeholder.png'), // TODO photo: The cows eat green grass.
-  'a1/nature-leaf': require('../../assets/images/a1/placeholder.png'), // TODO photo: A yellow leaf falls from the tree.
-  'a1/nature-forest': require('../../assets/images/a1/placeholder.png'), // TODO photo: The bear walks in the dark forest.
-  'a1/nature-lake': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy sits in a boat on the quiet lake.
-  // ── new A1 batch · weather (placeholder, TODO photo) ──
-  'a1/weather-weather': require('../../assets/images/a1/placeholder.png'), // TODO photo: The weather is great today.
-  'a1/weather-sunny': require('../../assets/images/a1/placeholder.png'), // TODO photo: It is a sunny day at the beach.
-  'a1/weather-cloudy': require('../../assets/images/a1/placeholder.png'), // TODO photo: It is cloudy and grey over the city.
-  'a1/weather-windy': require('../../assets/images/a1/placeholder.png'), // TODO photo: It is very windy and the girl holds her hat.
-  'a1/weather-rainy': require('../../assets/images/a1/placeholder.png'), // TODO photo: It is a rainy day in the city.
-  'a1/weather-snowy': require('../../assets/images/a1/placeholder.png'), // TODO photo: It is snowy and the children play in the garden.
-  'a1/weather-foggy': require('../../assets/images/a1/placeholder.png'), // TODO photo: It is foggy and we cannot see the road.
-  'a1/weather-storm': require('../../assets/images/a1/placeholder.png'), // TODO photo: A big storm comes over the sea.
-  // ── new A1 batch · adjectives (placeholder, TODO photo) ──
-  'a1/adj-high': require('../../assets/images/a1/placeholder.png'), // TODO photo: The tree is very high.
-  'a1/adj-deep': require('../../assets/images/a1/placeholder.png'), // TODO photo: The well is very deep.
-  'a1/adj-huge': require('../../assets/images/a1/placeholder.png'), // TODO photo: The elephant is huge!
-  'a1/adj-tiny': require('../../assets/images/a1/placeholder.png'), // TODO photo: The ant is tiny on her finger.
-  'a1/adj-cool': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy looks really cool.
-  'a1/adj-famous': require('../../assets/images/a1/placeholder.png'), // TODO photo: The singer is famous and everyone takes photos.
-  'a1/adj-modern': require('../../assets/images/a1/placeholder.png'), // TODO photo: The house is very modern.
-  'a1/adj-amazing': require('../../assets/images/a1/placeholder.png'), // TODO photo: The fireworks are amazing!
-  'a1/adj-exciting': require('../../assets/images/a1/placeholder.png'), // TODO photo: The ride is very exciting.
-  'a1/adj-pretty': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl in the yellow dress is pretty.
-  'a1/adj-blonde': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl has long blonde hair.
-  // ── new A1 batch · adverbs (placeholder, TODO photo) ──
-  'a1/adv-up': require('../../assets/images/a1/placeholder.png'), // TODO photo: The balloon flies up into the sky.
-  'a1/adv-down': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy goes down the slide.
-  'a1/adv-here': require('../../assets/images/a1/placeholder.png'), // TODO photo: Come here, little dog!
-  'a1/adv-there': require('../../assets/images/a1/placeholder.png'), // TODO photo: Look, the bird is over there!
-  'a1/adv-back': require('../../assets/images/a1/placeholder.png'), // TODO photo: The dog brings the ball back.
-  'a1/adv-left': require('../../assets/images/a1/placeholder.png'), // TODO photo: Turn left at the bank.
-  'a1/adv-very': require('../../assets/images/a1/placeholder.png'), // TODO photo: The elephant is very big.
-  'a1/adv-too': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy eats ice cream, and his sister eats ice cream too.
-  'a1/adv-slowly': require('../../assets/images/a1/placeholder.png'), // TODO photo: The snail moves slowly across the leaf.
-  // ── new A1 batch · clothes (placeholder, TODO photo) ──
-  'a1/clothes-scarf': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl wears a warm red scarf.
-  'a1/clothes-socks': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy puts on his socks and shoes.
-  'a1/clothes-shorts': require('../../assets/images/a1/placeholder.png'), // TODO photo: The children wear shorts and T-shirts on the beach.
+  'a1/pron-they': require('../../assets/images/a1/pron-they.png'),
+  'a1/pron-my': require('../../assets/images/a1/placeholder.png'),
+  'a1/pron-your': require('../../assets/images/a1/placeholder.png'),
+  'a1/pron-his': require('../../assets/images/a1/placeholder.png'),
+  'a1/pron-her': require('../../assets/images/a1/placeholder.png'),
+  'a1/pron-our': require('../../assets/images/a1/placeholder.png'),
+  'a1/pron-their': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · questions ──
+  'a1/q-what': require('../../assets/images/a1/placeholder.png'),
+  'a1/q-where': require('../../assets/images/a1/placeholder.png'),
+  'a1/q-who': require('../../assets/images/a1/placeholder.png'),
+  'a1/q-when': require('../../assets/images/a1/placeholder.png'),
+  'a1/q-why': require('../../assets/images/a1/placeholder.png'),
+  'a1/q-how': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · prepositions ──
+  'a1/prep-in': require('../../assets/images/a1/placeholder.png'),
+  'a1/prep-on': require('../../assets/images/a1/placeholder.png'),
+  'a1/prep-under': require('../../assets/images/a1/placeholder.png'),
+  'a1/prep-behind': require('../../assets/images/a1/placeholder.png'),
+  'a1/prep-between': require('../../assets/images/a1/placeholder.png'),
+  'a1/prep-next-to': require('../../assets/images/a1/placeholder.png'),
+  'a1/prep-in-front-of': require('../../assets/images/a1/placeholder.png'),
+  'a1/prep-above': require('../../assets/images/a1/placeholder.png'),
+  'a1/prep-around': require('../../assets/images/a1/placeholder.png'),
+  'a1/prep-through': require('../../assets/images/a1/placeholder.png'),
+  'a1/prep-across': require('../../assets/images/a1/placeholder.png'),
+  'a1/prep-with': require('../../assets/images/a1/placeholder.png'),
+  'a1/prep-without': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · actions ──
+  'a1/act-have': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-like': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-want': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-get': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-live': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-study': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-use': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-tell': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-keep': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-send': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-enjoy': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-finish': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-join': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-build': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-grow': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-follow': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-guess': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-paint': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-relax': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-repeat': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-return': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-order': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-lose': require('../../assets/images/a1/placeholder.png'),
+  'a1/act-fix': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · numbers ──
+  'a1/num-eleven': require('../../assets/images/a1/placeholder.png'),
+  'a1/num-twelve': require('../../assets/images/a1/placeholder.png'),
+  'a1/num-thirteen': require('../../assets/images/a1/placeholder.png'),
+  'a1/num-fourteen': require('../../assets/images/a1/placeholder.png'),
+  'a1/num-fifteen': require('../../assets/images/a1/placeholder.png'),
+  'a1/num-sixteen': require('../../assets/images/a1/placeholder.png'),
+  'a1/num-seventeen': require('../../assets/images/a1/placeholder.png'),
+  'a1/num-eighteen': require('../../assets/images/a1/placeholder.png'),
+  'a1/num-nineteen': require('../../assets/images/a1/placeholder.png'),
+  'a1/num-twenty': require('../../assets/images/a1/placeholder.png'),
+  'a1/num-thirty': require('../../assets/images/a1/placeholder.png'),
+  'a1/num-forty': require('../../assets/images/a1/placeholder.png'),
+  'a1/num-fifty': require('../../assets/images/a1/placeholder.png'),
+  'a1/num-sixty': require('../../assets/images/a1/placeholder.png'),
+  'a1/num-seventy': require('../../assets/images/a1/placeholder.png'),
+  'a1/num-eighty': require('../../assets/images/a1/placeholder.png'),
+  'a1/num-ninety': require('../../assets/images/a1/placeholder.png'),
+  'a1/num-hundred': require('../../assets/images/a1/placeholder.png'),
+  'a1/num-thousand': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · days ──
+  'a1/day-monday': require('../../assets/images/a1/placeholder.png'),
+  'a1/day-tuesday': require('../../assets/images/a1/placeholder.png'),
+  'a1/day-wednesday': require('../../assets/images/a1/placeholder.png'),
+  'a1/day-thursday': require('../../assets/images/a1/placeholder.png'),
+  'a1/day-friday': require('../../assets/images/a1/placeholder.png'),
+  'a1/day-saturday': require('../../assets/images/a1/placeholder.png'),
+  'a1/day-sunday': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · months ──
+  'a1/month-january': require('../../assets/images/a1/placeholder.png'),
+  'a1/month-february': require('../../assets/images/a1/placeholder.png'),
+  'a1/month-march': require('../../assets/images/a1/placeholder.png'),
+  'a1/month-april': require('../../assets/images/a1/placeholder.png'),
+  'a1/month-may': require('../../assets/images/a1/placeholder.png'),
+  'a1/month-june': require('../../assets/images/a1/placeholder.png'),
+  'a1/month-july': require('../../assets/images/a1/placeholder.png'),
+  'a1/month-august': require('../../assets/images/a1/placeholder.png'),
+  'a1/month-september': require('../../assets/images/a1/placeholder.png'),
+  'a1/month-october': require('../../assets/images/a1/placeholder.png'),
+  'a1/month-november': require('../../assets/images/a1/placeholder.png'),
+  'a1/month-december': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · time ──
+  'a1/time-today': require('../../assets/images/a1/placeholder.png'),
+  'a1/time-tomorrow': require('../../assets/images/a1/placeholder.png'),
+  'a1/time-yesterday': require('../../assets/images/a1/placeholder.png'),
+  'a1/time-weekend': require('../../assets/images/a1/placeholder.png'),
+  'a1/time-hour': require('../../assets/images/a1/placeholder.png'),
+  'a1/time-minute': require('../../assets/images/a1/placeholder.png'),
+  'a1/time-midnight': require('../../assets/images/a1/placeholder.png'),
+  'a1/time-birthday': require('../../assets/images/a1/placeholder.png'),
+  'a1/time-party': require('../../assets/images/a1/placeholder.png'),
+  'a1/time-holiday': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · home ──
+  'a1/home-home': require('../../assets/images/a1/placeholder.png'),
+  'a1/home-kitchen': require('../../assets/images/a1/placeholder.png'),
+  'a1/home-bathroom': require('../../assets/images/a1/placeholder.png'),
+  'a1/home-bedroom': require('../../assets/images/a1/placeholder.png'),
+  'a1/home-floor': require('../../assets/images/a1/placeholder.png'),
+  'a1/home-wall': require('../../assets/images/a1/placeholder.png'),
+  'a1/home-stairs': require('../../assets/images/a1/placeholder.png'),
+  'a1/home-roof': require('../../assets/images/a1/placeholder.png'),
+  'a1/home-apartment': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · school ──
+  'a1/school-classroom': require('../../assets/images/a1/placeholder.png'),
+  'a1/school-lesson': require('../../assets/images/a1/placeholder.png'),
+  'a1/school-homework': require('../../assets/images/a1/placeholder.png'),
+  'a1/school-question': require('../../assets/images/a1/placeholder.png'),
+  'a1/school-word': require('../../assets/images/a1/placeholder.png'),
+  'a1/school-letter': require('../../assets/images/a1/placeholder.png'),
+  'a1/school-page': require('../../assets/images/a1/placeholder.png'),
+  'a1/school-picture': require('../../assets/images/a1/placeholder.png'),
+  'a1/school-story': require('../../assets/images/a1/placeholder.png'),
+  'a1/school-test': require('../../assets/images/a1/placeholder.png'),
+  'a1/school-dictionary': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · money ──
+  'a1/money-money': require('../../assets/images/a1/placeholder.png'),
+  'a1/money-price': require('../../assets/images/a1/placeholder.png'),
+  'a1/money-ticket': require('../../assets/images/a1/placeholder.png'),
+  'a1/money-shopping': require('../../assets/images/a1/placeholder.png'),
+  'a1/money-supermarket': require('../../assets/images/a1/placeholder.png'),
+  'a1/money-pay': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · hobbies ──
+  'a1/hobby-music': require('../../assets/images/a1/placeholder.png'),
+  'a1/hobby-song': require('../../assets/images/a1/placeholder.png'),
+  'a1/hobby-sport': require('../../assets/images/a1/placeholder.png'),
+  'a1/hobby-football': require('../../assets/images/a1/placeholder.png'),
+  'a1/hobby-tennis': require('../../assets/images/a1/placeholder.png'),
+  'a1/hobby-game': require('../../assets/images/a1/placeholder.png'),
+  'a1/hobby-hobby': require('../../assets/images/a1/placeholder.png'),
+  'a1/hobby-film': require('../../assets/images/a1/placeholder.png'),
+  'a1/hobby-concert': require('../../assets/images/a1/placeholder.png'),
+  'a1/hobby-team': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · jobs ──
+  'a1/job-artist': require('../../assets/images/a1/placeholder.png'),
+  'a1/job-actor': require('../../assets/images/a1/placeholder.png'),
+  'a1/job-dancer': require('../../assets/images/a1/placeholder.png'),
+  'a1/job-tourist': require('../../assets/images/a1/placeholder.png'),
+  'a1/job-player': require('../../assets/images/a1/placeholder.png'),
+  'a1/job-scientist': require('../../assets/images/a1/placeholder.png'),
+  'a1/job-customer': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · people ──
+  'a1/people-family': require('../../assets/images/a1/placeholder.png'),
+  'a1/people-name': require('../../assets/images/a1/placeholder.png'),
+  'a1/people-job': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · food ──
+  'a1/food-breakfast': require('../../assets/images/a1/placeholder.png'),
+  'a1/food-lunch': require('../../assets/images/a1/placeholder.png'),
+  'a1/food-dinner': require('../../assets/images/a1/placeholder.png'),
+  'a1/food-vegetable': require('../../assets/images/a1/placeholder.png'),
+  'a1/food-menu': require('../../assets/images/a1/placeholder.png'),
+  'a1/food-cream': require('../../assets/images/a1/placeholder.png'),
+  'a1/food-food': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · places ──
+  'a1/place-pool': require('../../assets/images/a1/placeholder.png'),
+  'a1/place-gym': require('../../assets/images/a1/placeholder.png'),
+  'a1/place-theatre': require('../../assets/images/a1/placeholder.png'),
+  'a1/place-building': require('../../assets/images/a1/placeholder.png'),
+  'a1/place-university': require('../../assets/images/a1/placeholder.png'),
+  'a1/place-world': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · objects ──
+  'a1/obj-newspaper': require('../../assets/images/a1/placeholder.png'),
+  'a1/obj-magazine': require('../../assets/images/a1/placeholder.png'),
+  'a1/obj-passport': require('../../assets/images/a1/placeholder.png'),
+  'a1/obj-message': require('../../assets/images/a1/placeholder.png'),
+  'a1/obj-card': require('../../assets/images/a1/placeholder.png'),
+  'a1/obj-present': require('../../assets/images/a1/placeholder.png'),
+  'a1/obj-paper': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · body ──
+  'a1/body-finger': require('../../assets/images/a1/placeholder.png'),
+  'a1/body-knee': require('../../assets/images/a1/placeholder.png'),
+  'a1/body-neck': require('../../assets/images/a1/placeholder.png'),
+  'a1/body-shoulder': require('../../assets/images/a1/placeholder.png'),
+  'a1/body-stomach': require('../../assets/images/a1/placeholder.png'),
+  'a1/body-toe': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · animals ──
+  'a1/animal-duck': require('../../assets/images/a1/placeholder.png'),
+  'a1/animal-frog': require('../../assets/images/a1/placeholder.png'),
+  'a1/animal-monkey': require('../../assets/images/a1/placeholder.png'),
+  'a1/animal-giraffe': require('../../assets/images/a1/placeholder.png'),
+  'a1/animal-butterfly': require('../../assets/images/a1/placeholder.png'),
+  'a1/animal-tiger': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · nature ──
+  'a1/nature-sky': require('../../assets/images/a1/placeholder.png'),
+  'a1/nature-moon': require('../../assets/images/a1/placeholder.png'),
+  'a1/nature-star': require('../../assets/images/a1/placeholder.png'),
+  'a1/nature-grass': require('../../assets/images/a1/placeholder.png'),
+  'a1/nature-leaf': require('../../assets/images/a1/placeholder.png'),
+  'a1/nature-forest': require('../../assets/images/a1/placeholder.png'),
+  'a1/nature-lake': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · weather ──
+  'a1/weather-weather': require('../../assets/images/a1/placeholder.png'),
+  'a1/weather-sunny': require('../../assets/images/a1/placeholder.png'),
+  'a1/weather-cloudy': require('../../assets/images/a1/placeholder.png'),
+  'a1/weather-windy': require('../../assets/images/a1/placeholder.png'),
+  'a1/weather-rainy': require('../../assets/images/a1/placeholder.png'),
+  'a1/weather-snowy': require('../../assets/images/a1/placeholder.png'),
+  'a1/weather-foggy': require('../../assets/images/a1/placeholder.png'),
+  'a1/weather-storm': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · adjectives ──
+  'a1/adj-high': require('../../assets/images/a1/placeholder.png'),
+  'a1/adj-deep': require('../../assets/images/a1/placeholder.png'),
+  'a1/adj-huge': require('../../assets/images/a1/placeholder.png'),
+  'a1/adj-tiny': require('../../assets/images/a1/placeholder.png'),
+  'a1/adj-cool': require('../../assets/images/a1/placeholder.png'),
+  'a1/adj-famous': require('../../assets/images/a1/placeholder.png'),
+  'a1/adj-modern': require('../../assets/images/a1/placeholder.png'),
+  'a1/adj-amazing': require('../../assets/images/a1/placeholder.png'),
+  'a1/adj-exciting': require('../../assets/images/a1/placeholder.png'),
+  'a1/adj-pretty': require('../../assets/images/a1/placeholder.png'),
+  'a1/adj-blonde': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · adverbs ──
+  'a1/adv-up': require('../../assets/images/a1/placeholder.png'),
+  'a1/adv-down': require('../../assets/images/a1/placeholder.png'),
+  'a1/adv-here': require('../../assets/images/a1/placeholder.png'),
+  'a1/adv-there': require('../../assets/images/a1/placeholder.png'),
+  'a1/adv-back': require('../../assets/images/a1/placeholder.png'),
+  'a1/adv-left': require('../../assets/images/a1/placeholder.png'),
+  'a1/adv-very': require('../../assets/images/a1/placeholder.png'),
+  'a1/adv-too': require('../../assets/images/a1/placeholder.png'),
+  'a1/adv-slowly': require('../../assets/images/a1/placeholder.png'),
+  // ── new A1 batch · clothes ──
+  'a1/clothes-scarf': require('../../assets/images/a1/placeholder.png'),
+  'a1/clothes-socks': require('../../assets/images/a1/placeholder.png'),
+  'a1/clothes-shorts': require('../../assets/images/a1/placeholder.png'),
 };
 
 /** Resolve a bundled image key, or undefined for an unknown/remote key. */
