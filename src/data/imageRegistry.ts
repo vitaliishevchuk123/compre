@@ -484,15 +484,15 @@ const registry: Record<string, ImageSourcePropType> = {
   'a1/greet-sorry': require('../../assets/images/a1/greet-sorry.png'),
   'a1/greet-yes': require('../../assets/images/a1/greet-yes.png'),
   'a1/greet-no': require('../../assets/images/a1/greet-no.png'),
-  'a1/greet-welcome': require('../../assets/images/a1/placeholder.png'), // TODO photo: The mat at the front door says welcome.
+  'a1/greet-welcome': require('../../assets/images/a1/greet-welcome.png'),
   // ── new A1 batch · pronouns (placeholder, TODO photo) ──
-  'a1/pron-i': require('../../assets/images/a1/placeholder.png'), // TODO photo: I am taking a photo of the sea.
-  'a1/pron-you': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl points at the camera and says: You!
-  'a1/pron-he': require('../../assets/images/a1/placeholder.png'), // TODO photo: He is standing in the rain with a big umbrella.
-  'a1/pron-she': require('../../assets/images/a1/placeholder.png'), // TODO photo: She plays the piano every evening.
-  'a1/pron-it': require('../../assets/images/a1/placeholder.png'), // TODO photo: It is sleeping on the bed.
-  'a1/pron-we': require('../../assets/images/a1/placeholder.png'), // TODO photo: We love the sea!
-  'a1/pron-they': require('../../assets/images/a1/placeholder.png'), // TODO photo: They ride their bikes to school.
+  'a1/pron-i': require('../../assets/images/a1/pron-i.png'),
+  'a1/pron-you': require('../../assets/images/a1/pron-you.png'),
+  'a1/pron-he': require('../../assets/images/a1/pron-he.png'),
+  'a1/pron-she': require('../../assets/images/a1/pron-she.png'),
+  'a1/pron-it': require('../../assets/images/a1/pron-it.png'),
+  'a1/pron-we': require('../../assets/images/a1/pron-we.png'),
+  'a1/pron-they': require('../../assets/images/a1/pron-they.png'), // TODO photo: They ride their bikes to school.
   'a1/pron-my': require('../../assets/images/a1/placeholder.png'), // TODO photo: This is my ball!
   'a1/pron-your': require('../../assets/images/a1/placeholder.png'), // TODO photo: This is your present!
   'a1/pron-his': require('../../assets/images/a1/placeholder.png'), // TODO photo: It is his hat.
