@@ -4442,7 +4442,7 @@ export const A1_CARDS: LessonCard[] = [
   {
     order: 448,
     category: 'pronouns',
-    sentence: 'A boy hugs a big red ball. What does he say?',
+    sentence: 'A girl hugs a big red ball. What does he say?',
     imageKey: 'a1/pron-my',
     options: ['my', 'your', 'their', 'his'],
     answer: 'my',
@@ -4482,11 +4482,11 @@ export const A1_CARDS: LessonCard[] = [
   {
     order: 452,
     category: 'pronouns',
-    sentence: 'A family stands in front of a new house. Whose house is it?',
+    sentence: 'A family stands in front of a house. Whose house is it?',
     imageKey: 'a1/pron-our',
     options: ['our', 'their', 'your', 'her'],
     answer: 'our',
-    answerPhrase: 'This is our new house!',
+    answerPhrase: 'This is our house!',
     description: 'This is the word that a speaker uses for something that belongs to the speaker and other people together. A family in front of a new house uses it. It comes before a noun.',
   },
   {
@@ -4522,17 +4522,17 @@ export const A1_CARDS: LessonCard[] = [
   {
     order: 456,
     category: 'questions',
-    sentence: 'Knock, knock! What does the girl ask at the door?',
+    sentence: 'Someone knocks and runs away. The man opens the door and finds only a duck and a chicken. What does he ask?',
     imageKey: 'a1/q-who',
     options: ['who', 'how', 'when', 'where'],
     answer: 'who',
-    answerPhrase: 'Who is at the door?',
+    answerPhrase: 'Who knocked on the door?',
     description: 'This is a question word that we use to ask about a person. If someone knocks at the door, you ask a question with this word to find out the name. The answer is a name or a description of a person.',
   },
   {
     order: 457,
     category: 'questions',
-    sentence: 'The children look at the clock. What do they ask about the train?',
+    sentence: 'The man waits at the station and looks at his watch. What does he ask?',
     imageKey: 'a1/q-when',
     options: ['when', 'who', 'what', 'why'],
     answer: 'when',
