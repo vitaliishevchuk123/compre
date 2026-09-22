@@ -478,12 +478,12 @@ const registry: Record<string, ImageSourcePropType> = {
   'a1/act-teach':    require('../../assets/images/a1/act-teach.png'),
   // ── new A1 batch · greetings (placeholder, TODO photo) ──
   'a1/greet-hello': require('../../assets/images/a1/greet-hello.png'),
-  'a1/greet-goodbye': require('../../assets/images/a1/placeholder.png'), // TODO photo: The friends hug and say goodbye at the airport.
-  'a1/greet-please': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy says please and gets more cake.
-  'a1/greet-thanks': require('../../assets/images/a1/placeholder.png'), // TODO photo: The girl smiles and says thanks for the flowers.
-  'a1/greet-sorry': require('../../assets/images/a1/placeholder.png'), // TODO photo: The boy drops a glass and says sorry.
-  'a1/greet-yes': require('../../assets/images/a1/placeholder.png'), // TODO photo: Yes! The baby wants more ice cream.
-  'a1/greet-no': require('../../assets/images/a1/placeholder.png'), // TODO photo: No! The cat does not like the bath.
+  'a1/greet-goodbye': require('../../assets/images/a1/greet-goodbye.png'),
+  'a1/greet-please': require('../../assets/images/a1/greet-please.png'),
+  'a1/greet-thanks': require('../../assets/images/a1/greet-thanks.png'),
+  'a1/greet-sorry': require('../../assets/images/a1/greet-sorry.png'),
+  'a1/greet-yes': require('../../assets/images/a1/greet-yes.png'),
+  'a1/greet-no': require('../../assets/images/a1/greet-no.png'),
   'a1/greet-welcome': require('../../assets/images/a1/placeholder.png'), // TODO photo: The mat at the front door says welcome.
   // ── new A1 batch · pronouns (placeholder, TODO photo) ──
   'a1/pron-i': require('../../assets/images/a1/placeholder.png'), // TODO photo: I am taking a photo of the sea.

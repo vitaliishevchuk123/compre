@@ -4332,11 +4332,11 @@ export const A1_CARDS: LessonCard[] = [
   {
     order: 437,
     category: 'greetings',
-    sentence: 'The boy drops a glass on the floor. What does he say?',
+    sentence: 'The boy drops a jug on the floor. What does he say?',
     imageKey: 'a1/greet-sorry',
     options: ['sorry', 'hello', 'please', 'yes'],
     answer: 'sorry',
-    answerPhrase: 'The boy drops a glass and says sorry.',
+    answerPhrase: 'The boy drops a jug and says sorry.',
     description: 'You say this when you make a mistake or hurt someone by accident. It shows that you feel bad about it. You use it when you break something or step on a foot.',
   },
   {
