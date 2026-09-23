@@ -4902,11 +4902,11 @@ export const A1_CARDS: LessonCard[] = [
   {
     order: 494,
     category: 'actions',
-    sentence: 'The woman reads the menu and calls the waiter. What does she do?',
+    sentence: 'The man reads the menu and calls the waiter. What does she do?',
     imageKey: 'a1/act-order',
     options: ['order', 'cook', 'wash', 'lose'],
     answer: 'order',
-    answerPhrase: 'The woman orders a pizza.',
+    answerPhrase: 'The man orders a pizza.',
     description: 'You do this in a restaurant when you tell the waiter which food or drink you want. You read the menu and choose your meal. Then the kitchen makes it for you.',
   },
   {
