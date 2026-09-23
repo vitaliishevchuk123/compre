@@ -4772,12 +4772,12 @@ export const A1_CARDS: LessonCard[] = [
   {
     order: 481,
     category: 'actions',
-    sentence: 'The girl has a little box for her treasures. What does she do with them?',
+    sentence: 'The girl has a box for her treasures. What does she do with them?',
     imageKey: 'a1/act-keep',
     options: ['keep', 'throw', 'cut', 'tell'],
     answer: 'keep',
     answerPhrase: 'The girl keeps her treasures in a box.',
-    description: 'You do this when you have something and you do not lose it or give it away. A girl has a little box for her treasures and puts them there. She wants them to stay with her for a long time.',
+    description: 'You do this when you have something and you do not lose it or give it away. A girl has a box for her treasures and puts them there. She wants them to stay with her for a long time.',
   },
   {
     order: 482,
